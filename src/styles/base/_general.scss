@@ -1,0 +1,27 @@
+h1, h2, h3, h4, h5, h6, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+	font-family: $mainFont;
+	color: $colorGray;
+	background: #F4F4F4;
+	&:not(.active){
+		overflow: hidden !important;
+	}
+}
+
+*::-webkit-scrollbar {
+	display: none;
+}
+
+* {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+
+.wrapper{
+	padding-left: vw(91);
+}

@@ -1,0 +1,52 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+	- const title = "Project title"
+
+block content
+
+	include ../blocks/modules/loader/loader
+
+	.wrapper
+		include ../blocks/modules/sidebar/sidebar
+
+		.scroll-page.home-page
+			.section1
+				.header
+					.header__left
+						.header__menu
+							.header__menu-item
+								a(href="") История
+							.header__menu-item
+								a(href="") Легенды УГНТУ
+							.header__menu-item
+								a(href="") Поздравление ректора
+							.header__menu-item
+								a(href="") календарь событий
+					.header__right
+						a.header__btn(href="") поддержать
+						a.header__btn.header__btn--blue(href="") поздравить
+
+				.section1__title
+					img(src="img/svg/label1.svg")
+				.section1__dates
+					.section1__dates-item 1948
+					.section1__dates-item 2023
+				.section1__house
+					img(src="img/p1.webp")
+				.section1__circle
+					img.section1__circle-outside(src="img/svg/label-circle.svg" alt="")
+					img.section1__circle-inside(src="img/svg/logo.svg" alt="logo")
+				.section1__scroll Scroll
+
+
+
+
+	include ../blocks/modules/header/header
+	include ../blocks/modules/footer/footer
+
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")
