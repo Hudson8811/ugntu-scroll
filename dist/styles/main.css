@@ -429,6 +429,7 @@ body:not(.active) {
 }
 
 .header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid rgba(64, 64, 64, 0.2);
@@ -589,8 +590,17 @@ body:not(.active) {
   display: none;
 }
 
-.section1 {
+.home-page {
+  width: 100%;
+  height: 100vh;
   position: relative;
+}
+
+.section1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 .section1__title {
@@ -629,7 +639,7 @@ body:not(.active) {
   position: absolute;
   top: 25.92039801vw;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-58%);
 }
 
 .section1__dates-item:not(:first-child) {
@@ -662,6 +672,20 @@ body:not(.active) {
   width: 8.5572139303vw;
 }
 
+.section1__scroll {
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 1.92;
+  text-transform: uppercase;
+  color: #404040;
+  display: none;
+}
+
+.section1__scroll span {
+  display: block;
+  transform: rotate(-90deg);
+}
+
 @keyframes rotateCircle {
   0% {
     transform: rotate(0);
@@ -670,5 +694,72 @@ body:not(.active) {
   100% {
     transform: rotate(-360deg);
   }
+}
+
+.section2 {
+  background: #1EA9AF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.section2__numbers {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-45%);
+}
+
+.section2__numbers-number {
+  font-weight: 300;
+  font-size: 52.9353233831vw;
+  line-height: 1.71;
+  letter-spacing: -0.07em;
+  padding-right: 0.07em;
+  background: linear-gradient(180.23deg, #FFFFFF 35.85%, rgba(255, 255, 255, 0) 71.53%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.section2__numbers-line {
+  width: 27.5124378109vw;
+  height: 2.9850746269vw;
+  background: linear-gradient(90.77deg, #FFFFFF 3.75%, rgba(255, 255, 255, 0) 106.75%);
+  margin-left: 6.2189054726vw;
+  margin-right: 1.3930348259vw;
+  transform: translateY(-100%);
+}
+
+.section2__textblock {
+  padding-top: 2.4378109453vw;
+  padding-left: 2.7860696517vw;
+}
+
+.section2__text {
+  font-family: "Garamond Premier Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4.9751243781vw;
+  line-height: 0.96;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  color: #F5F5F5;
+  width: 67.8109452736vw;
+}
+
+.section2__text--opacity {
+  color: rgba(245, 245, 245, 0.29);
+}
+
+.section2__text--pl {
+  padding-left: 9.1044776119vw;
+  width: 79.9004975124vw;
 }
 /*# sourceMappingURL=maps/main.css.map */

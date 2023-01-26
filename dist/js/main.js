@@ -47,11 +47,82 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         duration: 1.5,
         ease: "power3.in"
       }, ">-1.3");
+      tl.from(".section1__house", {
+        y: '-25%',
+        duration: 1.7,
+        ease: "power1.inOut"
+      }, "<");
+      tl.from(".header", {
+        y: '-100%',
+        duration: 0.8,
+        ease: "Sine.in"
+      }, ">-0.5");
       tl.from(".sidebar", {
         x: "-100%",
         duration: 0.7,
         ease: "Sine.out"
-      }, ">");
+      }, ">-0.5");
+      tl.from(".section1__title", {
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "none"
+      }, ">-0.5");
+      tl.from(".section1__dates", {
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "none"
+      }, ">-0.5");
+      tl.from(".section1__circle", {
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "none"
+      }, ">0.1");
+      tl1.fromTo(".header", {
+        y: '0'
+      }, {
+        y: '-100%',
+        duration: 0.8,
+        ease: "none"
+      }, "0");
+      tl1.fromTo(".section1__circle", {
+        y: '0',
+        autoAlpha: 1
+      }, {
+        y: '50%',
+        autoAlpha: 0,
+        duration: 0.3,
+        ease: "none"
+      }, "0");
+      tl1.to(".section1__dates, .section1__title", {
+        y: '7vw',
+        duration: 2,
+        ease: "none"
+      }, "0");
+      tl1.to(".section1__house", {
+        top: '-54.72vw',
+        //-1100/2010
+        duration: 2,
+        ease: "none"
+      }, "0");
+      tl1.from(".section2", {
+        autoAlpha: '0',
+        duration: 1,
+        ease: "none"
+      }, ">-1");
+      tl1.fromTo(".section2__numbers", {
+        x: '100vw'
+      }, {
+        x: '-100%',
+        duration: 4,
+        ease: "none"
+      }, ">-0.5");
+      tl1.fromTo(".section2__textblock", {
+        autoAlpha: '0'
+      }, {
+        autoAlpha: '1',
+        duration: 1,
+        ease: "none"
+      }, ">-0.2");
       st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
         trigger: ".scroll-page",
         pin: true,
@@ -71,7 +142,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       }
     });
     var initMode;
-    var addTime = 2300;
+    var addTime = 300;
     var st1, st2, st3;
     var tl1 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
     var tl2 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});

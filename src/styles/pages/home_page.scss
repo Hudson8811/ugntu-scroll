@@ -1,5 +1,13 @@
-.section1{
+.home-page{
+	width: 100%;
+	height: 100vh;
 	position: relative;
+}
+.section1{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
 	&__title{
 		width: vw(1844);
 		position: absolute;
@@ -31,7 +39,7 @@
 		position: absolute;
 		top: vw(521);
 		left: 50%;
-		transform: translateX(-50%);
+		transform: translateX(-58%);
 		&-item{
 			&:not(:first-child){
 				margin-left: vw(106);
@@ -61,10 +69,85 @@
 			width: vw(172);
 		}
 	}
+
+	&__scroll{
+		font-weight: 450;
+		font-size: 16px;
+		line-height: 1.92;
+		text-transform: uppercase;
+		color: #404040;
+		display: none;
+		span{
+			display: block;
+			transform: rotate(-90deg);
+		}
+	}
 }
 
 
 @keyframes rotateCircle {
 	0%   {transform: rotate(0)}
 	100% {transform: rotate(-360deg)}
+}
+
+
+
+.section2{
+	background: $colorCyan;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	&__numbers{
+		display: flex;
+		align-items: center;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-45%);
+		&-number{
+			font-weight: 300;
+			font-size: vw(1064);
+			line-height: 1.71;
+			letter-spacing: -0.07em;
+			padding-right: 0.07em;
+			background: linear-gradient(180.23deg, #FFFFFF 35.85%, rgba(255, 255, 255, 0) 71.53%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+		}
+		&-line{
+			width: vw(553);
+			height: vw(60);
+			background: linear-gradient(90.77deg, #FFFFFF 3.75%, rgba(255, 255, 255, 0) 106.75%);
+			margin-left: vw(125);
+			margin-right: vw(28);
+			transform: translateY(-100%);
+		}
+	}
+	&__textblock{
+		padding-top: vw(49);
+		padding-left: vw(56);
+	}
+	&__text{
+		font-family: $textFont;
+		font-style: normal;
+		font-weight: 400;
+		font-size: vw(100);
+		line-height: 0.96;
+		letter-spacing: -0.015em;
+		text-transform: uppercase;
+		color: #F5F5F5;
+		width: vw(1363);
+		&--opacity{
+			color: rgba(245, 245, 245, 0.29);
+		}
+		&--pl{
+			padding-left: vw(183);
+			width: vw(1606);
+		}
+	}
 }

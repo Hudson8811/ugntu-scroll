@@ -24,7 +24,7 @@ $(document).ready(function (){
 
 
         var initMode;
-        let addTime = 2300;
+        let addTime = 300;
 
         let st1, st2, st3;
         let tl1 = gsap.timeline({});
@@ -78,11 +78,102 @@ $(document).ready(function (){
             } , ">-1.3");
 
 
+            tl.from(".section1__house", {
+                y: '-25%',
+                duration:  1.7,
+                ease: "power1.inOut",
+            } , "<");
+
+            tl.from(".header", {
+                y: '-100%',
+                duration:  0.8,
+                ease: "Sine.in",
+            } , ">-0.5");
+
             tl.from(".sidebar", {
                 x: "-100%",
                 duration:  0.7,
                 ease: "Sine.out",
-            } , ">");
+            } , ">-0.5");
+
+            tl.from(".section1__title", {
+                autoAlpha: 0,
+                duration:  0.5,
+                ease: "none",
+            } , ">-0.5");
+            tl.from(".section1__dates", {
+                autoAlpha: 0,
+                duration:  0.5,
+                ease: "none",
+            } , ">-0.5");
+            tl.from(".section1__circle", {
+                autoAlpha: 0,
+                duration:  0.5,
+                ease: "none",
+            } , ">0.1");
+
+
+
+
+
+
+
+            tl1.fromTo(".header", {
+                y: '0',
+            },{
+                y: '-100%',
+                duration:  0.8,
+                ease: "none",
+            } , "0");
+
+            tl1.fromTo(".section1__circle", {
+                y: '0',
+                autoAlpha:  1,
+            }, {
+                y: '50%',
+                autoAlpha:  0,
+                duration:  0.3,
+                ease: "none",
+            } , "0");
+
+
+            tl1.to(".section1__dates, .section1__title", {
+                y: '7vw',
+                duration:  2,
+                ease: "none",
+            } , "0");
+
+            tl1.to(".section1__house", {
+                top: '-54.72vw',  //-1100/2010
+                duration:  2,
+                ease: "none",
+            } , "0");
+
+
+
+            tl1.from(".section2", {
+                autoAlpha: '0',
+                duration:  1,
+                ease: "none",
+            } , ">-1");
+
+            tl1.fromTo(".section2__numbers", {
+                x: '100vw',
+            }, {
+                x: '-100%',
+                duration:  4,
+                ease: "none",
+            } , ">-0.5");
+
+
+
+            tl1.fromTo(".section2__textblock", {
+                autoAlpha: '0',
+            }, {
+                autoAlpha: '1',
+                duration:  1,
+                ease: "none",
+            } , ">-0.2");
 
 
             st1 = ScrollTrigger.create({
