@@ -93,13 +93,26 @@
 
 
 .section2{
-	background: $colorCyan;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	background: #ACACAC;
+	&::before{
+		content: "";
+		z-index: 8;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		display: block;
+		background: $colorCyanDark;
+		pointer-events: none;
+		mix-blend-mode: darken;
+	}
 	&__numbers{
 		display: flex;
 		align-items: center;
@@ -107,6 +120,7 @@
 		top: 50%;
 		left: 0;
 		transform: translateY(-45%);
+		z-index: 9;
 		&-number{
 			font-weight: 300;
 			font-size: vw(1064);
@@ -131,6 +145,8 @@
 	&__textblock{
 		padding-top: vw(49);
 		padding-left: vw(56);
+		position: relative;
+		z-index: 10;
 	}
 	&__text{
 		font-family: $textFont;
@@ -148,6 +164,52 @@
 		&--pl{
 			padding-left: vw(183);
 			width: vw(1606);
+		}
+	}
+
+	&__letter{
+		position: absolute;
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+		width: vw(887);
+		z-index: 11;
+		img{
+			width: 100%;
+		}
+	}
+
+	&__cloud{
+		&-1{
+			position: absolute;
+			width: vw(1667);
+			z-index: 9;
+		}
+		&-2{
+			position: absolute;
+			width: vw(1256);
+			z-index: 9;
+		}
+	}
+
+	&__house{
+		position: absolute;
+		left: 0;
+		width: 100%;
+		top: 100%;
+		z-index: 3;
+		&-birds{
+			width: vw(708);
+			top: vw(-400);
+			left: 15%;
+			position: absolute;
+		}
+		&-image{
+			width: 100%;
+		}
+		&-bottom{
+			width: 100%;
+			margin-top: vw(-118);
 		}
 	}
 }

@@ -24,7 +24,7 @@ $(document).ready(function (){
 
 
         var initMode;
-        let addTime = 300;
+        let addTime = 400;
 
         let st1, st2, st3;
         let tl1 = gsap.timeline({});
@@ -175,6 +175,70 @@ $(document).ready(function (){
                 ease: "none",
             } , ">-0.2");
 
+            tl1.fromTo(".section2__letter", {
+                top: '100%',
+                y: '0'
+            }, {
+                top: '0',
+                y:  '-100%',
+                duration:  3,
+                ease: "none",
+            } , ">");
+
+            tl1.to(".section2__textblock", {
+                top: '-100%',
+                duration:  3,
+                ease: "none",
+            } , ">0.1");
+
+
+            tl1.fromTo(".section2__cloud-1", {
+                left: '100%',
+                x: '0',
+                top: '26%'
+            }, {
+                left: '0',
+                x:  '-100%',
+                top: '-10%',
+                duration:  5,
+                ease: "none",
+            } , "<");
+            tl1.fromTo(".section2__cloud-2", {
+                left: '100%',
+                x: '0',
+                top: '10%'
+            }, {
+                left: '0',
+                x:  '-100%',
+                top: '-20%',
+                duration:  3.5,
+                ease: "none",
+            } , ">-3.5");
+
+
+            tl1.fromTo(".section2__house", {
+                top: '100%'
+            }, {
+                y:  '-100%',
+                top: '-0',
+                duration:  5,
+                ease: "none",
+            } , ">-3");
+
+            tl1.fromTo(".section2__house-birds", {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                duration:  0.5,
+                ease: "none",
+            } , ">-4,5");
+            tl1.fromTo(".section2__house-birds", {
+                x: 0
+            }, {
+                x:  "-50%",
+                duration:  4.5,
+                ease: "none",
+            } , "<");
 
             st1 = ScrollTrigger.create({
                 trigger: ".scroll-page",
