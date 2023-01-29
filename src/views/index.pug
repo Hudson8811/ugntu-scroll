@@ -36,16 +36,22 @@ block content
 				.section1__house
 					img(src="img/p1.webp")
 				.section1__circle
-					img.section1__circle-outside(src="img/svg/label-circle.svg" alt="")
-					img.section1__circle-inside(src="img/svg/logo.svg" alt="logo")
+					.section1__circle-inner
+						img.section1__circle-outside(src="img/svg/label-circle.svg" alt="")
+						img.section1__circle-inside(src="img/svg/logo.svg" alt="logo")
 				.section1__scroll
 					span Scroll
 
 			.section2
+				.section2__year 1948
 				.section2__numbers
 					span.section2__numbers-number 1941
 					span.section2__numbers-line
 					span.section2__numbers-number 1949
+				.section2__photos
+					img.section2__photos-item.section2__photos-item--1(src="img/p3-1.webp" alt="")
+					img.section2__photos-item.section2__photos-item--2(src="img/p3-2.webp" alt="")
+					img.section2__photos-item.section2__photos-item--3(src="img/p3-3.webp" alt="")
 
 
 				.section2__textblock
@@ -59,14 +65,82 @@ block content
 					img.section2__cloud-1(src="img/p4-2.webp" alt="")
 					img.section2__cloud-2(src="img/p4-3.webp" alt="")
 
+
+				.section2__textblock2
+					.section2__text первое здание Уфимского
+					.section2__text.section2__text--opacity.section2__text--pl нефтяного института
+
 				.section2__house
 					img.section2__house-birds(src="img/p4-1.webp" alt="")
 					img.section2__house-image(src="img/p4-4.webp" alt="")
 					img.section2__house-bottom(src="img/svg/p-bottom.svg" alt="")
 
+				.section2__last
+					.section2__last-img
+						img(src="img/p5.webp" alt="")
+					.section2__last-label
+						img(src="img/svg/label2.svg" alt="")
+					.section2__last-overlay
 
-	include ../blocks/modules/header/header
-	include ../blocks/modules/footer/footer
+			.section3
+				.section3__block.section3__block--1
+					.section3__flex
+						.section3__image
+							img(src="img/p6-1.webp" alt="")
+						.section3__text
+							.section3__year 1941
+							.section3__text-inner В октябре 1941 г. в Уфу был эвакуирован Московский нефтяной институт имени академика И.М. Губкина. Институт разместился в Соцгороде Уфимского крекинг-завода (ныне Уфимский нефтеперерабатывающий завод), который входил в состав Сталинского района г. Уфы.
+					.section3__overlay
+
+				.section3__block.section3__block--2
+					.section3__flex
+						.section3__image.section3__image--1
+							img(src="img/p6-2.webp" alt="")
+						.section3__text.section3__text--1
+							.section3__year 1943
+							.section3__text-inner Эвакуированные из Москвы студенты старших курсов без выполнения и защиты дипломных проектов направлялись на промышленные предприятия Башкирии в качестве молодых специалистов. В ноябре 1943 г. преподавательский состав возвратился в Москву, а в Уфе был организован филиал.
+						.section3__text.section3__text--2
+							.section3__year 1943
+							.section3__text-inner Приказом №743/к Народного Комиссариата нефтяной промышленности от 2 окт. 1945 г. директором Уфимского филиала МНИ был назначен Вениамин Григорьевич Рубинштейн.
+						.section3__image.section3__image--2
+							img(src="img/p6-3.webp" alt="")
+					.section3__overlay
+
+				.section3__block.section3__block--3
+					.section3__year 1948
+
+					.section3__label.section3__label--1
+						img.section3__label-item.section3__label-item--1(src="img/svg/label3-1.svg" alt="")
+						img.section3__label-item.section3__label-item--2(src="img/svg/label3-2.svg" alt="")
+					.section3__flex
+						.section3__image
+							img(src="img/p6-4.webp" alt="")
+					.section3__star
+							img(src="img/p6-5.webp" alt="")
+					.section3__label.section3__label--2
+						img.section3__label-item.section3__label-item--1(src="img/svg/label3-3-1.svg" alt="")
+						img.section3__label-item.section3__label-item--2(src="img/svg/label3-3-2.svg" alt="")
+					.section3__overlay
+
+				.section3__block.section3__block--4
+					.section3__year 1949
+					.section3__text
+						.section3__text-inner Директором института назначен доцент Мазит Идрисович Сайфуллин.
+					.section3__label
+						img.section3__label-item.section3__label-item--1(src="img/svg/label3-4.svg" alt="")
+						img.section3__label-item.section3__label-item--2(src="img/svg/label3-5.svg" alt="")
+						img.section3__label-item.section3__label-item--3(src="img/svg/label3-6.svg" alt="")
+					.section3__image
+						img(src="img/p6-7.webp" alt="")
+					.section3__overlay
+
+				.section3__block.section3__block--5
+					.section3__image
+						img(src="img/p7.webp" alt="")
+
+
+	//-include ../blocks/modules/header/header
+	//-include ../blocks/modules/footer/footer
 
 
 block scripts

@@ -26,7 +26,7 @@ onbeforeunload = function onbeforeunload(event) {
   window.scrollTo(0, 0);
 };
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
   if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.home-page').length > 0) {
     var initAnimation = function initAnimation() {
       if (window.innerWidth > 999) {
@@ -85,10 +85,15 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         ease: "none"
       }, "0");
       tl1.fromTo(".section1__circle", {
-        y: '0',
-        autoAlpha: 1
+        y: '0'
       }, {
         y: '50%',
+        duration: 0.3,
+        ease: "none"
+      }, "0");
+      tl1.fromTo(".section1__circle-inner", {
+        autoAlpha: 1
+      }, {
         autoAlpha: 0,
         duration: 0.3,
         ease: "none"
@@ -116,6 +121,34 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         duration: 4,
         ease: "none"
       }, ">-0.5");
+      tl1.fromTo(".section2__photos-item--1", {
+        x: '100vw'
+      }, {
+        x: '-100%',
+        duration: 2,
+        ease: "none"
+      }, "<");
+      tl1.fromTo(".section2__photos-item--2", {
+        x: '100vw'
+      }, {
+        x: '-100%',
+        duration: 2,
+        ease: "none"
+      }, ">-1");
+      tl1.fromTo(".section2__photos-item--3", {
+        x: '100vw'
+      }, {
+        x: '-100%',
+        duration: 2,
+        ease: "none"
+      }, ">-1");
+      tl1.fromTo(".section2__year", {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 1,
+        duration: 0.5,
+        ease: "none"
+      }, ">-0.5");
       tl1.fromTo(".section2__textblock", {
         autoAlpha: '0'
       }, {
@@ -133,7 +166,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         ease: "none"
       }, ">");
       tl1.to(".section2__textblock", {
-        top: '-100%',
+        y: '-100%',
         duration: 3,
         ease: "none"
       }, ">0.1");
@@ -159,6 +192,20 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         duration: 3.5,
         ease: "none"
       }, ">-3.5");
+      tl1.fromTo(".section2__textblock2", {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 1,
+        duration: 1.5,
+        ease: "none"
+      }, ">-3");
+      tl1.fromTo(".section2__textblock2", {
+        bottom: '-5%'
+      }, {
+        bottom: '100%',
+        duration: 3,
+        ease: "none"
+      }, "<");
       tl1.fromTo(".section2__house", {
         top: '100%'
       }, {
@@ -166,14 +213,14 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         top: '-0',
         duration: 5,
         ease: "none"
-      }, ">-3");
+      }, "<");
       tl1.fromTo(".section2__house-birds", {
         autoAlpha: 0
       }, {
         autoAlpha: 1,
         duration: 0.5,
         ease: "none"
-      }, ">-4,5");
+      }, "<+0.5");
       tl1.fromTo(".section2__house-birds", {
         x: 0
       }, {
@@ -181,6 +228,166 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         duration: 4.5,
         ease: "none"
       }, "<");
+      tl1.fromTo(".section2__last-img img", {
+        scale: 1.5
+      }, {
+        scale: 1,
+        duration: 8,
+        ease: "none"
+      }, "<");
+      tl1.fromTo(".section2__last-label", {
+        x: 0,
+        left: '100%'
+      }, {
+        x: "-120%",
+        left: '0',
+        duration: 8,
+        ease: "none"
+      }, ">-7");
+      tl1.fromTo(".section2__last-overlay", {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 0.7,
+        duration: 1,
+        ease: "none"
+      }, ">-2");
+      tl1.fromTo(".section3", {
+        left: "100%"
+      }, {
+        left: 0,
+        duration: 2,
+        ease: "none"
+      }, ">-1.5");
+      var s3Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3').innerWidth();
+      var b1Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--1').innerWidth();
+      var b2Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--2').innerWidth();
+      var b3Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--3').innerWidth();
+      var b4Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--4').innerWidth();
+      tl1.fromTo(".section3__block--1", {
+        x: "0"
+      }, {
+        x: -1 * (b1Width - s3Width),
+        duration: 1.5,
+        ease: "none"
+      }, ">");
+      tl1.fromTo(".section3__block--1 .section3__overlay", {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 0.7,
+        duration: 1.5,
+        ease: "none"
+      }, ">");
+      tl1.fromTo(".section3__block--2", {
+        x: "0",
+        left: "100%"
+      }, {
+        left: "0",
+        x: -1 * (b2Width - s3Width),
+        duration: 6,
+        ease: "none"
+      }, ">-1.5");
+      tl1.fromTo(".section3__block--2 .section3__overlay", {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 0.7,
+        duration: 1.5,
+        ease: "none"
+      }, ">");
+      tl1.fromTo(".section3__block--3", {
+        x: "0",
+        left: "100%"
+      }, {
+        left: "0",
+        x: -1 * (b3Width - s3Width),
+        duration: 6,
+        ease: "none"
+      }, ">-1.5");
+      tl1.fromTo(".section3__block--3 .section3__label--1  .section3__label-item--1", {
+        x: "20%"
+      }, {
+        x: "0%",
+        duration: 6,
+        ease: "none"
+      }, "<");
+      tl1.fromTo(".section3__block--3 .section3__label--1 .section3__label-item--2", {
+        x: "-5%"
+      }, {
+        x: "15%",
+        duration: 6,
+        ease: "none"
+      }, "<");
+      tl1.fromTo(".section3__block--3 .section3__label--2", {
+        x: "30%"
+      }, {
+        x: "-27%",
+        duration: 6,
+        ease: "none"
+      }, "<");
+      tl1.fromTo(".section3__block--3 .section3__star", {
+        x: "-10%"
+      }, {
+        x: "10%",
+        duration: 6,
+        ease: "none"
+      }, "<");
+      tl1.fromTo(".section3__block--3 .section3__overlay", {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 0.7,
+        duration: 1.5,
+        ease: "none"
+      }, ">");
+      tl1.fromTo(".section3__block--4", {
+        x: "0",
+        left: "100%"
+      }, {
+        left: "0",
+        x: -1 * (b4Width - s3Width),
+        duration: 4,
+        ease: "none"
+      }, ">-1.5");
+      tl1.fromTo(".section3__block--4 .section3__image", {
+        x: "-35%"
+      }, {
+        x: "0",
+        duration: 4,
+        ease: "none"
+      }, "<");
+      tl1.fromTo(".section3__block--4 .section3__label-item--1", {
+        x: "-65%"
+      }, {
+        x: "0",
+        duration: 4,
+        ease: "none"
+      }, "<");
+      tl1.fromTo(".section3__block--4 .section3__label-item--2", {
+        x: "10%"
+      }, {
+        x: "0",
+        duration: 4,
+        ease: "none"
+      }, "<");
+      tl1.fromTo(".section3__block--4 .section3__label-item--3", {
+        x: "100%"
+      }, {
+        x: "-10%",
+        duration: 4,
+        ease: "none"
+      }, "<");
+      tl1.fromTo(".section3__block--4 .section3__overlay", {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 0.7,
+        duration: 1.5,
+        ease: "none"
+      }, ">");
+      tl1.fromTo(".section3__block--5", {
+        left: "100%"
+      }, {
+        left: "0",
+        duration: 2,
+        ease: "none"
+      }, ">-1.5");
       st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
         trigger: ".scroll-page",
         pin: true,
@@ -188,7 +395,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         end: function end() {
           return "+=" + addTime + "%";
         },
-        scrub: 1.5,
+        scrub: 2.5,
         animation: tl1
       });
     };
@@ -200,7 +407,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       }
     });
     var initMode;
-    var addTime = 400;
+    var addTime = 1000;
     var st1, st2, st3;
     var tl1 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
     var tl2 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
@@ -211,7 +418,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       var wwidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).width();
 
       if (dwidth !== wwidth) {
-        addTime = 2300;
         if (typeof st1 !== "undefined") st1.kill();
         if (typeof st2 !== "undefined") st2.kill();
         if (typeof st3 !== "undefined") st3.kill();

@@ -11,7 +11,7 @@ onbeforeunload = (event) => {
 	window.scrollTo(0, 0);
 };
 
-$(document).ready(function (){
+$(window).on('load',function (){
 
     if ($('.home-page').length > 0){
 
@@ -24,7 +24,7 @@ $(document).ready(function (){
 
 
         var initMode;
-        let addTime = 400;
+        let addTime = 1000;
 
         let st1, st2, st3;
         let tl1 = gsap.timeline({});
@@ -44,7 +44,6 @@ $(document).ready(function (){
         $(window).on('resize',function (){
             var wwidth = $(window).width();
             if(dwidth!==wwidth){
-                addTime = 2300;
                 if (typeof st1 !== "undefined") st1.kill();
                 if (typeof st2 !== "undefined") st2.kill();
                 if (typeof st3 !== "undefined") st3.kill();
@@ -128,10 +127,15 @@ $(document).ready(function (){
 
             tl1.fromTo(".section1__circle", {
                 y: '0',
-                autoAlpha:  1,
             }, {
                 y: '50%',
-                autoAlpha:  0,
+                duration:  0.3,
+                ease: "none",
+            } , "0");
+            tl1.fromTo(".section1__circle-inner", {
+                autoAlpha: 1,
+            }, {
+                autoAlpha: 0,
                 duration:  0.3,
                 ease: "none",
             } , "0");
@@ -165,6 +169,36 @@ $(document).ready(function (){
                 ease: "none",
             } , ">-0.5");
 
+            tl1.fromTo(".section2__photos-item--1", {
+                x: '100vw',
+            }, {
+                x: '-100%',
+                duration:  2,
+                ease: "none",
+            } , "<");
+            tl1.fromTo(".section2__photos-item--2", {
+                x: '100vw',
+            }, {
+                x: '-100%',
+                duration:  2,
+                ease: "none",
+            } , ">-1");
+            tl1.fromTo(".section2__photos-item--3", {
+                x: '100vw',
+            }, {
+                x: '-100%',
+                duration:  2,
+                ease: "none",
+            } , ">-1");
+
+
+            tl1.fromTo(".section2__year", {
+                autoAlpha: 0,
+            }, {
+                autoAlpha: 1,
+                duration:  0.5,
+                ease: "none",
+            } , ">-0.5");
 
 
             tl1.fromTo(".section2__textblock", {
@@ -186,7 +220,7 @@ $(document).ready(function (){
             } , ">");
 
             tl1.to(".section2__textblock", {
-                top: '-100%',
+                y: '-100%',
                 duration:  3,
                 ease: "none",
             } , ">0.1");
@@ -215,6 +249,20 @@ $(document).ready(function (){
                 ease: "none",
             } , ">-3.5");
 
+            tl1.fromTo(".section2__textblock2", {
+                autoAlpha: 0,
+            }, {
+                autoAlpha: 1,
+                duration:  1.5,
+                ease: "none",
+            } , ">-3");
+            tl1.fromTo(".section2__textblock2", {
+                bottom: '-5%',
+            }, {
+                bottom: '100%',
+                duration:  3,
+                ease: "none",
+            } , "<");
 
             tl1.fromTo(".section2__house", {
                 top: '100%'
@@ -223,7 +271,7 @@ $(document).ready(function (){
                 top: '-0',
                 duration:  5,
                 ease: "none",
-            } , ">-3");
+            } , "<");
 
             tl1.fromTo(".section2__house-birds", {
                 autoAlpha: 0
@@ -231,7 +279,7 @@ $(document).ready(function (){
                 autoAlpha: 1,
                 duration:  0.5,
                 ease: "none",
-            } , ">-4,5");
+            } , "<+0.5");
             tl1.fromTo(".section2__house-birds", {
                 x: 0
             }, {
@@ -240,12 +288,201 @@ $(document).ready(function (){
                 ease: "none",
             } , "<");
 
+
+            tl1.fromTo(".section2__last-img img", {
+                scale: 1.5
+            }, {
+                scale:  1,
+                duration:  8,
+                ease: "none",
+            } , "<");
+            tl1.fromTo(".section2__last-label", {
+                x: 0,
+                left: '100%'
+            }, {
+                x: "-120%",
+                left: '0',
+                duration:  8,
+                ease: "none",
+            } , ">-7");
+            tl1.fromTo(".section2__last-overlay", {
+                autoAlpha: 0,
+            }, {
+                autoAlpha: 0.7,
+                duration:  1,
+                ease: "none",
+            } , ">-2");
+
+
+
+
+            tl1.fromTo(".section3", {
+                left: "100%",
+            }, {
+                left: 0,
+                duration:  2,
+                ease: "none",
+            } , ">-1.5");
+
+
+            let s3Width =  $('.section3').innerWidth();
+            let b1Width =  $('.section3__block--1').innerWidth();
+            let b2Width =  $('.section3__block--2').innerWidth();
+            let b3Width =  $('.section3__block--3').innerWidth();
+            let b4Width =  $('.section3__block--4').innerWidth();
+
+            tl1.fromTo(".section3__block--1", {
+                x: "0",
+            }, {
+                x: -1*(b1Width-s3Width),
+                duration:  1.5,
+                ease: "none",
+            } , ">");
+
+            tl1.fromTo(".section3__block--1 .section3__overlay", {
+                autoAlpha: 0,
+            }, {
+                autoAlpha: 0.7,
+                duration:  1.5,
+                ease: "none",
+            } , ">");
+
+
+            tl1.fromTo(".section3__block--2", {
+                x: "0",
+                left: "100%"
+            }, {
+                left: "0",
+                x: -1*(b2Width-s3Width),
+                duration:  6,
+                ease: "none",
+            } , ">-1.5");
+
+            tl1.fromTo(".section3__block--2 .section3__overlay", {
+                autoAlpha: 0,
+            }, {
+                autoAlpha: 0.7,
+                duration:  1.5,
+                ease: "none",
+            } , ">");
+
+
+            tl1.fromTo(".section3__block--3", {
+                x: "0",
+                left: "100%"
+            }, {
+                left: "0",
+                x: -1*(b3Width-s3Width),
+                duration:  6,
+                ease: "none",
+            } , ">-1.5");
+
+            tl1.fromTo(".section3__block--3 .section3__label--1  .section3__label-item--1", {
+                x: "20%",
+            }, {
+                x: "0%",
+                duration:  6,
+                ease: "none",
+            } , "<");
+
+            tl1.fromTo(".section3__block--3 .section3__label--1 .section3__label-item--2", {
+                x: "-5%",
+            }, {
+                x: "15%",
+                duration:  6,
+                ease: "none",
+            } , "<");
+
+            tl1.fromTo(".section3__block--3 .section3__label--2", {
+                x: "30%",
+            }, {
+                x: "-27%",
+                duration:  6,
+                ease: "none",
+            } , "<");
+            tl1.fromTo(".section3__block--3 .section3__star", {
+                x: "-10%",
+            }, {
+                x: "10%",
+                duration:  6,
+                ease: "none",
+            } , "<");
+
+
+            tl1.fromTo(".section3__block--3 .section3__overlay", {
+                autoAlpha: 0,
+            }, {
+                autoAlpha: 0.7,
+                duration:  1.5,
+                ease: "none",
+            } , ">");
+
+
+
+            tl1.fromTo(".section3__block--4", {
+                x: "0",
+                left: "100%"
+            }, {
+                left: "0",
+                x: -1*(b4Width-s3Width),
+                duration:  4,
+                ease: "none",
+            } , ">-1.5");
+
+            tl1.fromTo(".section3__block--4 .section3__image", {
+                x: "-35%",
+            }, {
+                x: "0",
+                duration:  4,
+                ease: "none",
+            } , "<");
+            tl1.fromTo(".section3__block--4 .section3__label-item--1", {
+                x: "-65%",
+            }, {
+                x: "0",
+                duration:  4,
+                ease: "none",
+            } , "<");
+            tl1.fromTo(".section3__block--4 .section3__label-item--2", {
+                x: "10%",
+            }, {
+                x: "0",
+                duration:  4,
+                ease: "none",
+            } , "<");
+            tl1.fromTo(".section3__block--4 .section3__label-item--3", {
+                x: "100%",
+            }, {
+                x: "-10%",
+                duration:  4,
+                ease: "none",
+            } , "<");
+
+
+            tl1.fromTo(".section3__block--4 .section3__overlay", {
+                autoAlpha: 0,
+            }, {
+                autoAlpha: 0.7,
+                duration:  1.5,
+                ease: "none",
+            } , ">");
+
+            tl1.fromTo(".section3__block--5", {
+                left: "100%"
+            }, {
+                left: "0",
+                duration:  2,
+                ease: "none",
+            } , ">-1.5");
+
+
+
             st1 = ScrollTrigger.create({
                 trigger: ".scroll-page",
                 pin: true,
                 start: "top top",
                 end: () =>   "+="+addTime+"%",
-                scrub: 1.5,
+                scrub: 2.5,
                 animation: tl1,
             });
         }
