@@ -25,6 +25,9 @@
 		background: $colorBlue;
 		img{
 			width: vw(172);
+			@include max(md){
+				width: vw2(172);
+			}
 		}
 	}
 	&.hide{

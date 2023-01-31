@@ -23,6 +23,13 @@ body{
 }
 
 
+img{
+	display: block;
+}
+
 .wrapper{
 	padding-left: vw(91);
+	@include max(md){
+		padding-left: 0;
+	}
 }

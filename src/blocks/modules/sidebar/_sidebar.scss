@@ -11,8 +11,25 @@
 	flex-direction: column;
 	align-items: center;
 	padding-top: vw(28);
+	@include max(md){
+		width: 100%;
+		height: vw2(71);
+		padding: vw2(10) vw2(26);
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	@include max(sm){
+		height: vw3(48);
+		padding: vw3(5) vw3(16);
+	}
 	&__logo{
 		width: vw(43);
+		@include max(md){
+			width: vw2(35);
+		}
+		@include max(sm){
+			width: vw3(29);
+		}
 		img{
 			width: 100%;
 		}
@@ -23,10 +40,21 @@
 		align-items: center;
 		margin-top: vw(62);
 		text-decoration: none;
+		@include max(md){
+			flex-direction: row;
+			margin-top: 0;
+		}
+		@include max(sm){
+			display: none;
+		}
 		&-item{
 			font-size: vw(16);
 			line-height: 192% ;
 			font-weight: 450;
+			@include max(md){
+				font-size: vw2(14);
+				line-height: 2.2;
+			}
 			a{
 				color: #404040;
 				opacity: 0.2;
@@ -46,6 +74,38 @@
 			}
 			&:not(:first-child){
 				margin-top: vw(28);
+				@include max(md){
+					margin-top: 0;
+					margin-left: vw2(24);
+				}
+			}
+		}
+	}
+
+	&__burger{
+		display: none;
+		cursor: pointer;
+		@include max(md){
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		&-open{
+			span{
+				display: block;
+				width: vw2(55);
+				height: 3px;
+				background: $colorGray;
+				@include max(sm){
+					width: vw3(26);
+				}
+				&:not(:first-child){
+					margin-top: 6px;
+					@include max(sm){
+						margin-top: 5px;
+					}
+				}
 			}
 		}
 	}

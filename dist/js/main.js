@@ -29,9 +29,26 @@ onbeforeunload = function onbeforeunload(event) {
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
   if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.home-page').length > 0) {
     var initAnimation = function initAnimation() {
-      if (window.innerWidth > 999) {
+      s3Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3').innerWidth();
+      b1Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--1').innerWidth();
+      b2Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--2').innerWidth();
+      b3Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--3').innerWidth();
+      b4Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--4').innerWidth();
+      s3Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3').innerHeight();
+      b1Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--1').innerHeight();
+      b2Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--2').innerHeight();
+      b3Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--3').innerHeight();
+      b4Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--4').innerHeight();
+
+      if (window.innerWidth > 1100) {
         initScrollAnimationDesktop();
         initMode = 'desk';
+      } else if (window.innerWidth > 699) {
+        initScrollAnimationTablet();
+        initMode = 'tablet';
+      } else {
+        initScrollAnimationMobile();
+        initMode = 'mobile';
       }
     };
 
@@ -258,11 +275,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
         duration: 2,
         ease: "none"
       }, ">-1.5");
-      var s3Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3').innerWidth();
-      var b1Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--1').innerWidth();
-      var b2Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--2').innerWidth();
-      var b3Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--3').innerWidth();
-      var b4Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3__block--4').innerWidth();
       tl1.fromTo(".section3__block--1", {
         x: "0"
       }, {
@@ -302,7 +314,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
         duration: 6,
         ease: "none"
       }, ">-1.5");
-      tl1.fromTo(".section3__block--3 .section3__label--1  .section3__label-item--1", {
+      tl1.fromTo(".section3__block--3 .section3__label--1 .section3__label-item--1", {
         x: "20%"
       }, {
         x: "0%",
@@ -400,6 +412,350 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
       });
     };
 
+    var initScrollAnimationTablet = function initScrollAnimationTablet() {
+      tl.to(".loader__center", {
+        y: "-100%",
+        duration: 1.5,
+        delay: 1,
+        ease: "power3.in"
+      });
+      tl.to(".loader__back", {
+        y: "-100%",
+        duration: 1.5,
+        ease: "power3.in"
+      }, ">-1.3");
+      tl.from(".section1__house", {
+        y: '-25%',
+        duration: 1.7,
+        ease: "power1.inOut"
+      }, "<");
+      tl.from(".sidebar", {
+        y: "-100%",
+        duration: 0.7,
+        ease: "Sine.out"
+      }, ">-0.2");
+      tl.from(".section1__title", {
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "none"
+      }, ">-0.5");
+      tl.from(".section1__dates", {
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "none"
+      }, ">-0.5");
+      tl.from(".section1__circle", {
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "none"
+      }, ">0.1");
+      tl1.fromTo(".section1__circle", {
+        y: '0'
+      }, {
+        y: '50%',
+        duration: 0.3,
+        ease: "none"
+      }, "0");
+      tl1.fromTo(".section1__circle-inner", {
+        autoAlpha: 1
+      }, {
+        autoAlpha: 0,
+        duration: 0.3,
+        ease: "none"
+      }, "0");
+      tl1.to(".section1__dates, .section1__title", {
+        y: '7vw',
+        duration: 2,
+        ease: "none"
+      }, "0");
+      tl1.to(".section1__house", {
+        top: '-27.6vw',
+        duration: 2,
+        ease: "none"
+      }, "0");
+      tl1.from(".section2", {
+        autoAlpha: '0',
+        duration: 1,
+        ease: "none"
+      }, ">-1");
+      tl1.fromTo(".section2__numbers", {
+        x: '100vw'
+      }, {
+        x: '-100%',
+        duration: 4,
+        ease: "none"
+      }, ">-0.5");
+      tl1.fromTo(".section2__photos-item--1", {
+        x: '100vw'
+      }, {
+        x: '-100%',
+        duration: 2,
+        ease: "none"
+      }, "<");
+      tl1.fromTo(".section2__photos-item--2", {
+        x: '100vw'
+      }, {
+        x: '-100%',
+        duration: 2,
+        ease: "none"
+      }, ">-1");
+      tl1.fromTo(".section2__photos-item--3", {
+        x: '100vw'
+      }, {
+        x: '-100%',
+        duration: 2,
+        ease: "none"
+      }, ">-1");
+      tl1.fromTo(".section2__year", {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 1,
+        duration: 0.5,
+        ease: "none"
+      }, ">-0.5");
+      tl1.fromTo(".section2__textblock", {
+        autoAlpha: '0'
+      }, {
+        autoAlpha: '1',
+        duration: 1,
+        ease: "none"
+      }, ">-0.2");
+      tl1.fromTo(".section2__letter", {
+        top: '100%',
+        y: '0'
+      }, {
+        top: '0',
+        y: '-100%',
+        duration: 3,
+        ease: "none"
+      }, ">");
+      tl1.to(".section2__textblock", {
+        y: '-100%',
+        duration: 3,
+        ease: "none"
+      }, ">0.1");
+      tl1.fromTo(".section2__cloud-1", {
+        x: '-33.72vw',
+        top: '96.6vw'
+      }, {
+        x: '-100%',
+        top: '-10%',
+        duration: 3.5,
+        ease: "none"
+      }, "<");
+      tl1.fromTo(".section2__cloud-2", {
+        left: '65vw',
+        x: '0',
+        top: '113vw'
+      }, {
+        left: '0',
+        top: '-30%',
+        duration: 3.5,
+        ease: "none"
+      }, ">-3.5");
+      tl1.fromTo(".section2__textblock2", {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 1,
+        duration: 1.5,
+        ease: "none"
+      }, ">-3");
+      tl1.fromTo(".section2__textblock2", {
+        bottom: '-5%'
+      }, {
+        bottom: '100%',
+        duration: 3,
+        ease: "none"
+      }, "<");
+      tl1.fromTo(".section2__house", {
+        top: '100%'
+      }, {
+        y: '-100%',
+        top: '-0',
+        duration: 5,
+        ease: "none"
+      }, "<");
+      tl1.fromTo(".section2__house-birds", {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 1,
+        duration: 0.5,
+        ease: "none"
+      }, "<+0.5");
+      tl1.fromTo(".section2__house-birds", {
+        x: 0
+      }, {
+        x: "-50%",
+        duration: 4.5,
+        ease: "none"
+      }, "<");
+      tl1.fromTo(".section2__last-img img", {
+        scale: 1.5
+      }, {
+        scale: 1,
+        duration: 8,
+        ease: "none"
+      }, "<");
+      tl1.fromTo(".section2__last-label", {
+        x: 0,
+        left: '100%'
+      }, {
+        x: "-120%",
+        left: '0',
+        duration: 8,
+        ease: "none"
+      }, ">-7");
+      tl1.fromTo(".section2__last-overlay", {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 0.7,
+        duration: 1,
+        ease: "none"
+      }, ">-2");
+      tl1.fromTo(".section3", {
+        top: "100%"
+      }, {
+        top: 0,
+        duration: 2,
+        ease: "none"
+      }, ">-1.5");
+      tl1.fromTo(".section3__block--1", {
+        y: "0"
+      }, {
+        y: -1 * (b1Height - s3Height),
+        duration: Math.abs((s3Height - b1Height) / 460),
+        ease: "none"
+      }, ">");
+      tl1.fromTo(".section3__block--1 .section3__overlay", {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 0.7,
+        duration: 1.5,
+        ease: "none"
+      }, ">");
+      tl1.fromTo(".section3__block--2", {
+        y: "0",
+        top: "100%"
+      }, {
+        top: "0",
+        y: -1 * (b2Height - s3Height),
+        duration: Math.abs((s3Height - b2Height) / 460) + 1.5,
+        ease: "none"
+      }, ">-1.5");
+      tl1.fromTo(".section3__block--2 .section3__overlay", {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 0.7,
+        duration: 1.5,
+        ease: "none"
+      }, ">");
+      tl1.fromTo(".section3__block--3", {
+        y: "0",
+        top: "100%"
+      }, {
+        top: "0",
+        y: -1 * (b3Height - s3Height),
+        duration: Math.abs((s3Height - b3Height) / 460) + 1.5,
+        ease: "none"
+      }, ">-1.5");
+      tl1.fromTo(".section3__block--3 .section3__overlay", {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 0.7,
+        duration: 1.5,
+        ease: "none"
+      }, ">");
+      tl1.fromTo(".section3__block--4", {
+        y: "0",
+        top: "100%"
+      }, {
+        top: "0",
+        y: -1 * (b4Height - s3Height),
+        duration: Math.abs((s3Height - b4Height) / 460) + 1.5,
+        ease: "none"
+      }, ">-1.5");
+      tl1.fromTo(".section3__block--4 .section3__overlay", {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 0.7,
+        duration: 1.5,
+        ease: "none"
+      }, ">");
+      tl1.fromTo(".section3__block--5", {
+        top: "100%"
+      }, {
+        top: "0",
+        duration: 1.5,
+        ease: "none"
+      }, ">-1.5");
+      st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
+        trigger: ".scroll-page",
+        pin: true,
+        start: "top top",
+        end: function end() {
+          return "+=" + addTime + "%";
+        },
+        scrub: 2.5,
+        animation: tl1
+      });
+    };
+
+    var initScrollAnimationMobile = function initScrollAnimationMobile() {
+      tl.to(".loader__center", {
+        y: "-100%",
+        duration: 1.5,
+        delay: 1,
+        ease: "power3.in"
+      });
+      tl.to(".loader__back", {
+        y: "-100%",
+        duration: 1.5,
+        ease: "power3.in"
+      }, ">-1.3");
+      tl.from(".section1__house", {
+        y: '-25%',
+        duration: 1.7,
+        ease: "power1.inOut"
+      }, "<");
+      tl.from(".sidebar", {
+        y: "-100%",
+        duration: 0.7,
+        ease: "Sine.out"
+      }, ">-0.2");
+      tl.from(".section1__title", {
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "none"
+      }, ">-0.5");
+      tl.from(".section1__dates", {
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "none"
+      }, ">-0.5");
+      tl.from(".section1__circle", {
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "none"
+      }, ">0.1");
+      tl1.fromTo(".section2__numbers", {
+        x: '10%'
+      }, {
+        x: '-80%',
+        duration: 1,
+        ease: "none"
+      }, "0");
+      st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
+        trigger: ".section2__numbers",
+        pin: false,
+        start: "top bottom",
+        end: function end() {
+          return "bottom top";
+        },
+        scrub: 1,
+        animation: tl1
+      });
+    };
+
     var tl = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({
       onComplete: function onComplete() {
         jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
@@ -407,11 +763,13 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
       }
     });
     var initMode;
-    var addTime = 1000;
+    var addTime = 1100;
     var st1, st2, st3;
     var tl1 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
     var tl2 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
     var tl3 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
+    var s3Width, b1Width, b2Width, b3Width, b4Width;
+    var s3Height, b1Height, b2Height, b3Height, b4Height;
     initAnimation();
     var dwidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).width();
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
@@ -425,15 +783,15 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
         tl1.clear();
         tl2.clear();
         tl3.clear();
-        gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".home-page", {
+        gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".loader__center, .loader__back, .section1__house, .header, .sidebar, .section1__title," + ".section1__dates, .section1__circle, .section1__circle-inner, .section2, .section2__numbers," + ".section2__photos-item--1, .section2__photos-item--2,.section2__photos-item--3, .section2__year," + ".section2__textblock, .section2__letter, .section2__cloud-1, .section2__cloud-2, .section2__textblock2," + ".section2__house, .section2__house-birds, .section2__last-img img, .section2__last-label," + ".section2__last-overlay, .section3, .section3__block--1, .section3__block--1 .section3__overlay," + ".section3__block--2, .section3__block--2 .section3__overlay, .section3__block--3," + ".section3__block--3 .section3__label--1 .section3__label-item--1," + ".section3__block--3 .section3__label--1 .section3__label-item--2," + ".section3__block--3 .section3__label--2, .section3__block--3 .section3__star," + ".section3__block--3 .section3__overlay, .section3__block--4, .section3__block--4 .section3__image," + ".section3__block--4 .section3__label-item--1, .section3__block--4 .section3__label-item--2," + ".section3__block--4 .section3__label-item--3, .section3__block--4 .section3__overlay," + ".section3__block--5, .scroll-page", {
           clearProps: "all"
         });
         window.scrollTo({
           top: 0,
           behavior: "instant"
         });
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.assorti__intro-text, .assorti__intro-title, .partners__intro-text, .partners__intro-title').addClass('active');
         jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('active');
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.loader').removeClass('hide');
         initAnimation();
       }
     });

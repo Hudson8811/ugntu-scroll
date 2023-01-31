@@ -4,6 +4,9 @@
 	justify-content: space-between;
 	border-bottom: 1px solid rgba(64, 64, 64, 0.2);
 	height: vw(85);
+	@include max(md){
+		display: none;
+	}
 	a{
 		font-style: normal;
 		font-weight: 450;
