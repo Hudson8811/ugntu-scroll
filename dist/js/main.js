@@ -135,30 +135,30 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
         x: '100vw'
       }, {
         x: '-100%',
-        duration: 4,
+        duration: 6,
         ease: "none"
       }, ">-0.5");
       tl1.fromTo(".section2__photos-item--1", {
         x: '100vw'
       }, {
         x: '-100%',
-        duration: 2,
+        duration: 3,
         ease: "none"
       }, "<");
       tl1.fromTo(".section2__photos-item--2", {
         x: '100vw'
       }, {
         x: '-100%',
-        duration: 2,
+        duration: 3,
         ease: "none"
-      }, ">-1");
+      }, ">-1.5");
       tl1.fromTo(".section2__photos-item--3", {
         x: '100vw'
       }, {
         x: '-100%',
-        duration: 2,
+        duration: 3,
         ease: "none"
-      }, ">-1");
+      }, ">-1.5");
       tl1.fromTo(".section2__year", {
         autoAlpha: 0
       }, {
@@ -393,13 +393,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
         duration: 1.5,
         ease: "none"
       }, ">");
-      tl1.fromTo(".section3__block--5", {
-        left: "100%"
-      }, {
-        left: "0",
-        duration: 2,
-        ease: "none"
-      }, ">-1.5");
       st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
         trigger: ".scroll-page",
         pin: true,
@@ -681,13 +674,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
         duration: 1.5,
         ease: "none"
       }, ">");
-      tl1.fromTo(".section3__block--5", {
-        top: "100%"
-      }, {
-        top: "0",
-        duration: 1.5,
-        ease: "none"
-      }, ">-1.5");
       st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
         trigger: ".scroll-page",
         pin: true,
@@ -763,7 +749,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
       }
     });
     var initMode;
-    var addTime = 1100;
+    var addTime = 1300;
     var st1, st2, st3;
     var tl1 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
     var tl2 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
@@ -783,7 +769,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
         tl1.clear();
         tl2.clear();
         tl3.clear();
-        gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".loader__center, .loader__back, .section1__house, .header, .sidebar, .section1__title," + ".section1__dates, .section1__circle, .section1__circle-inner, .section2, .section2__numbers," + ".section2__photos-item--1, .section2__photos-item--2,.section2__photos-item--3, .section2__year," + ".section2__textblock, .section2__letter, .section2__cloud-1, .section2__cloud-2, .section2__textblock2," + ".section2__house, .section2__house-birds, .section2__last-img img, .section2__last-label," + ".section2__last-overlay, .section3, .section3__block--1, .section3__block--1 .section3__overlay," + ".section3__block--2, .section3__block--2 .section3__overlay, .section3__block--3," + ".section3__block--3 .section3__label--1 .section3__label-item--1," + ".section3__block--3 .section3__label--1 .section3__label-item--2," + ".section3__block--3 .section3__label--2, .section3__block--3 .section3__star," + ".section3__block--3 .section3__overlay, .section3__block--4, .section3__block--4 .section3__image," + ".section3__block--4 .section3__label-item--1, .section3__block--4 .section3__label-item--2," + ".section3__block--4 .section3__label-item--3, .section3__block--4 .section3__overlay," + ".section3__block--5, .scroll-page", {
+        gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".loader__center, .loader__back, .section1__house, .header, .sidebar, .section1__title," + ".section1__dates, .section1__circle, .section1__circle-inner, .section2, .section2__numbers," + ".section2__photos-item--1, .section2__photos-item--2,.section2__photos-item--3, .section2__year," + ".section2__textblock, .section2__letter, .section2__cloud-1, .section2__cloud-2, .section2__textblock2," + ".section2__house, .section2__house-birds, .section2__last-img img, .section2__last-label," + ".section2__last-overlay, .section3, .section3__block--1, .section3__block--1 .section3__overlay," + ".section3__block--2, .section3__block--2 .section3__overlay, .section3__block--3," + ".section3__block--3 .section3__label--1 .section3__label-item--1," + ".section3__block--3 .section3__label--1 .section3__label-item--2," + ".section3__block--3 .section3__label--2, .section3__block--3 .section3__star," + ".section3__block--3 .section3__overlay, .section3__block--4, .section3__block--4 .section3__image," + ".section3__block--4 .section3__label-item--1, .section3__block--4 .section3__label-item--2," + ".section3__block--4 .section3__label-item--3, .section3__block--4 .section3__overlay," + ".scroll-page", {
           clearProps: "all"
         });
         window.scrollTo({

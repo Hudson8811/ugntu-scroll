@@ -24,7 +24,7 @@ $(window).on('load',function (){
 
 
         var initMode;
-        let addTime = 1100;
+        let addTime = 1300;
 
         let st1, st2, st3;
         let tl1 = gsap.timeline({});
@@ -86,7 +86,7 @@ $(window).on('load',function (){
                     ".section3__block--3 .section3__overlay, .section3__block--4, .section3__block--4 .section3__image," +
                     ".section3__block--4 .section3__label-item--1, .section3__block--4 .section3__label-item--2," +
                     ".section3__block--4 .section3__label-item--3, .section3__block--4 .section3__overlay," +
-                    ".section3__block--5, .scroll-page", {clearProps:"all"});
+                    ".scroll-page", {clearProps:"all"});
                 window.scrollTo({
                     top: 0,
                     behavior: "instant"
@@ -200,7 +200,7 @@ $(window).on('load',function (){
                 x: '100vw',
             }, {
                 x: '-100%',
-                duration:  4,
+                duration:  6,
                 ease: "none",
             } , ">-0.5");
 
@@ -208,23 +208,23 @@ $(window).on('load',function (){
                 x: '100vw',
             }, {
                 x: '-100%',
-                duration:  2,
+                duration:  3,
                 ease: "none",
             } , "<");
             tl1.fromTo(".section2__photos-item--2", {
                 x: '100vw',
             }, {
                 x: '-100%',
-                duration:  2,
+                duration:  3,
                 ease: "none",
-            } , ">-1");
+            } , ">-1.5");
             tl1.fromTo(".section2__photos-item--3", {
                 x: '100vw',
             }, {
                 x: '-100%',
-                duration:  2,
+                duration:  3,
                 ease: "none",
-            } , ">-1");
+            } , ">-1.5");
 
 
             tl1.fromTo(".section2__year", {
@@ -496,13 +496,7 @@ $(window).on('load',function (){
                 ease: "none",
             } , ">");
 
-            tl1.fromTo(".section3__block--5", {
-                left: "100%"
-            }, {
-                left: "0",
-                duration:  2,
-                ease: "none",
-            } , ">-1.5");
+
 
 
 
@@ -836,13 +830,6 @@ $(window).on('load',function (){
                 ease: "none",
             } , ">");
 
-            tl1.fromTo(".section3__block--5", {
-                top: "100%"
-            }, {
-                top: "0",
-                duration:  1.5,
-                ease: "none",
-            } , ">-1.5");
 
 
 

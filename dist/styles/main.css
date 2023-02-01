@@ -379,16 +379,40 @@ template {
 }
 
 @font-face {
-  font-family: "Garamond Premier Pro";
-  src: local("Garamond Premier Pro Regular"), local("Garamond-Premier-Pro-Regular"), url("../fonts/GaramondPremrPro.woff2") format("woff2"), url("../fonts/GaramondPremrPro.woff") format("woff");
-  font-weight: 400;
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-Regular.woff2") format("woff2"), url("../fonts/SuisseIntl-Regular.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Suisse Int'l";
-  src: url("../fonts/SuisseIntl-Regular.woff2") format("woff2"), url("../fonts/SuisseIntl-Regular.woff") format("woff");
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-Light.woff2") format("woff2"), url("../fonts/SuisseIntl-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-Book.woff2") format("woff2"), url("../fonts/SuisseIntl-Book.woff") format("woff");
+  font-weight: 450;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SangBleu Empire";
+  src: url("../fonts/SangBleuEmpire-Regular.woff2") format("woff2"), url("../fonts/SangBleuEmpire-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Garamond Premr Pro";
+  src: url("../fonts/GaramondPremrPro.woff2") format("woff2"), url("../fonts/GaramondPremrPro.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -406,7 +430,7 @@ ul {
 }
 
 body {
-  font-family: "Suisse Int'l", sans-serif;
+  font-family: "Suisse Intl", sans-serif;
   color: #404040;
   background: #F4F4F4;
 }
@@ -654,25 +678,25 @@ img {
 .section1__dates {
   display: flex;
   align-items: center;
-  font-size: 3.3333333333vw;
-  line-height: 1.71;
-  letter-spacing: -0.06em;
+  font-size: 0.7960199005vw;
+  line-height: 1.92;
   position: absolute;
   top: 25.92039801vw;
   left: 50%;
-  transform: translateX(-58%);
+  font-weight: 450;
+  transform: translateX(-60%);
 }
 
 .section1__dates-item:not(:first-child) {
-  margin-left: 5.2736318408vw;
+  margin-left: 10.3482587065vw;
 }
 
 .section1__circle {
   width: 16.7164179104vw;
   height: 16.7164179104vw;
   position: absolute;
-  left: 69.2039800995vw;
-  top: 35.8208955224vw;
+  left: 65.223880597vw;
+  top: 17.1144278607vw;
   opacity: 1;
   pointer-events: none;
 }
@@ -754,7 +778,7 @@ img {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(-45%);
+  transform: translateY(-50%);
   z-index: 9;
 }
 
@@ -776,7 +800,6 @@ img {
   background: linear-gradient(90.77deg, #FFFFFF 3.75%, rgba(255, 255, 255, 0) 106.75%);
   margin-left: 6.2189054726vw;
   margin-right: 1.3930348259vw;
-  transform: translateY(-100%);
 }
 
 .section2__photos {
@@ -822,7 +845,7 @@ img {
 }
 
 .section2__text {
-  font-family: "Garamond Premier Pro", sans-serif;
+  font-family: "Garamond Premr Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 4.9751243781vw;
@@ -953,7 +976,7 @@ img {
   position: absolute;
   left: 100%;
   bottom: -1.7412935323vw;
-  width: 206.368159204vw;
+  width: 210.1492537313vw;
   z-index: 2;
 }
 
@@ -1000,13 +1023,13 @@ img {
 
 .section3__text {
   flex-shrink: 0;
-  font-family: "Garamond Premier Pro", sans-serif;
+  font-family: "SangBleu Empire", sans-serif;
   font-size: 2.0895522388vw;
   line-height: 1.28;
   color: #404040;
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
+  justify-content: flex-start;
   width: 67.1641791045vw;
   padding: 2.4875621891vw 0;
   position: relative;
@@ -1035,11 +1058,11 @@ img {
 }
 
 .section3__block--1 .section3__text-inner {
-  width: 43.2835820896vw;
+  width: 48.2587064677vw;
 }
 
 .section3__block--2 .section3__text--1 .section3__text-inner {
-  width: 39.3532338308vw;
+  width: 44.328358209vw;
 }
 
 .section3__block--2 .section3__text--2 {
@@ -1047,7 +1070,7 @@ img {
 }
 
 .section3__block--2 .section3__text--2 .section3__text-inner {
-  width: 31.4925373134vw;
+  width: 36.4676616915vw;
 }
 
 .section3__block--2 .section3__image--2 {
@@ -1220,21 +1243,6 @@ img {
   z-index: 6;
 }
 
-.section3__block--5 {
-  width: 100%;
-  height: 100%;
-}
-
-.section3__block--5 .section3__image {
-  width: 100%;
-}
-
-.section3__block--5 .section3__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .section3__year {
   font-size: 6.2686567164vw;
   line-height: 1.09;
@@ -1244,7 +1252,7 @@ img {
   position: absolute;
   right: 2.2388059701vw;
   top: 1.6417910448vw;
-  font-family: "Suisse Int'l", sans-serif;
+  font-family: "Suisse Intl", sans-serif;
 }
 
 .section3__overlay {
@@ -1573,10 +1581,6 @@ img {
     width: 67.7083333333vw;
   }
 
-  .section3__block--5 .section3__image {
-    height: 100vh;
-  }
-
   .section3__year {
     font-size: 11.71875vw;
     position: relative;
@@ -1838,10 +1842,6 @@ img {
 
   .section3__block--4 .section3__mobile-label {
     width: 68.75vw;
-  }
-
-  .section3__block--5 .section3__image {
-    height: auto;
   }
 
   .section3__year {

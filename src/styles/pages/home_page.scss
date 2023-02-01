@@ -74,13 +74,13 @@
 	&__dates{
 		display: flex;
 		align-items: center;
-		font-size: vw(67);
-		line-height: 1.71;
-		letter-spacing: -0.06em;
+		font-size: vw(16);
+		line-height: 1.92;
 		position: absolute;
 		top: vw(521);
 		left: 50%;
-		transform: translateX(-58%);
+		font-weight: 450;
+		transform: translateX(-60%);
 		@include max(md){
 			font-size: vw2(33);
 			top: vw2(244);
@@ -95,7 +95,7 @@
 		}
 		&-item{
 			&:not(:first-child){
-				margin-left: vw(106);
+				margin-left: vw(208);
 				@include max(md){
 					margin-left: vw2(22);
 				}
@@ -109,8 +109,8 @@
 		width: vw(336);
 		height: vw(336);
 		position: absolute;
-		left: vw(1391);
-		top: vw(720);
+		left: vw(1311);
+		top: vw(344);
 		opacity: 1;
 		pointer-events: none;
 		@include max(md){
@@ -213,7 +213,7 @@
 		position: absolute;
 		top: 50%;
 		left: 0;
-		transform: translateY(-45%);
+		transform: translateY(-50%);
 		z-index: 9;
 		@include max(sm){
 			position: relative;
@@ -250,7 +250,6 @@
 			background: linear-gradient(90.77deg, #FFFFFF 3.75%, rgba(255, 255, 255, 0) 106.75%);
 			margin-left: vw(125);
 			margin-right: vw(28);
-			transform: translateY(-100%);
 			@include max(sm){
 				flex-shrink: 0;
 				background: #ffffff;
@@ -535,7 +534,7 @@
 			position: absolute;
 			left: 100%;
 			bottom: vw(-35);
-			width: vw(4148);
+			width: vw(4224);
 			z-index: 2;
 			@include max(sm){
 				left: 50%;
@@ -612,13 +611,13 @@
 	}
 	&__text{
 		flex-shrink: 0;
-		font-family: $textFont;
+		font-family: $titleFont;
 		font-size: vw(42);
 		line-height: 1.28;
 		color: $colorGray;
 		display: flex;
 		align-items: flex-end;
-		justify-content: flex-end;
+		justify-content: flex-start;
 		width: vw(1350);
 		padding: vw(50) 0;
 		position: relative;
@@ -681,7 +680,7 @@
 				background: #F7F7F7;
 			}
 			.section3__text-inner{
-				width: vw(870);
+				width: vw(970);
 				@include max(md){
 					width: 100%;
 				}
@@ -693,7 +692,7 @@
 					order: 2;
 				}
 				.section3__text-inner{
-					width: vw(791);
+					width: vw(891);
 					@include max(md){
 						width: 100%;
 					}
@@ -706,7 +705,7 @@
 					order: 4;
 				}
 				.section3__text-inner{
-					width: vw(633);
+					width: vw(733);
 					@include max(md){
 						width: 100%;
 					}
@@ -961,24 +960,6 @@
 			}
 			.section3__overlay{
 				z-index: 6;
-			}
-		}
-		&--5{
-			width: 100%;
-			height: 100%;
-			.section3__image{
-				width: 100%;
-				@include max(md){
-					height: 100vh;
-				}
-				@include max(sm){
-					height: auto;
-				}
-				img{
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-				}
 			}
 		}
 	}
