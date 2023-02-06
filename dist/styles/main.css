@@ -1266,6 +1266,178 @@ img {
   z-index: 1;
 }
 
+.y1950 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.y2-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #ACACAC;
+}
+
+.y2-1::before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #003F78;
+  pointer-events: none;
+}
+
+.y2-1__numbers {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 9;
+}
+
+.y2-1__numbers-number {
+  font-weight: 300;
+  font-size: 52.9353233831vw;
+  line-height: 1.71;
+  letter-spacing: -0.07em;
+  padding-right: 0.07em;
+  background: linear-gradient(180.23deg, #FFFFFF 35.85%, rgba(255, 255, 255, 0) 71.53%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.y2-1__numbers-line {
+  width: 27.5124378109vw;
+  height: 2.9850746269vw;
+  background: linear-gradient(90.77deg, #FFFFFF 3.75%, rgba(255, 255, 255, 0) 106.75%);
+  margin-left: 6.2189054726vw;
+  margin-right: 1.3930348259vw;
+}
+
+.y2-1__photos {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+  top: 0;
+  left: 0;
+}
+
+.y2-1__photos-item {
+  left: 0;
+  position: absolute;
+}
+
+.y2-1__photos-item--1 {
+  width: 26.1194029851vw;
+  bottom: 7.5124378109vw;
+}
+
+.y2-1__photos-item--2 {
+  width: 13.9303482587vw;
+  top: 3.8805970149vw;
+}
+
+.y2-1__photos-item--3 {
+  width: 21.1940298507vw;
+  bottom: 5.8706467662vw;
+}
+
+.y2-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #003F78;
+}
+
+.y2-2__top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.y2-2__top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.y2-2__title {
+  font-family: "SangBleu Empire", sans-serif;
+  font-size: 10.5472636816vw;
+  line-height: 110%;
+  letter-spacing: -0.065em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  position: absolute;
+  z-index: 3;
+}
+
+.y2-2__title span {
+  display: block;
+}
+
+.y2-2__text {
+  font-family: "SangBleu Empire", sans-serif;
+  font-size: 2.0895522388vw;
+  line-height: 128%;
+  color: #FFFFFF;
+  width: 28.5074626866vw;
+  position: absolute;
+  top: 38.4577114428vw;
+  right: 7.3134328358vw;
+  z-index: 3;
+}
+
+.y2-2__fly {
+  width: 21.8407960199vw;
+  position: absolute;
+  left: 10.1990049751vw;
+  top: 6.7661691542vw;
+  z-index: 2;
+}
+
+.y2-2__fly img {
+  width: 100%;
+}
+
+.y2-2__diplom {
+  position: absolute;
+  left: 13.3333333333vw;
+  top: 0;
+  width: 63.0845771144vw;
+  z-index: 4;
+}
+
+.y2-2__diplom img {
+  width: 100%;
+}
+
+.y2-2__bottom {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
 @media only screen and (max-width: 1100px) {
   .wrapper {
     padding-left: 0;
@@ -1588,6 +1760,23 @@ img {
     top: 0;
     padding: 1.3020833333vw 0 6.5104166667vw;
   }
+
+  .y1950 {
+    padding-top: 9.2447916667vw;
+  }
+
+  .y2-1__photos-item--1 {
+    width: 68.359375vw;
+  }
+
+  .y2-1__photos-item--2 {
+    width: 36.4583333333vw;
+    top: 10.15625vw;
+  }
+
+  .y2-1__photos-item--3 {
+    width: 55.46875vw;
+  }
 }
 
 @media only screen and (max-width: 1100px) and (max-width: 699px) {
@@ -1851,6 +2040,48 @@ img {
   }
 
   .section3__overlay {
+    display: none;
+  }
+
+  .y1950 {
+    height: auto;
+    padding-top: 15vw;
+  }
+
+  .y2-1 {
+    position: relative;
+    height: auto;
+  }
+
+  .y2-1__numbers {
+    position: relative;
+    top: 0;
+    transform: none;
+    padding: 2.5vw 5.625vw 0;
+  }
+
+  .y2-1__numbers-number {
+    font-size: 35.3125vw;
+    line-height: 1.09;
+    letter-spacing: -0.06em;
+    padding-right: 0.06em;
+    background: none;
+    -webkit-background-clip: inherit;
+    background-clip: inherit;
+    -webkit-text-fill-color: unset;
+    color: #ffffff;
+  }
+
+  .y2-1__numbers-line {
+    flex-shrink: 0;
+    background: #ffffff;
+    width: 10vw;
+    height: 2.5vw;
+    margin-left: 2.5vw;
+    margin-right: 0.9375vw;
+  }
+
+  .y2-1__photos {
     display: none;
   }
 }

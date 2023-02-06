@@ -1,0 +1,62 @@
+extends ../layouts/default
+
+block variables
+	- const title = "1950-1958"
+	- var sidebarActive = 2
+
+
+block content
+	.wrapper
+		include ../../blocks/modules/sidebar/sidebar
+
+		.scroll-page.y1950
+			.y2-1
+				.y2-1__numbers
+					span.y2-1__numbers-number 1950
+					span.y2-1__numbers-line
+					span.y2-1__numbers-number 1958
+				.y2-1__photos
+					img.y2-1__photos-item.y2-1__photos-item--1(src="img/o1-1.webp" alt="")
+					img.y2-1__photos-item.y2-1__photos-item--2(src="img/o1-2.webp" alt="")
+					img.y2-1__photos-item.y2-1__photos-item--3(src="img/o1-3.webp" alt="")
+
+			.y2-2
+				.y2-2__top
+					img(src="img/o2.webp" alt="")
+				.y2-2__title
+					span Состоялся
+					span первый
+					span выпуск
+				.y2-2__fly
+					img(src="img/o3.webp" alt="")
+				.y2-2__text Окончили институт четырнадцать инженеров по специальности «Машины и оборудование нефтяных и газовых промыслов».
+				.y2-2__diplom
+					img(src="img/o4.webp" alt="")
+				img.y2-2__bottom(src="img/svg/o-bottom.svg" alt="")
+
+			.y2-3
+				.y2-3__text Идет защита дипломных проектов перед государственной экзаменационной комиссией
+				.y2-3__background
+					img(src="img/o5-1.jpg" alt="")
+				.y2-3__man
+					img(src="" alt="")
+				.y2-3__label председателем комиссии был Лауреат Сталинской премии Герой Социалистического Труда Начальник Объединения «Башнефть» С.И. Кувыкин
+
+
+			.y2-4
+				.y2-4__first
+					.y2-4__first-bg
+						img(src="img/o6-1.jpg" alt="")
+					.y2-4__first-text Первый выпуск инженеров-технологов по переработке нефти и газа
+					.y2-4__first-year.y1950__year 1951
+
+
+			.y2-5
+				.y2-5__flex
+					.y2-5__image
+						img(src="img/o6-3.jpg" alt="")
+					.y2-5__text
+
+
+block scripts
+	script(src="js/vendor.js")
