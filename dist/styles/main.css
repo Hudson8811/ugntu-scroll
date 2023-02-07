@@ -433,6 +433,7 @@ body {
   font-family: "Suisse Intl", sans-serif;
   color: #404040;
   background: #F4F4F4;
+  -webkit-font-smoothing: antialiased;
 }
 
 body:not(.active) {
@@ -1280,6 +1281,7 @@ img {
   height: 100%;
   overflow: hidden;
   background: #ACACAC;
+  z-index: 2;
 }
 
 .y2-1::before {
@@ -1362,6 +1364,7 @@ img {
   height: 100%;
   overflow: hidden;
   background: #003F78;
+  z-index: 3;
 }
 
 .y2-2__top {
@@ -1382,16 +1385,26 @@ img {
 .y2-2__title {
   font-family: "SangBleu Empire", sans-serif;
   font-size: 10.5472636816vw;
-  line-height: 110%;
+  line-height: 105%;
   letter-spacing: -0.065em;
   text-transform: uppercase;
   color: #FFFFFF;
   position: absolute;
+  left: 1.7412935323vw;
+  top: 6.7164179104vw;
   z-index: 3;
 }
 
 .y2-2__title span {
   display: block;
+}
+
+.y2-2__title span:nth-child(2) {
+  transform: translateX(59%);
+}
+
+.y2-2__title span:nth-child(3) {
+  transform: translateX(18%);
 }
 
 .y2-2__text {
@@ -1401,8 +1414,8 @@ img {
   color: #FFFFFF;
   width: 28.5074626866vw;
   position: absolute;
-  top: 38.4577114428vw;
-  right: 7.3134328358vw;
+  top: 29.2537313433vw;
+  right: 0.4975124378vw;
   z-index: 3;
 }
 
@@ -1436,6 +1449,69 @@ img {
   position: absolute;
   top: 100%;
   left: 0;
+}
+
+.y2-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #003F78;
+  z-index: 1;
+}
+
+.y2-3__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.y2-3__background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.y2-3__man {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 21.6915422886vw;
+}
+
+.y2-3__man img {
+  width: 100%;
+}
+
+.y2-3__text {
+  font-family: "SangBleu Empire", sans-serif;
+  font-size: 2.0895522388vw;
+  line-height: 128%;
+  color: #FFFFFF;
+  width: 28.5074626866vw;
+  position: absolute;
+  left: 2.2885572139vw;
+  top: 2.1890547264vw;
+  z-index: 2;
+}
+
+.y2-3__label {
+  font-weight: 450;
+  font-size: 0.7960199005vw;
+  line-height: 124%;
+  text-transform: uppercase;
+  color: #F5F5F5;
+  width: 12.6368159204vw;
+  position: absolute;
+  left: 17.8109452736vw;
+  bottom: 16.815920398vw;
+  z-index: 2;
 }
 
 @media only screen and (max-width: 1100px) {

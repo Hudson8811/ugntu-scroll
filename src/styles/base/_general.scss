@@ -7,6 +7,7 @@ body{
 	font-family: $mainFont;
 	color: $colorGray;
 	background: #F4F4F4;
+	-webkit-font-smoothing: antialiased;
 	&:not(.active){
 		overflow: hidden !important;
 	}

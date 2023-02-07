@@ -22,6 +22,7 @@
 	height: 100%;
 	overflow: hidden;
 	background: #ACACAC;
+	z-index: 2;
 	@include max(sm){
 		position: relative;
 		height: auto;
@@ -142,6 +143,7 @@
 	height: 100%;
 	overflow: hidden;
 	background: $colorBlue;
+	z-index: 3;
 	&__top{
 		position: absolute;
 		top: 0;
@@ -158,14 +160,22 @@
 	&__title{
 		font-family: $titleFont;
 		font-size: vw(212);
-		line-height: 110%;
+		line-height: 105%;
 		letter-spacing: -0.065em;
 		text-transform: uppercase;
 		color: #FFFFFF;
 		position: absolute;
+		left: vw(35);
+		top: vw(135);
 		z-index: 3;
 		span{
 			display: block;
+			&:nth-child(2){
+				transform: translateX(59%);
+			}
+			&:nth-child(3){
+				transform: translateX(18%);
+			}
 		}
 	}
 	&__text{
@@ -175,8 +185,8 @@
 		color: #FFFFFF;
 		width: vw(573);
 		position: absolute;
-		top: vw(773);
-		right: vw(147);
+		top: vw(588);
+		right: vw(10);
 		z-index: 3;
 	}
 	&__fly{
@@ -205,15 +215,64 @@
 		position: absolute;
 		top: 100%;
 		left: 0;
-
 	}
 }
 
 .y2-3{
-	&__background{}
-	&__man{}
-	&__text{}
-	&__label{}
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: $colorBlue;
+	z-index: 1;
+	&__background{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__man{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		width: vw(436);
+		img{
+			width: 100%;
+		}
+	}
+	&__text{
+		font-family: $titleFont;
+		font-size: vw(42);
+		line-height: 128%;
+		color: #FFFFFF;
+		width: vw(573);
+		position: absolute;
+		left: vw(46);
+		top: vw(44);
+		z-index: 2;
+	}
+	&__label{
+		font-weight: 450;
+		font-size: vw(16);
+		line-height: 124%;
+		text-transform: uppercase;
+		color: #F5F5F5;
+		width: vw(254);
+		position: absolute;
+		left: vw(358);
+		bottom: vw(338);
+		z-index: 2;
+	}
 }
 
 
