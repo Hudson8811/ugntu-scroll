@@ -34,3 +34,34 @@ img{
 		padding-left: 0;
 	}
 }
+
+
+.blockTitle{
+	@include title;
+}
+
+.horisontalBlock{
+	@include block;
+}
+
+.horisontalBlock__flex{
+	@include blockFlex;
+}
+
+.allHeightImage{
+	@include allHeightImage;
+}
+
+.paddingsImage{
+	@include paddingsImage;
+}
+
+.yearConner{
+	@include year;
+}
+.blockOverlay{
+	@include overlay;
+}
+.textBlock{
+	@include text;
+}

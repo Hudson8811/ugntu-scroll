@@ -1,8 +1,8 @@
 // Переменные, миксины, функции
 @use 'sass:math';
 @import "helpers/variables";
-@import "helpers/mixins";
 @import "helpers/functions";
+@import "helpers/mixins";
 
 // CSS-файлы библиотек
 @import "vendor/libs";
