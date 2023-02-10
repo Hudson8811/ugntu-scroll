@@ -834,7 +834,7 @@ __webpack_require__.r(__webpack_exports__);
 gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"]);
 gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_MotionPathPlugin__WEBPACK_IMPORTED_MODULE_3__["default"]);
 var initMode;
-var addTime = 800;
+var addTime = 2100;
 var st1, st2, st3;
 var tl1 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
 var tl2 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
@@ -852,6 +852,7 @@ function initAnimation() {
   b7Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y2-10').innerWidth();
   b8Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y2-11').innerWidth();
   b9Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y2-12').innerWidth();
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('video').trigger('play');
 
   if (window.innerWidth > 1100) {
     initScrollAnimationDesktop();
@@ -878,7 +879,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
     tl1.clear();
     tl2.clear();
     tl3.clear();
-    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set("" + ".scroll-page", {
+    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".y2-1__numbers,.y2-1__photos-item--1,.y2-1__photos-item--2,.y2-1__photos-item--3,.y2-2,.y2-2__top," + ".y2-2__title,.y2-2__fly,.y2-2__title span,.y2-2__text,.y2-2__diplom,.y2-1,.y2-3__text,.y2-3__label,.y2-3__overlay," + ".y2-4,.y2-4__overlay,.y2-5,.y2-5__overlay,.y2-6,.y2-6__title span,.y2-6__image,.y2-6__overlay,.y2-7,.y2-7__image," + ".y2-7__title span,.y2-7__overlay,.y2-9,.y2-8,.y2-9__flex,.y2-9__title,.y2-9__title span,.y2-10,.y2-10__overlay," + ".y2-11,.y2-11__first-title,.y2-11__second-title span,.y2-11__overlay,.y2-12,.y2-12__title,.y2-12__text-col," + ".y2-12__images-img" + ".scroll-page", {
       clearProps: "all"
     });
     window.scrollTo({
@@ -998,12 +999,10 @@ function initScrollAnimationDesktop() {
     ease: "none"
   }, ">");
   tl1.fromTo(".y2-2", {
-    y: 0,
     top: "0"
   }, {
-    y: "0",
-    top: "-100%",
-    duration: 2,
+    top: "-120%",
+    duration: 2.5,
     ease: "none"
   }, "<");
   tl1.fromTo(".y2-3__text", {
@@ -1108,27 +1107,27 @@ function initScrollAnimationDesktop() {
   }, {
     left: "0",
     x: -1 * (b4Width - scWidth),
-    duration: 6,
+    duration: 5,
     ease: "none"
   }, ">-1.5");
   tl1.from(".y2-7__image", {
     x: "-35%",
-    duration: 6,
+    duration: 5,
     ease: "none"
   }, "<");
   tl1.from(".y2-7__title span:nth-child(1)", {
     x: "40%",
-    duration: 6,
+    duration: 5,
     ease: "none"
   }, "<");
   tl1.from(".y2-7__title span:nth-child(2)", {
     x: "-15%",
-    duration: 6,
+    duration: 5,
     ease: "none"
   }, "<");
   tl1.from(".y2-7__title span:nth-child(3)", {
     x: "-70%",
-    duration: 6,
+    duration: 5,
     ease: "none"
   }, "<");
   tl1.fromTo(".y2-7__overlay", {
@@ -1203,6 +1202,28 @@ function initScrollAnimationDesktop() {
     duration: 6,
     ease: "none"
   }, ">-1.5");
+  tl1.fromTo(".y2-11__first-title", {
+    x: "40%"
+  }, {
+    x: "-5%",
+    duration: 3,
+    ease: "none"
+  }, "<");
+  tl1.from(".y2-11__second-title span:nth-child(1)", {
+    x: "15%",
+    duration: 3,
+    ease: "none"
+  }, ">");
+  tl1.from(".y2-11__second-title span:nth-child(2)", {
+    x: "-7%",
+    duration: 3,
+    ease: "none"
+  }, "<");
+  tl1.from(".y2-11__second-title span:nth-child(3)", {
+    x: "-10%",
+    duration: 3,
+    ease: "none"
+  }, "<");
   tl1.fromTo(".y2-11__overlay", {
     autoAlpha: 0
   }, {
@@ -1219,6 +1240,21 @@ function initScrollAnimationDesktop() {
     duration: 6,
     ease: "none"
   }, ">-1.5");
+  tl1.from(".y2-12__title", {
+    x: "-75%",
+    duration: 6,
+    ease: "none"
+  }, "<");
+  tl1.from(".y2-12__text-col", {
+    x: "20vw",
+    duration: 6,
+    ease: "none"
+  }, "<");
+  tl1.from(".y2-12__images-img", {
+    x: "20vw",
+    duration: 6,
+    ease: "none"
+  }, "<");
   st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
     trigger: ".scroll-page",
     pin: true,
@@ -1231,7 +1267,9 @@ function initScrollAnimationDesktop() {
   });
 }
 
-function initScrollAnimationTablet() {}
+function initScrollAnimationTablet() {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
+}
 
 function initScrollAnimationMobile() {}
 
