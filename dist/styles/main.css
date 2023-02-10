@@ -3143,6 +3143,7 @@ img {
   .y2-2 {
     position: relative;
     height: auto;
+    top: auto;
   }
 
   .y2-2__top {

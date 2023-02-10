@@ -110,6 +110,7 @@
 	@include max(sm){
 		position: relative;
 		height: auto;
+		top: auto;
 	}
 	&__top{
 		position: absolute;
