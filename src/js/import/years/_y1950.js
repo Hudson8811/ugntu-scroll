@@ -10,12 +10,11 @@ var initMode;
 let addTime = 2100;
 
 
-let st1, st2, st3;
+let st1;
 let tl1 = gsap.timeline({});
-let tl2 = gsap.timeline({});
-let tl3 = gsap.timeline({});
 
 let scWidth, b1Width, b2Width, b3Width, b4Width, b5Width, b6Width, b7Width, b8Width, b9Width;
+let scHeight, b1Height, b2Height, b3Height, b4Height, b5Height, b6Height, b7Height, b8Height, b9Height;
 
 function initAnimation(){
     scWidth =  $('.scroll-page').innerWidth();
@@ -28,6 +27,18 @@ function initAnimation(){
     b7Width =  $('.y2-10').innerWidth();
     b8Width =  $('.y2-11').innerWidth();
     b9Width =  $('.y2-12').innerWidth();
+
+    scHeight =  $('.scroll-page').innerHeight();
+    b1Height =  $('.y2-4').innerHeight();
+    b2Height =  $('.y2-5').innerHeight();
+    b3Height =  $('.y2-6').innerHeight();
+    b4Height =  $('.y2-7').innerHeight();
+    b5Height =  $('.y2-8').innerHeight();
+    b6Height =  $('.y2-9').innerHeight();
+    b7Height =  $('.y2-10').innerHeight();
+    b8Height =  $('.y2-11').innerHeight();
+    b9Height =  $('.y2-12').innerHeight();
+
 
 
     $('video').trigger('play');
@@ -51,18 +62,13 @@ $(window).on('resize',function (){
     var wwidth = $(window).width();
     if(dwidth!==wwidth){
         if (typeof st1 !== "undefined") st1.kill();
-        if (typeof st2 !== "undefined") st2.kill();
-        if (typeof st3 !== "undefined") st3.kill();
-        tl.clear();
         tl1.clear();
-        tl2.clear();
-        tl3.clear();
         gsap.set(".y2-1__numbers,.y2-1__photos-item--1,.y2-1__photos-item--2,.y2-1__photos-item--3,.y2-2,.y2-2__top," +
             ".y2-2__title,.y2-2__fly,.y2-2__title span,.y2-2__text,.y2-2__diplom,.y2-1,.y2-3__text,.y2-3__label,.y2-3__overlay," +
             ".y2-4,.y2-4__overlay,.y2-5,.y2-5__overlay,.y2-6,.y2-6__title span,.y2-6__image,.y2-6__overlay,.y2-7,.y2-7__image," +
             ".y2-7__title span,.y2-7__overlay,.y2-9,.y2-8,.y2-9__flex,.y2-9__title,.y2-9__title span,.y2-10,.y2-10__overlay," +
             ".y2-11,.y2-11__first-title,.y2-11__second-title span,.y2-11__overlay,.y2-12,.y2-12__title,.y2-12__text-col," +
-            ".y2-12__images-img" +
+            ".y2-12__images-img,.y2-9__overlay,.y2-8__overlay" +
             ".scroll-page", {clearProps:"all"});
         window.scrollTo({
             top: 0,
@@ -513,6 +519,335 @@ function initScrollAnimationDesktop(){
 function initScrollAnimationTablet(){
     $('body').addClass('active');
 
+    tl1.fromTo(".y2-1__numbers", {
+        x: '5%',
+    }, {
+        x: '-100%',
+        duration:  2,
+        ease: "none",
+    } , "0");
 
+    tl1.fromTo(".y2-1__numbers", {
+        y: 0
+    }, {
+        y: '40%',
+        duration:  2,
+        ease: "none",
+    } , "0");
+
+
+    tl1.fromTo(".y2-1__photos-item--1", {
+        x: '5vw',
+    }, {
+        x: '-100%',
+        duration:  0.3,
+        ease: "none",
+    } , "0");
+    tl1.fromTo(".y2-1__photos-item--2", {
+        x: '100vw',
+    }, {
+        x: '-100%',
+        duration:  0.7,
+        ease: "none",
+    } , "0");
+    tl1.fromTo(".y2-1__photos-item--3", {
+        x: '100vw',
+    }, {
+        x: '-100%',
+        duration:  0.7,
+        ease: "none",
+    } , ">-0.3");
+
+    tl1.to(".y2-1", {
+        top: '-80vw',
+        duration:  2,
+        ease: "none",
+    } , "0");
+    tl1.to(".y2-2", {
+        top: '0',
+        duration:  2,
+        ease: "none",
+    } , "<");
+
+
+
+
+    tl1.from(".y2-2__title span:nth-child(1)", {
+        x: "130%",
+        duration: 3,
+        ease: "none",
+    } , "0");
+
+    tl1.from(".y2-2__title span:nth-child(2)", {
+        x: "-80%",
+        duration: 3,
+        ease: "none",
+    } , "0");
+
+    tl1.from(".y2-2__title span:nth-child(3)", {
+        x: "50%",
+        duration: 3,
+        ease: "none",
+    } , "0");
+
+
+
+    tl1.fromTo(".y2-2__text", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 1,
+        duration: 0.3,
+        ease: "none",
+    } , ">-2");
+
+
+
+    tl1.fromTo(".y2-2__diplom", {
+        y: 0,
+        top: "100%"
+    }, {
+        y: "-100%",
+        top: 0,
+        duration: 2,
+        ease: "none",
+    } , ">");
+
+
+    tl1.to(".y2-2", {
+        top: "-150vw",
+        duration: 2.5,
+        ease: "none",
+    } , "2");
+
+
+    tl1.fromTo(".y2-3__text", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 1,
+        duration: 0.5,
+        ease: "none",
+    } , ">-0.5");
+
+    tl1.fromTo(".y2-3__label", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 1,
+        duration: 0.5,
+        ease: "none",
+    } , ">");
+    tl1.fromTo(".y2-3__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration: 0.5,
+        ease: "none",
+    } , "<");
+
+
+    tl1.fromTo(".y2-4", {
+        y: "0",
+        top: "100%"
+    }, {
+        top: "0",
+        y: -1*(b1Height-scHeight),
+        duration: Math.abs((scHeight-b1Height)/460),
+        ease: "none",
+    } , ">");
+
+    tl1.fromTo(".y2-4__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration:  1.5,
+        ease: "none",
+    } , ">");
+
+
+    tl1.fromTo(".y2-5", {
+        y: "0",
+        top: "100%"
+    }, {
+        top: "0",
+        y: -1*(b2Height-scHeight),
+        duration: Math.abs((scHeight-b2Height)/460)+1.5,
+        ease: "none",
+    } , ">");
+
+    tl1.fromTo(".y2-5__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration:  1.5,
+        ease: "none",
+    } , ">");
+
+
+
+    tl1.fromTo(".y2-6", {
+        y: "0",
+        top: "100%"
+    }, {
+        top: "0",
+        y: -1*(b3Height-scHeight),
+        duration: Math.abs((scHeight-b3Height)/460)+1.5,
+        ease: "none",
+    } , ">");
+
+    tl1.fromTo(".y2-6__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration:  1.5,
+        ease: "none",
+    } , ">");
+
+
+    tl1.fromTo(".y2-7", {
+        y: "0",
+        top: "100%"
+    }, {
+        top: "0",
+        y: -1*(b4Height-scHeight),
+        duration: Math.abs((scHeight-b4Height)/460)+1.5,
+        ease: "none",
+    } , ">");
+
+    tl1.fromTo(".y2-7__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration:  1.5,
+        ease: "none",
+    } , ">");
+
+
+    tl1.fromTo(".y2-8", {
+        y: "0",
+        top: "100%"
+    }, {
+        top: "0",
+        y: -1*(b5Height-scHeight),
+        duration: Math.abs((scHeight-b5Height)/460)+1.5,
+        ease: "none",
+    } , ">");
+
+    tl1.fromTo(".y2-8__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration:  1.5,
+        ease: "none",
+    } , ">");
+
+
+    tl1.fromTo(".y2-9", {
+        y: "0",
+        top: "100%"
+    }, {
+        top: "0",
+        y: -1*(b6Height-scHeight),
+        duration: Math.abs((scHeight-b6Height)/460)+1.5,
+        ease: "none",
+    } , ">");
+
+    tl1.fromTo(".y2-9__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration:  1.5,
+        ease: "none",
+    } , ">")
+
+
+    tl1.fromTo(".y2-10", {
+        y: "0",
+        top: "100%"
+    }, {
+        top: "0",
+        y: -1*(b7Height-scHeight),
+        duration: Math.abs((scHeight-b7Height)/460)+1.5,
+        ease: "none",
+    } , ">");
+
+    tl1.fromTo(".y2-10__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration:  1.5,
+        ease: "none",
+    } , ">")
+
+
+    tl1.fromTo(".y2-11", {
+        y: "0",
+        top: "100%"
+    }, {
+        top: "0",
+        y: -1*(b8Height-scHeight),
+        duration: Math.abs((scHeight-b8Height)/460)+1.5,
+        ease: "none",
+    } , ">");
+
+    tl1.fromTo(".y2-11__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration:  1.5,
+        ease: "none",
+    } , ">")
+
+
+    tl1.fromTo(".y2-12", {
+        y: "0",
+        top: "100%"
+    }, {
+        top: "0",
+        y: -1*(b9Height-scHeight),
+        duration: Math.abs((scHeight-b9Height)/460)+1.5,
+        ease: "none",
+    } , ">");
+
+
+
+    st1 = ScrollTrigger.create({
+        trigger: ".scroll-page",
+        pin: true,
+        start: "top top",
+        end: () =>   "+="+addTime+"%",
+        scrub: 2.5,
+        animation: tl1,
+    });
 }
-function initScrollAnimationMobile(){}
+
+function initScrollAnimationMobile(){
+    $('body').addClass('active');
+
+
+    tl1.fromTo(".y2-1__numbers", {
+        x: 0,
+    }, {
+        x: '-80%',
+        duration:  1,
+        ease: "none",
+    } , "0");
+
+    tl1.fromTo(".y2-1__numbers", {
+        y: 0
+    }, {
+        y: '50%',
+        duration:  0.5,
+        ease: "none",
+    } , "0");
+
+
+
+
+    st1 = ScrollTrigger.create({
+        trigger: ".y2-1__numbers",
+        pin: false,
+        start: "-45vw top",
+        end: () =>   "bottom top",
+        scrub: 1,
+        animation: tl1,
+    });
+}

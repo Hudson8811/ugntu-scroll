@@ -21,9 +21,14 @@
 	overflow: hidden;
 	background: #ACACAC;
 	z-index: 2;
+	@include max(md){
+		height: 80vw;
+		z-index: 7;
+	}
 	@include max(sm){
 		position: relative;
 		height: auto;
+		padding-bottom: vw3(56);
 	}
 	&::before{
 		content: "";
@@ -98,6 +103,14 @@
 	overflow: visible;
 	background: $colorBlue;
 	z-index: 3;
+	@include max(md){
+		top: 80vw;
+		height: vw2(1080);
+	}
+	@include max(sm){
+		position: relative;
+		height: auto;
+	}
 	&__top{
 		position: absolute;
 		top: 0;
@@ -105,6 +118,14 @@
 		width: 100%;
 		height: 100%;
 		z-index: 4;
+		@include max(md){
+			height: vw2(475);
+			z-index: 1;
+		}
+		@include max(sm){
+			position: static;
+			height: auto;
+		}
 		img{
 			width: 100%;
 			height: 100%;
@@ -117,12 +138,29 @@
 		left: vw(35);
 		top: vw(135);
 		z-index: 3;
+		@include max(md){
+			left: vw2(35);
+			top: vw2(505);
+		}
+		@include max(sm){
+			position: static;
+			padding: vw3(27) vw3(16) vw3(72);
+		}
 		span{
+			@include max(md){
+				display: block;
+			}
 			&:nth-child(2){
 				transform: translateX(59%);
+				@include max(sm){
+					transform: none;
+				}
 			}
 			&:nth-child(3){
 				transform: translateX(18%);
+				@include max(sm){
+					transform: none;
+				}
 			}
 		}
 	}
@@ -134,6 +172,18 @@
 		top: vw(588);
 		right: vw(10);
 		z-index: 3;
+		@include max(md){
+			width: vw2(573);
+			right: auto;
+			left: vw2(20);
+			top: vw2(790);
+		}
+
+		@include max(sm){
+			position: static;
+			width: 100%;
+			padding: vw3(11) vw3(16) vw3(22);
+		}
 	}
 	&__fly{
 		width: vw(439);
@@ -141,6 +191,16 @@
 		left: vw(205);
 		top: vw(136);
 		z-index: 2;
+		@include max(md){
+			width: vw2(289);
+			left: vw2(20);
+			top: vw2(410);
+		}
+		@include max(sm){
+			position: static;
+			width: 100%;
+			padding: 0 vw3(16);
+		}
 		img{
 			width: 100%;
 		}
@@ -150,6 +210,12 @@
 		left: vw(268);
 		top: 0;
 		width: vw(1268);
+		@include max(sm){
+			width: vw3(98);
+			left: auto;
+			right: vw3(34);
+			top: vw3(263);
+		}
 		z-index: 4;
 		img{
 			width: 100%;
@@ -162,6 +228,9 @@
 		top: 100%;
 		left: 0;
 		transform: translateY(-50%);
+		@include max(sm){
+			display: none;
+		}
 	}
 }
 
@@ -174,6 +243,9 @@
 	overflow: hidden;
 	background: $colorBlue;
 	z-index: 1;
+	@include max(sm){
+		position: relative;
+	}
 	&__background{
 		position: absolute;
 		top: 0;
@@ -181,6 +253,10 @@
 		width: 100%;
 		height: 100%;
 		z-index: 1;
+		@include max(sm){
+			position: relative;
+			height: auto;
+		}
 		img{
 			object-position: left bottom;
 			width: 100%;
@@ -195,6 +271,9 @@
 		z-index: 13;
 		width: 100%;
 		height: 100%;
+		@include max(sm){
+			display: none;
+		}
 		img{
 			object-position: left bottom;
 			width: 100%;
@@ -210,6 +289,20 @@
 		left: vw(46);
 		top: vw(44);
 		z-index: 13;
+		@include max(md){
+			left: vw2(20);
+			top: vw2(91);
+			width: vw2(500);
+		}
+		@include max(sm){
+			width: 100%;
+			position: static;
+			padding: vw3(68) vw3(159) vw3(12) vw3(16);
+			font-family: $mainFont;
+			font-size: vw3(9);
+			line-height: 1.42;
+			text-transform: uppercase;
+		}
 	}
 	&__label{
 		@include label;
@@ -219,6 +312,16 @@
 		left: vw(358);
 		bottom: vw(338);
 		z-index: 13;
+		@include max(md){
+			left: vw2(490);
+			bottom: 38vh;
+			width: vw2(260);
+		}
+		@include max(sm){
+			width: vw3(176);
+			top: vw3(16);
+			left: vw3(16);
+		}
 	}
 }
 
@@ -226,10 +329,21 @@
 .y2-4{
 	z-index: 4;
 	display: flex;
+	@include max(md){
+		display: block;
+	}
 	&__first{
 		position: relative;
 		&-year{
 			color: #FFFFFF;
+			@include max(md){
+				color: $colorGray;
+				width: 100%;
+				padding-left: vw2(20);
+			}
+			@include max(sm){
+				padding-left: vw3(16);
+			}
 		}
 		&-text{
 			color: #F4F4F4;
@@ -237,6 +351,15 @@
 			left: vw(50);
 			bottom: vw(50);
 			width: vw(503);
+			@include max(md){
+				position: static;
+				color: $colorGray;
+				width: 100%;
+				padding: 0 vw2(100) vw2(20) vw2(20);
+			}
+			@include max(sm){
+				padding: 0 vw3(76) vw3(16) vw3(16);
+			}
 		}
 	}
 	&__second{
@@ -246,13 +369,31 @@
 			display: flex;
 			align-items: flex-end;
 			position: relative;
+			@include max(md){
+				display: block;
+				padding: 0 vw2(100) 0 vw2(20);
+			}
+			@include max(sm){
+				padding: 0 vw3(48) 0 vw3(16);
+			}
 			&-col{
 				&:nth-child(3){
 					width: vw(631);
+					@include max(md){
+						width: 100%;
+					}
 				}
 				&:nth-child(4){
 					margin-left: vw(60);
 					width: vw(660);
+					@include max(md){
+						width: 100%;
+						margin-left: 0;
+						padding: vw2(20) 0 vw2(20);
+					}
+					@include max(sm){
+						padding: vw3(16) 0 vw3(16);
+					}
 				}
 			}
 			&-img{
@@ -260,6 +401,20 @@
 				top: vw(33);
 				left: vw(69);
 				width: vw(451);
+				@include max(md){
+					position: absolute;
+					left: auto;
+					top: vw2(20);
+					right: vw2(20);
+					width: vw2(300);
+					opacity: 0.2;
+					z-index: -1;
+				}
+				@include max(sm){
+					top: vw3(16);
+					right: vw3(16);
+					width: vw3(162);
+				}
 			}
 		}
 	}
@@ -273,14 +428,37 @@
 		display: flex;
 		align-items: flex-end;
 		padding: vw(50) vw(168) vw(50) vw(50);
+		@include max(md){
+			display: block;
+			padding: 0 vw2(100) 0 vw2(20);
+		}
+		@include max(sm){
+			padding: 0 vw3(76) vw3(16) vw3(16);
+		}
 		&-bottom{
 			display: flex;
+			@include max(md){
+				display: block;
+			}
 		}
 		&-col{
 			width: vw(535);
+			@include max(md){
+				width: 100%;
+				padding-bottom: vw2(20);
+			}
 			&:not(:last-child){
 				margin-left: vw(60);
+				@include max(md){
+					margin-left: 0;
+				}
 			}
+		}
+	}
+	&__flex{
+		@include max(md){
+			flex-direction: column-reverse;
+			justify-content: flex-end;
 		}
 	}
 }
@@ -290,8 +468,19 @@
 	z-index: 4;
 	width: vw(2940);
 	background: url("../img/o8-bg.webp") center center / cover no-repeat;
+	@include max(md){
+		width: 100%;
+		background: #ffffff;
+	}
 	&__year{
 		color: #ffffff;
+		@include max(md){
+			color: $colorGray;
+			padding-left: vw2(20);
+		}
+		@include max(sm){
+			padding-left: vw3(16);
+		}
 	}
 	&__text{
 		color: #ffffff;
@@ -299,6 +488,15 @@
 		position: absolute;
 		left: vw(50);
 		bottom: vw(50);
+		@include max(md){
+			position: static;
+			color: $colorGray;
+			width: 100%;
+			padding: 0 vw2(100) vw2(20) vw2(20);
+		}
+		@include max(sm){
+			padding: 0 vw3(76) vw3(16) vw3(16);
+		}
 	}
 	&__image{
 		position: absolute;
@@ -306,8 +504,17 @@
 		top: 0;
 		height: 100%;
 		z-index: 4;
+		@include max(md){
+			position: static;
+			height: auto;
+			width: 100%;
+		}
 		img{
 			height: 100%;
+			@include max(md){
+				width: 100%;
+				height: auto;
+			}
 		}
 	}
 	&__title{
@@ -318,20 +525,45 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		@include max(md){
+			position: static;
+			color: $colorGray;
+			padding-left: vw2(20);
+			padding-bottom: vw2(20);
+			padding-right: vw2(20);
+			display: block;
+		}
+		@include max(sm){
+			padding-left: vw3(16);
+			padding-bottom: vw3(16);
+			padding-right: vw3(46);
+		}
 		span{
 			&:nth-child(1){
 				opacity: 0.2;
+				@include max(md){
+					opacity: 1;
+				}
 			}
 			&:nth-child(2){
 				margin-left: vw(250);
+				@include max(md){
+					margin-left: 0;
+				}
 			}
 			&:nth-child(3){
 				margin-left: vw(700);
+				@include max(md){
+					margin-left: 0;
+				}
 			}
 			&:nth-child(4){
 				margin-left: vw(2150);
 				position: relative;
 				z-index: 4;
+				@include max(md){
+					margin-left: 0;
+				}
 			}
 		}
 	}
@@ -341,8 +573,19 @@
 	z-index: 4;
 	width: vw(2563);
 	background: url("../img/o9-bg.webp") center center / cover no-repeat;
+	@include max(md){
+		width: 100%;
+		background: #ffffff;
+	}
 	&__year{
 		color: #ffffff;
+		@include max(md){
+			color: $colorGray;
+			padding-left: vw2(20);
+		}
+		@include max(sm){
+			padding-left: vw3(16);
+		}
 	}
 	&__text{
 		color: #ffffff;
@@ -350,6 +593,15 @@
 		position: absolute;
 		left: vw(50);
 		bottom: vw(50);
+		@include max(md){
+			position: static;
+			color: $colorGray;
+			width: 100%;
+			padding: 0 vw2(100) vw2(20) vw2(20);
+		}
+		@include max(sm){
+			padding: 0 vw3(76) vw3(16) vw3(16);
+		}
 	}
 	&__image{
 		position: absolute;
@@ -357,6 +609,11 @@
 		bottom: 0;
 		z-index: 4;
 		width: vw(1359);
+		@include max(md){
+			position: static;
+			height: auto;
+			width: 100%;
+		}
 		img{
 			width: 100%;
 		}
@@ -369,17 +626,39 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		@include max(md){
+			position: static;
+			color: $colorGray;
+			padding-left: vw2(20);
+			padding-bottom: vw2(20);
+			padding-right: vw2(20);
+			display: block;
+		}
+		@include max(sm){
+			padding-left: vw3(16);
+			padding-right: vw3(16);
+			padding-bottom: vw3(16);
+		}
 		span{
 			&:nth-child(1){
 				opacity: 0.2;
+				@include max(md){
+					opacity: 1;
+				}
 			}
 			&:nth-child(2){
 				margin-left: vw(234);
+				@include max(md){
+					margin-left: 0;
+				}
 			}
 			&:nth-child(3){
 				margin-left: vw(1460);
 				position: relative;
 				z-index: 4;
+				@include max(md){
+					margin-left: 0;
+				}
 			}
 		}
 	}
@@ -387,13 +666,42 @@
 
 .y2-8{
 	z-index: 5;
+	@include max(md){
+		z-index: 4;
+	}
 	&__text{
 		position: relative;
 		padding: vw(50) vw(602) vw(50) vw(50);
 		display: flex;
 		align-items: flex-end;
+		@include max(md){
+			display: block;
+			position: static;
+			width: 100%;
+			padding: 0 vw2(100) vw2(20) vw2(20);
+		}
+		@include max(sm){
+			padding: 0 vw3(46) vw3(16) vw3(16);
+		}
 		&-col{
 			width: vw(690);
+			@include max(md){
+				width: 100%;
+			}
+		}
+	}
+	&__flex{
+		@include max(md){
+			flex-direction: column-reverse;
+			justify-content: flex-end;
+		}
+	}
+	&__image{
+		@include max(md){
+			padding: vw2(20) vw2(20) 0;
+		}
+		@include max(sm){
+			padding: vw3(16) vw3(16) 0;
 		}
 	}
 }
@@ -409,22 +717,51 @@
 		height: 100%;
 		object-fit: cover;
 		pointer-events: none;
+		@include max(md){
+			z-index: 1;
+		}
 	}
 	&__flex{
 		@include block;
 		background: transparent;
+		@include max(md){
+			position: relative;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			display: block;
+			background: rgba(0, 0, 0, 0.42);
+		}
 	}
 	&__image{
 		padding-right: 0;
 		padding-left: vw(50);
+		@include max(md){
+			padding: vw2(20) vw2(20) 0;
+		}
+		@include max(sm){
+			padding: vw3(16) vw3(16) 0;
+		}
 	}
 	&__text{
 		padding: vw(50) vw(50) vw(50) vw(50);
 		box-sizing: border-box;
 		width: 95.5vw;
 		color: #ffffff;
+		@include max(md){
+			display: block;
+			position: static;
+			width: 100%;
+			padding: 0 vw2(100) vw2(20) vw2(20);
+		}
+		@include max(sm){
+			padding: 0 vw3(76) vw3(16) vw3(16);
+		}
 		&-col{
 			width: vw(581);
+			@include max(md){
+				width: 100%;
+			}
 		}
 	}
 	&__title{
@@ -435,6 +772,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		@include max(md){
+			position: static;
+			display: block;
+			padding-bottom: vw2(20);
+		}
 		span{
 			&:nth-child(1){}
 			&:nth-child(2){}
@@ -455,8 +797,20 @@
 		align-items: flex-end;
 		color: #ffffff;
 		position: relative;
+		@include max(md){
+			display: block;
+			position: static;
+			width: 100%;
+			padding: 0 vw2(100) vw2(20) vw2(20);
+		}
+		@include max(sm){
+			padding: 0 vw3(76) vw3(16) vw3(16);
+		}
 		&-col{
 			width: vw(446);
+			@include max(md){
+				width: 100%;
+			}
 		}
 	}
 }
@@ -464,10 +818,19 @@
 .y2-11{
 	z-index: 4;
 	display: flex;
+	@include max(md){
+		display: block;
+	}
 	&__first{
 		align-items: flex-end;
+		@include max(md){
+			display: block;
+		}
 		&-img{
 			width: vw(1159);
+			@include max(md){
+				width: 100%;
+			}
 			img{
 				width: 100%;
 			}
@@ -476,14 +839,43 @@
 			padding: vw(50) vw(551) vw(50) vw(104);
 			display: flex;
 			align-items: flex-end;
+			@include max(md) {
+				display: block;
+				position: static;
+				width: 100%;
+				padding: 0 vw2(100) vw2(20) vw2(20);
+			}
+			@include max(sm){
+				padding: 0 vw3(46) vw3(16) vw3(16);
+			}
 			&-col{
 				width: vw(577);
+				@include max(md){
+					width: 100%;
+				}
 			}
 		}
 		&-title{
 			position: absolute;
 			bottom: vw(466);
 			left: vw(240);
+			@include max(md){
+				position: static;
+				padding-bottom: vw2(20);
+				padding-left: vw2(20);
+			}
+			@include max(sm){
+				padding-bottom: vw3(16);
+				padding-left: vw3(16);
+			}
+		}
+		&-year{
+			@include max(md){
+				padding-left: vw2(20);
+			}
+			@include max(sm){
+				padding-left: vw3(16);
+			}
 		}
 	}
 	&__second{
@@ -491,18 +883,37 @@
 		flex-direction: row-reverse;
 		align-items: flex-end;
 		position: relative;
+		@include max(md){
+			padding: 0;
+			display: block;
+		}
 		&-text{
 			padding: 0 vw(104) 0 vw(50);
 			display: flex;
 			align-items: flex-end;
 			border-left: 1px solid #484848;
 			height: 100%;
+			@include max(md){
+				display: block;
+				position: static;
+				width: 100%;
+				padding: 0 vw2(100) vw2(20) vw2(20);
+				border: 0;
+			}@include max(sm){
+				 padding: 0 vw3(46) vw3(16) vw3(16);
+			 }
 			&-col{
 				width: vw(622);
+				@include max(md){
+					width: 100%;
+				}
 			}
 		}
 		&-image{
 			width: vw(870);
+			@include max(md){
+				width: 100%;
+			}
 			img{
 				width: 100%;
 			}
@@ -511,15 +922,31 @@
 			position: absolute;
 			top: vw(50);
 			left: vw(400);
+			@include max(md){
+				position: static;
+				padding-bottom: vw2(20);
+			}
+			@include max(sm){
+				padding-bottom: vw3(16);
+			}
 			span{
 				&:nth-child(1){
 					color: $colorCyan;
+					@include max(md){
+						color: $colorGray;
+					}
 				}
 				&:nth-child(2){
 					margin-left: vw(130);
+					@include max(md){
+						margin-left: 0;
+					}
 				}
 				&:nth-child(3){
 					margin-left: vw(960);
+					@include max(md){
+						margin-left: 0;
+					}
 				}
 			}
 		}
@@ -531,6 +958,10 @@
 	background: #E3E3E3;
 	padding-right: vw(93);
 	display: flex;
+	@include max(md){
+		padding: 0;
+		display: block;
+	}
 	&__images{
 		position: relative;
 		&-bg{}
@@ -539,6 +970,15 @@
 			width: vw(959);
 			left: vw(1036);
 			top: vw(50);
+			@include max(md){
+				left: auto;
+				right: vw2(20);
+				top: vw2(450);
+			}
+			@include max(sm){
+				right: vw3(20);
+				top: vw3(180);
+			}
 			img{
 				width: 100%;
 			}
@@ -546,14 +986,35 @@
 	}
 	&__text{
 		padding: vw(50) vw(794) vw(50) vw(650);
+		@include max(md){
+			display: block;
+			position: static;
+			width: 100%;
+			padding: 0 vw2(100) vw2(20) vw2(20);
+		}
+		@include max(sm){
+			padding: 0 vw3(120) vw3(16) vw3(16);
+		}
 		&-col{
 			width: vw(577);
+			@include max(md){
+				width: 100%;
+			}
 		}
 	}
 	&__last{
 		width: vw(919);
 		padding-bottom: vw(104);
 		align-self: flex-end;
+		@include max(md){
+			width: 50%;
+			margin-left: vw2(20);
+			padding-bottom: vw2(40);
+		}
+		@include max(sm){
+			margin-left: vw3(16);
+			padding-bottom: vw3(40);
+		}
 		img{
 			width: 100%;
 		}
@@ -562,5 +1023,8 @@
 		position: absolute;
 		bottom: vw(50);
 		right: vw(1000);
+		@include max(md){
+			display: none;
+		}
 	}
 }
