@@ -1,0 +1,753 @@
+.events{
+	background: #FFFFFF;
+	&__top{
+		padding-top: 24px;
+		padding-bottom: 59px;
+		@include max(md){
+			padding-top: 23px;
+			padding-bottom: 27px;
+		}
+		@include max(sm){
+			padding-top: 14px;
+			padding-bottom: 19px;
+		}
+	}
+	&__title{
+		max-width: 552px;
+		font-family: $titleFont;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 42px;
+		line-height: 1.28;
+		@include max(sm){
+			font-size: 14px;
+			line-height: 1.52;
+			max-width: 70%;
+		}
+	}
+	&__filter{
+		margin-top: 110px;
+		@include max(md){
+			margin-top: 33px;
+		}
+		@include max(sm){
+			margin-top: 25px;
+		}
+	}
+	&__bottom{
+		background: #F6F6F6;
+		padding-top: 107px;
+		@include max(md){
+			padding-top: 57px;
+		}
+		@include max(sm){
+			padding-top: 44px;
+		}
+	}
+	&__flex{
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		padding-bottom: 27px;
+		@include max(md){
+			padding-bottom: 18px;
+			align-items: flex-end;
+		}
+		@include max(sm){
+			padding-bottom: 12px;
+		}
+	}
+	&__count{
+		font-weight: 450;
+		font-size: 16px;
+		line-height: 1.24;
+		text-transform: uppercase;
+		@include max(md){
+			font-size: 16px;
+			padding-bottom: 10px;
+		}
+		@include max(sm){
+			font-size: 9px;
+			padding-bottom: 2px;
+		}
+		span{
+			color: $colorCyan;
+		}
+	}
+	&__date{
+		font-family: $titleFont;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 146px;
+		line-height: 1;
+		letter-spacing: -0.06em;
+		padding-right: 0.06em;
+		text-transform: uppercase;
+		@include max(md){
+			font-size: 82px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+		@include max(sm){
+			font-size: 24px;
+			letter-spacing: -0.01em;
+			padding-right: 0.01em;
+		}
+		&-year{
+			color: $colorCyan;
+		}
+		&-mounth{}
+	}
+	&__list{}
+}
+
+
+.e-filter{
+	display: flex;
+	align-items: center;
+	padding-top: 41px;
+	position: relative;
+	@include max(sm){
+		padding-top: 0;
+		margin-left: -16px;
+		margin-right: -16px;
+	}
+	&__year{
+		position: absolute;
+		left: 83px;
+		top: 0;
+		font-style: normal;
+		font-weight: 450;
+		font-size: 16px;
+		line-height: 1.24;
+		text-transform: uppercase;
+		@include max(sm){
+			display: none;
+		}
+	}
+	.swiper{
+		flex-grow: 1;
+		width: auto;
+		margin: 0 18px;
+		position: relative;
+		@include max(sm){
+			margin: 0;
+			padding: 1px 16px;
+		}
+		&::after{
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: 100;
+			right: 0;
+			top: 0;
+			width: 109px;
+			height: 100%;
+			background: linear-gradient(270deg, #FFFFFF 6.58%, rgba(255, 255, 255, 0) 88.16%);
+			@include max(sm){
+				display: none;
+			}
+		}
+		&::before{
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: 100;
+			left: 0;
+			top: 0;
+			width: 109px;
+			height: 100%;
+			background: linear-gradient(90deg, #FFFFFF 6.58%, rgba(255, 255, 255, 0) 88.16%);
+			@include max(sm){
+				display: none;
+			}
+		}
+		&.start{
+			&::before{
+				display: none;
+			}
+		}
+		&.end{
+			&::after{
+				display: none;
+			}
+		}
+	}
+	&__wrapper{
+	}
+	&__item{
+		font-weight: 450;
+		font-size: 16px;
+		line-height: 1.24;
+		text-transform: uppercase;
+		cursor: pointer;
+		border: 1px solid rgba(28, 28, 28, 0.2);
+		border-radius: 29px;
+		padding: 28px 34px;
+		margin: 0 6px;
+		width: auto;
+		@include max(md){
+			padding: 18px 25px;
+			border-radius: 18px;
+		}
+		@include max(sm){
+			padding: 9px 13px;
+			font-size: 9px;
+			line-height: 1.42;
+			margin: 0 2px;
+			border-radius: 9px;
+		}
+		&:hover{
+			border-color: $colorCyan;
+		}
+		&.active{
+			color: #ffffff;
+			background: $colorCyan;
+		}
+	}
+	&__button{
+		margin: 0;
+		width: 65px;
+		height: 65px;
+		position: static;
+		flex-shrink: 0;
+		cursor: pointer;
+		border-radius: 50%;
+		background:  rgba(64, 64, 64, 0.1) url("../img/svg/i-arrow.svg") 55% center no-repeat;
+		background-size: 10px auto;
+		transition: 0.3s;
+		@include max(sm){
+			display: none;
+		}
+		&:hover{
+			background-color: $colorCyan;
+			background-image: url("../img/svg/i-arrow-white.svg");
+		}
+		&::after{
+			display: none;
+		}
+		&--prev{
+			transform: scaleX(-1);
+		}
+		&--next{}
+	}
+}
+
+
+.event{
+	$self: &;
+	padding-bottom: 56px;
+	background: transparent;
+	transition: background-color 0.3s, color 0.3s;
+	text-decoration: none;
+	color: $colorGray;
+	display: block;
+	position: relative;
+	@include max(md){
+		padding-bottom: 60px;
+	}
+	@include max(sm){
+		padding-bottom: 16px;
+	}
+	&__flex{
+		display: flex;
+		border-top: 1px solid rgba(0, 0, 0, 0.2);
+		@include max(md){
+			display: block;
+		}
+	}
+	&__left{
+		max-width: 459px;
+		flex-shrink: 0;
+		min-width: 338px;
+		width: 24%;
+		padding-top: 35px;
+		display: flex;
+		flex-direction: column;
+		@include max(md){
+			min-width: 0;
+			max-width: 100%;
+			width: 100%;
+			padding-top: 26px;
+		}
+		@include max(sm){
+			padding-top: 12px;
+		}
+	}
+	&__date{
+		font-weight: 400;
+		font-size: 100px;
+		line-height: 1;
+		letter-spacing: -0.03em;
+		color: #15A6B1;
+		transition: color 0.3s;
+		@include max(sm){
+			font-size: 40px;
+		}
+	}
+	&__week{
+		font-family: $titleFont;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 1.42;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		flex-grow: 1;
+		@include max(md){
+			display: block;
+		}
+		@include max(sm){
+			font-size: 14px;
+			line-height: 1.38;
+		}
+		span{
+			&:first-child{
+				&::after{
+					content: ", ";
+					display: inline;
+				}
+			}
+		}
+	}
+	&__right{
+		flex-grow: 1;
+		border-left: 1px solid rgba(0, 0, 0, 0.2);
+		transition: boder-color 0.3s;
+		padding: 42px 0 0 60px;
+		@include max(md){
+			border: 0;
+			padding: 80px 0 0;
+		}
+		@include max(sm){
+			padding: 27px 0 0;
+		}
+	}
+	&__text{
+		font-family: $titleFont;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 1.42;
+		max-width: 720px;
+		@include max(md){
+			max-width: 100%;
+		}
+		@include max(sm){
+			font-size: 18px;
+			line-height: 1.32;
+		}
+	}
+	&__info{
+		margin-top: 51px;
+		display: grid;
+		grid-template-columns: auto auto auto 1fr;
+		grid-column-gap: 57px;
+		@include max(md){
+			margin-top: 40px;
+		}
+		@include max(900){
+			grid-template-columns: auto 1fr;
+		}
+		@include max(sm){
+			margin-top: 17px;
+			grid-column-gap: 37px;
+		}
+		&-item{
+			max-width: 164px;
+			font-weight: 450;
+			font-size: 16px;
+			line-height: 1.24;
+			@include max(sm){
+				font-size: 10px;
+			}
+		}
+		&-title{
+			margin-bottom: 12px;
+			color: #ADADAD;
+			transition: color 0.3s;
+			@include max(sm){
+				margin-bottom: 5px;
+			}
+		}
+		&-text{
+			text-transform: uppercase;
+		}
+	}
+
+	&__arrow{
+		width: 65px;
+		height: 65px;
+		border-radius: 50%;
+		background:  rgba(64, 64, 64, 0.1) url("../img/svg/i-arrow.svg") 55% center no-repeat;
+		background-size: 10px auto;
+		transition: 0.3s;
+		position: absolute;
+		right: 52px;
+		top: 51px;
+		pointer-events: none;
+		@include max(md){
+			right: 24px;
+			top: 32px;
+		}
+		@include max(sm){
+			display: none;
+		}
+	}
+
+	&:hover{
+		background-color: $colorCyan;
+		color: #ffffff;
+		#{ $self }{
+			&__right{
+				border-color: rgba(255, 255, 255, 0.5);
+			}
+
+			&__date{
+				color: #ffffff;
+			}
+			&__info{
+				&-title{
+					color: #ffffff;
+				}
+			}
+			&__arrow{
+				background-color: rgba(255, 255, 255, 0.1);
+				background-image: url("../img/svg/i-arrow-white.svg");
+			}
+		}
+	}
+}
+
+
+
+
+.event-page{
+	$self: &;
+	background: #FFFFFF;
+	&__flex{
+		display: flex;
+		position: relative;
+		@include max(md){
+			display: block;
+		}
+	}
+	&__left{
+		max-width: 459px;
+		flex-shrink: 0;
+		min-width: 338px;
+		width: 24%;
+		@include max(md){
+			width: 100%;
+			min-width: 0;
+			max-width: 100%;
+		}
+	}
+	&__right{
+		flex-grow: 1;
+	}
+	&__top{
+		padding-top: 21px;
+		padding-bottom: 23px;
+		position: relative;
+		@include max(md){
+			padding-top: 18px;
+			padding-bottom: 7px;
+		}
+		@include max(sm){
+			padding-top: 15px;
+			padding-bottom: 5px;
+		}
+		#{$self}{
+			&__right{
+				@include max(md){
+					margin-top: 75px;
+				}
+				@include max(sm){
+					margin-top: 32px;
+				}
+			}
+		}
+	}
+	&__close{
+		width: 53px;
+		height: 53px;
+		border: 1px solid rgba(28, 28, 28, 0.2);
+		border-radius: 50%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-image: url("../img/svg/i-close.svg");
+		background-size: 21px auto;
+		transition: 0.3s;
+		cursor: pointer;
+		position: absolute;
+		right: 0;
+		top: 0;
+		@include max(sm){
+			width: 33px;
+			height: 33px;
+			background-size: 13px auto;
+		}
+		&:hover{
+			border-color: $colorCyan;
+		}
+	}
+	&__date{
+		color: $colorCyan;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 100px;
+		line-height: 1;
+		letter-spacing: -0.03em;
+		@include max(sm){
+			font-size: 40px;
+		}
+	}
+	&__mounth{
+		font-family: $titleFont;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 1.42;
+		@include max(sm){
+			font-size: 14px;
+		}
+	}
+	&__title{
+		font-family: $titleFont;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 52px;
+		line-height: 1.23;
+		max-width: 677px;
+		@include max(md){
+			font-size: 42px;
+			line-height: 1.28;
+		}
+		@include max(sm){
+			font-size: 24px;
+			line-height: 1.22;
+		}
+	}
+	&__info{
+		margin-top: 101px;
+		display: grid;
+		grid-template-columns: minmax(auto, 24%) minmax(auto, 24%) minmax(auto, 24%) 1fr;
+		grid-column-gap: 57px;
+		max-width: 1000px;
+		@include max(md){
+			margin-top: 59px;
+		}
+		@include max(900){
+			grid-template-columns: minmax(auto, 45%) minmax(45%, 1fr);
+		}
+		@include max(sm){
+			margin-top: 13px;
+			grid-column-gap: 37px;
+		}
+		&-item{
+			max-width: 220px;
+			font-weight: 450;
+			font-size: 16px;
+			line-height: 1.24;
+			margin-bottom: 20px;
+			@include max(sm){
+				font-size: 10px;
+				margin-bottom: 15px;
+			}
+		}
+		&-title{
+			margin-bottom: 12px;
+			color: #ADADAD;
+			transition: color 0.3s;
+			@include max(sm){
+				margin-bottom: 5px;
+			}
+		}
+		&-text{
+			text-transform: uppercase;
+		}
+	}
+	&__center{
+		padding-bottom: 79px;
+		@include max(md){
+			padding-bottom: 38px;
+		}
+		@include max(sm){
+			padding-bottom: 24px;
+		}
+		#{ $self }{
+			&__flex{
+				border-top: 1px solid rgba(0, 0, 0, 0.2);
+				padding-top: 35px;
+				@include max(md){
+					padding-bottom: 25px;
+				}
+				@include max(sm){
+					padding-bottom: 12px;
+				}
+			}
+			&__right{
+				@include max(md){
+					padding-top: 32px;
+				}
+				@include max(sm){
+					padding-top: 17px;
+				}
+			}
+		}
+	}
+	&__actions{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		@include max(md){
+			flex-direction: row;
+		}
+		@include max(sm){
+			flex-direction: column;
+		}
+		&-link{
+			display: flex;
+			align-items: center;
+			font-style: normal;
+			font-weight: 450;
+			font-size: 16px;
+			line-height: 1.24;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: $colorGray;
+			transition: 0.3s;
+			cursor: pointer;
+			margin-bottom: 15px;
+			@include max(sm){
+				margin-bottom: 12px;
+				font-size: 9px;
+			}
+			&:not(:last-child){
+				@include max(md){
+					margin-right: 25px;
+				}
+				@include max(sm){
+					margin-right: 0;
+				}
+			}
+			&::before{
+				content: "";
+				width: 53px;
+				height: 53px;
+				border: 1px solid rgba(28, 28, 28, 0.2);
+				border-radius: 50%;
+				background-repeat: no-repeat;
+				background-position: center center;
+				transition: 0.3s;
+				margin-right: 12px;
+				flex-shrink: 0;
+				@include max(sm){
+					width: 33px;
+					height: 33px;
+					margin-right: 8px;
+				}
+			}
+			span{}
+
+			&--share{
+				&::before{
+					background-image: url("../img/svg/i-share.svg");
+					background-size: 23px auto;
+					@include max(sm){
+						background-size: 15px auto;
+					}
+				}
+			}
+			&--download{
+				&::before{
+					background-image: url("../img/svg/i-download.svg");
+					background-size: 17px auto;
+					@include max(sm){
+						background-size: 13px auto;
+					}
+				}
+			}
+			&--more{
+				&::before{
+					background-image: url("../img/svg/i-link.svg");
+					background-size: 15px auto;
+					@include max(sm){
+						background-size: 11px auto;
+					}
+				}
+			}
+			&:hover{
+				color: $colorCyan;
+				&::before{
+					border-color: $colorCyan;
+				}
+			}
+		}
+	}
+	&__text{
+		max-width: 824px;
+		font-family: $titleFont;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 1.51;
+		color: #000000;
+		@include max(md){
+			max-width: 100%;
+		}
+		@include max(sm){
+			font-size: 14px;
+			line-height: 1.73;
+		}
+	}
+	&__image{
+		width: 100%;
+		padding-bottom: 51.2159%;
+		overflow: hidden;
+		position: relative;
+		@include max(md){
+			padding-bottom: 67.83%;
+		}
+		img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			object-fit: cover;
+			object-position: center center;
+		}
+	}
+
+	&__bottom{
+		background: #F6F6F6;
+		&-title{
+			font-family: $titleFont;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 52px;
+			line-height: 1.23;
+			max-width: 507px;
+			@include max(sm){
+				font-size: 24px;
+				line-height: 1.22;
+				max-width: 227px;
+			}
+		}
+		#{ $self }{
+			&__flex{
+				padding-top: 32px;
+				padding-bottom: 101px;
+				@include max(md){
+					padding-top: 25px;
+					padding-bottom: 105px;
+				}
+				@include max(sm){
+					padding-top: 13px;
+					padding-bottom: 40px;
+				}
+			}
+		}
+	}
+
+}

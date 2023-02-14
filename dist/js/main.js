@@ -11,6 +11,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
+
 
 addEventListener('beforeunload', function (event) {});
 
@@ -23,6 +25,39 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
     __webpack_require__(/*! ./years/_y1940 */ "./src/js/import/years/_y1940.js");
   } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y1950').length > 0) {
     __webpack_require__(/*! ./years/_y1950 */ "./src/js/import/years/_y1950.js");
+  } else {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
+  }
+});
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.e-filter').length > 0) {
+    var swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('.e-filter .swiper', {
+      loop: false,
+      freeMode: true,
+      spaceBetween: 0,
+      slidesPerView: 'auto',
+      navigation: {
+        nextEl: '.e-filter__button--next',
+        prevEl: '.e-filter__button--prev'
+      }
+    });
+    swiper.on('progress', function (swiper, progress) {
+      if (progress === 0) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.e-filter .swiper').addClass('start');
+      } else {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.e-filter .swiper').removeClass('start');
+      }
+
+      if (progress === 1) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.e-filter .swiper').addClass('end');
+      } else {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.e-filter .swiper').removeClass('end');
+      }
+    });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.e-filter__item').on('click', function () {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.e-filter__item').removeClass('active');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
+    });
   }
 });
 

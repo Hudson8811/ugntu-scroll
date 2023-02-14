@@ -1,0 +1,89 @@
+extends ../layouts/default
+
+block variables
+	- const title = "Событие"
+
+
+block content
+	.wrapper
+		include ../../blocks/modules/sidebar/sidebar
+
+
+		.page-content.event-page
+			include ../../blocks/modules/header/header
+
+			.event-page__top
+				.container
+					.event-page__flex
+						.event-page__left
+							.event-page__date 04-05
+							.event-page__mounth Сентября, Вт
+						.event-page__right
+							h1.event-page__title Дни кампаний-партнеров в УГНТУ
+							.event-page__info
+								.event-page__info-item
+									.event-page__info-title Организаторы
+									.event-page__info-text IT-институт, каф. АТМ
+								.event-page__info-item
+									.event-page__info-title Место проведения
+									.event-page__info-text Институт экосистем бизнеса и креативных индустрий г. Уфа, ул. Чернышевского, 145
+								.event-page__info-item
+									.event-page__info-title Ответственный
+									.event-page__info-text Панфиленко Вероника  сергеевна
+								.event-page__info-item
+									.event-page__info-title Контакты
+									.event-page__info-text 89066561161 <br>user@mail.ru
+
+						a.event-page__close(href="../events.html")
+
+			.event-page__center
+				.container
+					.event-page__flex
+						.event-page__left
+							.event-page__actions
+								a.event-page__actions-link.event-page__actions-link--share(href="#")
+									span поделиться
+								a.event-page__actions-link.event-page__actions-link--download(href="#")
+									span Скачать документы
+								a.event-page__actions-link.event-page__actions-link--more(href="#")
+									span Больше о событии
+						.event-page__right
+							.event-page__text
+								p 1 сентября 2017 года на торжественной линейке я, как призёр олимпиады школьников, удостоилась чести получить из рук проректора УГНТУ по учебной работе символический студенческий билет. С того момента началось моё погружение в удивительный мир нефтегаза. Сейчас я уже студентка 2-го курса магистратуры горно-нефтяного факультета и очень рада, что тогда сделала такой важный шаг, поступив в Уфимский государственный нефтяной технический университет. С первых дней студенчества я постоянно стремлюсь к повышению своего уровня знаний, являюсь автором научных статей, призёром и победителем конференций всероссийского и международного уровней, победителем всероссийской олимпиады «Я – профессионал» по направлению «Нефтегазовое дело». И я очень благодарна УГНТУ за широкий выбор направлений для развития, за все возможности, знания и навыки, которые он предоставляет! От всей души желаю нашему вузу новых достижений и высот, процветания и движения вперед! Всем сотрудникам, профессорско-преподавательскому составу, студентам – неиссякаемой энергии, благополучия и успехов во всем!
+							.event-page__image
+								img(src="img/event-example.webp" alt="")
+
+
+			.event-page__bottom
+				.container
+					.event-page__flex
+						.event-page__left
+						.event-page__right
+							.event-page__bottom-title Другие мероприятия
+
+				.events__list
+					- var i=0
+					while i < 5
+						- i++
+						a.events__list-item.event(href="../event-single.html")
+							.container
+								.event__flex
+									.event__left
+										.event__date 01-22
+										.event__week
+											span Сентябрь
+											span Вт
+									.event__right
+										.event__text Всероссийская научно-практическая конференция «Промышленный туризм: современные подходы в реализации туристического потенциала предприятий»
+										.event__info
+											.event__info-item
+												.event__info-title Организаторы
+												.event__info-text IT-институт, каф. АТМ
+											.event__info-item
+												.event__info-title Примечание
+												.event__info-text ауд. 1-227
+								.event__arrow
+
+
+
+block scripts

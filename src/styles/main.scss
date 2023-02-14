@@ -6,6 +6,8 @@
 
 // CSS-файлы библиотек
 @import "vendor/libs";
+@import '../../node_modules/swiper/swiper-bundle';
+
 
 // Основное
 @import "base/fonts";
@@ -18,3 +20,4 @@
 // Стили целых страниц без разбития на модули
 @import "pages/home_page";
 @import "pages/y1950";
+@import "pages/events";

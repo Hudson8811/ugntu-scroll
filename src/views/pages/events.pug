@@ -1,0 +1,78 @@
+extends ../layouts/default
+
+block variables
+	- const title = "События"
+	- const hideYears = true
+
+
+block content
+	.wrapper
+		include ../../blocks/modules/sidebar/sidebar
+
+
+		.page-content.events
+			include ../../blocks/modules/header/header
+
+			.events__top
+				.container
+					h1.events__title Календарь мероприятий, посвященных 75-летию УГНТУ
+					.events__filter
+						.e-filter
+							.e-filter__year 2023
+							.swiper-button-prev.e-filter__button.e-filter__button--prev
+							.swiper.start
+								.swiper-wrapper.e-filter__wrapper
+									.swiper-slide.e-filter__item.active сентябрь
+									.swiper-slide.e-filter__item октябрь
+									.swiper-slide.e-filter__item ноябрь
+									.swiper-slide.e-filter__item декабрь
+									.swiper-slide.e-filter__item январь
+									.swiper-slide.e-filter__item февраль
+									.swiper-slide.e-filter__item март
+									.swiper-slide.e-filter__item апрель
+									.swiper-slide.e-filter__item май
+									.swiper-slide.e-filter__item июнь
+									.swiper-slide.e-filter__item июль
+									.swiper-slide.e-filter__item август
+									.swiper-slide.e-filter__item сентябрь
+									.swiper-slide.e-filter__item октябрь
+									.swiper-slide.e-filter__item ноябрь
+							.swiper-button-next.e-filter__button.e-filter__button--next
+
+			.events__bottom
+				.container
+					.events__flex
+						.events__count
+							span 20
+							|  событий
+						.events__date
+							span.events__date-year 2023
+							| !{' '}
+							span.events__date-mounth Сентябрь
+
+				.events__list
+					- var i=0
+					while i < 10
+						- i++
+						a.events__list-item.event(href="../event-single.html")
+							.container
+								.event__flex
+									.event__left
+										.event__date 01-22
+										.event__week
+											span Сентябрь
+											span Вт
+									.event__right
+										.event__text Всероссийская научно-практическая конференция «Промышленный туризм: современные подходы в реализации туристического потенциала предприятий»
+										.event__info
+											.event__info-item
+												.event__info-title Организаторы
+												.event__info-text IT-институт, каф. АТМ
+											.event__info-item
+												.event__info-title Примечание
+												.event__info-text ауд. 1-227
+								.event__arrow
+
+
+
+block scripts

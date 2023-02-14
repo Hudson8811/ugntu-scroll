@@ -76,6 +76,7 @@
     "dependencies": {
         "gsap": "^3.11.3",
         "jquery": "^3.6.1",
+        "swiper": "^9.0.5",
         "vivus": "^0.4.6",
         "webpack": "^5.70.0",
         "webpack-stream": "^7.0.0"

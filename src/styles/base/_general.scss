@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, h6, ul {
+h1, h2, h3, h4, h5, h6, ul, p {
     margin: 0;
     padding: 0;
 }
@@ -32,6 +32,29 @@ img{
 	padding-left: vw(91);
 	@include max(md){
 		padding-left: 0;
+	}
+}
+
+.container{
+	padding: 0 52px;
+	width: 100%;
+	@include max(md){
+		padding: 0 24px;
+	}
+	@include max(sm){
+		padding: 0 16px;
+	}
+}
+
+
+
+
+.page-content{
+	@include max(md){
+		padding-top: vw2(71);
+	}
+	@include max(sm){
+		padding-top: vw3(48);
 	}
 }
 
