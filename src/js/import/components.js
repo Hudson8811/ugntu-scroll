@@ -54,5 +54,18 @@ $(document).ready(function (){
             $(this).addClass('active');
         });
     }
+
+
+    if (typeof nextPage !== "undefined"){
+        if (nextPage != ''){
+            $(window).scroll(function() {
+                if($(window).scrollTop() + $(window).height() == $(document).height()) {
+                    $(window).off("scroll");
+                    window.location.href = nextPage;
+                }
+            });
+        }
+    }
+
 });
 

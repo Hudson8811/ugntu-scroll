@@ -59,6 +59,17 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
     });
   }
+
+  if (typeof nextPage !== "undefined") {
+    if (nextPage != '') {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(function () {
+        if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() + jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).height() == jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).height()) {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).off("scroll");
+          window.location.href = nextPage;
+        }
+      });
+    }
+  }
 });
 
 /***/ }),
