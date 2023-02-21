@@ -136,13 +136,13 @@
 			border-radius: 50%;
 		}
 		&-outside{
-			width: vw(355);
+			width: vw(318);
 			animation: rotateCircle 15s infinite linear;
 			@include max(md){
-				width: vw2(193);
+				width: vw2(174);
 			}
 			@include max(sm){
-				width: vw3(95);
+				width: vw3(90);
 			}
 		}
 		&-inside{

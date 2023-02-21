@@ -1807,17 +1807,17 @@ img {
   border-radius: 50%;
 }
 .section1__circle-outside {
-  width: 17.6616915423vw;
+  width: 15.8208955224vw;
   animation: rotateCircle 15s infinite linear;
 }
 @media only screen and (max-width: 1100px) {
   .section1__circle-outside {
-    width: 25.1302083333vw;
+    width: 22.65625vw;
   }
 }
 @media only screen and (max-width: 699px) {
   .section1__circle-outside {
-    width: 29.6875vw;
+    width: 28.125vw;
   }
 }
 .section1__circle-inside {
