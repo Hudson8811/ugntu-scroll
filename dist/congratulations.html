@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Поздравление</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="header__left">
+          <div class="header__menu">
+            <div class="header__menu-item"><a href="">История</a></div>
+            <div class="header__menu-item"><a href="">Легенды УГНТУ</a></div>
+            <div class="header__menu-item"><a href="">Поздравление ректора</a></div>
+            <div class="header__menu-item"><a href="">календарь событий</a></div>
+          </div>
+        </div>
+        <div class="header__right"><a class="header__btn" href="">поддержать</a><a class="header__btn header__btn--blue js-congrat" href="">поздравить</a></div>
+      </div>
+      <div class="sidebar">
+        <div class="sidebar__logo"><img src="img/svg/logo-side.svg" alt="logo"></div>
+        <div class="sidebar__menu">
+          <div class="sidebar__menu-item active"><a href="">1940-е</a></div>
+          <div class="sidebar__menu-item"><a href="">1950-е</a></div>
+          <div class="sidebar__menu-item"><a href="">1960-е</a></div>
+          <div class="sidebar__menu-item"><a href="">1970-е</a></div>
+          <div class="sidebar__menu-item"><a href="">1980-е</a></div>
+          <div class="sidebar__menu-item"><a href="">1990-е</a></div>
+          <div class="sidebar__menu-item"><a href="">2010-е</a></div>
+        </div>
+        <div class="sidebar__burger">
+          <div class="sidebar__burger-open"><span></span><span></span></div>
+        </div>
+      </div>
+      <form class="form" action="" method="post">
+        <div class="form__content">
+          <div class="form__top">
+            <div class="form__title">Поздравление</div>
+            <div class="close-btn form__close-btn">
+              <svg>
+                <use xlink:href="./images/sprite.svg#close"></use>
+              </svg>
+            </div>
+          </div>
+          <input type="text" name="firstname" placeholder="Имя" required>
+          <input type="text" name="firstname" placeholder="Группа" required>
+          <textarea name="comment" placeholder="Поздравление" required></textarea>
+          <div class="form__files">
+            <div class="form__files-item"><span></span>
+              <div class="form__files-item-remove">
+                <svg>
+                  <use xlink:href="./images/sprite.svg#close"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <label class="form__download">
+            <input id="file-loader" type="file"><span class="form__download-title">Перетащите файлы в эту область</span><span class="form__download-button">
+              <svg>
+                <use xlink:href="./images/sprite.svg#upload"></use>
+              </svg><span>Выберите файл</span></span>
+          </label>
+        </div>
+        <button class="form__submit" type="submit">отправить</button>
+      </form>
+      <section class="first-screen">
+        <div class="container container--full first-screen__container">
+          <div class="first-screen__text">Тут будет находиться описание этого <span>раздела, что бы люди понимали как он работает</span></div>
+          <div class="first-screen__title js-marquee">Поздравления университета</div><a class="first-screen__anchor anchor" href="#list">список <br> поздравлений</a>
+          <div class="first-screen__buttons d-none-desktop-flex"><a href="#">поддержать</a><a class="js-congrat" href="#">поздравить</a></div>
+        </div>
+      </section>
+      <section class="list-block" id="list">
+        <div class="list-block__line-block">
+          <div class="container list-block__container-top">
+            <div class="list-block__title">список <br> поздравлений</div>
+            <label class="d-none-desktop">
+              <svg>
+                <use xlink:href="./images/sprite.svg#search"></use>
+              </svg>
+              <input type="search" placeholder="Введите имя">
+            </label>
+          </div>
+        </div>
+        <label class="d-none-mobile">
+          <svg>
+            <use xlink:href="./images/sprite.svg#search"></use>
+          </svg>
+          <input type="search" placeholder="Введите имя">
+        </label>
+        <div class="list-block__grid-block">
+          <div class="container">
+            <div class="list-block__sort">
+              <div class="list-block__number"><span class="congrat-num">20</span> поздравлений</div>
+              <select>
+                <option>По алфавиту а - я</option>
+                <option>По алфавиту я - а</option>
+                <option>По новизне</option>
+              </select>
+            </div>
+            <div class="list-block__grid">
+              <div class="card-person list-block__item"><a class="link-area" href="#" target="_blank"></a>
+                <div class="card-person__image"><img src="img/person.jpg" srcset="img/person@2x.jpg 2x" alt=""></div>
+                <div class="card-person__content">
+                  <div class="card-person__content-group">
+                    <div class="card-person__name">Аделина Имамутдинова</div>
+                    <div class="card-person__position">магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):</div>
+                  </div>
+                  <button class="button card-person__button">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-person list-block__item"><a class="link-area" href="#" target="_blank"></a>
+                <div class="card-person__image"><img src="img/person.jpg" srcset="img/person@2x.jpg 2x" alt=""></div>
+                <div class="card-person__content">
+                  <div class="card-person__content-group">
+                    <div class="card-person__name">Аделина Имамутдинова</div>
+                    <div class="card-person__position">магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):</div>
+                  </div>
+                  <button class="button card-person__button">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-person list-block__item"><a class="link-area" href="#" target="_blank"></a>
+                <div class="card-person__image"><img src="img/person.jpg" srcset="img/person@2x.jpg 2x" alt=""></div>
+                <div class="card-person__content">
+                  <div class="card-person__content-group">
+                    <div class="card-person__name">Аделина Имамутдинова</div>
+                    <div class="card-person__position">магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):</div>
+                  </div>
+                  <button class="button card-person__button">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-person list-block__item"><a class="link-area" href="#" target="_blank"></a>
+                <div class="card-person__image"><img src="img/person.jpg" srcset="img/person@2x.jpg 2x" alt=""></div>
+                <div class="card-person__content">
+                  <div class="card-person__content-group">
+                    <div class="card-person__name">Аделина Имамутдинова</div>
+                    <div class="card-person__position">магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):</div>
+                  </div>
+                  <button class="button card-person__button">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-person list-block__item"><a class="link-area" href="#" target="_blank"></a>
+                <div class="card-person__image"><img src="img/person.jpg" srcset="img/person@2x.jpg 2x" alt=""></div>
+                <div class="card-person__content">
+                  <div class="card-person__content-group">
+                    <div class="card-person__name">Аделина Имамутдинова</div>
+                    <div class="card-person__position">магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):</div>
+                  </div>
+                  <button class="button card-person__button">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card-person list-block__item"><a class="link-area" href="#" target="_blank"></a>
+                <div class="card-person__image"><img src="img/person.jpg" srcset="img/person@2x.jpg 2x" alt=""></div>
+                <div class="card-person__content">
+                  <div class="card-person__content-group">
+                    <div class="card-person__name">Аделина Имамутдинова</div>
+                    <div class="card-person__position">магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):</div>
+                  </div>
+                  <button class="button card-person__button">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#chevron-right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

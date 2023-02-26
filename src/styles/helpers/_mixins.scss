@@ -257,3 +257,12 @@
 		}
 	}
 }
+
+@mixin hover {
+	@media (min-width: 1024px) {
+		&:hover,
+		&:focus {
+			@content;
+		}
+	}
+}
