@@ -411,6 +411,15 @@
 			line-height: 13px;
 		}
 	}
+	&__button{
+		background-image: url("../img/svg/i-arrow.svg");
+		background-position: 51% center;
+		background-repeat: no-repeat;
+		background-size: 10px auto;
+		@include max(sm) {
+			background-size: 6px auto;
+		}
+	}
 }
 
 .first-screen {

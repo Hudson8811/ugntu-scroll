@@ -5837,6 +5837,17 @@ img {
     line-height: 13px;
   }
 }
+.card-person__button {
+  background-image: url("../img/svg/i-arrow.svg");
+  background-position: 51% center;
+  background-repeat: no-repeat;
+  background-size: 10px auto;
+}
+@media only screen and (max-width: 699px) {
+  .card-person__button {
+    background-size: 6px auto;
+  }
+}
 
 .first-screen {
   min-height: calc(100vh - 4.2288557214vw);
@@ -6535,6 +6546,10 @@ img {
 .single__slider-nav .swiper-prev,
 .single__slider-nav .swiper-next {
   background-color: rgba(0, 0, 0, 0.2);
+  background-image: url("../img/svg/i-arrow-white.svg");
+  background-position: 51% center;
+  background-repeat: no-repeat;
+  background-size: 10px auto;
 }
 @media (min-width: 1024px) {
   .single__slider-nav .swiper-prev:hover, .single__slider-nav .swiper-prev:focus,
@@ -6555,7 +6570,11 @@ img {
 .single__slider-nav .swiper-next {
     width: 32px;
     height: 32px;
+    background-size: 6px auto;
   }
+}
+.single__slider-nav .swiper-prev {
+  transform: scaleX(-1);
 }
 .single__subslider {
   margin-top: 124px;
