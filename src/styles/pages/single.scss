@@ -126,9 +126,20 @@
 			margin-top: 50px;
 		}
 
+		@include hover {
+			.single__share-icon {
+				border-color: $green;
+			}
+
+			span {
+				color: $green;
+			}
+		}
+
 		span {
 			text-transform: uppercase;
 			color: $black-40;
+			transition: 0.3s ease;
 
 			@include max(sm) {
 				font-size: 9px;
@@ -146,6 +157,7 @@
 		border-radius: 50%;
 		border: 1px solid rgba($gray-1c, 0.2);
 		margin-right: 20px;
+		transition: 0.3s ease;
 
 		@include max(sm) {
 			width: 33px;

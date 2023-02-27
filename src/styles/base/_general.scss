@@ -197,3 +197,22 @@ img{
 		}
 	}
 }
+
+.overlay {
+	position: fixed;
+	inset: 0;
+	z-index: 30;
+	background-color: rgba(#011F18, 0.7);
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.3s ease;
+
+	&.active {
+		opacity: 1;
+		pointer-events: auto;
+	}
+}
+
+.body-scroll-lock {
+	overflow: hidden;
+}
