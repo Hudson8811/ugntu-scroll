@@ -238,6 +238,10 @@
 		.swiper-prev,
 		.swiper-next {
 			background-color: rgba($black, 0.2);
+			background-image: url("../img/svg/i-arrow-white.svg");
+			background-position: 51% center;
+			background-repeat: no-repeat;
+			background-size: 10px auto;
 
 			@include hover {
 				background-color: rgba($black, 0.5);
@@ -251,7 +255,11 @@
 			@include max(sm) {
 				width: 32px;
 				height: 32px;
+				background-size: 6px auto;
 			}
+		}
+		.swiper-prev{
+			transform: scaleX(-1);
 		}
 	}
 
