@@ -28,9 +28,11 @@ block content
 					label.d-none-desktop
 						+icon('search')
 						input(type='search', placeholder='Введите имя')
-			label.d-none-mobile
-				+icon('search')
-				input(type='search', placeholder='Введите имя')
+
+			label.list-block__search-row.d-none-mobile
+				.container
+					+icon('search')
+					input(type='search', placeholder='Введите имя')
 			.list-block__grid-block
 				.container
 					.list-block__sort

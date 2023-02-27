@@ -27,7 +27,7 @@ $(window).on('load',function (){
 
 $(document).ready(function (){
     if ($('.e-filter').length > 0){
-        const swiper = new Swiper('.e-filter .swiper', {
+        const eFilterSwiper = new Swiper('.e-filter .swiper', {
             loop: false,
             freeMode: true,
             spaceBetween: 0,
@@ -37,7 +37,7 @@ $(document).ready(function (){
                 prevEl: '.e-filter__button--prev',
             },
         });
-        swiper.on('progress', function (swiper, progress) {
+        eFilterSwiper.on('progress', function (swiper, progress) {
             if (progress === 0){
                 $('.e-filter .swiper').addClass('start');
             } else {
@@ -73,8 +73,8 @@ $(document).ready(function() {
     $('.list-block__sort select').select2();
 
     /* Partners marquee */
-    if ($('.js-marquee')) {
-        if (window.matchMedia('(min-width: 768px)').matches) {
+    if ($('.js-marquee').length > 0) {
+        if (window.matchMedia('(min-width: 700px)').matches) {
             $('.js-marquee').marquee({
                 duration: 15000,
                 delayBeforeStart: 0,
@@ -135,37 +135,39 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    const subSlider = new Swiper('.js-subslider-single', {
-        slidesPerView: 5.8,
-        spaceBetween: 18,
-        breakpoints: {
-            1024: {
-                slidesPerView: 6.4,
-            },
-            1280: {
-                slidesPerView: 5.8
+    if ($('.js-subslider-single').length > 0 && $('.js-slider-single').length > 0){
+        const subSlider = new Swiper('.js-subslider-single', {
+            slidesPerView: 5.8,
+            spaceBetween: 18,
+            breakpoints: {
+                1024: {
+                    slidesPerView: 6.4,
+                },
+                1280: {
+                    slidesPerView: 5.8
+                }
             }
-        }
-    });
+        });
 
-    const slider = new Swiper('.js-slider-single', {
-        slidesPerView: 1.2,
-        spaceBetween: 6,
-        centeredSlides: true,
-        navigation: {
-            nextEl: '.swiper-next',
-            prevEl: '.swiper-prev',
-        },
-        thumbs: {
-            swiper: subSlider
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 1,
-                spaceBetween: 0,
-                centeredSlides: false
+        const mainSlider = new Swiper('.js-slider-single', {
+            slidesPerView: 1.2,
+            spaceBetween: 6,
+            centeredSlides: true,
+            navigation: {
+                nextEl: '.swiper-next',
+                prevEl: '.swiper-prev',
             },
-        }
-    });
+            thumbs: {
+                swiper: subSlider
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    centeredSlides: false
+                },
+            }
+        });
+    }
 });
 

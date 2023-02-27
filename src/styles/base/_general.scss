@@ -136,6 +136,7 @@ img{
 	border-radius: 50%;
 	border: 1px solid rgba($gray-1c, 0.2);
 	cursor: pointer;
+	transition: 0.3s;
 
 	@include max(sm) {
 		width: 33px;
@@ -143,16 +144,13 @@ img{
 	}
 
 	@include hover {
-		svg {
-			transform: rotate(180deg);
-		}
+		border-color: $colorCyan;
 	}
 
 	svg {
 		stroke: $gray-1c;
 		width: 21px;
 		height: 12px;
-		transition: 0.3s ease;
 
 		@include max(sm) {
 			width: 13px;
@@ -201,7 +199,7 @@ img{
 .overlay {
 	position: fixed;
 	inset: 0;
-	z-index: 30;
+	z-index: 8010;
 	background-color: rgba(#011F18, 0.7);
 	opacity: 0;
 	pointer-events: none;
