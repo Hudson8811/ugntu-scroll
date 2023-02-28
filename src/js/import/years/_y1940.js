@@ -483,10 +483,9 @@ function initScrollAnimationDesktop(){
         autoAlpha: 0,
     }, {
         autoAlpha: 0.7,
-        duration:  1.5,
+        duration:  1,
         ease: "none",
     } , ">");
-
 
 
 

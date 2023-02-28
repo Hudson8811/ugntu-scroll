@@ -4,15 +4,16 @@ include helpers/mixins
 block variables
 	- const title = "Project title"
 	- var sidebarActive = 1
-
+block head
+	include ../blocks/modules/overlay/overlayStyle
 block content
-
+	.fullPageOverlay
 	include ../blocks/modules/loader/loader
-
 	.wrapper
 		include ../blocks/modules/sidebar/sidebar
 
 		.scroll-page.home-page
+
 			.section1
 				.header
 					.header__left

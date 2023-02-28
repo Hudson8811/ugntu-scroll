@@ -81,29 +81,38 @@ $(window).on('resize',function (){
 
 
 function initScrollAnimationDesktop(){
-    $('body').addClass('active');
+
+    gsap.to(".fullPageOverlay", {
+        duration: 1,
+        autoAlpha: 0,
+        ease: "none",
+        onComplete: function (){
+            $('body').addClass('active');
+            $('.fullPageOverlay').removeClass('active');
+        }
+    });
 
     tl1.fromTo(".y2-1__numbers", {
-        x: '100vw',
+        x: '5vw',
     }, {
         x: '-100%',
-        duration:  6,
+        duration:  4,
         ease: "none",
     } , "0");
     tl1.fromTo(".y2-1__photos-item--1", {
-        x: '100vw',
+        x: '50vw',
     }, {
         x: '-100%',
-        duration:  1.5,
+        duration:  1,
         ease: "none",
-    } , "<+1");
+    } , "<");
     tl1.fromTo(".y2-1__photos-item--2", {
         x: '100vw',
     }, {
         x: '-100%',
         duration:  1.5,
         ease: "none",
-    } , ">-0.2");
+    } , ">-0.3");
     tl1.fromTo(".y2-1__photos-item--3", {
         x: '100vw',
     }, {
@@ -119,7 +128,7 @@ function initScrollAnimationDesktop(){
         autoAlpha: 1,
         duration: 0.7,
         ease: "none",
-    } , "6");
+    } , "4");
 
 
     tl1.fromTo(".y2-2__top", {

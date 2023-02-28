@@ -1,6 +1,6 @@
 import $ from "jquery";
 import Swiper from 'swiper/bundle';
-
+import gsap from "gsap";
 
 addEventListener('beforeunload', (event) => { });
 onbeforeunload = (event) => {
@@ -20,7 +20,6 @@ $(window).on('load',function (){
     else {
         $('body').addClass('active');
     }
-
 
 
 });
@@ -60,8 +59,18 @@ $(document).ready(function (){
         if (nextPage != ''){
             $(window).scroll(function() {
                 if($(window).scrollTop() + $(window).height() == $(document).height()) {
-                    $(window).off("scroll");
-                    window.location.href = nextPage;
+                    disableScroll();
+                    $('.fullPageOverlay').css('pointer-events','auto');
+                    gsap.to(".fullPageOverlay", {
+                        duration: 1,
+                        autoAlpha: 1,
+                        ease: "none",
+                        onComplete: function (){
+                            setTimeout(function (){
+                                window.location.href = nextPage;
+                            },200)
+                        }
+                    });
                 }
             });
         }
@@ -171,3 +180,12 @@ $(document).ready(function() {
     }
 });
 
+
+
+function disableScroll() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+    window.onscroll = function() {
+        window.scrollTo(scrollLeft, scrollTop);
+    };
+}

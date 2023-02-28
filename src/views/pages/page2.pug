@@ -4,11 +4,12 @@ block variables
 	- const title = "1950-1958"
 	- var sidebarActive = 2
 
-
+block head
+	include ../../blocks/modules/overlay/overlayStyle
 block content
+	.fullPageOverlay.active
 	.wrapper
 		include ../../blocks/modules/sidebar/sidebar
-
 		.scroll-page.y1950
 			.y2-1
 				.y2-1__numbers

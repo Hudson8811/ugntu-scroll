@@ -214,3 +214,20 @@ img{
 .body-scroll-lock {
 	overflow: hidden;
 }
+/*
+.fullPageOverlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999999;
+	background: $colorBlue;
+	pointer-events: none;
+	opacity: 0;
+	&.active{
+		opacity: 1;
+		pointer-events: auto;
+	}
+}
+*/
