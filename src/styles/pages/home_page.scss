@@ -754,6 +754,9 @@
 					left: vw(614);
 					display: flex;
 					align-items: flex-start;
+					@include max(md){
+						display: none;
+					}
 					.section3__label-item{
 						flex-shrink: 0;
 						&--1{

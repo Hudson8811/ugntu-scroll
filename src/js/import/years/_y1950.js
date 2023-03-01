@@ -12,6 +12,11 @@ let addTime = 2100;
 
 let st1;
 let tl1 = gsap.timeline({});
+let tl = gsap.timeline({
+    onComplete: function (){
+        $('body').addClass('active');
+    }
+});
 
 let scWidth, b1Width, b2Width, b3Width, b4Width, b5Width, b6Width, b7Width, b8Width, b9Width;
 let scHeight, b1Height, b2Height, b3Height, b4Height, b5Height, b6Height, b7Height, b8Height, b9Height;
@@ -63,18 +68,20 @@ $(window).on('resize',function (){
     if(dwidth!==wwidth){
         if (typeof st1 !== "undefined") st1.kill();
         tl1.clear();
+        tl.clear();
         gsap.set(".y2-1__numbers,.y2-1__photos-item--1,.y2-1__photos-item--2,.y2-1__photos-item--3,.y2-2,.y2-2__top," +
             ".y2-2__title,.y2-2__fly,.y2-2__title span,.y2-2__text,.y2-2__diplom,.y2-1,.y2-3__text,.y2-3__label,.y2-3__overlay," +
             ".y2-4,.y2-4__overlay,.y2-5,.y2-5__overlay,.y2-6,.y2-6__title span,.y2-6__image,.y2-6__overlay,.y2-7,.y2-7__image," +
             ".y2-7__title span,.y2-7__overlay,.y2-9,.y2-8,.y2-9__flex,.y2-9__title,.y2-9__title span,.y2-10,.y2-10__overlay," +
             ".y2-11,.y2-11__first-title,.y2-11__second-title span,.y2-11__overlay,.y2-12,.y2-12__title,.y2-12__text-col," +
-            ".y2-12__images-img,.y2-9__overlay,.y2-8__overlay" +
+            ".y2-12__images-img,.y2-9__overlay,.y2-8__overlay, .fullPageOverlay, " +
             ".scroll-page", {clearProps:"all"});
         window.scrollTo({
             top: 0,
             behavior: "instant"
         });
         $('body').removeClass('active');
+        $('.fullPageOverlay').addClass('active');
         initAnimation();
     }
 });
@@ -87,10 +94,26 @@ function initScrollAnimationDesktop(){
         autoAlpha: 0,
         ease: "none",
         onComplete: function (){
-            $('body').addClass('active');
             $('.fullPageOverlay').removeClass('active');
         }
     });
+
+    tl.fromTo(".y2-1__numbers", {
+        x: '100vw',
+    }, {
+        x: '5vw',
+        duration:  1,
+        ease: "none",
+    } , "0");
+    tl.fromTo(".y2-1__photos-item--1", {
+        x: '100vw',
+    }, {
+        x: '50vw',
+        duration:  1,
+        ease: "none",
+    } , "0");
+
+
 
     tl1.fromTo(".y2-1__numbers", {
         x: '5vw',
@@ -526,7 +549,15 @@ function initScrollAnimationDesktop(){
 }
 
 function initScrollAnimationTablet(){
-    $('body').addClass('active');
+    gsap.to(".fullPageOverlay", {
+        duration: 1,
+        autoAlpha: 0,
+        ease: "none",
+        onComplete: function (){
+            $('.fullPageOverlay').removeClass('active');
+            $('body').addClass('active');
+        }
+    });
 
     tl1.fromTo(".y2-1__numbers", {
         x: '5%',
@@ -829,8 +860,15 @@ function initScrollAnimationTablet(){
 }
 
 function initScrollAnimationMobile(){
-    $('body').addClass('active');
-
+    gsap.to(".fullPageOverlay", {
+        duration: 1,
+        autoAlpha: 0,
+        ease: "none",
+        onComplete: function (){
+            $('.fullPageOverlay').removeClass('active');
+            $('body').addClass('active');
+        }
+    });
 
     tl1.fromTo(".y2-1__numbers", {
         x: 0,

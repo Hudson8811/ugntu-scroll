@@ -4123,6 +4123,11 @@ var initMode;
 var addTime = 2100;
 var st1;
 var tl1 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
+var tl = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({
+  onComplete: function onComplete() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
+  }
+});
 var scWidth, b1Width, b2Width, b3Width, b4Width, b5Width, b6Width, b7Width, b8Width, b9Width;
 var scHeight, b1Height, b2Height, b3Height, b4Height, b5Height, b6Height, b7Height, b8Height, b9Height;
 
@@ -4169,7 +4174,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
   if (dwidth !== wwidth) {
     if (typeof st1 !== "undefined") st1.kill();
     tl1.clear();
-    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".y2-1__numbers,.y2-1__photos-item--1,.y2-1__photos-item--2,.y2-1__photos-item--3,.y2-2,.y2-2__top," + ".y2-2__title,.y2-2__fly,.y2-2__title span,.y2-2__text,.y2-2__diplom,.y2-1,.y2-3__text,.y2-3__label,.y2-3__overlay," + ".y2-4,.y2-4__overlay,.y2-5,.y2-5__overlay,.y2-6,.y2-6__title span,.y2-6__image,.y2-6__overlay,.y2-7,.y2-7__image," + ".y2-7__title span,.y2-7__overlay,.y2-9,.y2-8,.y2-9__flex,.y2-9__title,.y2-9__title span,.y2-10,.y2-10__overlay," + ".y2-11,.y2-11__first-title,.y2-11__second-title span,.y2-11__overlay,.y2-12,.y2-12__title,.y2-12__text-col," + ".y2-12__images-img,.y2-9__overlay,.y2-8__overlay" + ".scroll-page", {
+    tl.clear();
+    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".y2-1__numbers,.y2-1__photos-item--1,.y2-1__photos-item--2,.y2-1__photos-item--3,.y2-2,.y2-2__top," + ".y2-2__title,.y2-2__fly,.y2-2__title span,.y2-2__text,.y2-2__diplom,.y2-1,.y2-3__text,.y2-3__label,.y2-3__overlay," + ".y2-4,.y2-4__overlay,.y2-5,.y2-5__overlay,.y2-6,.y2-6__title span,.y2-6__image,.y2-6__overlay,.y2-7,.y2-7__image," + ".y2-7__title span,.y2-7__overlay,.y2-9,.y2-8,.y2-9__flex,.y2-9__title,.y2-9__title span,.y2-10,.y2-10__overlay," + ".y2-11,.y2-11__first-title,.y2-11__second-title span,.y2-11__overlay,.y2-12,.y2-12__title,.y2-12__text-col," + ".y2-12__images-img,.y2-9__overlay,.y2-8__overlay, .fullPageOverlay, " + ".scroll-page", {
       clearProps: "all"
     });
     window.scrollTo({
@@ -4177,6 +4183,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
       behavior: "instant"
     });
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fullPageOverlay').addClass('active');
     initAnimation();
   }
 });
@@ -4187,10 +4194,23 @@ function initScrollAnimationDesktop() {
     autoAlpha: 0,
     ease: "none",
     onComplete: function onComplete() {
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fullPageOverlay').removeClass('active');
     }
   });
+  tl.fromTo(".y2-1__numbers", {
+    x: '100vw'
+  }, {
+    x: '5vw',
+    duration: 1,
+    ease: "none"
+  }, "0");
+  tl.fromTo(".y2-1__photos-item--1", {
+    x: '100vw'
+  }, {
+    x: '50vw',
+    duration: 1,
+    ease: "none"
+  }, "0");
   tl1.fromTo(".y2-1__numbers", {
     x: '5vw'
   }, {
@@ -4566,7 +4586,15 @@ function initScrollAnimationDesktop() {
 }
 
 function initScrollAnimationTablet() {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
+  gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(".fullPageOverlay", {
+    duration: 1,
+    autoAlpha: 0,
+    ease: "none",
+    onComplete: function onComplete() {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fullPageOverlay').removeClass('active');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
+    }
+  });
   tl1.fromTo(".y2-1__numbers", {
     x: '5%'
   }, {
@@ -4819,7 +4847,15 @@ function initScrollAnimationTablet() {
 }
 
 function initScrollAnimationMobile() {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
+  gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(".fullPageOverlay", {
+    duration: 1,
+    autoAlpha: 0,
+    ease: "none",
+    onComplete: function onComplete() {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fullPageOverlay').removeClass('active');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
+    }
+  });
   tl1.fromTo(".y2-1__numbers", {
     x: 0
   }, {
