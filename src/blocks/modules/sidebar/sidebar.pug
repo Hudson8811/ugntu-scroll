@@ -1,13 +1,29 @@
 .sidebar
 	.sidebar__logo
 		img(src="img/svg/logo-side.svg" alt="logo")
-
+	.sidebar__burger
+		.sidebar__burger-open
+			span
+			span
 	if !hideYears
 		.sidebar__menu
-			.sidebar__menu-item.active
-				a(href="") 1940-е
-			.sidebar__menu-item
-				a(href="") 1950-е
+			.sidebar__menu-item(class=sidebarActive === 1 ? 'active' : '')
+				a(href="./index.html") 1940-е
+				.sidebar__menu-dropdown
+					a(href="javascript:;") 1941
+					a(href="javascript:;") 1943
+					a(href="javascript:;") 1948
+					a(href="javascript:;") 1949
+			.sidebar__menu-item(class=sidebarActive === 2 ? 'active' : '')
+				a(href="page2.html") 1950-е
+				.sidebar__menu-dropdown
+					a(href="javascript:;") 1951
+					a(href="javascript:;") 1952
+					a(href="javascript:;") 1954
+					a(href="javascript:;") 1955
+					a(href="javascript:;") 1956
+					a(href="javascript:;") 1957
+					a(href="javascript:;") 1958
 			.sidebar__menu-item
 				a(href="") 1960-е
 			.sidebar__menu-item
@@ -19,7 +35,19 @@
 			.sidebar__menu-item
 				a(href="") 2010-е
 
-	.sidebar__burger
-		.sidebar__burger-open
-			span
-			span
+	.sidebar__global
+		.sidebar__global-top
+			.header
+				.header__left
+				.header__right
+					a.header__btn(href="") поддержать
+					a.header__btn.header__btn--blue(href="") поздравить
+		.sidebar__global-items
+			.sidebar__global-item.active
+				a(href="./index.html") История
+			.sidebar__global-item
+				a(href="") Легенды УГНТУ
+			.sidebar__global-item
+				a(href="./congratulations.html") Поздравления
+			.sidebar__global-item
+				a(href="./events.html") Календарь событий

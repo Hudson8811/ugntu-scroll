@@ -64,7 +64,7 @@ $(window).on('resize',function (){
         tl1.clear();
         tl2.clear();
         tl3.clear();
-        gsap.set(".loader__center, .loader__back, .section1__house, .header, .sidebar, .section1__title," +
+        gsap.set(".loader__center, .loader__back, .section1__house, .section1 .header, .sidebar, .section1__title," +
             ".section1__dates, .section1__circle, .section1__circle-inner, .section2, .section2__numbers," +
             ".section2__photos-item--1, .section2__photos-item--2,.section2__photos-item--3, .section2__year," +
             ".section2__textblock, .section2__letter, .section2__cloud-1, .section2__cloud-2, .section2__textblock2," +
@@ -84,6 +84,7 @@ $(window).on('resize',function (){
         });
         $('body').removeClass('active');
         $('.loader').removeClass('hide');
+        $('.sidebar__global, .sidebar__burger').removeClass('active');
         initAnimation();
     }
 });
@@ -109,7 +110,7 @@ function initScrollAnimationDesktop(){
         ease: "power1.inOut",
     } , "<");
 
-    tl.from(".header", {
+    tl.from(".section1 .header", {
         y: '-100%',
         duration:  0.8,
         ease: "Sine.in",
@@ -143,7 +144,7 @@ function initScrollAnimationDesktop(){
 
 
 
-    tl1.fromTo(".header", {
+    tl1.fromTo(".section1 .header", {
         y: '0',
     },{
         y: '-100%',

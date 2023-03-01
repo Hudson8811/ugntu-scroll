@@ -82,6 +82,7 @@ $(window).on('resize',function (){
         });
         $('body').removeClass('active');
         $('.fullPageOverlay').addClass('active');
+        $('.sidebar__global, .sidebar__burger').removeClass('active');
         initAnimation();
     }
 });
