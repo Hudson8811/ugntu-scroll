@@ -67,6 +67,8 @@ $(document).ready(function (){
         let link = $(this).attr('href');
         if (!$(this).closest('.sidebar__menu-item').hasClass('active')){
             nextPageAnimation(link);
+        } else {
+            $('.sidebar__menu').removeClass('active');
         }
     });
 
@@ -200,6 +202,7 @@ function disableScroll() {
 function nextPageAnimation(link){
     disableScroll();
     $('.sidebar__menu-dropdown').hide();
+    $('.sidebar__menu').removeClass('active');
     $('.fullPageOverlay').css('pointer-events','auto');
     gsap.to(".fullPageOverlay", {
         duration: 1,

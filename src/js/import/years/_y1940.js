@@ -85,14 +85,14 @@ $(window).on('resize',function (){
             ".section3__block--3 .section3__overlay, .section3__block--4, .section3__block--4 .section3__image," +
             ".section3__block--4 .section3__label-item--1, .section3__block--4 .section3__label-item--2," +
             ".section3__block--4 .section3__label-item--3, .section3__block--4 .section3__overlay," +
-            ".scroll-page", {clearProps:"all"});
+            ".scroll-page,.sidebar__menu-dropdown", {clearProps:"all"});
         window.scrollTo({
             top: 0,
             behavior: "instant"
         });
         $('body').removeClass('active');
         $('.loader').removeClass('hide');
-        $('.sidebar__global, .sidebar__burger').removeClass('active');
+        $('.sidebar__global, .sidebar__burger, .sidebar__menu').removeClass('active');
         initAnimation();
     }
 });

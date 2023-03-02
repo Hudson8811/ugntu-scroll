@@ -7,14 +7,14 @@
 			span
 	if !hideYears
 		.sidebar__menu
-			.sidebar__menu-item(class=sidebarActive === 1 ? 'active' : '')
+			.sidebar__menu-item(class=sidebarActive === 1940 ? 'active selected':'')
 				a(href="./index.html") 1940-е
 				.sidebar__menu-dropdown
 					a(href="./index.html?y=1941") 1941
 					a(href="./index.html?y=1943") 1943
 					a(href="./index.html?y=1948") 1948
 					a(href="./index.html?y=1949") 1949
-			.sidebar__menu-item(class=sidebarActive === 2 ? 'active' : '')
+			.sidebar__menu-item(class=sidebarActive === 1950 ? 'active selected':'')
 				a(href="page2.html") 1950-е
 				.sidebar__menu-dropdown
 					a(href="./page2.html?y=1951") 1951
@@ -34,6 +34,9 @@
 				a(href="") 1990-е
 			.sidebar__menu-item
 				a(href="") 2010-е
+
+		.sidebar__mobile-year #{sidebarActive}-e
+
 
 	.sidebar__global
 		.sidebar__global-top

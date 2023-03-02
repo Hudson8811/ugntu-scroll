@@ -81,14 +81,14 @@ $(window).on('resize',function (){
             ".y2-7__title span,.y2-7__overlay,.y2-9,.y2-8,.y2-9__flex,.y2-9__title,.y2-9__title span,.y2-10,.y2-10__overlay," +
             ".y2-11,.y2-11__first-title,.y2-11__second-title span,.y2-11__overlay,.y2-12,.y2-12__title,.y2-12__text-col," +
             ".y2-12__images-img,.y2-9__overlay,.y2-8__overlay, .fullPageOverlay, " +
-            ".scroll-page", {clearProps:"all"});
+            ".scroll-page,.sidebar__menu-dropdown", {clearProps:"all"});
         window.scrollTo({
             top: 0,
             behavior: "instant"
         });
         $('body').removeClass('active');
         $('.fullPageOverlay').addClass('active');
-        $('.sidebar__global, .sidebar__burger').removeClass('active');
+        $('.sidebar__global, .sidebar__burger, .sidebar__menu').removeClass('active');
         initAnimation();
     }
 });
