@@ -791,6 +791,9 @@
 	background: $colorCyan;
 	&__flex{
 		flex-direction: row-reverse;
+		@include max(md){
+			flex-direction: column;
+		}
 	}
 	&__text{
 		padding: vw(50) vw(838) vw(50) vw(50);

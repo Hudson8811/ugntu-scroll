@@ -63,6 +63,7 @@
 		width: 100%;
 		cursor: pointer;
 		transition: background-color 0.2s ease;
+		flex-shrink: 0;
 		@include max(md){
 			order: 3;
 			height: vw2(71);

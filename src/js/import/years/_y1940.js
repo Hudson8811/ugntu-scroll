@@ -2,8 +2,10 @@ import $ from "jquery";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
+import ScrollToPlugin from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(MotionPathPlugin);
+gsap.registerPlugin(ScrollToPlugin);
 
 
 let tl = gsap.timeline({
@@ -24,6 +26,10 @@ let tl3 = gsap.timeline({});
 
 let s3Width, b1Width, b2Width, b3Width, b4Width;
 let s3Height, b1Height, b2Height, b3Height, b4Height;
+
+
+let urlParams = new URLSearchParams(window.location.search);
+let yValue = urlParams.get('y');
 
 
 function initAnimation(){
@@ -53,6 +59,8 @@ function initAnimation(){
 }
 
 initAnimation();
+checkYearValue();
+
 var dwidth = $(window).width();
 $(window).on('resize',function (){
     var wwidth = $(window).width();
@@ -352,6 +360,7 @@ function initScrollAnimationDesktop(){
     } , ">-1.5");
 
 
+    tl1.addLabel('1941','+=0');
     tl1.fromTo(".section3__block--1", {
         x: "0",
     }, {
@@ -369,6 +378,7 @@ function initScrollAnimationDesktop(){
     } , ">");
 
 
+    tl1.addLabel('1943','+=0.8');
     tl1.fromTo(".section3__block--2", {
         x: "0",
         left: "100%"
@@ -388,6 +398,7 @@ function initScrollAnimationDesktop(){
     } , ">");
 
 
+    tl1.addLabel('1948','+=1.8');
     tl1.fromTo(".section3__block--3", {
         x: "0",
         left: "100%"
@@ -440,6 +451,7 @@ function initScrollAnimationDesktop(){
 
 
 
+    tl1.addLabel('1949','+=0.8');
     tl1.fromTo(".section3__block--4", {
         x: "0",
         left: "100%"
@@ -743,6 +755,7 @@ function initScrollAnimationTablet(){
     } , ">-1.5");
 
 
+    tl1.addLabel('1941','+=0');
     tl1.fromTo(".section3__block--1", {
         y: "0",
     }, {
@@ -761,6 +774,7 @@ function initScrollAnimationTablet(){
 
 
 
+    tl1.addLabel('1943','+=0.2');
     tl1.fromTo(".section3__block--2", {
         y: "0",
         top: "100%"
@@ -779,7 +793,7 @@ function initScrollAnimationTablet(){
         ease: "none",
     } , ">");
 
-
+    tl1.addLabel('1948','+=0.1');
     tl1.fromTo(".section3__block--3", {
         y: "0",
         top: "100%"
@@ -802,6 +816,7 @@ function initScrollAnimationTablet(){
 
 
 
+    tl1.addLabel('1949','+=0');
     tl1.fromTo(".section3__block--4", {
         y: "0",
         top: "100%"
@@ -898,4 +913,68 @@ function initScrollAnimationMobile(){
         scrub: 1,
         animation: tl1,
     });
+}
+
+
+
+
+
+
+function checkYearValue(){
+    if (yValue !== null){
+        $('.fullPageOverlay').addClass('active');
+        gsap.to(".fullPageOverlay", {
+            duration: 1,
+            autoAlpha: 0,
+            ease: "none",
+            onComplete: function (){
+                $('.fullPageOverlay').removeClass('active');
+            }
+        });
+
+
+        if (initMode === 'desk' || initMode === 'tablet'){
+            tl.progress(1);
+            gsap.to(window, {
+                scrollTo: tl1.scrollTrigger.labelToScroll(yValue),
+                duration: 0
+            });
+        } else if (initMode === 'mobile'){
+            tl.progress(1);
+            gsap.to(window, {
+                scrollTo: '#year'+yValue,
+                duration: 0.01
+            });
+        }
+    }
+}
+
+function scrollToYear(year){
+    if (year !== null){
+        if (initMode === 'desk' || initMode === 'tablet'){
+            gsap.to(window, {
+                scrollTo: tl1.scrollTrigger.labelToScroll(year),
+            });
+        } else if (initMode === 'mobile'){
+            gsap.to(window, {
+                scrollTo: '#year'+year,
+            });
+        }
+    }
+}
+
+$('.sidebar__menu-dropdown a').on('click',function (){
+    event.preventDefault();
+    let link = $(this).attr('href');
+    if ($(this).closest('.sidebar__menu-item').hasClass('active')){
+        let yValue = getParameterFromString(link, "y");
+        if (yValue !== null) {
+            scrollToYear(yValue);
+        }
+    }
+});
+
+function getParameterFromString(urlString, parameterName) {
+    var urlParams = new URLSearchParams(urlString.split('?')[1]);
+    return urlParams.get(parameterName);
 }

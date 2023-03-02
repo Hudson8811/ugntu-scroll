@@ -2,8 +2,10 @@ import $ from "jquery";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
+import ScrollToPlugin from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(MotionPathPlugin);
+gsap.registerPlugin(ScrollToPlugin);
 
 
 var initMode;
@@ -20,6 +22,9 @@ let tl = gsap.timeline({
 
 let scWidth, b1Width, b2Width, b3Width, b4Width, b5Width, b6Width, b7Width, b8Width, b9Width;
 let scHeight, b1Height, b2Height, b3Height, b4Height, b5Height, b6Height, b7Height, b8Height, b9Height;
+
+let urlParams = new URLSearchParams(window.location.search);
+let yValue = urlParams.get('y');
 
 function initAnimation(){
     scWidth =  $('.scroll-page').innerWidth();
@@ -61,6 +66,7 @@ function initAnimation(){
 }
 
 initAnimation();
+checkYearValue();
 
 var dwidth = $(window).width();
 $(window).on('resize',function (){
@@ -89,7 +95,6 @@ $(window).on('resize',function (){
 
 
 function initScrollAnimationDesktop(){
-
     gsap.to(".fullPageOverlay", {
         duration: 1,
         autoAlpha: 0,
@@ -271,7 +276,7 @@ function initScrollAnimationDesktop(){
         ease: "none",
     } , "<");
 
-
+    tl1.addLabel('1951','+=2');
     tl1.fromTo(".y2-4", {
         x: "0",
         left: "100%"
@@ -291,7 +296,7 @@ function initScrollAnimationDesktop(){
     } , ">");
 
 
-
+    tl1.addLabel('1952','+=1.1');
     tl1.fromTo(".y2-5", {
         x: "0",
         left: "100%"
@@ -360,6 +365,7 @@ function initScrollAnimationDesktop(){
     } , ">0.5");
 
 
+    tl1.addLabel('1954','+=2.3');
     tl1.fromTo(".y2-7", {
         x: "0",
         left: "100%"
@@ -401,6 +407,7 @@ function initScrollAnimationDesktop(){
     } , ">");
 
 
+    tl1.addLabel('1955','+=0.9');
     tl1.fromTo(".y2-9", {
         left: "100%"
     }, {
@@ -446,7 +453,7 @@ function initScrollAnimationDesktop(){
         ease: "none",
     } , "<");
 
-
+    tl1.addLabel('1956','+=3.7');
     tl1.fromTo(".y2-10", {
         x: "0",
         left: "100%"
@@ -457,8 +464,6 @@ function initScrollAnimationDesktop(){
         ease: "none",
     } , ">");
 
-
-
     tl1.fromTo(".y2-10__overlay", {
         autoAlpha: 0,
     }, {
@@ -467,6 +472,7 @@ function initScrollAnimationDesktop(){
         ease: "none",
     } , ">");
 
+    tl1.addLabel('1957','+=0.66');
     tl1.fromTo(".y2-11", {
         x: "0",
         left: "100%"
@@ -510,6 +516,7 @@ function initScrollAnimationDesktop(){
     } , ">");
 
 
+    tl1.addLabel('1958','+=1.5');
     tl1.fromTo(".y2-12", {
         x: "0",
         left: "100%"
@@ -684,7 +691,7 @@ function initScrollAnimationTablet(){
         ease: "none",
     } , "<");
 
-
+    tl1.addLabel('1951','+=1');
     tl1.fromTo(".y2-4", {
         y: "0",
         top: "100%"
@@ -703,7 +710,7 @@ function initScrollAnimationTablet(){
         ease: "none",
     } , ">");
 
-
+    tl1.addLabel('1952','+=1.5');
     tl1.fromTo(".y2-5", {
         y: "0",
         top: "100%"
@@ -742,7 +749,7 @@ function initScrollAnimationTablet(){
         ease: "none",
     } , ">");
 
-
+    tl1.addLabel('1954','+=1.7');
     tl1.fromTo(".y2-7", {
         y: "0",
         top: "100%"
@@ -762,6 +769,7 @@ function initScrollAnimationTablet(){
     } , ">");
 
 
+    tl1.addLabel('1955','+=2');
     tl1.fromTo(".y2-8", {
         y: "0",
         top: "100%"
@@ -779,7 +787,6 @@ function initScrollAnimationTablet(){
         duration:  1.5,
         ease: "none",
     } , ">");
-
 
     tl1.fromTo(".y2-9", {
         y: "0",
@@ -799,7 +806,7 @@ function initScrollAnimationTablet(){
         ease: "none",
     } , ">")
 
-
+    tl1.addLabel('1956','+=1.5');
     tl1.fromTo(".y2-10", {
         y: "0",
         top: "100%"
@@ -818,7 +825,7 @@ function initScrollAnimationTablet(){
         ease: "none",
     } , ">")
 
-
+    tl1.addLabel('1957','+=1.8');
     tl1.fromTo(".y2-11", {
         y: "0",
         top: "100%"
@@ -837,7 +844,7 @@ function initScrollAnimationTablet(){
         ease: "none",
     } , ">")
 
-
+    tl1.addLabel('1958','+=1.6');
     tl1.fromTo(".y2-12", {
         y: "0",
         top: "100%"
@@ -898,4 +905,57 @@ function initScrollAnimationMobile(){
         scrub: 1,
         animation: tl1,
     });
+}
+
+
+function checkYearValue(){
+    if (yValue !== null){
+        if (initMode === 'desk'){
+            tl.progress(1);
+            gsap.to(window, {
+                scrollTo: tl1.scrollTrigger.labelToScroll(yValue),
+                duration: 0
+            });
+        } else if (initMode === 'tablet'){
+            gsap.to(window, {
+                scrollTo: tl1.scrollTrigger.labelToScroll(yValue),
+                duration: 0
+            });
+        } else if (initMode === 'mobile'){
+            gsap.to(window, {
+                scrollTo: '#year'+yValue,
+                duration: 0.01
+            });
+        }
+    }
+}
+
+function scrollToYear(year){
+    if (year !== null){
+        if (initMode === 'desk' || initMode === 'tablet'){
+            gsap.to(window, {
+                scrollTo: tl1.scrollTrigger.labelToScroll(year),
+            });
+        } else if (initMode === 'mobile'){
+            gsap.to(window, {
+                scrollTo: '#year'+year,
+            });
+        }
+    }
+}
+
+$('.sidebar__menu-dropdown a').on('click',function (){
+    event.preventDefault();
+    let link = $(this).attr('href');
+    if ($(this).closest('.sidebar__menu-item').hasClass('active')){
+        let yValue = getParameterFromString(link, "y");
+        if (yValue !== null) {
+            scrollToYear(yValue);
+        }
+    }
+});
+
+function getParameterFromString(urlString, parameterName) {
+    var urlParams = new URLSearchParams(urlString.split('?')[1]);
+    return urlParams.get(parameterName);
 }

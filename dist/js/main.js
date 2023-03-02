@@ -62,22 +62,25 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     });
   }
 
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.sidebar__menu-item > a').on('click', function () {
+    event.preventDefault();
+    var link = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href');
+    nextPageAnimation(link);
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.sidebar__menu-dropdown a').on('click', function () {
+    event.preventDefault();
+    var link = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href');
+
+    if (!jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.sidebar__menu-item').hasClass('active')) {
+      nextPageAnimation(link);
+    }
+  });
+
   if (typeof nextPage !== "undefined") {
     if (nextPage != '') {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(function () {
         if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() + jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).height() == jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).height()) {
-          disableScroll();
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fullPageOverlay').css('pointer-events', 'auto');
-          gsap__WEBPACK_IMPORTED_MODULE_2__["default"].to(".fullPageOverlay", {
-            duration: 1,
-            autoAlpha: 1,
-            ease: "none",
-            onComplete: function onComplete() {
-              setTimeout(function () {
-                window.location.href = nextPage;
-              }, 200);
-            }
-          });
+          nextPageAnimation(nextPage);
         }
       });
     }
@@ -187,6 +190,22 @@ function disableScroll() {
   window.onscroll = function () {
     window.scrollTo(scrollLeft, scrollTop);
   };
+}
+
+function nextPageAnimation(link) {
+  disableScroll();
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.sidebar__menu-dropdown').hide();
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fullPageOverlay').css('pointer-events', 'auto');
+  gsap__WEBPACK_IMPORTED_MODULE_2__["default"].to(".fullPageOverlay", {
+    duration: 1,
+    autoAlpha: 1,
+    ease: "none",
+    onComplete: function onComplete() {
+      setTimeout(function () {
+        window.location.href = link;
+      }, 200);
+    }
+  });
 }
 
 /***/ }),
@@ -3349,12 +3368,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 /* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
 /* harmony import */ var gsap_MotionPathPlugin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gsap/MotionPathPlugin */ "./node_modules/gsap/MotionPathPlugin.js");
+/* harmony import */ var gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gsap/ScrollToPlugin */ "./node_modules/gsap/ScrollToPlugin.js");
+
 
 
 
 
 gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"]);
 gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_MotionPathPlugin__WEBPACK_IMPORTED_MODULE_3__["default"]);
+gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_4__["default"]);
 var tl = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({
   onComplete: function onComplete() {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
@@ -3369,6 +3391,8 @@ var tl2 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
 var tl3 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
 var s3Width, b1Width, b2Width, b3Width, b4Width;
 var s3Height, b1Height, b2Height, b3Height, b4Height;
+var urlParams = new URLSearchParams(window.location.search);
+var yValue = urlParams.get('y');
 
 function initAnimation() {
   s3Width = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.section3').innerWidth();
@@ -3395,6 +3419,7 @@ function initAnimation() {
 }
 
 initAnimation();
+checkYearValue();
 var dwidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).width();
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
   var wwidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).width();
@@ -3644,6 +3669,7 @@ function initScrollAnimationDesktop() {
     duration: 2,
     ease: "none"
   }, ">-1.5");
+  tl1.addLabel('1941', '+=0');
   tl1.fromTo(".section3__block--1", {
     x: "0"
   }, {
@@ -3658,6 +3684,7 @@ function initScrollAnimationDesktop() {
     duration: 1.5,
     ease: "none"
   }, ">");
+  tl1.addLabel('1943', '+=0.8');
   tl1.fromTo(".section3__block--2", {
     x: "0",
     left: "100%"
@@ -3674,6 +3701,7 @@ function initScrollAnimationDesktop() {
     duration: 1.5,
     ease: "none"
   }, ">");
+  tl1.addLabel('1948', '+=1.8');
   tl1.fromTo(".section3__block--3", {
     x: "0",
     left: "100%"
@@ -3718,6 +3746,7 @@ function initScrollAnimationDesktop() {
     duration: 1.5,
     ease: "none"
   }, ">");
+  tl1.addLabel('1949', '+=0.8');
   tl1.fromTo(".section3__block--4", {
     x: "0",
     left: "100%"
@@ -3981,6 +4010,7 @@ function initScrollAnimationTablet() {
     duration: 2,
     ease: "none"
   }, ">-1.5");
+  tl1.addLabel('1941', '+=0');
   tl1.fromTo(".section3__block--1", {
     y: "0"
   }, {
@@ -3995,6 +4025,7 @@ function initScrollAnimationTablet() {
     duration: 1.5,
     ease: "none"
   }, ">");
+  tl1.addLabel('1943', '+=0.2');
   tl1.fromTo(".section3__block--2", {
     y: "0",
     top: "100%"
@@ -4011,6 +4042,7 @@ function initScrollAnimationTablet() {
     duration: 1.5,
     ease: "none"
   }, ">");
+  tl1.addLabel('1948', '+=0.1');
   tl1.fromTo(".section3__block--3", {
     y: "0",
     top: "100%"
@@ -4027,6 +4059,7 @@ function initScrollAnimationTablet() {
     duration: 1.5,
     ease: "none"
   }, ">");
+  tl1.addLabel('1949', '+=0');
   tl1.fromTo(".section3__block--4", {
     y: "0",
     top: "100%"
@@ -4111,6 +4144,66 @@ function initScrollAnimationMobile() {
   });
 }
 
+function checkYearValue() {
+  if (yValue !== null) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fullPageOverlay').addClass('active');
+    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(".fullPageOverlay", {
+      duration: 1,
+      autoAlpha: 0,
+      ease: "none",
+      onComplete: function onComplete() {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fullPageOverlay').removeClass('active');
+      }
+    });
+
+    if (initMode === 'desk' || initMode === 'tablet') {
+      tl.progress(1);
+      gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(window, {
+        scrollTo: tl1.scrollTrigger.labelToScroll(yValue),
+        duration: 0
+      });
+    } else if (initMode === 'mobile') {
+      tl.progress(1);
+      gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(window, {
+        scrollTo: '#year' + yValue,
+        duration: 0.01
+      });
+    }
+  }
+}
+
+function scrollToYear(year) {
+  if (year !== null) {
+    if (initMode === 'desk' || initMode === 'tablet') {
+      gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(window, {
+        scrollTo: tl1.scrollTrigger.labelToScroll(year)
+      });
+    } else if (initMode === 'mobile') {
+      gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(window, {
+        scrollTo: '#year' + year
+      });
+    }
+  }
+}
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.sidebar__menu-dropdown a').on('click', function () {
+  event.preventDefault();
+  var link = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href');
+
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.sidebar__menu-item').hasClass('active')) {
+    var _yValue = getParameterFromString(link, "y");
+
+    if (_yValue !== null) {
+      scrollToYear(_yValue);
+    }
+  }
+});
+
+function getParameterFromString(urlString, parameterName) {
+  var urlParams = new URLSearchParams(urlString.split('?')[1]);
+  return urlParams.get(parameterName);
+}
+
 /***/ }),
 
 /***/ "./src/js/import/years/_y1950.js":
@@ -4126,12 +4219,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 /* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
 /* harmony import */ var gsap_MotionPathPlugin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gsap/MotionPathPlugin */ "./node_modules/gsap/MotionPathPlugin.js");
+/* harmony import */ var gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gsap/ScrollToPlugin */ "./node_modules/gsap/ScrollToPlugin.js");
+
 
 
 
 
 gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"]);
 gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_MotionPathPlugin__WEBPACK_IMPORTED_MODULE_3__["default"]);
+gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_4__["default"]);
 var initMode;
 var addTime = 2100;
 var st1;
@@ -4143,6 +4239,8 @@ var tl = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({
 });
 var scWidth, b1Width, b2Width, b3Width, b4Width, b5Width, b6Width, b7Width, b8Width, b9Width;
 var scHeight, b1Height, b2Height, b3Height, b4Height, b5Height, b6Height, b7Height, b8Height, b9Height;
+var urlParams = new URLSearchParams(window.location.search);
+var yValue = urlParams.get('y');
 
 function initAnimation() {
   scWidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.scroll-page').innerWidth();
@@ -4180,6 +4278,7 @@ function initAnimation() {
 }
 
 initAnimation();
+checkYearValue();
 var dwidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).width();
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
   var wwidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).width();
@@ -4358,6 +4457,7 @@ function initScrollAnimationDesktop() {
     duration: 0.5,
     ease: "none"
   }, "<");
+  tl1.addLabel('1951', '+=2');
   tl1.fromTo(".y2-4", {
     x: "0",
     left: "100%"
@@ -4374,6 +4474,7 @@ function initScrollAnimationDesktop() {
     duration: 1.5,
     ease: "none"
   }, ">");
+  tl1.addLabel('1952', '+=1.1');
   tl1.fromTo(".y2-5", {
     x: "0",
     left: "100%"
@@ -4433,6 +4534,7 @@ function initScrollAnimationDesktop() {
     duration: 1.5,
     ease: "none"
   }, ">0.5");
+  tl1.addLabel('1954', '+=2.3');
   tl1.fromTo(".y2-7", {
     x: "0",
     left: "100%"
@@ -4469,6 +4571,7 @@ function initScrollAnimationDesktop() {
     duration: 1.5,
     ease: "none"
   }, ">");
+  tl1.addLabel('1955', '+=0.9');
   tl1.fromTo(".y2-9", {
     left: "100%"
   }, {
@@ -4509,6 +4612,7 @@ function initScrollAnimationDesktop() {
     duration: 6,
     ease: "none"
   }, "<");
+  tl1.addLabel('1956', '+=3.7');
   tl1.fromTo(".y2-10", {
     x: "0",
     left: "100%"
@@ -4525,6 +4629,7 @@ function initScrollAnimationDesktop() {
     duration: 1.5,
     ease: "none"
   }, ">");
+  tl1.addLabel('1957', '+=0.66');
   tl1.fromTo(".y2-11", {
     x: "0",
     left: "100%"
@@ -4563,6 +4668,7 @@ function initScrollAnimationDesktop() {
     duration: 1.5,
     ease: "none"
   }, ">");
+  tl1.addLabel('1958', '+=1.5');
   tl1.fromTo(".y2-12", {
     x: "0",
     left: "100%"
@@ -4711,6 +4817,7 @@ function initScrollAnimationTablet() {
     duration: 0.5,
     ease: "none"
   }, "<");
+  tl1.addLabel('1951', '+=1');
   tl1.fromTo(".y2-4", {
     y: "0",
     top: "100%"
@@ -4727,6 +4834,7 @@ function initScrollAnimationTablet() {
     duration: 1.5,
     ease: "none"
   }, ">");
+  tl1.addLabel('1952', '+=1.5');
   tl1.fromTo(".y2-5", {
     y: "0",
     top: "100%"
@@ -4759,6 +4867,7 @@ function initScrollAnimationTablet() {
     duration: 1.5,
     ease: "none"
   }, ">");
+  tl1.addLabel('1954', '+=1.7');
   tl1.fromTo(".y2-7", {
     y: "0",
     top: "100%"
@@ -4775,6 +4884,7 @@ function initScrollAnimationTablet() {
     duration: 1.5,
     ease: "none"
   }, ">");
+  tl1.addLabel('1955', '+=2');
   tl1.fromTo(".y2-8", {
     y: "0",
     top: "100%"
@@ -4807,6 +4917,7 @@ function initScrollAnimationTablet() {
     duration: 1.5,
     ease: "none"
   }, ">");
+  tl1.addLabel('1956', '+=1.5');
   tl1.fromTo(".y2-10", {
     y: "0",
     top: "100%"
@@ -4823,6 +4934,7 @@ function initScrollAnimationTablet() {
     duration: 1.5,
     ease: "none"
   }, ">");
+  tl1.addLabel('1957', '+=1.8');
   tl1.fromTo(".y2-11", {
     y: "0",
     top: "100%"
@@ -4839,6 +4951,7 @@ function initScrollAnimationTablet() {
     duration: 1.5,
     ease: "none"
   }, ">");
+  tl1.addLabel('1958', '+=1.6');
   tl1.fromTo(".y2-12", {
     y: "0",
     top: "100%"
@@ -4894,6 +5007,60 @@ function initScrollAnimationMobile() {
     scrub: 1,
     animation: tl1
   });
+}
+
+function checkYearValue() {
+  if (yValue !== null) {
+    if (initMode === 'desk') {
+      tl.progress(1);
+      gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(window, {
+        scrollTo: tl1.scrollTrigger.labelToScroll(yValue),
+        duration: 0
+      });
+    } else if (initMode === 'tablet') {
+      gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(window, {
+        scrollTo: tl1.scrollTrigger.labelToScroll(yValue),
+        duration: 0
+      });
+    } else if (initMode === 'mobile') {
+      gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(window, {
+        scrollTo: '#year' + yValue,
+        duration: 0.01
+      });
+    }
+  }
+}
+
+function scrollToYear(year) {
+  if (year !== null) {
+    if (initMode === 'desk' || initMode === 'tablet') {
+      gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(window, {
+        scrollTo: tl1.scrollTrigger.labelToScroll(year)
+      });
+    } else if (initMode === 'mobile') {
+      gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(window, {
+        scrollTo: '#year' + year
+      });
+    }
+  }
+}
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.sidebar__menu-dropdown a').on('click', function () {
+  event.preventDefault();
+  var link = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href');
+
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.sidebar__menu-item').hasClass('active')) {
+    var _yValue = getParameterFromString(link, "y");
+
+    if (_yValue !== null) {
+      scrollToYear(_yValue);
+    }
+  }
+});
+
+function getParameterFromString(urlString, parameterName) {
+  var urlParams = new URLSearchParams(urlString.split('?')[1]);
+  return urlParams.get(parameterName);
 }
 
 /***/ }),
