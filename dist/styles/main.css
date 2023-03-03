@@ -3291,7 +3291,7 @@ summary {
   transform: translateX(100%);
   transition: 0.3s ease;
 }
-@media only screen and (max-width: 1279px) {
+@media only screen and (max-width: 1100px) {
   .form {
     max-width: 100%;
     height: 82.3vh;
@@ -3308,7 +3308,7 @@ summary {
 .form.open {
   transform: translateX(0);
 }
-@media only screen and (max-width: 1279px) {
+@media only screen and (max-width: 1100px) {
   .form.open {
     transform: translateY(0);
   }
@@ -3317,7 +3317,7 @@ summary {
   padding: 42px 50px 38px;
   flex-grow: 1;
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1100px) {
   .form__content {
     padding: 25px 40px 38px 25px;
   }
@@ -3344,7 +3344,7 @@ summary {
   font-size: 42px;
   line-height: 54px;
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1100px) {
   .form__title {
     text-transform: uppercase;
   }
@@ -3497,7 +3497,7 @@ summary {
   cursor: pointer;
   transition: 0.3s ease;
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1100px) {
   .form__download {
     height: auto;
     border: none;
@@ -3532,7 +3532,7 @@ summary {
   margin-top: 18px;
   cursor: pointer;
 }
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1100px) {
   .form__download-button {
     width: 100%;
     margin-top: 0;
@@ -3579,6 +3579,69 @@ summary {
 .form__submit:hover {
   background: #003F78;
   color: #ffffff;
+}
+.form__success {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.form__success:not(.active) {
+  display: none;
+}
+.form__success-content {
+  padding: 42px 50px 38px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1100px) {
+  .form__success-content {
+    padding: 25px 40px 38px 25px;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .form__success-content {
+    padding: 10px 15px;
+  }
+}
+.form__success-title {
+  font-family: "SangBleu Empire", sans-serif;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 1.28;
+  color: #404040;
+  text-align: center;
+  max-width: 650px;
+}
+@media only screen and (max-width: 699px) {
+  .form__success-title {
+    font-size: 24px;
+    max-width: 380px;
+  }
+}
+.form__success-text {
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 1.24;
+  text-align: center;
+  text-transform: uppercase;
+  color: #404040;
+  opacity: 0.3;
+  max-width: 333px;
+  margin-top: 32px;
+}
+@media only screen and (max-width: 699px) {
+  .form__success-text {
+    font-size: 14px;
+    max-width: 310px;
+  }
 }
 
 .home-page {
@@ -7596,13 +7659,6 @@ summary {
 @media only screen and (max-width: 1279px) {
   .single__container {
     flex-direction: column;
-    padding-top: 52px;
-  }
-}
-@media only screen and (max-width: 699px) {
-  .single__container {
-    padding-top: 12px;
-    padding-bottom: 50px;
   }
 }
 .single__col {
@@ -7615,32 +7671,48 @@ summary {
   }
 }
 .single__col:first-child {
-  padding: 35px 106px 80px 0;
+  padding-top: 35px;
+  padding-bottom: 106px;
+  padding-right: 80px;
+  background: #ffffff;
 }
 @media only screen and (max-width: 1279px) {
   .single__col:first-child {
-    padding: 0;
+    padding-top: 52px;
+    padding-right: 52px;
+    padding-bottom: 33px;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .single__col:first-child {
+    padding-top: 12px;
   }
 }
 .single__col:last-child {
-  padding: 124px 0 80px 40px;
+  padding-top: 124px;
+  padding-bottom: 80px;
+  padding-left: 40px;
 }
 @media only screen and (max-width: 1279px) {
   .single__col:last-child {
-    width: calc(100% + 48px);
-    margin-left: -24px;
-    padding: 35px 0 46px 24px;
+    width: 100%;
     background-color: #f6f6f6;
-    margin-top: 32px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 35px;
+    padding-bottom: 46px;
   }
 }
 @media only screen and (max-width: 699px) {
   .single__col:last-child {
     width: 100%;
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 50px;
     margin-left: 0;
-    background-color: transparent;
-    margin-top: 12px;
+    margin-top: 0;
+    background: #ffffff;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 .single__name {
@@ -7687,15 +7759,18 @@ summary {
     margin-top: 10px;
   }
 }
-.single__share {
-  display: inline-flex;
-  align-items: center;
+.single__shares {
+  display: flex;
   margin-top: 100px;
 }
 @media only screen and (max-width: 699px) {
-  .single__share {
+  .single__shares {
     margin-top: 50px;
   }
+}
+.single__share {
+  display: inline-flex;
+  align-items: center;
 }
 @media (min-width: 1024px) {
   .single__share:hover .single__share-icon, .single__share:focus .single__share-icon {
@@ -7714,6 +7789,14 @@ summary {
   .single__share span {
     font-size: 9px;
     line-height: 13px;
+  }
+}
+.single__share:not(:last-child) {
+  margin-right: 59px;
+}
+@media only screen and (max-width: 699px) {
+  .single__share:not(:last-child) {
+    margin-right: 25px;
   }
 }
 .single__share-icon {
@@ -7759,18 +7842,23 @@ summary {
     margin-top: 20px;
   }
 }
+@media only screen and (max-width: 699px) {
+  .single__text--desctop {
+    display: none;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .single__text--mobile {
+    display: none;
+  }
+}
 .single__slider {
   position: relative;
 }
-@media only screen and (max-width: 1279px) {
-  .single__slider {
-    margin-right: 24px;
-  }
-}
 @media only screen and (max-width: 699px) {
   .single__slider {
-    width: calc(100% + 30px);
-    margin: 0 -15px;
+    width: calc(100% + 32px);
+    margin: 0 -16px;
   }
 }
 .single__slider-item {
@@ -7880,13 +7968,19 @@ summary {
 }
 @media only screen and (max-width: 1279px) {
   .single__close-btn {
-    top: -20px;
-    right: 0;
+    top: 33px;
+    right: 52px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .single__close-btn {
+    right: 24px;
   }
 }
 @media only screen and (max-width: 699px) {
   .single__close-btn {
-    top: 3px;
+    top: 16px;
+    right: 16px;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */

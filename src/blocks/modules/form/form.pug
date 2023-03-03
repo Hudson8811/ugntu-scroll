@@ -5,8 +5,9 @@ form.form(action='', method='post')
 			.close-btn.form__close-btn
 				+icon('close')
 		input(type='text', name='firstname', placeholder='Имя', required)
-		input(type='text', name='firstname', placeholder='Группа', required)
-		textarea(name='comment', placeholder='Поздравление', required)
+		input(type='text', name='lastname', placeholder='Фамилия', required)
+		input(type='text', name='group', placeholder='Группа  / должность  / статус', required)
+		textarea(name='comment', placeholder='Текст поздравления', required)
 		.form__files
 			.form__files-item
 				span
@@ -19,3 +20,9 @@ form.form(action='', method='post')
 				+icon('upload')
 				span Выберите файл
 	button.form__submit(type='submit') отправить
+
+	.form__success
+		.form__success-content
+			.form__success-title Ваше поздравление направлено модератору
+			.form__success-text в ближайшее время  вы сможете увидеть его на сайте
+		button.form__submit.js-close-modal-form(type='button') ок

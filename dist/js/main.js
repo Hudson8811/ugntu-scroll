@@ -27,6 +27,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
     __webpack_require__(/*! ./years/_y1940 */ "./src/js/import/years/_y1940.js");
   } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y1950').length > 0) {
     __webpack_require__(/*! ./years/_y1950 */ "./src/js/import/years/_y1950.js");
+  } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y1960').length > 0) {
+    __webpack_require__(/*! ./years/_y1960 */ "./src/js/import/years/_y1960.js");
   } else {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
   }
@@ -81,7 +83,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   if (typeof nextPage !== "undefined") {
     if (nextPage != '') {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(function () {
-        if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() + jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).height() == jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).height()) {
+        if (Math.ceil(jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() + jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).height()) >= Math.floor(jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).height())) {
           nextPageAnimation(nextPage);
         }
       });
@@ -127,16 +129,24 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.overlay').addClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('body-scroll-lock');
   });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form__close-btn').on('click', function (e) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form__close-btn,.js-close-modal-form').on('click', function (e) {
     e.preventDefault();
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.form').removeClass('open');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.overlay').removeClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('body-scroll-lock');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form__success').removeClass('active');
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.overlay').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).removeClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form').removeClass('open');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('body-scroll-lock');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form__success').removeClass('active');
+  });
+  /*отмена отправки формы и показ окна успешной отправки*/
+
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form').on('submit', function () {
+    event.preventDefault();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form__success').addClass('active');
   });
   /* Anchor */
 
@@ -5087,6 +5097,42 @@ function getParameterFromString(urlString, parameterName) {
   var urlParams = new URLSearchParams(urlString.split('?')[1]);
   return urlParams.get(parameterName);
 }
+
+/***/ }),
+
+/***/ "./src/js/import/years/_y1960.js":
+/*!***************************************!*\
+  !*** ./src/js/import/years/_y1960.js ***!
+  \***************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+/* harmony import */ var gsap_MotionPathPlugin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gsap/MotionPathPlugin */ "./node_modules/gsap/MotionPathPlugin.js");
+/* harmony import */ var gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gsap/ScrollToPlugin */ "./node_modules/gsap/ScrollToPlugin.js");
+
+
+
+
+
+gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"]);
+gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_MotionPathPlugin__WEBPACK_IMPORTED_MODULE_3__["default"]);
+gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_4__["default"]);
+var initMode;
+var addTime = 400;
+var st1;
+var tl1 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
+var tl = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({
+  onComplete: function onComplete() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
+  }
+});
+var urlParams = new URLSearchParams(window.location.search);
+var yValue = urlParams.get('y');
 
 /***/ }),
 

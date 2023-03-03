@@ -1,0 +1,18 @@
+extends ../layouts/default
+
+block variables
+	- const title = "1960-1969"
+	- var sidebarActive = 1960
+
+block head
+	include ../../blocks/modules/overlay/overlayStyle
+block content
+	.fullPageOverlay.active
+	.wrapper
+		include ../../blocks/modules/sidebar/sidebar
+		.scroll-page.y1960
+			.y3-1
+
+
+
+block scripts

@@ -69,8 +69,9 @@
             </div>
           </div>
           <input type="text" name="firstname" placeholder="Имя" required>
-          <input type="text" name="firstname" placeholder="Группа" required>
-          <textarea name="comment" placeholder="Поздравление" required></textarea>
+          <input type="text" name="lastname" placeholder="Фамилия" required>
+          <input type="text" name="group" placeholder="Группа  / должность  / статус" required>
+          <textarea name="comment" placeholder="Текст поздравления" required></textarea>
           <div class="form__files">
             <div class="form__files-item"><span></span>
               <div class="form__files-item-remove">
@@ -88,11 +89,18 @@
           </label>
         </div>
         <button class="form__submit" type="submit">отправить</button>
+        <div class="form__success">
+          <div class="form__success-content">
+            <div class="form__success-title">Ваше поздравление направлено модератору</div>
+            <div class="form__success-text">в ближайшее время  вы сможете увидеть его на сайте</div>
+          </div>
+          <button class="form__submit js-close-modal-form" type="button">ок</button>
+        </div>
       </form>
       <div class="overlay"></div>
       <section class="first-screen">
         <div class="container container--full first-screen__container">
-          <div class="first-screen__text">Тут будет находиться описание этого <span>раздела, что бы люди понимали как он работает</span></div>
+          <div class="first-screen__text">Каждый может статью частью большой истории. <span>Поблагодарите университет и внесите свой вклад в его развитие</span></div>
           <div class="first-screen__title js-marquee">Поздравления университета</div><a class="first-screen__anchor anchor" href="#list">список <br> поздравлений</a>
           <div class="first-screen__buttons d-none-desktop-flex"><a href="#">поддержать</a><a class="js-congrat" href="#">поздравить</a></div>
         </div>

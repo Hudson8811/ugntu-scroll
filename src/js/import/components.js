@@ -17,6 +17,10 @@ $(window).on('load',function (){
     {
         require("./years/_y1950");
     }
+    else if ($('.y1960').length > 0)
+    {
+        require("./years/_y1960");
+    }
     else {
         $('body').addClass('active');
     }
@@ -77,7 +81,7 @@ $(document).ready(function (){
     if (typeof nextPage !== "undefined"){
         if (nextPage != ''){
             $(window).scroll(function() {
-                if($(window).scrollTop() + $(window).height() == $(document).height()) {
+                if(Math.ceil($(window).scrollTop() + $(window).height()) >= Math.floor($(document).height()) ) {
                     nextPageAnimation(nextPage);
                 }
             });
@@ -126,18 +130,27 @@ $(document).ready(function() {
         $('body').addClass('body-scroll-lock');
     });
 
-    $('.form__close-btn').on('click', function (e) {
+    $('.form__close-btn,.js-close-modal-form').on('click', function (e) {
         e.preventDefault();
         $(this).closest('.form').removeClass('open');
         $('.overlay').removeClass('active');
         $('body').removeClass('body-scroll-lock');
+        $('.form__success').removeClass('active');
     });
 
     $('.overlay').on('click', function () {
         $(this).removeClass('active');
         $('.form').removeClass('open');
         $('body').removeClass('body-scroll-lock');
+        $('.form__success').removeClass('active');
     });
+
+    /*отмена отправки формы и показ окна успешной отправки*/
+    $('.form').on('submit',function (){
+       event.preventDefault();
+       $('.form__success').addClass('active');
+    });
+
 
     /* Anchor */
     document.querySelectorAll('.anchor').forEach(anchor => {
