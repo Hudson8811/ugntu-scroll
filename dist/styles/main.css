@@ -3313,6 +3313,9 @@ summary {
     transform: translateY(0);
   }
 }
+.form.success {
+  overflow: hidden;
+}
 .form__content {
   padding: 42px 50px 38px;
   flex-grow: 1;
@@ -3579,6 +3582,9 @@ summary {
 .form__submit:hover {
   background: #003F78;
   color: #ffffff;
+}
+.form__close-btn {
+  z-index: 3;
 }
 .form__success {
   display: flex;

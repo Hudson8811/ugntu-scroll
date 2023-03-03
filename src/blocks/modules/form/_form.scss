@@ -32,6 +32,9 @@
 			transform: translateY(0);
 		}
 	}
+	&.success{
+		overflow: hidden;
+	}
 
 	&__content {
 		padding: 42px 50px 38px;
@@ -299,7 +302,9 @@
 		}
 	}
 
-
+	&__close-btn{
+		z-index: 3;
+	}
 
 	&__success{
 		display: flex;

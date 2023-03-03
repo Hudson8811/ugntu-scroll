@@ -136,6 +136,7 @@ $(document).ready(function() {
         $('.overlay').removeClass('active');
         $('body').removeClass('body-scroll-lock');
         $('.form__success').removeClass('active');
+        $('.form').removeClass('success');
     });
 
     $('.overlay').on('click', function () {
@@ -143,12 +144,14 @@ $(document).ready(function() {
         $('.form').removeClass('open');
         $('body').removeClass('body-scroll-lock');
         $('.form__success').removeClass('active');
+        $('.form').removeClass('success');
     });
 
     /*отмена отправки формы и показ окна успешной отправки*/
     $('.form').on('submit',function (){
-       event.preventDefault();
-       $('.form__success').addClass('active');
+        event.preventDefault();
+        $('.form').scrollTop(0).addClass('success');
+        $('.form__success').addClass('active');
     });
 
 

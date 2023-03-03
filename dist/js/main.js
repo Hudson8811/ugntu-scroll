@@ -135,17 +135,20 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.overlay').removeClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('body-scroll-lock');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form__success').removeClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form').removeClass('success');
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.overlay').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).removeClass('active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form').removeClass('open');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').removeClass('body-scroll-lock');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form__success').removeClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form').removeClass('success');
   });
   /*отмена отправки формы и показ окна успешной отправки*/
 
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form').on('submit', function () {
     event.preventDefault();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form').scrollTop(0).addClass('success');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form__success').addClass('active');
   });
   /* Anchor */
