@@ -6167,6 +6167,423 @@ summary {
   }
 }
 
+.y1960 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+@media only screen and (max-width: 1100px) {
+  .y1960 {
+    padding-top: 9.2447916667vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y1960 {
+    height: auto;
+    padding-top: 15vw;
+  }
+}
+
+.y3-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #FFFFFF;
+  z-index: 2;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-1 {
+    height: 80vw;
+    z-index: 7;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-1 {
+    position: relative;
+    height: auto;
+    padding-bottom: 17.5vw;
+  }
+}
+.y3-1::before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #ffffff;
+  pointer-events: none;
+}
+.y3-1__numbers {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 9;
+}
+@media only screen and (max-width: 699px) {
+  .y3-1__numbers {
+    position: relative;
+    top: 0;
+    transform: none;
+    padding: 2.5vw 5.625vw 0;
+  }
+}
+.y3-1__numbers-number {
+  font-weight: 300;
+  font-size: 52.9353233831vw;
+  line-height: 1.71;
+  letter-spacing: -0.07em;
+  padding-right: 0.07em;
+  background: linear-gradient(180.23deg, #FFFFFF 35.85%, rgba(255, 255, 255, 0) 71.53%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(180deg, #000000 23.98%, rgba(0, 0, 0, 0) 70.38%);
+}
+@media only screen and (max-width: 699px) {
+  .y3-1__numbers-number {
+    font-size: 35.3125vw;
+    line-height: 1.09;
+    letter-spacing: -0.06em;
+    padding-right: 0.06em;
+    background: none;
+    -webkit-background-clip: inherit;
+    background-clip: inherit;
+    -webkit-text-fill-color: unset;
+    color: #ffffff;
+  }
+}
+.y3-1__numbers-line {
+  width: 27.5124378109vw;
+  height: 2.9850746269vw;
+  background: linear-gradient(90.77deg, #FFFFFF 3.75%, rgba(255, 255, 255, 0) 106.75%);
+  margin-left: 6.2189054726vw;
+  margin-right: 1.3930348259vw;
+  background: rgba(0, 0, 0, 0.2);
+}
+@media only screen and (max-width: 699px) {
+  .y3-1__numbers-line {
+    flex-shrink: 0;
+    background: #ffffff;
+    width: 10vw;
+    height: 2.5vw;
+    margin-left: 2.5vw;
+    margin-right: 0.9375vw;
+  }
+}
+.y3-1__photos {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+  top: 0;
+  left: 0;
+}
+@media only screen and (max-width: 699px) {
+  .y3-1__photos {
+    display: none;
+  }
+}
+.y3-1__photos-item {
+  left: 0;
+  position: absolute;
+}
+.y3-1__photos-item--1 {
+  width: 26.1194029851vw;
+  bottom: 7.5124378109vw;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-1__photos-item--1 {
+    width: 68.359375vw;
+  }
+}
+.y3-1__photos-item--2 {
+  width: 13.9303482587vw;
+  top: 3.8805970149vw;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-1__photos-item--2 {
+    width: 36.4583333333vw;
+    top: 10.15625vw;
+  }
+}
+.y3-1__photos-item--3 {
+  width: 21.1940298507vw;
+  bottom: 5.8706467662vw;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-1__photos-item--3 {
+    width: 55.46875vw;
+  }
+}
+
+.y3-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #ffffff;
+  z-index: 3;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-2 {
+    top: 80vw;
+    height: 140.625vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-2 {
+    position: relative;
+    height: auto;
+    top: auto;
+  }
+}
+.y3-2__top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-2__top {
+    height: 61.8489583333vw;
+    z-index: 1;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-2__top {
+    position: static;
+    height: auto;
+  }
+}
+.y3-2__top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.y3-2__title {
+  color: #FFFFFF;
+  position: absolute;
+  left: 1.7412935323vw;
+  top: 6.7164179104vw;
+  z-index: 3;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-2__title {
+    left: 4.5572916667vw;
+    top: 65.7552083333vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-2__title {
+    position: static;
+    padding: 8.4375vw 5vw 22.5vw;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .y3-2__title span {
+    display: block;
+  }
+}
+.y3-2__title span:nth-child(2) {
+  transform: translateX(59%);
+}
+@media only screen and (max-width: 699px) {
+  .y3-2__title span:nth-child(2) {
+    transform: none;
+  }
+}
+.y3-2__title span:nth-child(3) {
+  transform: translateX(18%);
+}
+@media only screen and (max-width: 699px) {
+  .y3-2__title span:nth-child(3) {
+    transform: none;
+  }
+}
+.y3-2__text {
+  font-family: "SangBleu Empire", sans-serif;
+  font-size: 2.0895522388vw;
+  line-height: 1.28;
+  color: #FFFFFF;
+  width: 28.5074626866vw;
+  position: absolute;
+  top: 29.2537313433vw;
+  right: 0.4975124378vw;
+  z-index: 3;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-2__text {
+    font-size: 4.1666666667vw;
+    line-height: 1.4;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-2__text {
+    font-size: 4.375vw;
+    line-height: 1.52;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .y3-2__text {
+    width: 74.609375vw;
+    right: auto;
+    left: 2.6041666667vw;
+    top: 102.8645833333vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-2__text {
+    position: static;
+    width: 100%;
+    padding: 3.4375vw 5vw 6.875vw;
+  }
+}
+.y3-2__fly {
+  width: 21.8407960199vw;
+  position: absolute;
+  left: 10.1990049751vw;
+  top: 6.7661691542vw;
+  z-index: 2;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-2__fly {
+    width: 37.6302083333vw;
+    left: 2.6041666667vw;
+    top: 53.3854166667vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-2__fly {
+    position: static;
+    width: 100%;
+    padding: 0 5vw;
+  }
+}
+.y3-2__fly img {
+  width: 100%;
+}
+.y3-2__diplom {
+  position: absolute;
+  left: 13.3333333333vw;
+  top: 0;
+  width: 63.0845771144vw;
+  z-index: 4;
+}
+@media only screen and (max-width: 699px) {
+  .y3-2__diplom {
+    width: 30.625vw;
+    left: auto;
+    right: 10.625vw;
+    top: 82.1875vw;
+  }
+}
+.y3-2__diplom img {
+  width: 100%;
+}
+.y3-2__bottom {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateY(-50%);
+}
+@media only screen and (max-width: 699px) {
+  .y3-2__bottom {
+    display: none;
+  }
+}
+
+.y3-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  z-index: 1;
+}
+@media only screen and (max-width: 699px) {
+  .y3-3 {
+    position: relative;
+  }
+}
+.y3-3__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+@media only screen and (max-width: 699px) {
+  .y3-3__background {
+    position: relative;
+    height: auto;
+  }
+}
+.y3-3__background img {
+  object-position: left bottom;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.y3-3__text {
+  font-family: "SangBleu Empire", sans-serif;
+  font-size: 2.0895522388vw;
+  line-height: 1.28;
+  color: #FFFFFF;
+  width: 28.5074626866vw;
+  position: absolute;
+  left: 2.2885572139vw;
+  top: 2.1890547264vw;
+  z-index: 13;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-3__text {
+    font-size: 4.1666666667vw;
+    line-height: 1.4;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-3__text {
+    font-size: 4.375vw;
+    line-height: 1.52;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .y3-3__text {
+    left: 2.6041666667vw;
+    top: 11.8489583333vw;
+    width: 65.1041666667vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-3__text {
+    width: 100%;
+    position: static;
+    padding: 21.25vw 49.6875vw 3.75vw 5vw;
+    font-family: "Suisse Intl", sans-serif;
+    font-size: 2.8125vw;
+    line-height: 1.42;
+    text-transform: uppercase;
+  }
+}
+
 .events {
   background: #FFFFFF;
 }

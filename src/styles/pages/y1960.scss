@@ -1,0 +1,295 @@
+.y1960{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	@include max(md){
+		padding-top: vw2(71);
+	}
+	@include max(sm){
+		height: auto;
+		padding-top: vw3(48);
+	}
+}
+
+
+.y3-1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #FFFFFF;
+	z-index: 2;
+	@include max(md){
+		height: 80vw;
+		z-index: 7;
+	}
+	@include max(sm){
+		position: relative;
+		height: auto;
+		padding-bottom: vw3(56);
+	}
+	&::before{
+		content: "";
+		z-index: 1;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		display: block;
+		background: #ffffff;
+		pointer-events: none;
+	}
+
+	&__numbers{
+		@include years-row;
+		&-number{
+			@include years-number;
+			background-image:  linear-gradient(180deg, #000000 23.98%, rgba(0, 0, 0, 0) 70.38%);
+		}
+		&-line{
+			@include years-line;
+			background: rgba(0, 0, 0, 0.2);
+		}
+	}
+
+	&__photos{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 8;
+		top: 0;
+		left: 0;
+		@include max(sm){
+			display: none;
+		}
+		&-item{
+			left: 0;
+			position: absolute;
+			&--1{
+				width: vw(525);
+				bottom: vw(151);
+				@include max(md){
+					width: vw2(525);
+				}
+			}
+			&--2{
+				width: vw(280);
+				top: vw(78);
+				@include max(md){
+					width: vw2(280);
+					top: vw2(78);
+				}
+			}
+			&--3{
+				width: vw(426);
+				bottom: vw(118);
+				@include max(md){
+					width: vw2(426);
+				}
+			}
+		}
+	}
+
+}
+
+
+.y3-2{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+	background: #ffffff;
+	z-index: 3;
+	@include max(md){
+		top: 80vw;
+		height: vw2(1080);
+	}
+	@include max(sm){
+		position: relative;
+		height: auto;
+		top: auto;
+	}
+	&__top{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 4;
+		@include max(md){
+			height: vw2(475);
+			z-index: 1;
+		}
+		@include max(sm){
+			position: static;
+			height: auto;
+		}
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__title{
+		color: #FFFFFF;
+		position: absolute;
+		left: vw(35);
+		top: vw(135);
+		z-index: 3;
+		@include max(md){
+			left: vw2(35);
+			top: vw2(505);
+		}
+		@include max(sm){
+			position: static;
+			padding: vw3(27) vw3(16) vw3(72);
+		}
+		span{
+			@include max(md){
+				display: block;
+			}
+			&:nth-child(2){
+				transform: translateX(59%);
+				@include max(sm){
+					transform: none;
+				}
+			}
+			&:nth-child(3){
+				transform: translateX(18%);
+				@include max(sm){
+					transform: none;
+				}
+			}
+		}
+	}
+	&__text{
+		@include text;
+		color: #FFFFFF;
+		width: vw(573);
+		position: absolute;
+		top: vw(588);
+		right: vw(10);
+		z-index: 3;
+		@include max(md){
+			width: vw2(573);
+			right: auto;
+			left: vw2(20);
+			top: vw2(790);
+		}
+
+		@include max(sm){
+			position: static;
+			width: 100%;
+			padding: vw3(11) vw3(16) vw3(22);
+		}
+	}
+	&__fly{
+		width: vw(439);
+		position: absolute;
+		left: vw(205);
+		top: vw(136);
+		z-index: 2;
+		@include max(md){
+			width: vw2(289);
+			left: vw2(20);
+			top: vw2(410);
+		}
+		@include max(sm){
+			position: static;
+			width: 100%;
+			padding: 0 vw3(16);
+		}
+		img{
+			width: 100%;
+		}
+	}
+	&__diplom{
+		position: absolute;
+		left: vw(268);
+		top: 0;
+		width: vw(1268);
+		@include max(sm){
+			width: vw3(98);
+			left: auto;
+			right: vw3(34);
+			top: vw3(263);
+		}
+		z-index: 4;
+		img{
+			width: 100%;
+		}
+	}
+	&__bottom{
+		display: block;
+		width: 100%;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		transform: translateY(-50%);
+		@include max(sm){
+			display: none;
+		}
+	}
+}
+
+
+.y3-3{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #ffffff;
+	z-index: 1;
+	@include max(sm){
+		position: relative;
+	}
+	&__background{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		@include max(sm){
+			position: relative;
+			height: auto;
+		}
+		img{
+			object-position: left bottom;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__text{
+		@include text;
+		color: #FFFFFF;
+		width: vw(573);
+		position: absolute;
+		left: vw(46);
+		top: vw(44);
+		z-index: 13;
+		@include max(md){
+			left: vw2(20);
+			top: vw2(91);
+			width: vw2(500);
+		}
+		@include max(sm){
+			width: 100%;
+			position: static;
+			padding: vw3(68) vw3(159) vw3(12) vw3(16);
+			font-family: $mainFont;
+			font-size: vw3(9);
+			line-height: 1.42;
+			text-transform: uppercase;
+		}
+	}
+}
