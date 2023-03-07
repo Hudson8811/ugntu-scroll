@@ -127,6 +127,24 @@ function initScrollAnimationDesktop(){
     } , "4");
 
 
+    tl1.fromTo(".y3-2__top", {
+        y: 0,
+    }, {
+        y: "-100%",
+        duration: 2,
+        ease: "none",
+    } , ">0.3");
+
+    tl1.fromTo(".y3-2__title", {
+        y: "100vh"
+    }, {
+        y: "0",
+        duration: 2,
+        ease: "none",
+    } , "<0.2");
+
+
+
 
 
     st1 = ScrollTrigger.create({

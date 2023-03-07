@@ -14,6 +14,7 @@ import plumber from "gulp-plumber";
 import browsersync from "browser-sync";
 import debug from "gulp-debug";
 import yargs from "yargs";
+import cssImport from 'gulp-cssimport';
 
 const sass = gulpsass(dartsass);
 const argv = yargs.argv,
@@ -29,7 +30,9 @@ gulp.task("styles", () => {
             cascade: false,
             grid: true
         })))
+        .pipe(cssImport())
         .pipe(gulpif(production, mincss({
+
             compatibility: "ie8", level: {
                 1: {
                     specialComments: 0,

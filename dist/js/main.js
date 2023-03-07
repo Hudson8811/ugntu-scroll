@@ -12,7 +12,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var _fancyapps_ui_dist_fancybox_fancybox_esm_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fancyapps/ui/dist/fancybox/fancybox.esm.js */ "./node_modules/@fancyapps/ui/dist/fancybox/fancybox.esm.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
 
 
 
@@ -196,6 +198,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       }
     });
   }
+
+  _fancyapps_ui_dist_fancybox_fancybox_esm_js__WEBPACK_IMPORTED_MODULE_2__.Fancybox.bind("[data-fancybox]", {});
 });
 
 function disableScroll() {
@@ -212,7 +216,7 @@ function nextPageAnimation(link) {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.sidebar__menu-dropdown').hide();
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.sidebar__menu').removeClass('active');
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fullPageOverlay').css('pointer-events', 'auto');
-  gsap__WEBPACK_IMPORTED_MODULE_2__["default"].to(".fullPageOverlay", {
+  gsap__WEBPACK_IMPORTED_MODULE_3__["default"].to(".fullPageOverlay", {
     duration: 1,
     autoAlpha: 1,
     ease: "none",
@@ -5231,6 +5235,20 @@ function initScrollAnimationDesktop() {
     duration: 0.7,
     ease: "none"
   }, "4");
+  tl1.fromTo(".y3-2__top", {
+    y: 0
+  }, {
+    y: "-100%",
+    duration: 2,
+    ease: "none"
+  }, ">0.3");
+  tl1.fromTo(".y3-2__title", {
+    y: "100vh"
+  }, {
+    y: "0",
+    duration: 2,
+    ease: "none"
+  }, "<0.2");
   st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
     trigger: ".scroll-page",
     pin: true,
