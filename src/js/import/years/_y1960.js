@@ -19,12 +19,39 @@ let tl = gsap.timeline({
     }
 });
 
+
+let scWidth, b1Width, b2Width, b3Width, b4Width, b5Width, b6Width, b7Width, b8Width, b9Width;
+let scHeight, b1Height, b2Height, b3Height, b4Height, b5Height, b6Height, b7Height, b8Height, b9Height;
+
 let urlParams = new URLSearchParams(window.location.search);
 let yValue = urlParams.get('y');
 
 
 
 function initAnimation(){
+
+    scWidth =  $('.scroll-page').innerWidth();
+    b1Width =  $('.y3-4').innerWidth();
+    b2Width =  $('.y3-5').innerWidth();
+    b3Width =  $('.y3-6').innerWidth();
+    b4Width =  $('.y3-7').innerWidth();
+    b5Width =  $('.y3-8').innerWidth();
+    b6Width =  $('.y3-9').innerWidth();
+    b7Width =  $('.y3-10').innerWidth();
+    b8Width =  $('.y3-11').innerWidth();
+    b9Width =  $('.y3-12').innerWidth();
+
+    scHeight =  $('.scroll-page').innerHeight();
+    b1Height =  $('.y3-4').innerHeight();
+    b2Height =  $('.y3-5').innerHeight();
+    b3Height =  $('.y3-6').innerHeight();
+    b4Height =  $('.y3-7').innerHeight();
+    b5Height =  $('.y3-8').innerHeight();
+    b6Height =  $('.y3-9').innerHeight();
+    b7Height =  $('.y3-10').innerHeight();
+    b8Height =  $('.y3-11').innerHeight();
+    b9Height =  $('.y3-12').innerHeight();
+    
     if (window.innerWidth > 1100){
         initScrollAnimationDesktop();
         initMode = 'desk';
@@ -127,24 +154,252 @@ function initScrollAnimationDesktop(){
     } , "4");
 
 
+    tl1.fromTo(".y3-1", {
+        top: "0",
+        autoAlpha: 1,
+    }, {
+        top: "-100%",
+        autoAlpha: 0,
+        duration: 0,
+        ease: "none",
+    } , ">");
+
+
+
+    tl1.addLabel('startScroll','+=0.3');
+    tl1.fromTo(".y3-2__bg", {
+        y: 0,
+    }, {
+        y: "-100%",
+        duration: 10,
+        ease: "none",
+    } , "startScroll+0.7");
+    tl1.addLabel('endScroll');
+
     tl1.fromTo(".y3-2__top", {
         y: 0,
     }, {
         y: "-100%",
         duration: 2,
         ease: "none",
-    } , ">0.3");
+    } , "startScroll");
 
-    tl1.fromTo(".y3-2__title", {
+
+
+    tl1.fromTo(".y3-2__top", {
+        autoAlpha: 1,
+    }, {
+        autoAlpha: 0.3,
+        duration: 1,
+        ease: "none",
+    } , ">-1.5");
+
+    tl1.fromTo(".y3-2__title--1", {
         y: "100vh"
     }, {
-        y: "0",
+        y: "-100%",
         duration: 2,
         ease: "none",
-    } , "<0.2");
+    } , "<");
+
+    tl1.fromTo(".y3-2__title--1 span:nth-child(1)", {
+        x: "100vw"
+    }, {
+        x: "-10vw",
+        duration: 2,
+        ease: "none",
+    } , "<");
+    tl1.fromTo(".y3-2__title--1 span:nth-child(2)", {
+        x: "-100%"
+    }, {
+        x: "40%",
+        duration: 2,
+        ease: "none",
+    } , "<");
+    tl1.fromTo(".y3-2__title--1 span:nth-child(3)", {
+        x: "50%"
+    }, {
+        x: "30%",
+        duration: 2,
+        ease: "none",
+    } , "<");
+    tl1.fromTo(".y3-2__title--1 span:nth-child(4)", {
+        x: "0%"
+    }, {
+        x: "25%",
+        duration: 2,
+        ease: "none",
+    } , "<");
+
+
+    tl1.fromTo(".y3-2__text--1", {
+        y: "100vh"
+    }, {
+        y: "-100%",
+        duration: 1.8,
+        ease: "none",
+    } , ">-0.7");
+
+    tl1.fromTo(".y3-2__title--2", {
+        y: "100vh"
+    }, {
+        y: "-100%",
+        duration: 2,
+        ease: "none",
+    } , "<+0.5");
+    tl1.fromTo(".y3-2__title--2 span:nth-child(1)", {
+        x: "50%"
+    }, {
+        x: "30%",
+        duration: 2,
+        ease: "none",
+    } , "<");
+    tl1.fromTo(".y3-2__title--2 span:nth-child(2)", {
+        x: "30%"
+    }, {
+        x: "70%",
+        duration: 2,
+        ease: "none",
+    } , "<");
+
+
+    tl1.fromTo(".y3-2__azs", {
+        y: "100vh"
+    }, {
+        y: "-200%",
+        duration: 2,
+        ease: "none",
+    } , ">-1.3");
+    tl1.fromTo(".y3-2__azs-logo", {
+        y: "-50%"
+    }, {
+        y: "0%",
+        duration: 2,
+        ease: "none",
+    } , "<");
+
+
+    tl1.fromTo(".y3-2__text--2", {
+        y: "100vh"
+    }, {
+        y: "-100%",
+        duration: 1.8,
+        ease: "none",
+    } , ">-1");
+
+    tl1.fromTo(".y3-2__label-block", {
+        y: "100vh"
+    }, {
+        y: "-100%",
+        duration: 2.3,
+        ease: "none",
+    } , "<");
+
+    tl1.fromTo(".y3-2__label", {
+        y: "100vh"
+    }, {
+        y: "-100%",
+        duration: 3.5,
+        ease: "none",
+    } , "<-0.15");
+
+    tl1.fromTo(".y3-2__label", {
+        autoAlpha: 0
+    }, {
+        autoAlpha: 1,
+        duration: 0.5,
+        ease: "none",
+    } , "<1");
+
+    tl1.fromTo(".y3-2__year", {
+        autoAlpha: 1
+    }, {
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "none",
+    } , "<2");
+
+    tl1.fromTo(".y3-3__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration: 0.5,
+        ease: "none",
+    } , ">3");
+
+
+    tl1.fromTo(".y3-4", {
+        x: "0",
+        left: "100%"
+    }, {
+        left: "0",
+        x: -1*(b1Width-scWidth),
+        duration:  6,
+        ease: "none",
+    } , ">");
+
+    tl1.fromTo(".y3-4__first-title", {
+        y: '300%',
+    }, {
+        y: 0,
+        duration:  5.5,
+        ease: "none",
+    } , "<");
+
+    tl1.fromTo(".y3-4__second-image", {
+        x: '30%',
+    }, {
+        x: "-20%",
+        duration:  6,
+        ease: "none",
+    } , "<");
+
+    tl1.fromTo(".y3-4__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration:  1.5,
+        ease: "none",
+    } , ">");
+
+
+    tl1.fromTo(".y3-5", {
+        x: "0",
+        left: "100%"
+    }, {
+        left: "0",
+        x: -1*(b2Width-scWidth),
+        duration:  4,
+        ease: "none",
+    } , ">-1.5");
+
+    tl1.fromTo(".y2-5__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration:  1.5,
+        ease: "none",
+    } , ">");
 
 
 
+    tl1.fromTo(".y3-6", {
+        x: "0",
+        left: "100%"
+    }, {
+        left: "0",
+        x: -1*(b3Width-scWidth),
+        duration:  4,
+        ease: "none",
+    } , ">-1.5");
+
+    tl1.fromTo(".y2-6__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration:  1.5,
+        ease: "none",
+    } , ">");
 
 
     st1 = ScrollTrigger.create({
