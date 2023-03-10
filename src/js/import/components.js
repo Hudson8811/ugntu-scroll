@@ -205,6 +205,27 @@ $(document).ready(function() {
     }
 
     Fancybox.bind("[data-fancybox]", {});
+
+
+    let jsShareElements = document.querySelectorAll('.js-share')
+    if (jsShareElements.length > 0 && typeof Ya !== 'undefined'){
+        for (var i = 0; i < jsShareElements.length; i++) {
+            var yaBlock = document.createElement('div');
+            yaBlock.classList.add('yaBlock');
+            jsShareElements[i].appendChild(yaBlock);
+        }
+
+        let shareButton = document.querySelector('.yaBlock');
+        Ya.share2(shareButton, {
+            theme: {
+                services: 'vkontakte,odnoklassniki,telegram,whatsapp',
+                lang: 'ru',
+                limit: 0,
+                size: 's',
+                bare: false
+            }
+        });
+    }
 });
 
 

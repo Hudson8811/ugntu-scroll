@@ -7,14 +7,14 @@
 			span
 	if !hideYears
 		.sidebar__menu
-			.sidebar__menu-item(class=sidebarActive === 1940 ? 'active selected':'')
+			.sidebar__menu-item(class=sidebarActive === 1940 ? 'active selected':'', data-overlay="#05427A")
 				a(href="./index.html") 1940-е
 				.sidebar__menu-dropdown
 					a(href="./index.html?y=1941") 1941
 					a(href="./index.html?y=1943") 1943
 					a(href="./index.html?y=1948") 1948
 					a(href="./index.html?y=1949") 1949
-			.sidebar__menu-item(class=sidebarActive === 1950 ? 'active selected':'')
+			.sidebar__menu-item(class=sidebarActive === 1950 ? 'active selected':'', data-overlay="#05427A")
 				a(href="page2.html") 1950-е
 				.sidebar__menu-dropdown
 					a(href="./page2.html?y=1951") 1951
@@ -24,13 +24,15 @@
 					a(href="./page2.html?y=1956") 1956
 					a(href="./page2.html?y=1957") 1957
 					a(href="./page2.html?y=1958") 1958
-			.sidebar__menu-item
+			.sidebar__menu-item(class=sidebarActive === 1960 ? 'active selected':'', data-overlay="#ffffff")
 				a(href="page3.html") 1960-е
 				.sidebar__menu-dropdown
 					a(href="./page3.html?y=1960") 1960
 					a(href="./page3.html?y=1962") 1962
 					a(href="./page3.html?y=1964") 1964
 					a(href="./page3.html?y=1966") 1966
+					a(href="./page3.html?y=1967") 1967
+					a(href="./page3.html?y=1968") 1968
 			.sidebar__menu-item
 				a(href="") 1970-е
 			.sidebar__menu-item

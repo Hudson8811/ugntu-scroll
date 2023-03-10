@@ -4,6 +4,9 @@ block variables
 	- const title = "Событие"
 	- const hideYears = true
 
+block scripts
+	script(src="https://yastatic.net/share2/share.js")
+
 block content
 	.wrapper
 		include ../../blocks/modules/sidebar/sidebar
@@ -41,7 +44,7 @@ block content
 					.event-page__flex
 						.event-page__left
 							.event-page__actions
-								a.event-page__actions-link.event-page__actions-link--share(href="#")
+								a.event-page__actions-link.event-page__actions-link--share.js-share(href='javascript:;')
 									span поделиться
 								a.event-page__actions-link.event-page__actions-link--download(href="#")
 									span Скачать документы
@@ -85,5 +88,3 @@ block content
 								.event__arrow
 
 
-
-block scripts

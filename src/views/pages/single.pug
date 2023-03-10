@@ -4,6 +4,11 @@ block variables
 	- const title = "Поздравление детально"
 	- const hideYears = true
 
+
+block scripts
+	script(src="https://yastatic.net/share2/share.js")
+
+
 block content
 	.wrapper
 		include ../../blocks/modules/header/header
@@ -18,7 +23,7 @@ block content
 					.single__name Аделина Имамутдинова
 					.single__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):
 					.single__shares
-						a.single__share(href='#')
+						a.single__share.js-share(href='javascript:;')
 							.single__share-icon
 								+icon('share')
 							span поделиться
@@ -90,3 +95,4 @@ block content
 						|  направлений для развития, за все возможности, знания и навыки, которые он предоставляет! От всей души
 						|  желаю нашему вузу новых достижений и высот, процветания и движения вперед! Всем сотрудникам,
 						|  профессорско-преподавательскому составу, студентам – неиссякаемой энергии, благополучия и успехов во всем!
+

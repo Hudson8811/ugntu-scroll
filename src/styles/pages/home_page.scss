@@ -44,6 +44,8 @@
 		position: absolute;
 		left: 0;
 		top: vw(178);
+		will-change: transform, opacity, left, top;
+		transform-style: preserve-3d;
 		@include max(md){
 			top: vw2(121);
 			translate: none;
@@ -190,6 +192,8 @@
 	height: 100%;
 	overflow: hidden;
 	background: #ACACAC;
+	will-change: transform, opacity, left, top;
+	transform-style: preserve-3d;
 	@include max(sm){
 		position: relative;
 		height: auto;
@@ -464,6 +468,8 @@
 		width: 100%;
 		top: 100%;
 		z-index: 3;
+		will-change: transform, opacity, left, top;
+		transform-style: preserve-3d;
 		@include max(sm){
 			position: relative;
 			top: 0;
@@ -516,6 +522,8 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
+		will-change: transform, opacity, left, top;
+		transform-style: preserve-3d;
 		@include max(sm){
 			position: relative;
 			height: auto;

@@ -36,6 +36,7 @@
       pointer-events: none;
       opacity: 0;
       }
+      .fullPageOverlay.fullPageOverlay--white{background: #FFFFFF;}
       .fullPageOverlay.active{
       opacity: 1;
       pointer-events: auto;
@@ -43,7 +44,7 @@
     </style>
   </head>
   <body>
-    <div class="fullPageOverlay active"></div>
+    <div class="fullPageOverlay fullPageOverlay--white active"></div>
     <div class="wrapper">
       <div class="sidebar">
         <div class="sidebar__logo"><img src="img/svg/logo-side.svg" alt="logo"></div>
@@ -51,14 +52,14 @@
           <div class="sidebar__burger-open"><span></span><span></span></div>
         </div>
         <div class="sidebar__menu">
-          <div class="sidebar__menu-item"><a href="./index.html">1940-е</a>
+          <div class="sidebar__menu-item" data-overlay="#05427A"><a href="./index.html">1940-е</a>
             <div class="sidebar__menu-dropdown"><a href="./index.html?y=1941">1941</a><a href="./index.html?y=1943">1943</a><a href="./index.html?y=1948">1948</a><a href="./index.html?y=1949">1949</a></div>
           </div>
-          <div class="sidebar__menu-item"><a href="page2.html">1950-е</a>
+          <div class="sidebar__menu-item" data-overlay="#05427A"><a href="page2.html">1950-е</a>
             <div class="sidebar__menu-dropdown"><a href="./page2.html?y=1951">1951</a><a href="./page2.html?y=1952">1952</a><a href="./page2.html?y=1954">1954</a><a href="./page2.html?y=1955">1955</a><a href="./page2.html?y=1956">1956</a><a href="./page2.html?y=1957">1957</a><a href="./page2.html?y=1958">1958</a></div>
           </div>
-          <div class="sidebar__menu-item"><a href="page3.html">1960-е</a>
-            <div class="sidebar__menu-dropdown"><a href="./page3.html?y=1960">1960</a><a href="./page3.html?y=1962">1962</a><a href="./page3.html?y=1964">1964</a><a href="./page3.html?y=1966">1966</a></div>
+          <div class="sidebar__menu-item active selected" data-overlay="#ffffff"><a href="page3.html">1960-е</a>
+            <div class="sidebar__menu-dropdown"><a href="./page3.html?y=1960">1960</a><a href="./page3.html?y=1962">1962</a><a href="./page3.html?y=1964">1964</a><a href="./page3.html?y=1966">1966</a><a href="./page3.html?y=1967">1967</a><a href="./page3.html?y=1968">1968</a></div>
           </div>
           <div class="sidebar__menu-item"><a href="">1970-е</a></div>
           <div class="sidebar__menu-item"><a href="">1980-е</a></div>
@@ -131,9 +132,7 @@
         </div>
         <div class="y3-5 horisontalBlock" id="year1964">
           <div class="y3-5__image">
-            <picture>
-              <source srcset="img/mobile/r4-1.webp" media="(max-width: 1100px)"><img src="img/r4-1.webp" alt="">
-            </picture>
+            <picture><img src="img/r4-1.webp" alt=""></picture>
           </div>
           <div class="y3-5__year yearConner">1964</div>
           <div class="y3-5__title blockTitle"><span>Всеволод</span><span> Леонидович</span><span> Березин</span></div>
@@ -143,11 +142,9 @@
           <div class="y3-5__overlay blockOverlay"></div>
         </div>
         <div class="y3-6 horisontalBlock" id="year1966">
-          <div class="y3-6__first">
+          <div class="y3-6__first horisontalBlock__flex">
             <div class="y3-6__first-bg allHeightImage">
-              <picture>
-                <source srcset="img/mobile/r5-1.webp" media="(max-width: 1100px)"><img src="img/r5-1.webp" alt="">
-              </picture>
+              <picture><img src="img/r5-1.webp" alt=""></picture>
             </div>
             <div class="y3-6__first-year yearConner">1966</div>
             <div class="y3-6__first-text">
@@ -161,7 +158,47 @@
               <div class="y3-6__second-text-col textBlock">Летом на берегу Павловского водохранилища развернут Спортивно-оздоровительный лагерь Уфимского нефтяного института – СОЛУНИ. Лагерь начинали обустраивать 40 энтузиастов преподавателей и сотрудников: нексколько брезентовых палаток, деревянная кухня… Сегодня в СОЛУНИ каждое лето отдыхают более 1200 студентов и сотрудников университета, 600 студентов проходят практику.</div>
             </div>
           </div>
+          <div class="y3-6__last horisontalBlock__flex">
+            <div class="y3-6__last-image"><img src="img/r5-4.webp" alt=""></div>
+            <div class="y3-6__last-title blockTitle"><span>Вышел</span><span> первый</span><span> номер</span></div>
+            <div class="y3-6__last-text">
+              <div class="y3-6__last-year yearConner">1966</div>
+              <div class="y3-6__last-text-col textBlock">Вышел первый номер многотиражной газеты «‎За нефтяные кадры».</div>
+            </div>
+          </div>
           <div class="y3-6__overlay blockOverlay"></div>
+        </div>
+        <div class="y3-7 horisontalBlock" id="year1967">
+          <div class="y3-7__first horisontalBlock__flex">
+            <div class="y3-7__first-bg allHeightImage">
+              <picture><img src="img/r6-1.webp" alt=""></picture>
+            </div>
+            <div class="y3-7__first-year yearConner">1967</div>
+            <div class="y3-7__first-text"><img class="y3-7__text-image" src="img/r6-2.webp" alt="">
+              <div class="y3-7__first-text-col textBlock">Сданы в эксплуатацию два студенческих общежития на 1030 мест: № 3 и № 4</div>
+            </div>
+          </div>
+          <div class="y3-7__second horisontalBlock__flex">
+            <div class="y3-7__second-title blockTitle"><span>Владимир</span><span> Владимирович</span><span> Девликамов</span></div>
+            <div class="y3-7__second-text">
+              <div class="y3-7__second-year yearConner">1967</div>
+              <div class="y3-7__second-text-col textBlock">Профессор  Владимирович Девликамов - первый сотрудник института - удостоен высокого звания «‎Почетный нефтяник СССР»‎.</div>
+            </div>
+            <div class="y3-7__second-image allHeightImage">
+              <picture><img src="img/r6-4.webp" alt=""></picture>
+            </div><img class="y3-7__second-image2" src="img/r6-3.webp" alt="">
+          </div>
+          <div class="y3-7__overlay blockOverlay"></div>
+        </div>
+        <div class="y3-8 horisontalBlock" id="year1968">
+          <div class="y3-8__image">
+            <picture><img src="img/r7-1.webp" alt=""></picture>
+          </div>
+          <div class="y3-8__year yearConner">1968</div>
+          <div class="y3-8__text">
+            <div class="y3-8__text-col textBlock">Созданы два новых факультета: инженерно-экономический и&nbsp;автоматизации производственных процессов.</div>
+          </div>
+          <div class="y3-8__overlay blockOverlay"></div>
         </div>
       </div>
     </div>

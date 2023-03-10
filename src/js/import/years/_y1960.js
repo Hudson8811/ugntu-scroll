@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollToPlugin);
 
 
 var initMode;
-let addTime = 400;
+let addTime = 600;
 
 let st1;
 let tl1 = gsap.timeline({});
@@ -20,8 +20,8 @@ let tl = gsap.timeline({
 });
 
 
-let scWidth, b1Width, b2Width, b3Width, b4Width, b5Width, b6Width, b7Width, b8Width, b9Width;
-let scHeight, b1Height, b2Height, b3Height, b4Height, b5Height, b6Height, b7Height, b8Height, b9Height;
+let scWidth, b1Width, b2Width, b3Width, b4Width, b5Width;
+let scHeight, b1Height, b2Height, b3Height, b4Height, b5Height;
 
 let urlParams = new URLSearchParams(window.location.search);
 let yValue = urlParams.get('y');
@@ -36,10 +36,6 @@ function initAnimation(){
     b3Width =  $('.y3-6').innerWidth();
     b4Width =  $('.y3-7').innerWidth();
     b5Width =  $('.y3-8').innerWidth();
-    b6Width =  $('.y3-9').innerWidth();
-    b7Width =  $('.y3-10').innerWidth();
-    b8Width =  $('.y3-11').innerWidth();
-    b9Width =  $('.y3-12').innerWidth();
 
     scHeight =  $('.scroll-page').innerHeight();
     b1Height =  $('.y3-4').innerHeight();
@@ -47,10 +43,6 @@ function initAnimation(){
     b3Height =  $('.y3-6').innerHeight();
     b4Height =  $('.y3-7').innerHeight();
     b5Height =  $('.y3-8').innerHeight();
-    b6Height =  $('.y3-9').innerHeight();
-    b7Height =  $('.y3-10').innerHeight();
-    b8Height =  $('.y3-11').innerHeight();
-    b9Height =  $('.y3-12').innerHeight();
     
     if (window.innerWidth > 1100){
         initScrollAnimationDesktop();
@@ -165,7 +157,7 @@ function initScrollAnimationDesktop(){
     } , ">");
 
 
-
+    tl1.addLabel('1960');
     tl1.addLabel('startScroll','+=0.3');
     tl1.fromTo(".y3-2__bg", {
         y: 0,
@@ -299,7 +291,7 @@ function initScrollAnimationDesktop(){
         y: "100vh"
     }, {
         y: "-100%",
-        duration: 3.5,
+        duration: 3.3,
         ease: "none",
     } , "<-0.15");
 
@@ -328,6 +320,7 @@ function initScrollAnimationDesktop(){
     } , ">3");
 
 
+    tl1.addLabel('1962');
     tl1.fromTo(".y3-4", {
         x: "0",
         left: "100%"
@@ -363,6 +356,7 @@ function initScrollAnimationDesktop(){
     } , ">");
 
 
+    tl1.addLabel('1964','+=1.1');
     tl1.fromTo(".y3-5", {
         x: "0",
         left: "100%"
@@ -382,18 +376,59 @@ function initScrollAnimationDesktop(){
     } , ">");
 
 
-
+    tl1.addLabel('1966','+=1.1');
     tl1.fromTo(".y3-6", {
         x: "0",
         left: "100%"
     }, {
         left: "0",
         x: -1*(b3Width-scWidth),
-        duration:  4,
+        duration:  10,
         ease: "none",
     } , ">-1.5");
 
     tl1.fromTo(".y2-6__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration:  1.5,
+        ease: "none",
+    } , ">");
+
+
+    tl1.addLabel('1967','+=1.1');
+    tl1.fromTo(".y3-7", {
+        x: "0",
+        left: "100%"
+    }, {
+        left: "0",
+        x: -1*(b4Width-scWidth),
+        duration:  8,
+        ease: "none",
+    } , ">-1.5");
+
+    tl1.fromTo(".y2-7__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration:  1.5,
+        ease: "none",
+    } , ">");
+
+
+
+    tl1.addLabel('1968','+=1.1');
+    tl1.fromTo(".y3-8", {
+        x: "0",
+        left: "100%"
+    }, {
+        left: "0",
+        x: -1*(b5Width-scWidth),
+        duration: 4,
+        ease: "none",
+    } , ">-1.5");
+
+    tl1.fromTo(".y2-8__overlay", {
         autoAlpha: 0,
     }, {
         autoAlpha: 0.7,

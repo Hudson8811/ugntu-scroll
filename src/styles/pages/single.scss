@@ -134,7 +134,7 @@
 	&__share {
 		display: inline-flex;
 		align-items: center;
-
+		position: relative;
 		@include hover {
 			.single__share-icon {
 				border-color: $green;
@@ -142,6 +142,26 @@
 
 			span {
 				color: $green;
+			}
+		}
+		.yaBlock{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 3;
+			.ya-share2__container,
+			.ya-share2__list,
+			.ya-share2__list,
+			.ya-share2__item_more{
+				width: 100%;
+				height: 100%;
+				display: block !important;
+				margin: 0 !important;
+			}
+			.ya-share2__link_more{
+				opacity: 0 !important;
 			}
 		}
 

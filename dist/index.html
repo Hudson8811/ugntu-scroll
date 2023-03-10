@@ -36,6 +36,7 @@
       pointer-events: none;
       opacity: 0;
       }
+      .fullPageOverlay.fullPageOverlay--white{background: #FFFFFF;}
       .fullPageOverlay.active{
       opacity: 1;
       pointer-events: auto;
@@ -55,14 +56,14 @@
           <div class="sidebar__burger-open"><span></span><span></span></div>
         </div>
         <div class="sidebar__menu">
-          <div class="sidebar__menu-item active selected"><a href="./index.html">1940-е</a>
+          <div class="sidebar__menu-item active selected" data-overlay="#05427A"><a href="./index.html">1940-е</a>
             <div class="sidebar__menu-dropdown"><a href="./index.html?y=1941">1941</a><a href="./index.html?y=1943">1943</a><a href="./index.html?y=1948">1948</a><a href="./index.html?y=1949">1949</a></div>
           </div>
-          <div class="sidebar__menu-item"><a href="page2.html">1950-е</a>
+          <div class="sidebar__menu-item" data-overlay="#05427A"><a href="page2.html">1950-е</a>
             <div class="sidebar__menu-dropdown"><a href="./page2.html?y=1951">1951</a><a href="./page2.html?y=1952">1952</a><a href="./page2.html?y=1954">1954</a><a href="./page2.html?y=1955">1955</a><a href="./page2.html?y=1956">1956</a><a href="./page2.html?y=1957">1957</a><a href="./page2.html?y=1958">1958</a></div>
           </div>
-          <div class="sidebar__menu-item"><a href="page3.html">1960-е</a>
-            <div class="sidebar__menu-dropdown"><a href="./page3.html?y=1960">1960</a><a href="./page3.html?y=1962">1962</a><a href="./page3.html?y=1964">1964</a><a href="./page3.html?y=1966">1966</a></div>
+          <div class="sidebar__menu-item" data-overlay="#ffffff"><a href="page3.html">1960-е</a>
+            <div class="sidebar__menu-dropdown"><a href="./page3.html?y=1960">1960</a><a href="./page3.html?y=1962">1962</a><a href="./page3.html?y=1964">1964</a><a href="./page3.html?y=1966">1966</a><a href="./page3.html?y=1967">1967</a><a href="./page3.html?y=1968">1968</a></div>
           </div>
           <div class="sidebar__menu-item"><a href="">1970-е</a></div>
           <div class="sidebar__menu-item"><a href="">1980-е</a></div>
@@ -221,7 +222,7 @@
       </div>
     </div>
     <script src="js/vendor.js"></script>
-    <script src="js/main.js"></script>
     <script>var nextPage = 'page2.html';</script>
+    <script src="js/main.js"></script>
   </body>
 </html>
