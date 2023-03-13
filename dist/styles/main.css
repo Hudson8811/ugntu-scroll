@@ -3712,7 +3712,7 @@ summary {
   position: absolute;
   left: 0;
   top: 8.855721393vw;
-  will-change: transform, opacity, left, top;
+  will-change: transform, opacity, left, top, right, bottom, background;
   transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
@@ -3795,6 +3795,8 @@ summary {
   top: 17.1144278607vw;
   opacity: 1;
   pointer-events: none;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .section1__circle {
@@ -3882,7 +3884,7 @@ summary {
   height: 100%;
   overflow: hidden;
   background: #ACACAC;
-  will-change: transform, opacity, left, top;
+  will-change: transform, opacity, left, top, right, bottom, background;
   transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
@@ -3911,6 +3913,8 @@ summary {
   left: 0;
   transform: translateY(-50%);
   z-index: 9;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
   .section2__numbers {
@@ -3930,6 +3934,8 @@ summary {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
   .section2__numbers-number {
@@ -3950,6 +3956,8 @@ summary {
   background: linear-gradient(90.77deg, #FFFFFF 3.75%, rgba(255, 255, 255, 0) 106.75%);
   margin-left: 6.2189054726vw;
   margin-right: 1.3930348259vw;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
   .section2__numbers-line {
@@ -3977,6 +3985,8 @@ summary {
 .section2__photos-item {
   left: 0;
   position: absolute;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 .section2__photos-item--1 {
   width: 26.1194029851vw;
@@ -4157,6 +4167,10 @@ summary {
 .section2__letter img {
   width: 100%;
 }
+.section2__cloud {
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
+}
 .section2__cloud-1 {
   position: absolute;
   width: 82.9353233831vw;
@@ -4197,7 +4211,7 @@ summary {
   width: 100%;
   top: 100%;
   z-index: 3;
-  will-change: transform, opacity, left, top;
+  will-change: transform, opacity, left, top, right, bottom, background;
   transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
@@ -4235,6 +4249,8 @@ summary {
   left: 15%;
   position: absolute;
   z-index: 2;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
   .section2__house-birds {
@@ -4243,10 +4259,14 @@ summary {
 }
 .section2__house-image {
   width: 100%;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 .section2__house-bottom {
   width: 100%;
   margin-top: -5.8706467662vw;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
   .section2__house-bottom {
@@ -4260,7 +4280,7 @@ summary {
   top: 0;
   width: 100%;
   height: 100%;
-  will-change: transform, opacity, left, top;
+  will-change: transform, opacity, left, top, right, bottom, background;
   transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
@@ -6184,6 +6204,8 @@ summary {
   width: 100%;
   height: 100vh;
   position: relative;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y1960 {
@@ -6206,6 +6228,8 @@ summary {
   overflow: hidden;
   background: #FFFFFF;
   z-index: 2;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y3-1 {
@@ -6240,6 +6264,8 @@ summary {
   left: 0;
   transform: translateY(-50%);
   z-index: 9;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
   .y3-1__numbers {
@@ -6299,6 +6325,8 @@ summary {
   z-index: 8;
   top: 0;
   left: 0;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
   .y3-1__photos {
@@ -6308,6 +6336,8 @@ summary {
 .y3-1__photos-item {
   left: 0;
   position: absolute;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 .y3-1__photos-item--1 {
   width: 26.1194029851vw;
@@ -6347,6 +6377,8 @@ summary {
   overflow: visible;
   background-size: 100% auto;
   z-index: 3;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 .y3-2__bg {
   display: block;
@@ -6360,6 +6392,8 @@ summary {
   top: 0;
   left: 0;
   z-index: -1;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 .y3-2__bg::before {
   content: "";
@@ -6381,6 +6415,8 @@ summary {
   left: 0;
   width: 100%;
   z-index: 2;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 .y3-2__top img {
   width: 100%;
@@ -6394,12 +6430,20 @@ summary {
   top: 0;
   left: 0;
 }
+.y3-2__title {
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
+}
 .y3-2__title--1 {
   color: #FFFFFF;
   position: absolute;
   left: 0;
   top: 0;
   z-index: 3;
+}
+.y3-2__title--1 span {
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 .y3-2__title--1 span:nth-child(3) {
   color: #484848;
@@ -6415,6 +6459,10 @@ summary {
   top: 0;
   color: #FFFFFF;
   z-index: 2;
+}
+.y3-2__title--2 span {
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 .y3-2__title--2 span:nth-child(2) {
   color: #939393;
@@ -6433,6 +6481,8 @@ summary {
   position: absolute;
   top: 0;
   z-index: 3;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y3-2__text {
@@ -6471,6 +6521,8 @@ summary {
   right: 5.1741293532vw;
   top: 0;
   z-index: 1;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 .y3-2__azs-photo {
   width: 49.7014925373vw;
@@ -6480,12 +6532,16 @@ summary {
   right: 4.0298507463vw;
   top: 100%;
   width: 22.9850746269vw;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 .y3-2__label-block {
   position: absolute;
   top: 0;
   left: 10.1990049751vw;
   width: 40.7960199005vw;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 .y3-2__label-block span {
   width: 10.1492537313vw;
@@ -6512,6 +6568,8 @@ summary {
   position: absolute;
   right: 23.8805970149vw;
   top: 0;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 
 .y3-3 {
@@ -6523,6 +6581,8 @@ summary {
   overflow: hidden;
   background: #ffffff;
   z-index: 1;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
   .y3-3 {
@@ -6588,6 +6648,8 @@ summary {
 
 .y3-4 {
   z-index: 4;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 .y3-4__first {
   background: #E3E3E3;
@@ -6608,6 +6670,8 @@ summary {
   padding: 2.4875621891vw;
   width: 66.0696517413vw;
   z-index: 4;
+  will-change: transform, opacity, left, top, right, bottom, background;
+  transform-style: preserve-3d;
 }
 .y3-4__second-image {
   display: flex;
@@ -6827,7 +6891,6 @@ summary {
   left: 8.3084577114vw;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   z-index: 1;
 }
 @media only screen and (max-width: 1100px) {
@@ -6847,8 +6910,18 @@ summary {
     padding-bottom: 5vw;
   }
 }
+.y3-6__last-title span {
+  position: relative;
+}
+.y3-6__last-title span:nth-child(1) {
+  left: 0;
+}
 .y3-6__last-title span:nth-child(2) {
   color: #1EA9AF;
+  left: 9.0547263682vw;
+}
+.y3-6__last-title span:nth-child(3) {
+  left: 27.1144278607vw;
 }
 .y3-6__last-text {
   padding: 2.4875621891vw;

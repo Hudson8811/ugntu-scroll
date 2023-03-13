@@ -367,7 +367,24 @@ function initScrollAnimationDesktop(){
         ease: "none",
     } , ">-1.5");
 
-    tl1.fromTo(".y2-5__overlay", {
+
+    tl1.from(".y3-5__title span:nth-child(1)",  {
+        x: "-120%",
+        duration: 4,
+        ease: "none",
+    } , "<");
+    tl1.from(".y3-5__title span:nth-child(2)", {
+        x: "-65%",
+        duration: 4,
+        ease: "none",
+    } , "<");
+    tl1.to(".y3-5__image", {
+        x: "-30vw",
+        duration: 2,
+        ease: "none",
+    } , "<2");
+
+    tl1.fromTo(".y3-5__overlay", {
         autoAlpha: 0,
     }, {
         autoAlpha: 0.7,
@@ -387,13 +404,45 @@ function initScrollAnimationDesktop(){
         ease: "none",
     } , ">-1.5");
 
-    tl1.fromTo(".y2-6__overlay", {
+
+
+    tl1.fromTo(".y3-6__second-image2", {
+        x: '150%',
+    }, {
+        x: '-80%',
+        duration: 4,
+        ease: "none",
+    } , "<3");
+
+
+    tl1.from(".y3-6__last-title span:nth-child(1)",  {
+        left: "50vw",
+        duration: 3,
+        ease: "none",
+    } , ">");
+    tl1.from(".y3-6__last-title span:nth-child(2)", {
+        left: "0",
+        duration: 3,
+        ease: "none",
+    } , "<");
+    tl1.from(".y3-6__last-title span:nth-child(3)", {
+        left: "5vw",
+        duration: 3,
+        ease: "none",
+    } , "<");
+    tl1.from(".y3-6__last-image", {
+        top: "-100%",
+        duration: 3,
+        ease: "none",
+    } , "<");
+
+    tl1.fromTo(".y3-6__overlay", {
         autoAlpha: 0,
     }, {
         autoAlpha: 0.7,
         duration:  1.5,
         ease: "none",
-    } , ">");
+    } , ">3");
 
 
     tl1.addLabel('1967','+=1.1');
@@ -407,7 +456,7 @@ function initScrollAnimationDesktop(){
         ease: "none",
     } , ">-1.5");
 
-    tl1.fromTo(".y2-7__overlay", {
+    tl1.fromTo(".y3-7__overlay", {
         autoAlpha: 0,
     }, {
         autoAlpha: 0.7,
@@ -428,7 +477,7 @@ function initScrollAnimationDesktop(){
         ease: "none",
     } , ">-1.5");
 
-    tl1.fromTo(".y2-8__overlay", {
+    tl1.fromTo(".y3-8__overlay", {
         autoAlpha: 0,
     }, {
         autoAlpha: 0.7,
