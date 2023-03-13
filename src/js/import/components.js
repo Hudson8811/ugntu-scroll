@@ -150,7 +150,9 @@ $(document).ready(function() {
 
     /*отмена отправки формы и показ окна успешной отправки*/
     $('.form').on('submit',function (){
-        event.preventDefault();
+        if (!$(this).hasClass('node-congratulation-form')) {
+            event.preventDefault();
+        }
         $('.form').scrollTop(0).addClass('success');
         $('.form__success').addClass('active');
     });

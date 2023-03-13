@@ -76,7 +76,7 @@
 		}
 	}
 
-	input,
+	input:not([type="submit"]),
 	textarea {
 		width: 100%;
 		border: 0;
@@ -126,6 +126,10 @@
 		height: 237px;
 		margin-top: 18px;
 		resize: none;
+
+		&[name^="field_position"] {
+			height: 90px;
+		}
 
 		@include max(sm) {
 			height: 87px;
@@ -212,11 +216,17 @@
 		align-items: center;
 		justify-content: center;
 		width: 100%;
-		height: 255px;
+		min-height: 215px;
+		padding-top: 20px;
+		padding-bottom: 20px;
 		border: 1px dashed rgba($black, 0.3);
 		margin-top: 10px;
 		cursor: pointer;
 		transition: 0.3s ease;
+
+		label, .description, summary {
+			display: none;
+		}
 
 		@include max(md) {
 			height: auto;
@@ -227,9 +237,40 @@
 			border-color: $black;
 		}
 
-		input {
+		input:not([type="submit"]) {
 			display: none;
 		}
+
+		.form-managed-file {
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+		}
+	}
+
+	details {
+		margin: 0;
+		border: none;
+
+		.tabledrag-toggle-weight-wrapper,
+		.tableresponsive-toggle-columns,
+		.tabledrag-handle,
+		table thead {
+			display: none;
+		}
+		table {
+			margin-top: 1em;
+			margin-bottom: 1em;
+		}
+	}
+
+	input[name*="remove_button"] {
+		display: block;
+		border-radius: inherit;
+		border-bottom: 0;
+		margin: 0;
+		margin-left: 5px;
+		min-width: 80px;
 	}
 
 	&__download-title {
@@ -282,19 +323,25 @@
 		width: 100%;
 		border: none;
 		outline: none;
-		padding: 32px 10px;
-		background-color: $green;
+		padding: 32px 10px !important;
+		background-color: $green !important;
 		text-transform: uppercase;
 		color: $white;
 		cursor: pointer;
 		transition: 0.3s ease;
+		max-width: inherit;
+		border-radius: inherit;
+
+		&.button {
+			width: 100%;
+			max-width: 100%;
+		}
 
 		@include max(sm) {
 			font-size: 9px;
 			line-height: 13px;
 			padding: 15px 10px;
 		}
-
 
 		&:hover{
 			background: $colorBlue;

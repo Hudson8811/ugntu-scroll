@@ -2,10 +2,14 @@
 	position: relative;
 
 	@include max(md){
-		padding-top: vw2(75);
+		&:not(.no-p-top) {
+			padding-top: vw2(75);
+		}
 	}
 	@include max(sm){
-		padding-top: vw3(50);
+		&:not(.no-p-top) {
+			padding-top: vw3(50);
+		}
 	}
 
 	&::before {
