@@ -365,6 +365,9 @@
 	}
 	&__second{
 		flex-direction: row-reverse;
+		@include max(md){
+			flex-direction: column;
+		}
 		&-text{
 			padding: vw(50) vw(905) vw(50) vw(69);
 			display: flex;
@@ -416,6 +419,12 @@
 					right: vw3(16);
 					width: vw3(162);
 				}
+			}
+		}
+		&-image{
+			@include max(md){
+				height: auto;
+				width: 100%;
 			}
 		}
 	}

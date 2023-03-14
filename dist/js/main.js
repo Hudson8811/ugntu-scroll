@@ -149,7 +149,10 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   /*отмена отправки формы и показ окна успешной отправки*/
 
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form').on('submit', function () {
-    event.preventDefault();
+    if (!jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass('node-congratulation-form')) {
+      event.preventDefault();
+    }
+
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form').scrollTop(0).addClass('success');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form__success').addClass('active');
   });
@@ -5150,7 +5153,7 @@ gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_ScrollTrigger__
 gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_MotionPathPlugin__WEBPACK_IMPORTED_MODULE_3__["default"]);
 gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_4__["default"]);
 var initMode;
-var addTime = 600;
+var addTime = 1800;
 var st1;
 var tl1 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
 var tl = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({
@@ -5198,7 +5201,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
     if (typeof st1 !== "undefined") st1.kill();
     tl1.clear();
     tl.clear();
-    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set("" + ".scroll-page,.sidebar__menu-dropdown", {
+    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".y3-1__numbers, .y3-1__photos-item--1, .y3-1__numbers, .y3-1__photos-item--1, .y3-1__photos-item--2," + ".y3-1__photos-item--3, .y3-2, .y3-1, .y3-2__bg, .y3-2__top, .y3-2__title--1, .y3-2__title--1 span, .y3-2__text--1," + ".y3-2__title--2, .y3-2__title--2 span, .y3-2__azs, .y3-2__azs-logo ,.y3-2__cloud-1, .y3-2__cloud-2, .y3-2__cloud-3," + ".y3-2__text--2, .y3-2__label-block, .y3-2__label, .y3-2__year, .y3-3__overlay, .y3-4, .y3-4__first-title, " + ".y3-4__second-image, .y3-4__overlay, .y3-5, .y3-5__title span, .y3-5__image, .y3-5__overlay, .y3-6, " + ".y3-6__second-image2, .y3-6__last-title span, .y3-6__last-image, .y3-6__overlay, .y3-7, .y3-7__first-title, " + ".y3-7__second-title span, .y3-7__second-image2, .y3-7__overlay, .y3-8, .y3-8__overlay," + ".scroll-page,.sidebar__menu-dropdown", {
       clearProps: "all"
     });
     window.scrollTo({
@@ -5380,13 +5383,48 @@ function initScrollAnimationDesktop() {
     duration: 2,
     ease: "none"
   }, "<");
+  tl1.fromTo(".y3-2__cloud-1", {
+    left: '0',
+    x: '0',
+    top: '0',
+    y: '-100%'
+  }, {
+    left: '0',
+    x: '-100%',
+    top: '20%',
+    y: '0',
+    duration: 3,
+    ease: "none"
+  }, ">-2");
+  tl1.fromTo(".y3-2__cloud-2", {
+    left: '100%',
+    x: '0',
+    top: '10%'
+  }, {
+    left: '0',
+    x: '-100%',
+    top: '-20%',
+    duration: 5,
+    ease: "none"
+  }, "<");
+  tl1.fromTo(".y3-2__cloud-3", {
+    left: '100%',
+    x: '0',
+    top: '10%'
+  }, {
+    left: '0',
+    x: '-100%',
+    top: '-40%',
+    duration: 4,
+    ease: "none"
+  }, "<+1");
   tl1.fromTo(".y3-2__text--2", {
     y: "100vh"
   }, {
     y: "-100%",
     duration: 1.8,
     ease: "none"
-  }, ">-1");
+  }, "<");
   tl1.fromTo(".y3-2__label-block", {
     y: "100vh"
   }, {
@@ -5528,7 +5566,7 @@ function initScrollAnimationDesktop() {
     autoAlpha: 0.7,
     duration: 1.5,
     ease: "none"
-  }, ">3");
+  }, ">");
   tl1.addLabel('1967', '+=1.1');
   tl1.fromTo(".y3-7", {
     x: "0",
@@ -5539,6 +5577,31 @@ function initScrollAnimationDesktop() {
     duration: 8,
     ease: "none"
   }, ">-1.5");
+  tl1.from(".y3-7__first-title", {
+    x: "100%",
+    duration: 5.5,
+    ease: "none"
+  }, "<");
+  tl1.from(".y3-7__second-title span:nth-child(1)", {
+    left: "50vw",
+    duration: 4,
+    ease: "none"
+  }, "<4");
+  tl1.from(".y3-7__second-title span:nth-child(2)", {
+    left: "15vw",
+    duration: 4,
+    ease: "none"
+  }, "<");
+  tl1.from(".y3-7__second-title span:nth-child(3)", {
+    left: "10vw",
+    duration: 4,
+    ease: "none"
+  }, "<");
+  tl1.from(".y3-7__second-image2", {
+    y: "150%",
+    duration: 4,
+    ease: "none"
+  }, "<");
   tl1.fromTo(".y3-7__overlay", {
     autoAlpha: 0
   }, {
@@ -5573,6 +5636,232 @@ function initScrollAnimationDesktop() {
     scrub: 2.5,
     animation: tl1
   });
+}
+
+function initScrollAnimationTablet() {
+  gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(".fullPageOverlay", {
+    duration: 1,
+    autoAlpha: 0,
+    ease: "none",
+    onComplete: function onComplete() {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fullPageOverlay').removeClass('active');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
+    }
+  });
+  tl1.fromTo(".y3-1__numbers", {
+    x: '5%'
+  }, {
+    x: '-100%',
+    duration: 2,
+    ease: "none"
+  }, "0");
+  tl1.fromTo(".y3-1__numbers", {
+    y: 0
+  }, {
+    y: '40%',
+    duration: 2,
+    ease: "none"
+  }, "0");
+  tl1.fromTo(".y3-1__photos-item--1", {
+    x: '5vw'
+  }, {
+    x: '-100%',
+    duration: 0.3,
+    ease: "none"
+  }, "0");
+  tl1.fromTo(".y3-1__photos-item--2", {
+    x: '100vw'
+  }, {
+    x: '-100%',
+    duration: 0.7,
+    ease: "none"
+  }, "0");
+  tl1.fromTo(".y3-1__photos-item--3", {
+    x: '100vw'
+  }, {
+    x: '-100%',
+    duration: 0.7,
+    ease: "none"
+  }, ">-0.3");
+  tl1.to(".y3-1", {
+    top: '-80vw',
+    duration: 2,
+    ease: "none"
+  }, "0");
+  tl1.to(".y3-2", {
+    top: '0',
+    duration: 2,
+    ease: "none"
+  }, "<");
+  tl1.addLabel('1960');
+  tl1.to(".y3-2", {
+    top: "-100vw",
+    duration: 2.5,
+    ease: "none"
+  }, "2");
+  tl1.fromTo(".y3-3__overlay", {
+    autoAlpha: 0
+  }, {
+    autoAlpha: 0.7,
+    duration: 0.5,
+    ease: "none"
+  }, "<");
+  tl1.addLabel('1962', '+=1');
+  tl1.fromTo(".y3-4", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b1Height - scHeight),
+    duration: Math.abs((scHeight - b1Height) / 460),
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y2-4__overlay", {
+    autoAlpha: 0
+  }, {
+    autoAlpha: 0.7,
+    duration: 1.5,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('1964', '+=1.5');
+  tl1.fromTo(".y3-5", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b2Height - scHeight),
+    duration: Math.abs((scHeight - b2Height) / 460) + 1.5,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y3-5__overlay", {
+    autoAlpha: 0
+  }, {
+    autoAlpha: 0.7,
+    duration: 1.5,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('1966', '+=1.5');
+  tl1.fromTo(".y3-6", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b2Height - scHeight),
+    duration: Math.abs((scHeight - b3Height) / 460) + 1.5,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y3-6__overlay", {
+    autoAlpha: 0
+  }, {
+    autoAlpha: 0.7,
+    duration: 1.5,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('1967', '+=1.5');
+  tl1.fromTo(".y3-7", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b2Height - scHeight),
+    duration: Math.abs((scHeight - b4Height) / 460) + 1.5,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y3-7__overlay", {
+    autoAlpha: 0
+  }, {
+    autoAlpha: 0.7,
+    duration: 1.5,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('1968', '+=1.5');
+  tl1.fromTo(".y3-8", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b2Height - scHeight),
+    duration: Math.abs((scHeight - b5Height) / 460) + 1.5,
+    ease: "none"
+  }, ">");
+  st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
+    trigger: ".scroll-page",
+    pin: true,
+    start: "top top",
+    end: function end() {
+      return "+=" + addTime + "%";
+    },
+    scrub: 2.5,
+    animation: tl1
+  });
+}
+
+function initScrollAnimationMobile() {
+  gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(".fullPageOverlay", {
+    duration: 1,
+    autoAlpha: 0,
+    ease: "none",
+    onComplete: function onComplete() {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fullPageOverlay').removeClass('active');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
+    }
+  });
+  tl1.fromTo(".y3-1__numbers", {
+    x: 0
+  }, {
+    x: '-80%',
+    duration: 1,
+    ease: "none"
+  }, "0");
+  tl1.fromTo(".y3-1__numbers", {
+    y: 0
+  }, {
+    y: '50%',
+    duration: 0.5,
+    ease: "none"
+  }, "0");
+  st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
+    trigger: ".y3-1__numbers",
+    pin: false,
+    start: "-45vw top",
+    end: function end() {
+      return "bottom top";
+    },
+    scrub: 1,
+    animation: tl1
+  });
+}
+
+function scrollToYear(year) {
+  if (year !== null) {
+    if (initMode === 'desk' || initMode === 'tablet') {
+      gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(window, {
+        scrollTo: tl1.scrollTrigger.labelToScroll(year)
+      });
+    } else if (initMode === 'mobile') {
+      gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(window, {
+        scrollTo: '#year' + year
+      });
+    }
+  }
+}
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.sidebar__menu-dropdown a').on('click', function () {
+  event.preventDefault();
+  var link = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href');
+
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.sidebar__menu-item').hasClass('active')) {
+    var _yValue = getParameterFromString(link, "y");
+
+    if (_yValue !== null) {
+      scrollToYear(_yValue);
+    }
+  }
+});
+
+function getParameterFromString(urlString, parameterName) {
+  var urlParams = new URLSearchParams(urlString.split('?')[1]);
+  return urlParams.get(parameterName);
 }
 
 /***/ }),
