@@ -4817,9 +4817,9 @@ function initScrollAnimationTablet() {
     ease: "none"
   }, "0");
   tl1.fromTo(".y2-1__numbers", {
-    y: 0
+    y: "-50%"
   }, {
-    y: '40%',
+    y: '10%',
     duration: 2,
     ease: "none"
   }, "0");
@@ -5239,7 +5239,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
     if (typeof st1 !== "undefined") st1.kill();
     tl1.clear();
     tl.clear();
-    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".y3-1__numbers, .y3-1__photos-item--1, .y3-1__numbers, .y3-1__photos-item--1, .y3-1__photos-item--2," + ".y3-1__photos-item--3, .y3-2, .y3-1, .y3-2__bg, .y3-2__top, .y3-2__title--1, .y3-2__title--1 span, .y3-2__text--1," + ".y3-2__title--2, .y3-2__title--2 span, .y3-2__azs, .y3-2__azs-logo ,.y3-2__cloud-1, .y3-2__cloud-2, .y3-2__cloud-3," + ".y3-2__text--2, .y3-2__label-block, .y3-2__label, .y3-2__year, .y3-3__overlay, .y3-4, .y3-4__first-title, " + ".y3-4__second-image, .y3-4__overlay, .y3-5, .y3-5__title span, .y3-5__image, .y3-5__overlay, .y3-6, " + ".y3-6__second-image2, .y3-6__last-title span, .y3-6__last-image, .y3-6__overlay, .y3-7, .y3-7__first-title, " + ".y3-7__second-title span, .y3-7__second-image2, .y3-7__overlay, .y3-8, .y3-8__overlay, .y3-2__overlay, .y3-1__photos," + ".scroll-page,.sidebar__menu-dropdown, .fullPageOverlay", {
+    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".y3-1__numbers, .y3-1__photos-item--1, .y3-1__photos-item--1, .y3-1__photos-item--2," + ".y3-1__photos-item--3, .y3-2, .y3-1, .y3-2__bg, .y3-2__top, .y3-2__title--1, .y3-2__title--1 span, .y3-2__text--1," + ".y3-2__title--2, .y3-2__title--2 span, .y3-2__azs, .y3-2__azs-logo ,.y3-2__cloud-1, .y3-2__cloud-2, .y3-2__cloud-3," + ".y3-2__text--2, .y3-2__label-block, .y3-2__label, .y3-2__year, .y3-3, .y3-3__overlay, .y3-4, .y3-4__first-title, " + ".y3-4__second-image, .y3-4__overlay, .y3-5, .y3-5__title span, .y3-5__image, .y3-5__overlay, .y3-6, " + ".y3-6__second-image2, .y3-6__last-title span, .y3-6__last-image, .y3-6__overlay, .y3-7, .y3-7__first-title, " + ".y3-7__second-title span, .y3-7__second-image2, .y3-7__overlay, .y3-8, .y3-8__overlay, .y3-2__overlay, .y3-1__photos," + ".scroll-page,.sidebar__menu-dropdown, .fullPageOverlay", {
       clearProps: "all"
     });
     window.scrollTo({
@@ -5708,9 +5708,9 @@ function initScrollAnimationTablet() {
     ease: "none"
   }, "0");
   tl1.fromTo(".y3-1__numbers", {
-    y: 0
+    y: "-50%"
   }, {
-    y: '40%',
+    y: '10%',
     duration: 2,
     ease: "none"
   }, "0");

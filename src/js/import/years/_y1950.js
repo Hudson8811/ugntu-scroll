@@ -598,9 +598,9 @@ function initScrollAnimationTablet(){
     } , "0");
 
     tl1.fromTo(".y2-1__numbers", {
-        y: 0
+        y: "-50%"
     }, {
-        y: '40%',
+        y: '10%',
         duration:  2,
         ease: "none",
     } , "0");

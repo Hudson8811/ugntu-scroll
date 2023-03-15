@@ -132,6 +132,9 @@
 	left: 0;
 	transform: translateY(-50%);
 	z-index: 9;
+	@include max(md){
+		transform: none;
+	}
 	@include max(sm){
 		position: relative;
 		top: 0;
