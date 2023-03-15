@@ -80,7 +80,7 @@ $(window).on('resize',function (){
             ".y2-4,.y2-4__overlay,.y2-5,.y2-5__overlay,.y2-6,.y2-6__title span,.y2-6__image,.y2-6__overlay,.y2-7,.y2-7__image," +
             ".y2-7__title span,.y2-7__overlay,.y2-9,.y2-8,.y2-9__flex,.y2-9__title,.y2-9__title span,.y2-10,.y2-10__overlay," +
             ".y2-11,.y2-11__first-title,.y2-11__second-title span,.y2-11__overlay,.y2-12,.y2-12__title,.y2-12__text-col," +
-            ".y2-12__images-img,.y2-9__overlay,.y2-8__overlay, " +
+            ".y2-12__images-img,.y2-9__overlay,.y2-8__overlay, .y2-1__photos," +
             ".scroll-page,.sidebar__menu-dropdown, .fullPageOverlay", {clearProps:"all"});
         window.scrollTo({
             top: 0,
@@ -103,6 +103,20 @@ function initScrollAnimationDesktop(){
             $('.fullPageOverlay').removeClass('active');
         }
     });
+    tl.fromTo(".y2-1__numbers", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 1,
+        duration:  0.1,
+        ease: "none",
+    } , "0.1");
+    tl.fromTo(".y2-1__photos", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 1,
+        duration:  0.1,
+        ease: "none",
+    } , "0.1");
 
     tl.fromTo(".y2-1__numbers", {
         x: '100vw',

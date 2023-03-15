@@ -4360,7 +4360,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
     if (typeof st1 !== "undefined") st1.kill();
     tl1.clear();
     tl.clear();
-    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".y2-1__numbers,.y2-1__photos-item--1,.y2-1__photos-item--2,.y2-1__photos-item--3,.y2-2,.y2-2__top," + ".y2-2__title,.y2-2__fly,.y2-2__title span,.y2-2__text,.y2-2__diplom,.y2-1,.y2-3__text,.y2-3__label,.y2-3__overlay," + ".y2-4,.y2-4__overlay,.y2-5,.y2-5__overlay,.y2-6,.y2-6__title span,.y2-6__image,.y2-6__overlay,.y2-7,.y2-7__image," + ".y2-7__title span,.y2-7__overlay,.y2-9,.y2-8,.y2-9__flex,.y2-9__title,.y2-9__title span,.y2-10,.y2-10__overlay," + ".y2-11,.y2-11__first-title,.y2-11__second-title span,.y2-11__overlay,.y2-12,.y2-12__title,.y2-12__text-col," + ".y2-12__images-img,.y2-9__overlay,.y2-8__overlay, " + ".scroll-page,.sidebar__menu-dropdown, .fullPageOverlay", {
+    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".y2-1__numbers,.y2-1__photos-item--1,.y2-1__photos-item--2,.y2-1__photos-item--3,.y2-2,.y2-2__top," + ".y2-2__title,.y2-2__fly,.y2-2__title span,.y2-2__text,.y2-2__diplom,.y2-1,.y2-3__text,.y2-3__label,.y2-3__overlay," + ".y2-4,.y2-4__overlay,.y2-5,.y2-5__overlay,.y2-6,.y2-6__title span,.y2-6__image,.y2-6__overlay,.y2-7,.y2-7__image," + ".y2-7__title span,.y2-7__overlay,.y2-9,.y2-8,.y2-9__flex,.y2-9__title,.y2-9__title span,.y2-10,.y2-10__overlay," + ".y2-11,.y2-11__first-title,.y2-11__second-title span,.y2-11__overlay,.y2-12,.y2-12__title,.y2-12__text-col," + ".y2-12__images-img,.y2-9__overlay,.y2-8__overlay, .y2-1__photos," + ".scroll-page,.sidebar__menu-dropdown, .fullPageOverlay", {
       clearProps: "all"
     });
     window.scrollTo({
@@ -4383,6 +4383,20 @@ function initScrollAnimationDesktop() {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fullPageOverlay').removeClass('active');
     }
   });
+  tl.fromTo(".y2-1__numbers", {
+    autoAlpha: 0
+  }, {
+    autoAlpha: 1,
+    duration: 0.1,
+    ease: "none"
+  }, "0.1");
+  tl.fromTo(".y2-1__photos", {
+    autoAlpha: 0
+  }, {
+    autoAlpha: 1,
+    duration: 0.1,
+    ease: "none"
+  }, "0.1");
   tl.fromTo(".y2-1__numbers", {
     x: '100vw'
   }, {
@@ -5225,7 +5239,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
     if (typeof st1 !== "undefined") st1.kill();
     tl1.clear();
     tl.clear();
-    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".y3-1__numbers, .y3-1__photos-item--1, .y3-1__numbers, .y3-1__photos-item--1, .y3-1__photos-item--2," + ".y3-1__photos-item--3, .y3-2, .y3-1, .y3-2__bg, .y3-2__top, .y3-2__title--1, .y3-2__title--1 span, .y3-2__text--1," + ".y3-2__title--2, .y3-2__title--2 span, .y3-2__azs, .y3-2__azs-logo ,.y3-2__cloud-1, .y3-2__cloud-2, .y3-2__cloud-3," + ".y3-2__text--2, .y3-2__label-block, .y3-2__label, .y3-2__year, .y3-3__overlay, .y3-4, .y3-4__first-title, " + ".y3-4__second-image, .y3-4__overlay, .y3-5, .y3-5__title span, .y3-5__image, .y3-5__overlay, .y3-6, " + ".y3-6__second-image2, .y3-6__last-title span, .y3-6__last-image, .y3-6__overlay, .y3-7, .y3-7__first-title, " + ".y3-7__second-title span, .y3-7__second-image2, .y3-7__overlay, .y3-8, .y3-8__overlay, .y3-2__overlay," + ".scroll-page,.sidebar__menu-dropdown, .fullPageOverlay", {
+    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".y3-1__numbers, .y3-1__photos-item--1, .y3-1__numbers, .y3-1__photos-item--1, .y3-1__photos-item--2," + ".y3-1__photos-item--3, .y3-2, .y3-1, .y3-2__bg, .y3-2__top, .y3-2__title--1, .y3-2__title--1 span, .y3-2__text--1," + ".y3-2__title--2, .y3-2__title--2 span, .y3-2__azs, .y3-2__azs-logo ,.y3-2__cloud-1, .y3-2__cloud-2, .y3-2__cloud-3," + ".y3-2__text--2, .y3-2__label-block, .y3-2__label, .y3-2__year, .y3-3__overlay, .y3-4, .y3-4__first-title, " + ".y3-4__second-image, .y3-4__overlay, .y3-5, .y3-5__title span, .y3-5__image, .y3-5__overlay, .y3-6, " + ".y3-6__second-image2, .y3-6__last-title span, .y3-6__last-image, .y3-6__overlay, .y3-7, .y3-7__first-title, " + ".y3-7__second-title span, .y3-7__second-image2, .y3-7__overlay, .y3-8, .y3-8__overlay, .y3-2__overlay, .y3-1__photos," + ".scroll-page,.sidebar__menu-dropdown, .fullPageOverlay", {
       clearProps: "all"
     });
     window.scrollTo({
@@ -5248,6 +5262,20 @@ function initScrollAnimationDesktop() {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fullPageOverlay').removeClass('active');
     }
   });
+  tl.fromTo(".y3-1__numbers", {
+    autoAlpha: 0
+  }, {
+    autoAlpha: 1,
+    duration: 0.1,
+    ease: "none"
+  }, "0.1");
+  tl.fromTo(".y3-1__photos", {
+    autoAlpha: 0
+  }, {
+    autoAlpha: 1,
+    duration: 0.1,
+    ease: "none"
+  }, "0.1");
   tl.fromTo(".y3-1__numbers", {
     x: '100vw'
   }, {

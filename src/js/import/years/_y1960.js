@@ -74,7 +74,7 @@ $(window).on('resize',function (){
             ".y3-2__text--2, .y3-2__label-block, .y3-2__label, .y3-2__year, .y3-3__overlay, .y3-4, .y3-4__first-title, " +
             ".y3-4__second-image, .y3-4__overlay, .y3-5, .y3-5__title span, .y3-5__image, .y3-5__overlay, .y3-6, " +
             ".y3-6__second-image2, .y3-6__last-title span, .y3-6__last-image, .y3-6__overlay, .y3-7, .y3-7__first-title, " +
-            ".y3-7__second-title span, .y3-7__second-image2, .y3-7__overlay, .y3-8, .y3-8__overlay, .y3-2__overlay," +
+            ".y3-7__second-title span, .y3-7__second-image2, .y3-7__overlay, .y3-8, .y3-8__overlay, .y3-2__overlay, .y3-1__photos," +
             ".scroll-page,.sidebar__menu-dropdown, .fullPageOverlay", {clearProps:"all"});
         window.scrollTo({
             top: 0,
@@ -97,6 +97,21 @@ function initScrollAnimationDesktop(){
             $('.fullPageOverlay').removeClass('active');
         }
     });
+
+    tl.fromTo(".y3-1__numbers", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 1,
+        duration:  0.1,
+        ease: "none",
+    } , "0.1");
+    tl.fromTo(".y3-1__photos", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 1,
+        duration:  0.1,
+        ease: "none",
+    } , "0.1");
 
     tl.fromTo(".y3-1__numbers", {
         x: '100vw',

@@ -6278,7 +6278,7 @@ summary {
   left: 0;
   transform: translateY(-50%);
   z-index: 9;
-  will-change: transform;
+  will-change: transform, opacity;
   transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
@@ -6337,6 +6337,8 @@ summary {
   z-index: 8;
   top: 0;
   left: 0;
+  will-change: opacity;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
   .y2-1__photos {
@@ -7721,7 +7723,7 @@ summary {
   left: 0;
   transform: translateY(-50%);
   z-index: 9;
-  will-change: transform;
+  will-change: transform, opacity;
   transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
@@ -7792,6 +7794,8 @@ summary {
   z-index: 8;
   top: 0;
   left: 0;
+  will-change: opacity;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
   .y3-1__photos {
