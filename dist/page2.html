@@ -35,6 +35,8 @@
       background: #003F78;
       pointer-events: none;
       opacity: 0;
+      will-change: opacity;
+      transform-style: preserve-3d;
       }
       .fullPageOverlay.fullPageOverlay--white{background: #FFFFFF;}
       .fullPageOverlay.active{
@@ -231,10 +233,15 @@
             <div class="y2-12__text-col textBlock">Сдана в эксплуатацию первая студенческая столовая на 200 посадочных мест.</div>
           </div>
           <div class="y2-12__last"><img src="img/o14-3.webp" alt=""></div>
+          <div class="y2-12__overrlay"></div>
         </div>
       </div>
     </div>
     <script src="js/vendor.js"></script>
+    <script>
+      var nextPage = 'page3.html';
+      var nextPageBg = '#FFFFFF';
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -69,14 +69,16 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.sidebar__menu-item > a').on('click', function () {
     event.preventDefault();
     var link = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href');
-    nextPageAnimation(link);
+    var bgColor = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.sidebar__menu-item').data('overlay');
+    nextPageAnimation(link, bgColor);
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.sidebar__menu-dropdown a').on('click', function () {
     event.preventDefault();
     var link = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href');
 
     if (!jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.sidebar__menu-item').hasClass('active')) {
-      nextPageAnimation(link);
+      var bgColor = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.sidebar__menu-item').data('overlay');
+      nextPageAnimation(link, bgColor);
     } else {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.sidebar__menu').removeClass('active');
     }
@@ -86,7 +88,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     if (nextPage != '') {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(function () {
         if (Math.ceil(jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() + jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).height()) >= Math.floor(jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).height())) {
-          nextPageAnimation(nextPage);
+          nextPageAnimation(nextPage, nextPageBg);
         }
       });
     }
@@ -235,7 +237,13 @@ function disableScroll() {
 }
 
 function nextPageAnimation(link) {
+  var bgColor = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
   disableScroll();
+
+  if (bgColor != '') {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fullPageOverlay').css('background', bgColor);
+  }
+
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.sidebar__menu-dropdown').hide();
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.sidebar__menu').removeClass('active');
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fullPageOverlay').css('pointer-events', 'auto');
@@ -3497,7 +3505,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
     tl1.clear();
     tl2.clear();
     tl3.clear();
-    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".loader__center, .loader__back, .section1__house, .section1 .header, .sidebar, .section1__title," + ".section1__dates, .section1__circle, .section1__circle-inner, .section2, .section2__numbers," + ".section2__photos-item--1, .section2__photos-item--2,.section2__photos-item--3, .section2__year," + ".section2__textblock, .section2__letter, .section2__cloud-1, .section2__cloud-2, .section2__textblock2," + ".section2__house, .section2__house-birds, .section2__last-img img, .section2__last-label," + ".section2__last-overlay, .section3, .section3__block--1, .section3__block--1 .section3__overlay," + ".section3__block--2, .section3__block--2 .section3__overlay, .section3__block--3," + ".section3__block--3 .section3__label--1 .section3__label-item--1," + ".section3__block--3 .section3__label--1 .section3__label-item--2," + ".section3__block--3 .section3__label--2, .section3__block--3 .section3__star," + ".section3__block--3 .section3__overlay, .section3__block--4, .section3__block--4 .section3__image," + ".section3__block--4 .section3__label-item--1, .section3__block--4 .section3__label-item--2," + ".section3__block--4 .section3__label-item--3, .section3__block--4 .section3__overlay," + ".scroll-page,.sidebar__menu-dropdown", {
+    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".loader__center, .loader__back, .section1__house, .section1 .header, .sidebar, .section1__title," + ".section1__dates, .section1__circle, .section1__circle-inner, .section2, .section2__numbers," + ".section2__photos-item--1, .section2__photos-item--2,.section2__photos-item--3, .section2__year," + ".section2__textblock, .section2__letter, .section2__cloud-1, .section2__cloud-2, .section2__textblock2," + ".section2__house, .section2__house-birds, .section2__last-img img, .section2__last-label," + ".section2__last-overlay, .section3, .section3__block--1, .section3__block--1 .section3__overlay," + ".section3__block--2, .section3__block--2 .section3__overlay, .section3__block--3," + ".section3__block--3 .section3__label--1 .section3__label-item--1," + ".section3__block--3 .section3__label--1 .section3__label-item--2," + ".section3__block--3 .section3__label--2, .section3__block--3 .section3__star," + ".section3__block--3 .section3__overlay, .section3__block--4, .section3__block--4 .section3__image," + ".section3__block--4 .section3__label-item--1, .section3__block--4 .section3__label-item--2," + ".section3__block--4 .section3__label-item--3, .section3__block--4 .section3__overlay," + ".scroll-page,.sidebar__menu-dropdown, .fullPageOverlay", {
       clearProps: "all"
     });
     window.scrollTo({
@@ -4352,7 +4360,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
     if (typeof st1 !== "undefined") st1.kill();
     tl1.clear();
     tl.clear();
-    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".y2-1__numbers,.y2-1__photos-item--1,.y2-1__photos-item--2,.y2-1__photos-item--3,.y2-2,.y2-2__top," + ".y2-2__title,.y2-2__fly,.y2-2__title span,.y2-2__text,.y2-2__diplom,.y2-1,.y2-3__text,.y2-3__label,.y2-3__overlay," + ".y2-4,.y2-4__overlay,.y2-5,.y2-5__overlay,.y2-6,.y2-6__title span,.y2-6__image,.y2-6__overlay,.y2-7,.y2-7__image," + ".y2-7__title span,.y2-7__overlay,.y2-9,.y2-8,.y2-9__flex,.y2-9__title,.y2-9__title span,.y2-10,.y2-10__overlay," + ".y2-11,.y2-11__first-title,.y2-11__second-title span,.y2-11__overlay,.y2-12,.y2-12__title,.y2-12__text-col," + ".y2-12__images-img,.y2-9__overlay,.y2-8__overlay, .fullPageOverlay, " + ".scroll-page,.sidebar__menu-dropdown", {
+    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".y2-1__numbers,.y2-1__photos-item--1,.y2-1__photos-item--2,.y2-1__photos-item--3,.y2-2,.y2-2__top," + ".y2-2__title,.y2-2__fly,.y2-2__title span,.y2-2__text,.y2-2__diplom,.y2-1,.y2-3__text,.y2-3__label,.y2-3__overlay," + ".y2-4,.y2-4__overlay,.y2-5,.y2-5__overlay,.y2-6,.y2-6__title span,.y2-6__image,.y2-6__overlay,.y2-7,.y2-7__image," + ".y2-7__title span,.y2-7__overlay,.y2-9,.y2-8,.y2-9__flex,.y2-9__title,.y2-9__title span,.y2-10,.y2-10__overlay," + ".y2-11,.y2-11__first-title,.y2-11__second-title span,.y2-11__overlay,.y2-12,.y2-12__title,.y2-12__text-col," + ".y2-12__images-img,.y2-9__overlay,.y2-8__overlay, " + ".scroll-page,.sidebar__menu-dropdown, .fullPageOverlay", {
       clearProps: "all"
     });
     window.scrollTo({
@@ -4758,6 +4766,13 @@ function initScrollAnimationDesktop() {
     duration: 6,
     ease: "none"
   }, "<");
+  tl1.fromTo(".y2-12__overlay", {
+    autoAlpha: 0
+  }, {
+    autoAlpha: 0.7,
+    duration: 1,
+    ease: "none"
+  }, ">");
   st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
     trigger: ".scroll-page",
     pin: true,
@@ -5026,6 +5041,13 @@ function initScrollAnimationTablet() {
     duration: Math.abs((scHeight - b9Height) / 460) + 1.5,
     ease: "none"
   }, ">");
+  tl1.fromTo(".y2-12__overlay", {
+    autoAlpha: 0
+  }, {
+    autoAlpha: 0.7,
+    duration: 1,
+    ease: "none"
+  }, ">");
   st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
     trigger: ".scroll-page",
     pin: true,
@@ -5162,7 +5184,7 @@ var tl = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({
   }
 });
 var scWidth, b1Width, b2Width, b3Width, b4Width, b5Width;
-var scHeight, b1Height, b2Height, b3Height, b4Height, b5Height;
+var scHeight, b1Height, b2Height, b3Height, b4Height, b5Height, b6Height, b7Height;
 var urlParams = new URLSearchParams(window.location.search);
 var yValue = urlParams.get('y');
 
@@ -5179,6 +5201,8 @@ function initAnimation() {
   b3Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y3-6').innerHeight();
   b4Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y3-7').innerHeight();
   b5Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y3-8').innerHeight();
+  b6Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y3-2').innerHeight();
+  b7Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y3-3').innerHeight();
 
   if (window.innerWidth > 1100) {
     initScrollAnimationDesktop();
@@ -5201,7 +5225,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
     if (typeof st1 !== "undefined") st1.kill();
     tl1.clear();
     tl.clear();
-    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".y3-1__numbers, .y3-1__photos-item--1, .y3-1__numbers, .y3-1__photos-item--1, .y3-1__photos-item--2," + ".y3-1__photos-item--3, .y3-2, .y3-1, .y3-2__bg, .y3-2__top, .y3-2__title--1, .y3-2__title--1 span, .y3-2__text--1," + ".y3-2__title--2, .y3-2__title--2 span, .y3-2__azs, .y3-2__azs-logo ,.y3-2__cloud-1, .y3-2__cloud-2, .y3-2__cloud-3," + ".y3-2__text--2, .y3-2__label-block, .y3-2__label, .y3-2__year, .y3-3__overlay, .y3-4, .y3-4__first-title, " + ".y3-4__second-image, .y3-4__overlay, .y3-5, .y3-5__title span, .y3-5__image, .y3-5__overlay, .y3-6, " + ".y3-6__second-image2, .y3-6__last-title span, .y3-6__last-image, .y3-6__overlay, .y3-7, .y3-7__first-title, " + ".y3-7__second-title span, .y3-7__second-image2, .y3-7__overlay, .y3-8, .y3-8__overlay," + ".scroll-page,.sidebar__menu-dropdown", {
+    gsap__WEBPACK_IMPORTED_MODULE_1__["default"].set(".y3-1__numbers, .y3-1__photos-item--1, .y3-1__numbers, .y3-1__photos-item--1, .y3-1__photos-item--2," + ".y3-1__photos-item--3, .y3-2, .y3-1, .y3-2__bg, .y3-2__top, .y3-2__title--1, .y3-2__title--1 span, .y3-2__text--1," + ".y3-2__title--2, .y3-2__title--2 span, .y3-2__azs, .y3-2__azs-logo ,.y3-2__cloud-1, .y3-2__cloud-2, .y3-2__cloud-3," + ".y3-2__text--2, .y3-2__label-block, .y3-2__label, .y3-2__year, .y3-3__overlay, .y3-4, .y3-4__first-title, " + ".y3-4__second-image, .y3-4__overlay, .y3-5, .y3-5__title span, .y3-5__image, .y3-5__overlay, .y3-6, " + ".y3-6__second-image2, .y3-6__last-title span, .y3-6__last-image, .y3-6__overlay, .y3-7, .y3-7__first-title, " + ".y3-7__second-title span, .y3-7__second-image2, .y3-7__overlay, .y3-8, .y3-8__overlay, .y3-2__overlay," + ".scroll-page,.sidebar__menu-dropdown, .fullPageOverlay", {
       clearProps: "all"
     });
     window.scrollTo({
@@ -5453,6 +5477,7 @@ function initScrollAnimationDesktop() {
     duration: 0.5,
     ease: "none"
   }, "<2");
+  tl1.addLabel('1962');
   tl1.fromTo(".y3-3__overlay", {
     autoAlpha: 0
   }, {
@@ -5460,7 +5485,6 @@ function initScrollAnimationDesktop() {
     duration: 0.5,
     ease: "none"
   }, ">3");
-  tl1.addLabel('1962');
   tl1.fromTo(".y3-4", {
     x: "0",
     left: "100%"
@@ -5491,7 +5515,7 @@ function initScrollAnimationDesktop() {
     duration: 1.5,
     ease: "none"
   }, ">");
-  tl1.addLabel('1964', '+=1.1');
+  tl1.addLabel('1964', '+=1.35');
   tl1.fromTo(".y3-5", {
     x: "0",
     left: "100%"
@@ -5523,7 +5547,7 @@ function initScrollAnimationDesktop() {
     duration: 1.5,
     ease: "none"
   }, ">");
-  tl1.addLabel('1966', '+=1.1');
+  tl1.addLabel('1966', '+=0.5');
   tl1.fromTo(".y3-6", {
     x: "0",
     left: "100%"
@@ -5694,36 +5718,54 @@ function initScrollAnimationTablet() {
     ease: "none"
   }, "<");
   tl1.addLabel('1960');
-  tl1.to(".y3-2", {
-    top: "-100vw",
-    duration: 2.5,
-    ease: "none"
-  }, "2");
-  tl1.fromTo(".y3-3__overlay", {
-    autoAlpha: 0
+  tl1.fromTo(".y3-2", {
+    y: "0"
   }, {
-    autoAlpha: 0.7,
-    duration: 0.5,
-    ease: "none"
-  }, "<");
-  tl1.addLabel('1962', '+=1');
-  tl1.fromTo(".y3-4", {
-    y: "0",
-    top: "100%"
-  }, {
-    top: "0",
-    y: -1 * (b1Height - scHeight),
-    duration: Math.abs((scHeight - b1Height) / 460),
+    y: -1 * (b6Height - scHeight),
+    duration: Math.abs((scHeight - b6Height) / 460),
     ease: "none"
   }, ">");
-  tl1.fromTo(".y2-4__overlay", {
+  tl1.fromTo(".y3-2__overlay", {
     autoAlpha: 0
   }, {
     autoAlpha: 0.7,
     duration: 1.5,
     ease: "none"
   }, ">");
-  tl1.addLabel('1964', '+=1.5');
+  tl1.addLabel('1962', '+=1.4');
+  tl1.fromTo(".y3-3", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b7Height - scHeight),
+    duration: Math.abs((scHeight - b7Height) / 460) + 1.5,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y3-3__overlay", {
+    autoAlpha: 0
+  }, {
+    autoAlpha: 0.7,
+    duration: 0.5,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y3-4", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b1Height - scHeight),
+    duration: Math.abs((scHeight - b1Height) / 460) + 1.5,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y3-4__overlay", {
+    autoAlpha: 0
+  }, {
+    autoAlpha: 0.7,
+    duration: 1.5,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('1964', '+=1.7');
   tl1.fromTo(".y3-5", {
     y: "0",
     top: "100%"
@@ -5740,13 +5782,13 @@ function initScrollAnimationTablet() {
     duration: 1.5,
     ease: "none"
   }, ">");
-  tl1.addLabel('1966', '+=1.5');
+  tl1.addLabel('1966', '+=2');
   tl1.fromTo(".y3-6", {
     y: "0",
     top: "100%"
   }, {
     top: "0",
-    y: -1 * (b2Height - scHeight),
+    y: -1 * (b3Height - scHeight),
     duration: Math.abs((scHeight - b3Height) / 460) + 1.5,
     ease: "none"
   }, ">");
@@ -5757,13 +5799,13 @@ function initScrollAnimationTablet() {
     duration: 1.5,
     ease: "none"
   }, ">");
-  tl1.addLabel('1967', '+=1.5');
+  tl1.addLabel('1967', '+=2');
   tl1.fromTo(".y3-7", {
     y: "0",
     top: "100%"
   }, {
     top: "0",
-    y: -1 * (b2Height - scHeight),
+    y: -1 * (b4Height - scHeight),
     duration: Math.abs((scHeight - b4Height) / 460) + 1.5,
     ease: "none"
   }, ">");
@@ -5774,14 +5816,21 @@ function initScrollAnimationTablet() {
     duration: 1.5,
     ease: "none"
   }, ">");
-  tl1.addLabel('1968', '+=1.5');
+  tl1.addLabel('1968', '+=1.4');
   tl1.fromTo(".y3-8", {
     y: "0",
     top: "100%"
   }, {
     top: "0",
-    y: -1 * (b2Height - scHeight),
+    y: -1 * (b5Height - scHeight),
     duration: Math.abs((scHeight - b5Height) / 460) + 1.5,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y3-8__overlay", {
+    autoAlpha: 0
+  }, {
+    autoAlpha: 0.7,
+    duration: 1,
     ease: "none"
   }, ">");
   st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({

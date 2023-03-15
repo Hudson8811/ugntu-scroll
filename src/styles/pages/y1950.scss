@@ -21,6 +21,8 @@
 	overflow: hidden;
 	background: #ACACAC;
 	z-index: 2;
+	will-change: transform, opacity, top;
+	transform-style: preserve-3d;
 	@include max(md){
 		height: 80vw;
 		z-index: 7;
@@ -45,6 +47,8 @@
 
 	&__numbers{
 		@include years-row;
+		will-change: transform;
+		transform-style: preserve-3d;
 		&-number{
 			@include years-number;
 		}
@@ -66,6 +70,8 @@
 		&-item{
 			left: 0;
 			position: absolute;
+			will-change: transform, left;
+			transform-style: preserve-3d;
 			&--1{
 				width: vw(525);
 				bottom: vw(151);
@@ -103,6 +109,8 @@
 	overflow: visible;
 	background: $colorBlue;
 	z-index: 3;
+	will-change: transform, opacity, top;
+	transform-style: preserve-3d;
 	@include max(md){
 		top: 80vw;
 		height: vw2(1080);
@@ -119,6 +127,8 @@
 		width: 100%;
 		height: 100%;
 		z-index: 4;
+		will-change: transform;
+		transform-style: preserve-3d;
 		@include max(md){
 			height: vw2(475);
 			z-index: 1;
@@ -139,6 +149,8 @@
 		left: vw(35);
 		top: vw(135);
 		z-index: 3;
+		will-change: transform, opacity;
+		transform-style: preserve-3d;
 		@include max(md){
 			left: vw2(35);
 			top: vw2(505);
@@ -148,6 +160,8 @@
 			padding: vw3(27) vw3(16) vw3(72);
 		}
 		span{
+			will-change: transform;
+			transform-style: preserve-3d;
 			@include max(md){
 				display: block;
 			}
@@ -173,6 +187,8 @@
 		top: vw(588);
 		right: vw(10);
 		z-index: 3;
+		will-change: opacity;
+		transform-style: preserve-3d;
 		@include max(md){
 			width: vw2(573);
 			right: auto;
@@ -192,6 +208,8 @@
 		left: vw(205);
 		top: vw(136);
 		z-index: 2;
+		will-change: transform, top;
+		transform-style: preserve-3d;
 		@include max(md){
 			width: vw2(289);
 			left: vw2(20);
@@ -211,6 +229,8 @@
 		left: vw(268);
 		top: 0;
 		width: vw(1268);
+		will-change: transform, top;
+		transform-style: preserve-3d;
 		@include max(sm){
 			width: vw3(98);
 			left: auto;
@@ -244,6 +264,8 @@
 	overflow: hidden;
 	background: $colorBlue;
 	z-index: 1;
+	will-change: transform, top;
+	transform-style: preserve-3d;
 	@include max(sm){
 		position: relative;
 	}
@@ -290,6 +312,8 @@
 		left: vw(46);
 		top: vw(44);
 		z-index: 13;
+		will-change: opacity;
+		transform-style: preserve-3d;
 		@include max(md){
 			left: vw2(20);
 			top: vw2(91);
@@ -313,6 +337,8 @@
 		left: vw(358);
 		bottom: vw(338);
 		z-index: 13;
+		will-change: opacity;
+		transform-style: preserve-3d;
 		@include max(md){
 			left: vw2(490);
 			bottom: 38vh;
@@ -330,6 +356,8 @@
 .y2-4{
 	z-index: 4;
 	display: flex;
+	will-change: transform, left, top;
+	transform-style: preserve-3d;
 	@include max(md){
 		display: block;
 	}
@@ -433,6 +461,8 @@
 
 .y2-5{
 	z-index: 4;
+	will-change: transform, left, top;
+	transform-style: preserve-3d;
 	&__text{
 		position: relative;
 		display: flex;
@@ -478,6 +508,8 @@
 	z-index: 4;
 	width: vw(2940);
 	background: url("../img/o8-bg.webp") center center / cover no-repeat;
+	will-change: transform, left, top;
+	transform-style: preserve-3d;
 	@include max(md){
 		width: 100%;
 		background: #ffffff;
@@ -514,6 +546,8 @@
 		top: 0;
 		height: 100%;
 		z-index: 4;
+		will-change: opacity;
+		transform-style: preserve-3d;
 		@include max(md){
 			position: static;
 			height: auto;
@@ -549,6 +583,8 @@
 			padding-right: vw3(46);
 		}
 		span{
+			will-change: transform;
+			transform-style: preserve-3d;
 			&:nth-child(1){
 				opacity: 0.2;
 				@include max(md){
@@ -583,6 +619,8 @@
 	z-index: 4;
 	width: vw(2563);
 	background: url("../img/o9-bg.webp") center center / cover no-repeat;
+	will-change: transform, left, top;
+	transform-style: preserve-3d;
 	@include max(md){
 		width: 100%;
 		background: #ffffff;
@@ -619,6 +657,8 @@
 		bottom: 0;
 		z-index: 4;
 		width: vw(1359);
+		will-change: transform;
+		transform-style: preserve-3d;
 		@include max(md){
 			position: static;
 			height: auto;
@@ -650,6 +690,8 @@
 			padding-bottom: vw3(16);
 		}
 		span{
+			will-change: transform;
+			transform-style: preserve-3d;
 			&:nth-child(1){
 				opacity: 0.2;
 				@include max(md){
@@ -676,6 +718,8 @@
 
 .y2-8{
 	z-index: 5;
+	will-change: transform, left, top;
+	transform-style: preserve-3d;
 	@include max(md){
 		z-index: 4;
 	}
@@ -719,6 +763,8 @@
 .y2-9{
 	z-index: 4;
 	width: 100%;
+	will-change: transform, left, top;
+	transform-style: preserve-3d;
 	&__video{
 		position: absolute;
 		left: 0;
@@ -734,6 +780,8 @@
 	&__flex{
 		@include block;
 		background: transparent;
+		will-change: transform, left, top;
+		transform-style: preserve-3d;
 		@include max(md){
 			position: relative;
 			top: 0;
@@ -782,12 +830,16 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		will-change: transform;
+		transform-style: preserve-3d;
 		@include max(md){
 			position: static;
 			display: block;
 			padding-bottom: vw2(20);
 		}
 		span{
+			will-change: transform;
+			transform-style: preserve-3d;
 			&:nth-child(1){}
 			&:nth-child(2){}
 			&:nth-child(3){}
@@ -798,6 +850,8 @@
 .y2-10{
 	z-index: 4;
 	background: $colorCyan;
+	will-change: transform, left, top;
+	transform-style: preserve-3d;
 	&__flex{
 		flex-direction: row-reverse;
 		@include max(md){
@@ -831,6 +885,8 @@
 .y2-11{
 	z-index: 4;
 	display: flex;
+	will-change: transform, left, top;
+	transform-style: preserve-3d;
 	@include max(md){
 		display: block;
 	}
@@ -943,6 +999,8 @@
 				padding-bottom: vw3(16);
 			}
 			span{
+				will-change: transform;
+				transform-style: preserve-3d;
 				&:nth-child(1){
 					color: $colorCyan;
 					@include max(md){
@@ -971,6 +1029,8 @@
 	background: #E3E3E3;
 	padding-right: vw(93);
 	display: flex;
+	will-change: transform, left, top;
+	transform-style: preserve-3d;
 	@include max(md){
 		padding: 0;
 		display: block;
@@ -981,8 +1041,10 @@
 		&-img{
 			position: absolute;
 			width: vw(959);
-			left: vw(1036);
+			right: vw(-603);
 			top: vw(50);
+			will-change: transform;
+			transform-style: preserve-3d;
 			@include max(md){
 				left: auto;
 				right: vw2(20);
@@ -1010,6 +1072,8 @@
 		}
 		&-col{
 			width: vw(577);
+			will-change: transform;
+			transform-style: preserve-3d;
 			@include max(md){
 				width: 100%;
 			}
@@ -1036,6 +1100,8 @@
 		position: absolute;
 		bottom: vw(50);
 		right: vw(1000);
+		will-change: transform;
+		transform-style: preserve-3d;
 		@include max(md){
 			display: none;
 		}

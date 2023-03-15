@@ -80,8 +80,8 @@ $(window).on('resize',function (){
             ".y2-4,.y2-4__overlay,.y2-5,.y2-5__overlay,.y2-6,.y2-6__title span,.y2-6__image,.y2-6__overlay,.y2-7,.y2-7__image," +
             ".y2-7__title span,.y2-7__overlay,.y2-9,.y2-8,.y2-9__flex,.y2-9__title,.y2-9__title span,.y2-10,.y2-10__overlay," +
             ".y2-11,.y2-11__first-title,.y2-11__second-title span,.y2-11__overlay,.y2-12,.y2-12__title,.y2-12__text-col," +
-            ".y2-12__images-img,.y2-9__overlay,.y2-8__overlay, .fullPageOverlay, " +
-            ".scroll-page,.sidebar__menu-dropdown", {clearProps:"all"});
+            ".y2-12__images-img,.y2-9__overlay,.y2-8__overlay, " +
+            ".scroll-page,.sidebar__menu-dropdown, .fullPageOverlay", {clearProps:"all"});
         window.scrollTo({
             top: 0,
             behavior: "instant"
@@ -544,6 +544,14 @@ function initScrollAnimationDesktop(){
         ease: "none",
     } , "<");
 
+    tl1.fromTo(".y2-12__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration:  1,
+        ease: "none",
+    } , ">");
+
 
 
     st1 = ScrollTrigger.create({
@@ -852,6 +860,14 @@ function initScrollAnimationTablet(){
         top: "0",
         y: -1*(b9Height-scHeight),
         duration: Math.abs((scHeight-b9Height)/460)+1.5,
+        ease: "none",
+    } , ">");
+
+    tl1.fromTo(".y2-12__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration:  1,
         ease: "none",
     } , ">");
 

@@ -21,7 +21,7 @@ let tl = gsap.timeline({
 
 
 let scWidth, b1Width, b2Width, b3Width, b4Width, b5Width;
-let scHeight, b1Height, b2Height, b3Height, b4Height, b5Height;
+let scHeight, b1Height, b2Height, b3Height, b4Height, b5Height, b6Height, b7Height;
 
 let urlParams = new URLSearchParams(window.location.search);
 let yValue = urlParams.get('y');
@@ -43,7 +43,9 @@ function initAnimation(){
     b3Height =  $('.y3-6').innerHeight();
     b4Height =  $('.y3-7').innerHeight();
     b5Height =  $('.y3-8').innerHeight();
-    
+    b6Height =  $('.y3-2').innerHeight();
+    b7Height =  $('.y3-3').innerHeight();
+
     if (window.innerWidth > 1100){
         initScrollAnimationDesktop();
         initMode = 'desk';
@@ -72,8 +74,8 @@ $(window).on('resize',function (){
             ".y3-2__text--2, .y3-2__label-block, .y3-2__label, .y3-2__year, .y3-3__overlay, .y3-4, .y3-4__first-title, " +
             ".y3-4__second-image, .y3-4__overlay, .y3-5, .y3-5__title span, .y3-5__image, .y3-5__overlay, .y3-6, " +
             ".y3-6__second-image2, .y3-6__last-title span, .y3-6__last-image, .y3-6__overlay, .y3-7, .y3-7__first-title, " +
-            ".y3-7__second-title span, .y3-7__second-image2, .y3-7__overlay, .y3-8, .y3-8__overlay," +
-            ".scroll-page,.sidebar__menu-dropdown", {clearProps:"all"});
+            ".y3-7__second-title span, .y3-7__second-image2, .y3-7__overlay, .y3-8, .y3-8__overlay, .y3-2__overlay," +
+            ".scroll-page,.sidebar__menu-dropdown, .fullPageOverlay", {clearProps:"all"});
         window.scrollTo({
             top: 0,
             behavior: "instant"
@@ -365,6 +367,7 @@ function initScrollAnimationDesktop(){
         ease: "none",
     } , "<2");
 
+    tl1.addLabel('1962');
     tl1.fromTo(".y3-3__overlay", {
         autoAlpha: 0,
     }, {
@@ -374,7 +377,7 @@ function initScrollAnimationDesktop(){
     } , ">3");
 
 
-    tl1.addLabel('1962');
+
     tl1.fromTo(".y3-4", {
         x: "0",
         left: "100%"
@@ -410,7 +413,7 @@ function initScrollAnimationDesktop(){
     } , ">");
 
 
-    tl1.addLabel('1964','+=1.1');
+    tl1.addLabel('1964','+=1.35');
     tl1.fromTo(".y3-5", {
         x: "0",
         left: "100%"
@@ -447,7 +450,7 @@ function initScrollAnimationDesktop(){
     } , ">");
 
 
-    tl1.addLabel('1966','+=1.1');
+    tl1.addLabel('1966','+=0.5');
     tl1.fromTo(".y3-6", {
         x: "0",
         left: "100%"
@@ -640,39 +643,23 @@ function initScrollAnimationTablet(){
         ease: "none",
     } , "<");
 
+
     tl1.addLabel('1960');
 
 
 
-    tl1.to(".y3-2", {
-        top: "-100vw",
-        duration: 2.5,
-        ease: "none",
-    } , "2");
 
-
-    tl1.fromTo(".y3-3__overlay", {
-        autoAlpha: 0,
-    }, {
-        autoAlpha: 0.7,
-        duration: 0.5,
-        ease: "none",
-    } , "<");
-
-
-
-    tl1.addLabel('1962','+=1');
-    tl1.fromTo(".y3-4", {
+    tl1.fromTo(".y3-2", {
         y: "0",
-        top: "100%"
     }, {
-        top: "0",
-        y: -1*(b1Height-scHeight),
-        duration: Math.abs((scHeight-b1Height)/460),
+        y: -1*(b6Height-scHeight),
+        duration: Math.abs((scHeight-b6Height)/460),
         ease: "none",
     } , ">");
 
-    tl1.fromTo(".y2-4__overlay", {
+
+
+    tl1.fromTo(".y3-2__overlay", {
         autoAlpha: 0,
     }, {
         autoAlpha: 0.7,
@@ -680,7 +667,48 @@ function initScrollAnimationTablet(){
         ease: "none",
     } , ">");
 
-    tl1.addLabel('1964','+=1.5');
+
+    tl1.addLabel('1962','+=1.4');
+    tl1.fromTo(".y3-3", {
+        y: "0",
+        top: "100%"
+    }, {
+        top: "0",
+        y: -1*(b7Height-scHeight),
+        duration: Math.abs((scHeight-b7Height)/460)+1.5,
+        ease: "none",
+    } , ">");
+
+    tl1.fromTo(".y3-3__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration: 0.5,
+        ease: "none",
+    } , ">");
+
+
+
+
+    tl1.fromTo(".y3-4", {
+        y: "0",
+        top: "100%"
+    }, {
+        top: "0",
+        y: -1*(b1Height-scHeight),
+        duration: Math.abs((scHeight-b1Height)/460)+1.5,
+        ease: "none",
+    } , ">");
+
+    tl1.fromTo(".y3-4__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration:  1.5,
+        ease: "none",
+    } , ">");
+
+    tl1.addLabel('1964','+=1.7');
     tl1.fromTo(".y3-5", {
         y: "0",
         top: "100%"
@@ -699,13 +727,13 @@ function initScrollAnimationTablet(){
         ease: "none",
     } , ">");
 
-    tl1.addLabel('1966','+=1.5');
+    tl1.addLabel('1966','+=2');
     tl1.fromTo(".y3-6", {
         y: "0",
         top: "100%"
     }, {
         top: "0",
-        y: -1*(b2Height-scHeight),
+        y: -1*(b3Height-scHeight),
         duration: Math.abs((scHeight-b3Height)/460)+1.5,
         ease: "none",
     } , ">");
@@ -718,13 +746,13 @@ function initScrollAnimationTablet(){
         ease: "none",
     } , ">");
 
-    tl1.addLabel('1967','+=1.5');
+    tl1.addLabel('1967','+=2');
     tl1.fromTo(".y3-7", {
         y: "0",
         top: "100%"
     }, {
         top: "0",
-        y: -1*(b2Height-scHeight),
+        y: -1*(b4Height-scHeight),
         duration: Math.abs((scHeight-b4Height)/460)+1.5,
         ease: "none",
     } , ">");
@@ -737,18 +765,24 @@ function initScrollAnimationTablet(){
         ease: "none",
     } , ">");
 
-    tl1.addLabel('1968','+=1.5');
+    tl1.addLabel('1968','+=1.4');
     tl1.fromTo(".y3-8", {
         y: "0",
         top: "100%"
     }, {
         top: "0",
-        y: -1*(b2Height-scHeight),
+        y: -1*(b5Height-scHeight),
         duration: Math.abs((scHeight-b5Height)/460)+1.5,
         ease: "none",
     } , ">");
 
-
+    tl1.fromTo(".y3-8__overlay", {
+        autoAlpha: 0,
+    }, {
+        autoAlpha: 0.7,
+        duration:  1,
+        ease: "none",
+    } , ">");
 
 
     st1 = ScrollTrigger.create({

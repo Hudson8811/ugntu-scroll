@@ -27,6 +27,8 @@
 		left: 50%;
 		top: vw(102);
 		transform: translateX(-50%);
+		will-change: transform, opacity;
+		transform-style: preserve-3d;
 		@include max(md){
 			width: vw2(720);
 			top: vw2(88);
@@ -44,7 +46,7 @@
 		position: absolute;
 		left: 0;
 		top: vw(178);
-		will-change: transform, opacity, left, top, right, bottom, background;
+		will-change: transform, top;
 		transform-style: preserve-3d;
 		@include max(md){
 			top: vw2(121);
@@ -83,6 +85,8 @@
 		left: 50%;
 		font-weight: 450;
 		transform: translateX(-60%);
+		will-change: transform, opacity;
+		transform-style: preserve-3d;
 		@include max(md){
 			font-size: vw2(33);
 			top: vw2(244);
@@ -115,7 +119,7 @@
 		top: vw(344);
 		opacity: 1;
 		pointer-events: none;
-		will-change: transform, opacity, left, top, right, bottom, background;
+		will-change: transform, opacity;
 		transform-style: preserve-3d;
 		@include max(md){
 			width: vw2(183);
@@ -138,6 +142,8 @@
 			justify-content: center;
 			background: $colorBlue;
 			border-radius: 50%;
+			will-change: opacity;
+			transform-style: preserve-3d;
 		}
 		&-outside{
 			width: vw(318);
@@ -194,7 +200,7 @@
 	height: 100%;
 	overflow: hidden;
 	background: #ACACAC;
-	will-change: transform, opacity, left, top, right, bottom, background;
+	will-change: transform, opacity;
 	transform-style: preserve-3d;
 	@include max(sm){
 		position: relative;
@@ -221,7 +227,7 @@
 		left: 0;
 		transform: translateY(-50%);
 		z-index: 9;
-		will-change: transform, opacity, left, top, right, bottom, background;
+		will-change: transform;
 		transform-style: preserve-3d;
 		@include max(sm){
 			position: relative;
@@ -239,8 +245,6 @@
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			background-clip: text;
-			will-change: transform, opacity, left, top, right, bottom, background;
-			transform-style: preserve-3d;
 			@include max(sm){
 				font-size: vw3(113);
 				line-height: 1.09;
@@ -279,6 +283,8 @@
 		z-index: 8;
 		top: 0;
 		left: 0;
+		will-change: transform, left;
+		transform-style: preserve-3d;
 		@include max(sm){
 			display: none;
 		}
@@ -323,6 +329,8 @@
 		z-index: 12;
 		top: 0;
 		right: vw(52);
+		will-change: opacity;
+		transform-style: preserve-3d;
 		@include max(md){
 			font-size: vw2(32);
 			right: vw2(20);
@@ -360,6 +368,8 @@
 		padding-left: vw(56);
 		position: relative;
 		z-index: 10;
+		will-change: transform, opacity;
+		transform-style: preserve-3d;
 		@include max(md){
 			padding-top: vw2(93);
 			padding-left: vw2(22);
@@ -397,6 +407,8 @@
 		z-index: 10;
 		width: vw(892);
 		opacity: 1;
+		will-change: transform, opacity, bottom;
+		transform-style: preserve-3d;
 		@include max(md){
 			width: vw2(353);
 			right: vw2(22);
@@ -425,6 +437,8 @@
 		transform: translateX(-50%);
 		width: vw(887);
 		z-index: 11;
+		will-change: transform, top;
+		transform-style: preserve-3d;
 		@include max(md){
 			width: vw2(336);
 		}
@@ -448,7 +462,8 @@
 			position: absolute;
 			width: vw(1667);
 			z-index: 9;
-
+			will-change: transform, left, top;
+			transform-style: preserve-3d;
 			@include max(md){
 				width: vw2(667);
 			}
@@ -462,6 +477,8 @@
 			position: absolute;
 			width: vw(1256);
 			z-index: 9;
+			will-change: transform, left, top;
+			transform-style: preserve-3d;
 			@include max(md){
 				width: vw2(502);
 			}
@@ -510,7 +527,7 @@
 			left: 15%;
 			position: absolute;
 			z-index: 2;
-			will-change: transform, opacity, left, top, right, bottom, background;
+			will-change: transform, opacity;
 			transform-style: preserve-3d;
 			@include max(sm){
 				display: none;
@@ -553,6 +570,8 @@
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+				will-change: transform;
+				transform-style: preserve-3d;
 			}
 		}
 		&-label{
@@ -561,6 +580,8 @@
 			bottom: vw(-35);
 			width: vw(4224);
 			z-index: 2;
+			will-change: transform, left;
+			transform-style: preserve-3d;
 			@include max(sm){
 				left: 50%;
 				transform: translateX(-50%);
@@ -598,6 +619,8 @@
 	overflow: hidden;
 	background: #F9F9F9;
 	z-index: 16;
+	will-change: transform, left, top;
+	transform-style: preserve-3d;
 	@include max(md){
 		left: 0;
 		top: 100%;
@@ -698,6 +721,8 @@
 		}
 		&--1{
 			left: 0;
+			will-change: transform, top;
+			transform-style: preserve-3d;
 			@include max(md){
 				top: 0;
 			}
@@ -712,6 +737,8 @@
 			}
 		}
 		&--2{
+			will-change: transform, left, top;
+			transform-style: preserve-3d;
 			.section3__text--1{
 				@include max(md){
 					order: 2;
@@ -751,6 +778,8 @@
 		}
 		&--3{
 			padding-left: vw(776);
+			will-change: transform, left, top;
+			transform-style: preserve-3d;
 			@include max(md){
 				padding-left: 0;
 			}
@@ -764,6 +793,8 @@
 					top: vw(50);
 					left: vw(200);
 					.section3__label-item{
+						will-change: transform;
+						transform-style: preserve-3d;
 						&--1{
 							width: vw(662);
 						}
@@ -804,6 +835,8 @@
 				right: vw(529);
 				bottom: vw(300);
 				z-index: 5;
+				will-change: transform;
+				transform-style: preserve-3d;
 				@include max(md){
 					width: vw2(343);
 					right: 0;
@@ -876,6 +909,8 @@
 
 		&--4{
 			padding-left: vw(925);
+			will-change: transform, left, top;
+			transform-style: preserve-3d;
 			@include max(md){
 				padding-left: 0;
 			}
@@ -932,6 +967,8 @@
 			.section3__image{
 				position: relative;
 				z-index: 4;
+				will-change: transform;
+				transform-style: preserve-3d;
 			}
 			.section3__label{
 				z-index: 2;
@@ -942,6 +979,8 @@
 					display: none;
 				}
 				.section3__label-item{
+					will-change: transform;
+					transform-style: preserve-3d;
 					&--1{
 						width: vw(786);
 						margin-left: vw(800);

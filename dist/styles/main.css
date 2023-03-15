@@ -3487,6 +3487,8 @@ img {
   opacity: 0;
   pointer-events: none;
   transition: 0.3s ease;
+  will-change: opacity;
+  transform-style: preserve-3d;
 }
 .overlay.active {
   opacity: 1;
@@ -3499,6 +3501,18 @@ img {
 
 [data-fancybox] {
   cursor: pointer;
+}
+
+@media only screen and (min-width: 1101px) {
+  .d-tablet-minus {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .d-desktop-plus {
+    display: none !important;
+  }
 }
 
 /*
@@ -4525,6 +4539,8 @@ summary {
   width: 100%;
   height: 100%;
   background: #1EA9AF;
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 .loader__center {
   position: relative;
@@ -4535,6 +4551,8 @@ summary {
   height: 100%;
   z-index: 3;
   background: #003F78;
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 .loader__center img {
   width: 8.5572139303vw;
@@ -4999,6 +5017,8 @@ summary {
   left: 50%;
   top: 5.0746268657vw;
   transform: translateX(-50%);
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .section1__title {
@@ -5020,7 +5040,7 @@ summary {
   position: absolute;
   left: 0;
   top: 8.855721393vw;
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform, top;
   transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
@@ -5065,6 +5085,8 @@ summary {
   left: 50%;
   font-weight: 450;
   transform: translateX(-60%);
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .section1__dates {
@@ -5103,7 +5125,7 @@ summary {
   top: 17.1144278607vw;
   opacity: 1;
   pointer-events: none;
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform, opacity;
   transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
@@ -5131,6 +5153,8 @@ summary {
   justify-content: center;
   background: #003F78;
   border-radius: 50%;
+  will-change: opacity;
+  transform-style: preserve-3d;
 }
 .section1__circle-outside {
   width: 15.8208955224vw;
@@ -5192,7 +5216,7 @@ summary {
   height: 100%;
   overflow: hidden;
   background: #ACACAC;
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform, opacity;
   transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
@@ -5221,7 +5245,7 @@ summary {
   left: 0;
   transform: translateY(-50%);
   z-index: 9;
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform;
   transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
@@ -5242,8 +5266,6 @@ summary {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  will-change: transform, opacity, left, top, right, bottom, background;
-  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
   .section2__numbers-number {
@@ -5284,6 +5306,8 @@ summary {
   z-index: 8;
   top: 0;
   left: 0;
+  will-change: transform, left;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
   .section2__photos {
@@ -5335,6 +5359,8 @@ summary {
   z-index: 12;
   top: 0;
   right: 2.5870646766vw;
+  will-change: opacity;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .section2__year {
@@ -5377,6 +5403,8 @@ summary {
   padding-left: 2.7860696517vw;
   position: relative;
   z-index: 10;
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .section2__textblock {
@@ -5426,6 +5454,8 @@ summary {
   z-index: 10;
   width: 44.3781094527vw;
   opacity: 1;
+  will-change: transform, opacity, bottom;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .section2__textblock2 {
@@ -5456,6 +5486,8 @@ summary {
   transform: translateX(-50%);
   width: 44.1293532338vw;
   z-index: 11;
+  will-change: transform, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .section2__letter {
@@ -5483,6 +5515,8 @@ summary {
   position: absolute;
   width: 82.9353233831vw;
   z-index: 9;
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .section2__cloud-1 {
@@ -5500,6 +5534,8 @@ summary {
   position: absolute;
   width: 62.4875621891vw;
   z-index: 9;
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .section2__cloud-2 {
@@ -5557,7 +5593,7 @@ summary {
   left: 15%;
   position: absolute;
   z-index: 2;
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform, opacity;
   transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
@@ -5606,6 +5642,8 @@ summary {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 .section2__last-label {
   position: absolute;
@@ -5613,6 +5651,8 @@ summary {
   bottom: -1.7412935323vw;
   width: 210.1492537313vw;
   z-index: 2;
+  will-change: transform, left;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
   .section2__last-label {
@@ -5650,6 +5690,8 @@ summary {
   overflow: hidden;
   background: #F9F9F9;
   z-index: 16;
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .section3 {
@@ -5769,6 +5811,8 @@ summary {
 }
 .section3__block--1 {
   left: 0;
+  will-change: transform, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .section3__block--1 {
@@ -5787,6 +5831,10 @@ summary {
   .section3__block--1 .section3__text-inner {
     width: 100%;
   }
+}
+.section3__block--2 {
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .section3__block--2 .section3__text--1 {
@@ -5834,6 +5882,8 @@ summary {
 }
 .section3__block--3 {
   padding-left: 38.6069651741vw;
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .section3__block--3 {
@@ -5852,6 +5902,10 @@ summary {
   position: absolute;
   top: 2.4875621891vw;
   left: 9.9502487562vw;
+}
+.section3__block--3 .section3__label--1 .section3__label-item {
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 .section3__block--3 .section3__label--1 .section3__label-item--1 {
   width: 32.9353233831vw;
@@ -5892,6 +5946,8 @@ summary {
   right: 26.3184079602vw;
   bottom: 14.9253731343vw;
   z-index: 5;
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .section3__block--3 .section3__star {
@@ -5975,6 +6031,8 @@ summary {
 }
 .section3__block--4 {
   padding-left: 46.0199004975vw;
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .section3__block--4 {
@@ -6042,6 +6100,8 @@ summary {
 .section3__block--4 .section3__image {
   position: relative;
   z-index: 4;
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 .section3__block--4 .section3__label {
   z-index: 2;
@@ -6053,6 +6113,10 @@ summary {
   .section3__block--4 .section3__label {
     display: none;
   }
+}
+.section3__block--4 .section3__label .section3__label-item {
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 .section3__block--4 .section3__label .section3__label-item--1 {
   width: 39.1044776119vw;
@@ -6178,6 +6242,8 @@ summary {
   overflow: hidden;
   background: #ACACAC;
   z-index: 2;
+  will-change: transform, opacity, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-1 {
@@ -6212,6 +6278,8 @@ summary {
   left: 0;
   transform: translateY(-50%);
   z-index: 9;
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
   .y2-1__numbers {
@@ -6278,6 +6346,8 @@ summary {
 .y2-1__photos-item {
   left: 0;
   position: absolute;
+  will-change: transform, left;
+  transform-style: preserve-3d;
 }
 .y2-1__photos-item--1 {
   width: 26.1194029851vw;
@@ -6317,6 +6387,8 @@ summary {
   overflow: visible;
   background: #003F78;
   z-index: 3;
+  will-change: transform, opacity, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-2 {
@@ -6338,6 +6410,8 @@ summary {
   width: 100%;
   height: 100%;
   z-index: 4;
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-2__top {
@@ -6362,6 +6436,8 @@ summary {
   left: 1.7412935323vw;
   top: 6.7164179104vw;
   z-index: 3;
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-2__title {
@@ -6374,6 +6450,10 @@ summary {
     position: static;
     padding: 8.4375vw 5vw 22.5vw;
   }
+}
+.y2-2__title span {
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-2__title span {
@@ -6406,6 +6486,8 @@ summary {
   top: 29.2537313433vw;
   right: 0.4975124378vw;
   z-index: 3;
+  will-change: opacity;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-2__text {
@@ -6440,6 +6522,8 @@ summary {
   left: 10.1990049751vw;
   top: 6.7661691542vw;
   z-index: 2;
+  will-change: transform, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-2__fly {
@@ -6463,6 +6547,8 @@ summary {
   left: 13.3333333333vw;
   top: 0;
   width: 63.0845771144vw;
+  will-change: transform, top;
+  transform-style: preserve-3d;
   z-index: 4;
 }
 @media only screen and (max-width: 699px) {
@@ -6499,6 +6585,8 @@ summary {
   overflow: hidden;
   background: #003F78;
   z-index: 1;
+  will-change: transform, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
   .y2-3 {
@@ -6554,6 +6642,8 @@ summary {
   left: 2.2885572139vw;
   top: 2.1890547264vw;
   z-index: 13;
+  will-change: opacity;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-3__text {
@@ -6596,6 +6686,8 @@ summary {
   left: 17.8109452736vw;
   bottom: 16.815920398vw;
   z-index: 13;
+  will-change: opacity;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-3__label {
@@ -6627,6 +6719,8 @@ summary {
 .y2-4 {
   z-index: 4;
   display: flex;
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-4 {
@@ -6753,6 +6847,8 @@ summary {
 
 .y2-5 {
   z-index: 4;
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 .y2-5__text {
   position: relative;
@@ -6807,6 +6903,8 @@ summary {
   z-index: 4;
   width: 146.2686567164vw;
   background: url("../img/o8-bg.webp") center center/cover no-repeat;
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-6 {
@@ -6854,6 +6952,8 @@ summary {
   top: 0;
   height: 100%;
   z-index: 4;
+  will-change: opacity;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-6__image {
@@ -6897,6 +6997,10 @@ summary {
     padding-right: 14.375vw;
   }
 }
+.y2-6__title span {
+  will-change: transform;
+  transform-style: preserve-3d;
+}
 .y2-6__title span:nth-child(1) {
   opacity: 0.2;
 }
@@ -6936,6 +7040,8 @@ summary {
   z-index: 4;
   width: 127.5124378109vw;
   background: url("../img/o9-bg.webp") center center/cover no-repeat;
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-7 {
@@ -6983,6 +7089,8 @@ summary {
   bottom: 0;
   z-index: 4;
   width: 67.6119402985vw;
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-7__image {
@@ -7020,6 +7128,10 @@ summary {
     padding-bottom: 5vw;
   }
 }
+.y2-7__title span {
+  will-change: transform;
+  transform-style: preserve-3d;
+}
 .y2-7__title span:nth-child(1) {
   opacity: 0.2;
 }
@@ -7049,6 +7161,8 @@ summary {
 
 .y2-8 {
   z-index: 5;
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-8 {
@@ -7102,6 +7216,8 @@ summary {
 .y2-9 {
   z-index: 4;
   width: 100%;
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 .y2-9__video {
   position: absolute;
@@ -7126,6 +7242,8 @@ summary {
   background: #FFFFFF;
   overflow: hidden;
   background: transparent;
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-9__flex {
@@ -7202,6 +7320,8 @@ summary {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-9__title {
@@ -7210,9 +7330,15 @@ summary {
     padding-bottom: 2.6041666667vw;
   }
 }
+.y2-9__title span {
+  will-change: transform;
+  transform-style: preserve-3d;
+}
 .y2-10 {
   z-index: 4;
   background: #1EA9AF;
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 .y2-10__flex {
   flex-direction: row-reverse;
@@ -7254,6 +7380,8 @@ summary {
 .y2-11 {
   z-index: 4;
   display: flex;
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-11 {
@@ -7401,6 +7529,10 @@ summary {
     padding-bottom: 5vw;
   }
 }
+.y2-11__second-title span {
+  will-change: transform;
+  transform-style: preserve-3d;
+}
 .y2-11__second-title span:nth-child(1) {
   color: #1EA9AF;
 }
@@ -7431,6 +7563,8 @@ summary {
   background: #E3E3E3;
   padding-right: 4.6268656716vw;
   display: flex;
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-12 {
@@ -7444,8 +7578,10 @@ summary {
 .y2-12__images-img {
   position: absolute;
   width: 47.7114427861vw;
-  left: 51.5422885572vw;
+  right: -30vw;
   top: 2.4875621891vw;
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-12__images-img {
@@ -7481,6 +7617,8 @@ summary {
 }
 .y2-12__text-col {
   width: 28.7064676617vw;
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-12__text-col {
@@ -7512,6 +7650,8 @@ summary {
   position: absolute;
   bottom: 2.4875621891vw;
   right: 49.7512437811vw;
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y2-12__title {
@@ -7523,8 +7663,6 @@ summary {
   width: 100%;
   height: 100vh;
   position: relative;
-  will-change: transform, opacity, left, top, right, bottom, background;
-  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y1960 {
@@ -7547,7 +7685,7 @@ summary {
   overflow: hidden;
   background: #FFFFFF;
   z-index: 2;
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform, opacity, top;
   transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
@@ -7583,7 +7721,7 @@ summary {
   left: 0;
   transform: translateY(-50%);
   z-index: 9;
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform;
   transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
@@ -7619,6 +7757,11 @@ summary {
     color: #ffffff;
   }
 }
+@media only screen and (max-width: 699px) {
+  .y3-1__numbers-number {
+    color: #0F0F0F;
+  }
+}
 .y3-1__numbers-line {
   width: 27.5124378109vw;
   height: 2.9850746269vw;
@@ -7637,6 +7780,11 @@ summary {
     margin-right: 0.9375vw;
   }
 }
+@media only screen and (max-width: 699px) {
+  .y3-1__numbers-line {
+    background: #0F0F0F;
+  }
+}
 .y3-1__photos {
   position: absolute;
   width: 100%;
@@ -7644,8 +7792,6 @@ summary {
   z-index: 8;
   top: 0;
   left: 0;
-  will-change: transform, opacity, left, top, right, bottom, background;
-  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 699px) {
   .y3-1__photos {
@@ -7655,7 +7801,7 @@ summary {
 .y3-1__photos-item {
   left: 0;
   position: absolute;
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform, left;
   transform-style: preserve-3d;
 }
 .y3-1__photos-item--1 {
@@ -7696,8 +7842,27 @@ summary {
   overflow: visible;
   background-size: 100% auto;
   z-index: 3;
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform, opacity, top;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-2 {
+    top: 80vw;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #0F0F0F 0%, #0F0F0F 23%, #FFFFFF 67.4%);
+    z-index: 1;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-2 {
+    position: relative;
+    top: auto;
+    min-height: 0;
+    background: linear-gradient(180deg, #0F0F0F 0%, #0F0F0F 19%, #FFFFFF 67.4%);
+  }
 }
 .y3-2__bg {
   display: block;
@@ -7711,8 +7876,23 @@ summary {
   top: 0;
   left: 0;
   z-index: -1;
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-2__bg {
+    height: auto;
+    width: 100%;
+    background: url("../img/mobile/r1-bg.webp") center bottom no-repeat;
+    padding-bottom: 54%;
+    position: relative;
+    z-index: 1;
+    order: 9;
+    top: auto;
+    left: auto;
+    background-size: cover;
+    padding-top: 0;
+  }
 }
 .y3-2__bg::before {
   content: "";
@@ -7724,9 +7904,21 @@ summary {
   height: 52vh;
   position: absolute;
 }
+@media only screen and (max-width: 1100px) {
+  .y3-2__bg::before {
+    display: none;
+  }
+}
 .y3-2__year {
   color: #ffffff;
   z-index: 3;
+  will-change: opacity;
+  transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-2__year {
+    display: none;
+  }
 }
 .y3-2__top {
   position: relative;
@@ -7734,8 +7926,13 @@ summary {
   left: 0;
   width: 100%;
   z-index: 2;
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform, opacity;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-2__top {
+    order: 1;
+  }
 }
 .y3-2__top img {
   width: 100%;
@@ -7743,14 +7940,24 @@ summary {
 .y3-2__top-bg {
   width: 100%;
 }
+@media only screen and (max-width: 1100px) {
+  .y3-2__top-bg {
+    display: none;
+  }
+}
 .y3-2__top-man {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
+@media only screen and (max-width: 1100px) {
+  .y3-2__top-man {
+    position: relative;
+  }
+}
 .y3-2__title {
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform;
   transform-style: preserve-3d;
 }
 .y3-2__title--1 {
@@ -7760,14 +7967,28 @@ summary {
   top: 0;
   z-index: 3;
 }
+@media only screen and (max-width: 1100px) {
+  .y3-2__title--1 {
+    position: relative;
+    padding-left: 2.6041666667vw;
+    margin-top: 3.90625vw;
+    order: 2;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-2__title--1 {
+    padding-left: 5vw;
+    margin-top: 5vw;
+  }
+}
 .y3-2__title--1 span {
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform;
   transform-style: preserve-3d;
 }
 .y3-2__title--1 span:nth-child(3) {
   color: #484848;
 }
-@media only screen and (max-width: 699px) {
+@media only screen and (max-width: 1100px) {
   .y3-2__title--1 span:nth-child(3) {
     color: #FFFFFF;
   }
@@ -7779,14 +8000,19 @@ summary {
   color: #FFFFFF;
   z-index: 2;
 }
+@media only screen and (max-width: 1100px) {
+  .y3-2__title--2 {
+    display: none;
+  }
+}
 .y3-2__title--2 span {
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform;
   transform-style: preserve-3d;
 }
 .y3-2__title--2 span:nth-child(2) {
   color: #939393;
 }
-@media only screen and (max-width: 699px) {
+@media only screen and (max-width: 1100px) {
   .y3-2__title--2 span:nth-child(2) {
     color: #FFFFFF;
   }
@@ -7800,7 +8026,7 @@ summary {
   position: absolute;
   top: 0;
   z-index: 3;
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform;
   transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
@@ -7815,18 +8041,26 @@ summary {
     line-height: 1.52;
   }
 }
+@media only screen and (max-width: 1100px) {
+  .y3-2__text {
+    position: static;
+    width: 100%;
+  }
+}
 .y3-2__text--1 {
   left: 2.8358208955vw;
 }
 @media only screen and (max-width: 1100px) {
   .y3-2__text--1 {
-    left: 2.6041666667vw;
+    position: static;
+    padding: 0 2.6041666667vw;
+    width: 80%;
+    order: 4;
   }
 }
 @media only screen and (max-width: 699px) {
   .y3-2__text--1 {
     position: static;
-    width: 100%;
     padding: 3.4375vw 5vw 6.875vw;
   }
 }
@@ -7834,33 +8068,104 @@ summary {
   right: 3.3333333333vw;
   color: #000000;
 }
+@media only screen and (max-width: 1100px) {
+  .y3-2__text--2 {
+    position: static;
+    padding: 0 2.6041666667vw;
+    width: 70%;
+    order: 6;
+    margin-top: 2.6041666667vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-2__text--2 {
+    padding: 0 5vw;
+    margin-top: 1.5625vw;
+  }
+}
 .y3-2__azs {
   width: 49.7014925373vw;
   position: absolute;
   right: 5.1741293532vw;
   top: 0;
   z-index: 1;
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-2__azs {
+    position: relative;
+    width: 100%;
+    right: auto;
+    top: auto;
+    order: 3;
+  }
 }
 .y3-2__azs-photo {
   width: 49.7014925373vw;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-2__azs-photo {
+    display: none;
+  }
 }
 .y3-2__azs-logo {
   position: absolute;
   right: 4.0298507463vw;
   top: 100%;
   width: 22.9850746269vw;
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-2__azs-logo {
+    position: static;
+    right: auto;
+    width: 60.15625vw;
+    top: auto;
+    margin: 6.5104166667vw 2.6041666667vw 1.3020833333vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-2__azs-logo {
+    width: 82.1875vw;
+    margin: 15.625vw 5vw 2.5vw;
+  }
 }
 .y3-2__label-block {
   position: absolute;
   top: 0;
   left: 10.1990049751vw;
   width: 40.7960199005vw;
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-2__label-block {
+    position: relative;
+    order: 5;
+    width: 100%;
+    padding: 3.90625vw 2.6041666667vw 0;
+    left: auto;
+    top: auto;
+  }
+  .y3-2__label-block::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #FFFFFF;
+    opacity: 0.2;
+    margin-bottom: 3.90625vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-2__label-block {
+    padding: 7.8125vw 5vw 0;
+  }
+  .y3-2__label-block::before {
+    margin-bottom: 5vw;
+  }
 }
 .y3-2__label-block span {
   width: 10.1492537313vw;
@@ -7872,6 +8177,22 @@ summary {
   color: #404040;
   margin-bottom: 3.184079602vw;
   display: block;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-2__label-block span {
+    color: #ffffff;
+    font-size: 2.0833333333vw;
+    margin-bottom: 3.90625vw;
+    width: 26.5625vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-2__label-block span {
+    font-size: 2.8125vw;
+    line-height: 1.42;
+    margin-bottom: 4.0625vw;
+    width: 36.875vw;
+  }
 }
 .y3-2__label-block img {
   width: 100%;
@@ -7887,10 +8208,33 @@ summary {
   position: absolute;
   right: 23.8805970149vw;
   top: 0;
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform, opacity;
   transform-style: preserve-3d;
 }
+@media only screen and (max-width: 1100px) {
+  .y3-2__label {
+    position: relative;
+    order: 7;
+    right: auto;
+    top: auto;
+    margin-left: 2.6041666667vw;
+    font-size: 2.0833333333vw;
+    width: 21.3541666667vw;
+    margin-bottom: 1.3020833333vw;
+    margin-top: 9.1145833333vw;
+  }
+}
 @media only screen and (max-width: 699px) {
+  .y3-2__label {
+    margin-left: 5vw;
+    font-size: 2.8125vw;
+    line-height: 1.42;
+    width: 19.375vw;
+    margin-bottom: 2.1875vw;
+    margin-top: 14.0625vw;
+  }
+}
+@media only screen and (max-width: 1100px) {
   .y3-2__cloud {
     display: none;
   }
@@ -7938,12 +8282,20 @@ summary {
   overflow: hidden;
   background: #ffffff;
   z-index: 1;
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform, left, top;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-3 {
+    height: auto;
+    min-height: 100vh;
+  }
 }
 @media only screen and (max-width: 699px) {
   .y3-3 {
     position: relative;
+    height: auto;
+    min-height: 0;
   }
 }
 .y3-3__background {
@@ -7986,26 +8338,32 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y3-3__text {
-    left: 2.6041666667vw;
-    top: 11.8489583333vw;
-    width: 65.1041666667vw;
+    position: static;
+    color: #404040;
+    width: 100%;
+    padding: 0 13.0208333333vw 2.6041666667vw 2.6041666667vw;
   }
 }
 @media only screen and (max-width: 699px) {
   .y3-3__text {
-    width: 100%;
-    position: static;
-    padding: 21.25vw 49.6875vw 3.75vw 5vw;
-    font-family: "Suisse Intl", sans-serif;
-    font-size: 2.8125vw;
-    line-height: 1.42;
-    text-transform: uppercase;
+    padding: 0 23.75vw 5vw 5vw;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .y3-3__year {
+    padding-left: 2.6041666667vw;
+    color: #404040;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-3__year {
+    padding-left: 5vw;
   }
 }
 
 .y3-4 {
   z-index: 4;
-  will-change: transform, opacity, left, top, right, bottom, background;
+  will-change: transform, left, top;
   transform-style: preserve-3d;
 }
 .y3-4__first {
@@ -8015,29 +8373,67 @@ summary {
 .y3-4__first-image {
   position: relative;
   z-index: 2;
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 .y3-4__first-title {
   position: absolute;
   top: 0;
   right: 3.6815920398vw;
   z-index: 1;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-4__first-title {
+    display: none;
+  }
 }
 .y3-4__second {
   position: relative;
   padding: 2.4875621891vw;
   width: 66.0696517413vw;
   z-index: 4;
-  will-change: transform, opacity, left, top, right, bottom, background;
-  transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-4__second {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
 }
 .y3-4__second-image {
   display: flex;
   position: absolute;
   top: 23.1343283582vw;
   left: -12.4378109453vw;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-4__second-image {
+    order: 2;
+    position: static;
+    top: auto;
+    left: auto;
+    flex-direction: column;
+    width: 100%;
+    padding: 3.90625vw 2.6041666667vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-4__second-image {
+    padding: 0 5vw 12.5vw;
+  }
 }
 .y3-4__second-image img {
   width: 39.4527363184vw;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-4__second-image img {
+    width: 100%;
+  }
 }
 .y3-4__second-image span {
   display: block;
@@ -8049,6 +8445,22 @@ summary {
   margin-left: 1.1940298507vw;
   width: 10.1492537313vw;
 }
+@media only screen and (max-width: 1100px) {
+  .y3-4__second-image span {
+    margin-left: 0;
+    margin-top: 1.953125vw;
+    font-size: 2.0833333333vw;
+    width: 26.5625vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-4__second-image span {
+    margin-top: 3.125vw;
+    font-size: 2.8125vw;
+    line-height: 1.42;
+    width: 63.75vw;
+  }
+}
 .y3-4__second-text {
   width: 35.0248756219vw;
 }
@@ -8058,6 +8470,7 @@ summary {
     color: #404040;
     width: 100%;
     padding: 0 13.0208333333vw 2.6041666667vw 2.6041666667vw;
+    order: 1;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -8065,11 +8478,23 @@ summary {
     padding: 0 23.75vw 5vw 5vw;
   }
 }
+@media only screen and (max-width: 1100px) {
+  .y3-4__year {
+    padding-left: 2.6041666667vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-4__year {
+    padding-left: 5vw;
+  }
+}
 
 .y3-5 {
   z-index: 4;
   width: 135.5721393035vw;
   background: url("../img/r4-bg.webp") center center/cover no-repeat;
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y3-5 {
@@ -8137,6 +8562,10 @@ summary {
     padding-bottom: 5vw;
   }
 }
+.y3-5__title span {
+  will-change: transform;
+  transform-style: preserve-3d;
+}
 .y3-5__title span:nth-child(3) {
   margin-right: 24.8756218905vw;
 }
@@ -8146,15 +8575,36 @@ summary {
   z-index: 1;
   bottom: 0;
   left: 9.9502487562vw;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+.y3-5__image img {
+  width: 100%;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-5__image {
+    width: 100%;
+    position: static;
+    left: auto;
+    bottom: auto;
+  }
 }
 
 .y3-6 {
   z-index: 4;
   display: flex;
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y3-6 {
     display: block;
+    min-height: 100vh;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-6 {
+    min-height: 0;
   }
 }
 .y3-6__first {
@@ -8163,12 +8613,17 @@ summary {
   width: 137.8606965174vw;
   display: flex;
 }
+@media only screen and (max-width: 1100px) {
+  .y3-6__first {
+    width: 100%;
+    min-height: 0;
+  }
+}
 .y3-6__first-year {
   color: #FFFFFF;
 }
 @media only screen and (max-width: 1100px) {
   .y3-6__first-year {
-    color: #404040;
     width: 100%;
     padding-left: 2.6041666667vw;
   }
@@ -8187,7 +8642,6 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y3-6__first-text {
     position: static;
-    color: #404040;
     width: 100%;
     padding: 0 13.0208333333vw 2.6041666667vw 2.6041666667vw;
   }
@@ -8200,10 +8654,22 @@ summary {
 .y3-6__first-text-col {
   width: 31.4427860697vw;
 }
+@media only screen and (max-width: 1100px) {
+  .y3-6__first-text-col {
+    width: 100%;
+  }
+}
 .y3-6__second {
   flex-direction: row-reverse;
   background: #FDFDFD;
   position: relative;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-6__second {
+    flex-direction: column;
+    min-height: 0;
+    padding-bottom: 3.90625vw;
+  }
 }
 .y3-6__second-text {
   padding: 2.4875621891vw 38.4577114428vw 2.4875621891vw 3.4328358209vw;
@@ -8236,11 +8702,27 @@ summary {
   left: 58.9054726368vw;
   bottom: 4.2288557214vw;
 }
+@media only screen and (max-width: 1100px) {
+  .y3-6__second-image2 {
+    width: 100%;
+    position: static;
+    left: auto;
+    bottom: auto;
+  }
+}
 .y3-6__last {
   position: relative;
   background: #E7E7E7;
   width: 138.855721393vw;
   flex-direction: row-reverse;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-6__last {
+    background: #ffffff;
+    flex-direction: column;
+    min-height: 0;
+    width: 100%;
+  }
 }
 .y3-6__last-title {
   position: absolute;
@@ -8269,6 +8751,13 @@ summary {
 }
 .y3-6__last-title span {
   position: relative;
+  will-change: transform, left;
+  transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-6__last-title span {
+    position: static;
+  }
 }
 .y3-6__last-title span:nth-child(1) {
   left: 0;
@@ -8276,6 +8765,11 @@ summary {
 .y3-6__last-title span:nth-child(2) {
   color: #1EA9AF;
   left: 9.0547263682vw;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-6__last-title span:nth-child(2) {
+    color: #404040;
+  }
 }
 .y3-6__last-title span:nth-child(3) {
   left: 27.1144278607vw;
@@ -8290,12 +8784,12 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y3-6__last-text {
     display: block;
-    padding: 0 13.0208333333vw 0 2.6041666667vw;
+    padding: 0 13.0208333333vw 3.90625vw 2.6041666667vw;
   }
 }
 @media only screen and (max-width: 699px) {
   .y3-6__last-text {
-    padding: 0 15vw 0 5vw;
+    padding: 0 15vw 9.375vw 5vw;
   }
 }
 .y3-6__last-text-col {
@@ -8311,11 +8805,34 @@ summary {
   width: 44.4278606965vw;
   top: 8.6069651741vw;
   right: 19.7512437811vw;
+  will-change: transform, top;
+  transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-6__last-image {
+    position: static;
+    width: 100%;
+  }
+}
+.y3-6__last-image img {
+  width: 100%;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-6__last-year {
+    padding-left: 2.6041666667vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-6__last-year {
+    padding-left: 5vw;
+  }
 }
 
 .y3-7 {
   z-index: 4;
   display: flex;
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y3-7 {
@@ -8332,12 +8849,38 @@ summary {
   z-index: 1;
   position: relative;
 }
+@media only screen and (max-width: 1100px) {
+  .y3-7__first-text {
+    display: block;
+    padding: 0 13.0208333333vw 3.90625vw 2.6041666667vw;
+    position: static;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-7__first-text {
+    padding: 0 15vw 9.375vw 5vw;
+  }
+}
 .y3-7__first-text-image {
   width: 37.1641791045vw;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-7__first-text-image {
+    position: absolute;
+    width: 45.5729166667vw;
+    right: 7.8125vw;
+    top: 59.8958333333vw;
+  }
 }
 .y3-7__first-text-col {
   margin-left: 4.07960199vw;
   width: 26.0696517413vw;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-7__first-text-col {
+    margin: 0;
+    width: 100%;
+  }
 }
 .y3-7__first-title {
   position: absolute;
@@ -8345,12 +8888,29 @@ summary {
   top: 0;
   left: 19.1044776119vw;
   align-items: baseline;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-7__first-title {
+    display: none;
+  }
 }
 .y3-7__first-title span:nth-child(1) {
   line-height: 1;
 }
 .y3-7__first-title span:nth-child(2) {
   margin-left: 0.3em;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-7__first-year {
+    padding-left: 2.6041666667vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-7__first-year {
+    padding-left: 5vw;
+  }
 }
 .y3-7__second {
   position: relative;
@@ -8360,16 +8920,43 @@ summary {
   padding: 2.4875621891vw 71.144278607vw 2.4875621891vw 4.1293532338vw;
   position: relative;
 }
+@media only screen and (max-width: 1100px) {
+  .y3-7__second-text {
+    display: block;
+    padding: 0 13.0208333333vw 3.90625vw 2.6041666667vw;
+    position: static;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-7__second-text {
+    padding: 0 15vw 9.375vw 5vw;
+  }
+}
 .y3-7__second-text-col {
   color: #FDFDFD;
   width: 29.8507462687vw;
 }
+@media only screen and (max-width: 1100px) {
+  .y3-7__second-text-col {
+    width: 100%;
+  }
+}
 .y3-7__second-year {
   color: #FDFDFD;
 }
+@media only screen and (max-width: 1100px) {
+  .y3-7__second-year {
+    padding-left: 2.6041666667vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-7__second-year {
+    padding-left: 5vw;
+  }
+}
 .y3-7__second-title {
   position: absolute;
-  top: 20.3980099502vw;
+  bottom: 0.4975124378vw;
   left: 2.5870646766vw;
   display: flex;
   flex-direction: column;
@@ -8380,7 +8967,6 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y3-7__second-title {
     position: static;
-    color: #404040;
     padding-left: 2.6041666667vw;
     padding-bottom: 2.6041666667vw;
     padding-right: 2.6041666667vw;
@@ -8395,7 +8981,14 @@ summary {
   }
 }
 .y3-7__second-title span {
+  will-change: transform, left;
+  transform-style: preserve-3d;
   position: relative;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-7__second-title span {
+    position: static;
+  }
 }
 .y3-7__second-title span:nth-child(2) {
   left: 10.5970149254vw;
@@ -8409,12 +9002,26 @@ summary {
   right: 37.5621890547vw;
   z-index: 1;
   position: absolute;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-7__second-image2 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .y3-7__second-image {
+    order: -1;
+  }
 }
 
 .y3-8 {
   z-index: 4;
   background: #202020;
   display: flex;
+  will-change: transform, left, top;
+  transform-style: preserve-3d;
 }
 @media only screen and (max-width: 1100px) {
   .y3-8 {
@@ -8424,14 +9031,41 @@ summary {
 .y3-8__year {
   color: #ECECEC;
 }
+@media only screen and (max-width: 1100px) {
+  .y3-8__year {
+    padding-left: 2.6041666667vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-8__year {
+    padding-left: 5vw;
+  }
+}
 .y3-8__text {
   display: flex;
   align-items: flex-end;
   padding: 2.4875621891vw 37.9104477612vw 2.4875621891vw 2.7860696517vw;
   color: #ECECEC;
 }
+@media only screen and (max-width: 1100px) {
+  .y3-8__text {
+    display: block;
+    padding: 0 13.0208333333vw 3.90625vw 2.6041666667vw;
+    position: static;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y3-8__text {
+    padding: 0 15vw 9.375vw 5vw;
+  }
+}
 .y3-8__text-col {
   width: 26.0696517413vw;
+}
+@media only screen and (max-width: 1100px) {
+  .y3-8__text-col {
+    width: 100%;
+  }
 }
 
 .events {

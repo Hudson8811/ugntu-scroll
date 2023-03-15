@@ -13,6 +13,8 @@
 		width: 100%;
 		height: 100%;
 		background: $colorCyan;
+		will-change: transform;
+		transform-style: preserve-3d;
 	}
 	&__center{
 		position: relative;
@@ -23,6 +25,8 @@
 		height: 100%;
 		z-index: 3;
 		background: $colorBlue;
+		will-change: transform;
+		transform-style: preserve-3d;
 		img{
 			width: vw(172);
 			@include max(md){
