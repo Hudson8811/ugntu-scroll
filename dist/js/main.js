@@ -232,6 +232,9 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
     setCssRootVars();
   });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('select').on('change', function () {
+    console.log('Выбранное значение: ' + jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).val());
+  });
 });
 
 function setCssRootVars() {

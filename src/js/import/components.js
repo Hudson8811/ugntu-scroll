@@ -236,6 +236,11 @@ $(document).ready(function() {
     $(window).on('resize',function (){
         setCssRootVars();
     });
+
+
+    $('select').on('change',function (){
+        console.log('Выбранное значение: '+$(this).val());
+    })
 });
 
 
@@ -280,3 +285,5 @@ function nextPageAnimation(link, bgColor = ''){
         }
     });
 }
+
+
