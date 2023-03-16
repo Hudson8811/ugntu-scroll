@@ -22,25 +22,26 @@ block content
 					a.js-congrat(href='#') поздравить
 
 		section#list.list-block
-			.list-block__line-block
-				.container.list-block__container-top
-					.list-block__title список <br> поздравлений
-					label.d-none-desktop
-						+icon('search')
-						input(type='search', placeholder='Введите имя')
+			form
+				.list-block__line-block
+					.container.list-block__container-top
+						.list-block__title список <br> поздравлений
+						label
+							+icon('search')
+							input(type='search', placeholder='Введите имя')
 
-			label.list-block__search-row.d-none-mobile
-				.container
-					+icon('search')
-					input(type='search', placeholder='Введите имя')
+
+				.list-block__sort-block
+					.container
+						.list-block__sort
+							.list-block__number <span class="congrat-num">20</span> поздравлений
+							select
+								option По алфавиту а - я
+								option По алфавиту я - а
+								option По новизне
 			.list-block__grid-block
 				.container
-					.list-block__sort
-						.list-block__number <span class="congrat-num">20</span> поздравлений
-						select
-							option По алфавиту а - я
-							option По алфавиту я - а
-							option По новизне
+
 					.list-block__grid
 						.card-person.list-block__item
 							a.link-area(href='#', target='_blank')

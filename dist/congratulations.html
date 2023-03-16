@@ -106,35 +106,33 @@
         </div>
       </section>
       <section class="list-block" id="list">
-        <div class="list-block__line-block">
-          <div class="container list-block__container-top">
-            <div class="list-block__title">список <br> поздравлений</div>
-            <label class="d-none-desktop">
-              <svg>
-                <use xlink:href="./img/sprites/sprite.svg#search"></use>
-              </svg>
-              <input type="search" placeholder="Введите имя">
-            </label>
+        <form>
+          <div class="list-block__line-block">
+            <div class="container list-block__container-top">
+              <div class="list-block__title">список <br> поздравлений</div>
+              <label>
+                <svg>
+                  <use xlink:href="./img/sprites/sprite.svg#search"></use>
+                </svg>
+                <input type="search" placeholder="Введите имя">
+              </label>
+            </div>
           </div>
-        </div>
-        <label class="list-block__search-row d-none-mobile">
-          <div class="container">
-            <svg>
-              <use xlink:href="./img/sprites/sprite.svg#search"></use>
-            </svg>
-            <input type="search" placeholder="Введите имя">
+          <div class="list-block__sort-block">
+            <div class="container">
+              <div class="list-block__sort">
+                <div class="list-block__number"><span class="congrat-num">20</span> поздравлений</div>
+                <select>
+                  <option>По алфавиту а - я</option>
+                  <option>По алфавиту я - а</option>
+                  <option>По новизне</option>
+                </select>
+              </div>
+            </div>
           </div>
-        </label>
+        </form>
         <div class="list-block__grid-block">
           <div class="container">
-            <div class="list-block__sort">
-              <div class="list-block__number"><span class="congrat-num">20</span> поздравлений</div>
-              <select>
-                <option>По алфавиту а - я</option>
-                <option>По алфавиту я - а</option>
-                <option>По новизне</option>
-              </select>
-            </div>
             <div class="list-block__grid">
               <div class="card-person list-block__item"><a class="link-area" href="#" target="_blank"></a>
                 <div class="card-person__image"><img src="img/person.jpg" srcset="img/person@2x.jpg 2x" alt=""></div>
