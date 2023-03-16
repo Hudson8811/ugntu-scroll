@@ -907,7 +907,7 @@
 			}
 		}
 		&-text{
-			padding: vw(50) vw(551) vw(50) vw(104);
+			padding: vw(50) vw(551) vwRoot(50) vw(104);
 			display: flex;
 			align-items: flex-end;
 			@include max(md) {
@@ -928,7 +928,7 @@
 		}
 		&-title{
 			position: absolute;
-			bottom: vw(466);
+			bottom: vwRoot(466);
 			left: vw(240);
 			@include max(md){
 				position: static;

@@ -4,6 +4,10 @@
     @return ($px / 16) +rem;
 }
 
+@function vwRoot($px, $resolutiond: 2010) {
+	$temp: #{math.div($px, $resolutiond) * 100};
+	@return calc(var(--vw, 1vw) * $temp);
+}
 
 @function vw($px, $resolutiond: 2010) {
 	$temp: #{math.div($px, $resolutiond) * 100};

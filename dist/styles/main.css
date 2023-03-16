@@ -1,4 +1,8 @@
 @charset "UTF-8";
+:root {
+  --vw: 1vw;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -3172,8 +3176,8 @@ img {
 
 .blockTitle {
   font-family: "SangBleu Empire", sans-serif;
-  font-size: 10.5472636816vw;
-  line-height: 105%;
+  font-size: calc(var(--vw, 1vw) * 10.5472636816);
+  line-height: 95%;
   letter-spacing: -0.065em;
   text-transform: uppercase;
 }
@@ -3198,7 +3202,7 @@ img {
   }
 }
 .blockTitle span.big {
-  font-size: 27.3631840796vw;
+  font-size: calc(var(--vw, 1vw) * 27.3631840796);
   color: #1EA9AF;
 }
 @media only screen and (max-width: 1100px) {
@@ -3302,13 +3306,13 @@ img {
 }
 
 .yearConner {
-  font-size: 6.2686567164vw;
+  font-size: calc(var(--vw, 1vw) * 6.2686567164);
   line-height: 1.09;
   letter-spacing: -0.06em;
   padding-right: 0.06em;
   position: absolute;
   right: 2.2388059701vw;
-  top: 1.6417910448vw;
+  top: calc(var(--vw, 1vw) * 1.6417910448);
   font-family: "Suisse Intl", sans-serif;
 }
 @media only screen and (max-width: 1100px) {
@@ -3347,7 +3351,7 @@ img {
 
 .textBlock {
   font-family: "SangBleu Empire", sans-serif;
-  font-size: 2.0895522388vw;
+  font-size: calc(var(--vw, 1vw) * 2.0895522388);
   line-height: 1.28;
 }
 @media only screen and (max-width: 1100px) {
@@ -6485,7 +6489,7 @@ summary {
 }
 .y2-2__text {
   font-family: "SangBleu Empire", sans-serif;
-  font-size: 2.0895522388vw;
+  font-size: calc(var(--vw, 1vw) * 2.0895522388);
   line-height: 1.28;
   color: #FFFFFF;
   width: 28.5074626866vw;
@@ -6641,7 +6645,7 @@ summary {
 }
 .y2-3__text {
   font-family: "SangBleu Empire", sans-serif;
-  font-size: 2.0895522388vw;
+  font-size: calc(var(--vw, 1vw) * 2.0895522388);
   line-height: 1.28;
   color: #FFFFFF;
   width: 28.5074626866vw;
@@ -7415,7 +7419,7 @@ summary {
   width: 100%;
 }
 .y2-11__first-text {
-  padding: 2.4875621891vw 27.4129353234vw 2.4875621891vw 5.1741293532vw;
+  padding: 2.4875621891vw 27.4129353234vw calc(var(--vw, 1vw) * 2.4875621891) 5.1741293532vw;
   display: flex;
   align-items: flex-end;
 }
@@ -7442,7 +7446,7 @@ summary {
 }
 .y2-11__first-title {
   position: absolute;
-  bottom: 23.184079602vw;
+  bottom: calc(var(--vw, 1vw) * 23.184079602);
   left: 11.9402985075vw;
 }
 @media only screen and (max-width: 1100px) {
@@ -8033,7 +8037,7 @@ summary {
 }
 .y3-2__text {
   font-family: "SangBleu Empire", sans-serif;
-  font-size: 2.0895522388vw;
+  font-size: calc(var(--vw, 1vw) * 2.0895522388);
   line-height: 1.28;
   color: #FFFFFF;
   width: 28.7064676617vw;
@@ -8330,7 +8334,7 @@ summary {
 }
 .y3-3__text {
   font-family: "SangBleu Empire", sans-serif;
-  font-size: 2.0895522388vw;
+  font-size: calc(var(--vw, 1vw) * 2.0895522388);
   line-height: 1.28;
   color: #404040;
   width: 31.5422885572vw;
@@ -8392,16 +8396,21 @@ summary {
 }
 .y3-4__first-title {
   position: absolute;
-  top: 0;
+  top: calc(var(--vw, 1vw) * -3.9800995025);
   right: 3.6815920398vw;
   z-index: 1;
   will-change: transform;
   transform-style: preserve-3d;
+  display: flex;
+  align-items: baseline;
 }
 @media only screen and (max-width: 1100px) {
   .y3-4__first-title {
     display: none;
   }
+}
+.y3-4__first-title span:nth-child(1) {
+  line-height: 1;
 }
 .y3-4__second {
   position: relative;
@@ -8420,7 +8429,7 @@ summary {
 .y3-4__second-image {
   display: flex;
   position: absolute;
-  top: 23.1343283582vw;
+  top: calc(var(--vw, 1vw) * 23.1343283582);
   left: -12.4378109453vw;
   will-change: transform;
   transform-style: preserve-3d;
@@ -8859,7 +8868,7 @@ summary {
 .y3-7__first-text {
   display: flex;
   align-items: flex-end;
-  padding: 2.4875621891vw 26.3184079602vw 7.1641791045vw 6.2686567164vw;
+  padding: 2.4875621891vw 26.3184079602vw calc(var(--vw, 1vw) * 7.1641791045) 6.2686567164vw;
   z-index: 1;
   position: relative;
 }
@@ -9011,9 +9020,9 @@ summary {
   left: 48.2587064677vw;
 }
 .y3-7__second-image2 {
-  width: 18.9054726368vw;
-  top: 8.5572139303vw;
-  right: 37.5621890547vw;
+  width: calc(var(--vw, 1vw) * 18.9054726368);
+  top: calc(var(--vw, 1vw) * 8.5572139303);
+  right: calc(var(--vw, 1vw) * 37.5621890547);
   z-index: 1;
   position: absolute;
   will-change: transform;

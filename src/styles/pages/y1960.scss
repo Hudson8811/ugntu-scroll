@@ -562,13 +562,20 @@
 		}
 		&-title{
 			position: absolute;
-			top: 0;
+			top: vwRoot(-80);
 			right: vw(74);
 			z-index: 1;
 			will-change: transform;
 			transform-style: preserve-3d;
+			display: flex;
+			align-items: baseline;
 			@include max(md){
 				display: none;
+			}
+			span{
+				&:nth-child(1){
+					line-height: 1;
+				}
 			}
 		}
 	}
@@ -586,7 +593,7 @@
 		&-image{
 			display: flex;
 			position: absolute;
-			top: vw(465);
+			top: vwRoot(465);
 			left: vw(-250);
 			will-change: transform;
 			transform-style: preserve-3d;
@@ -959,7 +966,7 @@
 		&-text{
 			display: flex;
 			align-items: flex-end;
-			padding: vw(50) vw(529) vw(144) vw(126);
+			padding: vw(50) vw(529) vwRoot(144) vw(126);
 			z-index: 1;
 			position: relative;
 			@include max(md){
@@ -1088,9 +1095,9 @@
 			}
 		}
 		&-image2{
-			width: vw(380);
-			top: vw(172);
-			right: vw(755);
+			width: vwRoot(380);
+			top: vwRoot(172);
+			right: vwRoot(755);
 			z-index: 1;
 			position: absolute;
 			will-change: transform;

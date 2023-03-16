@@ -29,8 +29,8 @@
 
 @mixin title{
 	font-family: $titleFont;
-	font-size: vw(212);
-	line-height: 105%;
+	font-size: vwRoot(212);
+	line-height: 95%;
 	letter-spacing: -0.065em;
 	text-transform: uppercase;
 	@include max(md){
@@ -47,7 +47,7 @@
 			display: inline;
 		}
 		&.big{
-			font-size: vw(550);
+			font-size: vwRoot(550);
 			color: $colorCyan;
 			@include max(md){
 				font-size: vw2(150);
@@ -68,7 +68,7 @@
 
 @mixin text{
 	font-family: $titleFont;
-	font-size: vw(42);
+	font-size: vwRoot(42);
 	line-height: 1.28;
 	@include max(md){
 		font-size: vw2(32);
@@ -99,13 +99,13 @@
 
 
 @mixin year{
-	font-size: vw(126);
+	font-size: vwRoot(126);
 	line-height: 1.09;
 	letter-spacing: -0.06em;
 	padding-right: 0.06em;
 	position: absolute;
 	right: vw(45);
-	top: vw(33);
+	top: vwRoot(33);
 	font-family: $mainFont;
 
 	@include max(md){

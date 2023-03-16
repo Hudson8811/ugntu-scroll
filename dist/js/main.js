@@ -25,6 +25,8 @@ onbeforeunload = function onbeforeunload(event) {
 };
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
+  setCssRootVars();
+
   if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.home-page').length > 0) {
     __webpack_require__(/*! ./years/_y1940 */ "./src/js/import/years/_y1940.js");
   } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y1950').length > 0) {
@@ -225,7 +227,22 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       }
     });
   }
+
+  setCssRootVars();
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
+    setCssRootVars();
+  });
 });
+
+function setCssRootVars() {
+  var baseRatio = 2010 / 1080;
+  var windowWidth = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).innerWidth();
+  var windowHeight = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).innerHeight();
+  var windowRatio = windowWidth / windowHeight;
+  var newVW = 1;
+  if (windowRatio > baseRatio) newVW = 1 / (windowRatio / baseRatio);
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(':root').css('--vw', newVW + 'vw');
+}
 
 function disableScroll() {
   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
