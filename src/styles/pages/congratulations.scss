@@ -379,7 +379,7 @@
 			flex-grow: 0;
 		}
 
-		input[type='search'] {
+		input[type='search'], input[name="title"] {
 			width: 100%;
 			border: none;
 			outline: none;
@@ -552,6 +552,10 @@
 		font-size: 9px;
 		line-height: 13px;
 	}
+}
+
+.list-block__grid-block .js-form-item-sort-by label {
+	display: none;
 }
 
 .select2-container--default .select2-results__option--selected {
