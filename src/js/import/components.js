@@ -285,5 +285,3 @@ function nextPageAnimation(link, bgColor = ''){
         }
     });
 }
-
-
