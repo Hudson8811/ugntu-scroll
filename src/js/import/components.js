@@ -3,10 +3,13 @@ import Swiper from 'swiper/bundle';
 import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.esm.js";
 import gsap from "gsap";
 
-addEventListener('beforeunload', (event) => { });
-onbeforeunload = (event) => {
-	window.scrollTo(0, 0);
-};
+if ($('.scroll-page').length){
+    addEventListener('beforeunload', (event) => { });
+    onbeforeunload = (event) => {
+        window.scrollTo(0, 0);
+    };
+}
+
 
 $(window).on('load',function (){
     setCssRootVars();

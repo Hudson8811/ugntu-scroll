@@ -3403,6 +3403,10 @@ img {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 .link-area {
   position: absolute;
   inset: 0;
@@ -10415,6 +10419,9 @@ summary {
     width: 16px;
     height: 16px;
   }
+}
+.list-block .list-block__sort label {
+  display: none;
 }
 .list-block__sort-block {
   background: #f7f7f7;
