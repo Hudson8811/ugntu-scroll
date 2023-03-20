@@ -1,4 +1,3 @@
-
 (function ($, Drupal, drupalSettings) {
   Drupal.behaviors.tiqum = {
     attach: function attach() {
@@ -7,6 +6,8 @@
           $(this).text($('#views-count-result--source').text());
         }
       });
+
+      $('.list-block__sort select').once('select2').select2();
     }
   };
 })(jQuery, Drupal, drupalSettings);

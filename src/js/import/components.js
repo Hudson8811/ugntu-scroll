@@ -94,7 +94,9 @@ $(document).ready(function (){
 });
 
 $(document).ready(function() {
-    $('.list-block__sort select').select2();
+    if (typeof $('.list-block__sort select').select2 == 'function') {
+        $('.list-block__sort select').select2();
+    }
 
     /* Partners marquee */
     if ($('.js-marquee').length > 0) {

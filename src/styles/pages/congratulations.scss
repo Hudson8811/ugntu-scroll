@@ -437,6 +437,11 @@
 			}
 		}
 	}
+
+    .list-block__sort label {
+      display: none;
+    }
+
 	&__sort-block{
 		background: #f7f7f7;
 		padding-top: 80px;
