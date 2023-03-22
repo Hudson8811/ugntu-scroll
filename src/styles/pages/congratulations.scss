@@ -295,20 +295,13 @@
 			}
 
 			&:first-child {
-				background-color: $green-44;
-
-				@include max(sm) {
-					order: 1;
-					background-color: $green;
-				}
+				order: 1;
+				background-color: #11949E;
+				border-left: 1px solid rgba(255, 255, 255, 0.2);
 			}
 
 			&:last-child {
-				background-color: $green;
-
-				@include max(sm) {
-					background-color: $green-44;
-				}
+				background-color: #11949E;
 			}
 		}
 	}

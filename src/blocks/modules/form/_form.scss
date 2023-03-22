@@ -248,30 +248,7 @@
 		}
 	}
 
-	details {
-		margin: 0;
-		border: none;
 
-		.tabledrag-toggle-weight-wrapper,
-		.tableresponsive-toggle-columns,
-		.tabledrag-handle,
-		table thead {
-			display: none;
-		}
-		table {
-			margin-top: 1em;
-			margin-bottom: 1em;
-		}
-	}
-
-	input[name*="remove_button"] {
-		display: block;
-		border-radius: inherit;
-		border-bottom: 0;
-		margin: 0;
-		margin-left: 5px;
-		min-width: 80px;
-	}
 
 	&__download-title {
 		text-transform: uppercase;
@@ -408,4 +385,263 @@
 			}
 		}
 	}
+
+
+
+
+
+	&__fileblock{
+		margin-top: 28px;
+		@include max(sm) {
+			margin-top: 14px;
+		}
+		summary,
+		.js-hide,
+		.tabledrag-toggle-weight-wrapper{
+			display: none;
+		}
+
+
+		table thead{
+			display: none;
+		}
+
+		table,
+		table tbody{
+			display: block;
+		}
+		table tbody{
+			display: flex;
+			align-items: center;
+			overflow-x: auto;
+			padding-bottom: 28px;
+			@include max(sm) {
+				padding-bottom: 14px;
+			}
+			&::-webkit-scrollbar {
+				height: 6px;
+				border-radius: 25px;
+			}
+			&::-webkit-scrollbar-track {
+				background-color: transparent;
+			}
+			&::-webkit-scrollbar-thumb {
+				background: rgba($black-40, 0.2);
+			}
+		}
+		div.js-form-managed-file[id^='edit-field-video'],
+		table tbody tr{
+			display: flex;
+			background-color: $green;
+			padding: 11px 14px;
+			margin-right: 13px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			align-items: center;
+			@include max(sm) {
+				font-size: 9px;
+				line-height: 13px;
+				padding: 7px;
+			}
+		}
+		div.js-form-managed-file[id^='edit-field-video']{
+			width: max-content;
+			margin-right: 0;
+		}
+		table tbody tr td{
+			display: flex;
+			align-items: center;
+		}
+		table tbody tr td img[data-drupal-selector^='edit-field-images']{
+			display: none;
+		}
+		table tbody tr td .file-size{
+			display: none;
+		}
+		div.js-form-managed-file[id^='edit-field-video'] .file,
+		table tbody tr td .file {
+			display: block;
+			min-height: 0;
+			padding-left: 0;
+			background: none;
+		}
+		div.js-form-managed-file[id^='edit-field-video'] .file a,
+		table tbody tr td .file a{
+			cursor: default;
+			pointer-events: none;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $gray-f9;
+			user-select: none;
+		}
+
+		div.js-form-managed-file[id^='edit-field-video'] input[name*="remove_button"],
+		table tbody tr td input[name*="remove_button"] {
+			cursor: pointer;
+			color: transparent;
+			font-size: 0;
+			width: 21px;
+			height: 12px;
+			border-radius: 0;
+			background: url("../img/svg/close2.svg") center center no-repeat;
+			background-size: contain;
+			display: block;
+			max-height: none;
+			margin-left: 13px;
+			padding: 0;
+			margin-top: 0;
+
+			@include max(sm) {
+				width: 13px;
+				height: 7px;
+			}
+		}
+
+		.description{
+			font-family: $mainFont;
+			font-style: normal;
+			font-weight: 450;
+			font-size: 14px;
+			line-height: 1.41;
+			color: #404040;
+			margin-bottom: 15px;
+			@include max(sm) {
+				font-size: 12px;
+				margin-bottom: 10px;
+			}
+			span{
+				color: #15A6B1;
+			}
+		}
+
+		details {
+			margin: 0;
+			border: none;
+		}
+
+		.js-form-type-managed-file{
+			display: flex;
+			flex-direction: column-reverse;
+			flex-direction: column-reverse;
+		}
+
+		.js-form-type-managed-file > .js-form-managed-file.image-widget{
+			display: none;
+		}
+
+
+
+		label[id^=edit-field-images]{
+			display: flex;
+			justify-content: center;
+			padding: 20px 15px 15px;
+			font-size: 0;
+			color: transparent;
+			user-select: none;
+			width: 100%;
+			background: #D9D9D9;
+			cursor: pointer;
+			@include max(sm) {
+				padding: 15px 15px 10px;
+			}
+			&:hover{
+				background-color: #c7c7c7;
+			}
+			&::after{
+				content: "Выберите фото";
+				font-style: normal;
+				font-weight: 450;
+				font-size: 16px;
+				line-height: 1.24;
+				text-transform: uppercase;
+				display: block;
+				color: #404040;
+				padding-top: 2px;
+				@include max(sm) {
+					font-size: 9px;
+					line-height: 13px;
+				}
+			}
+			&::before{
+				content: "";
+				display: block;
+				width: 24px;
+				height: 24px;
+				margin-right: 8px;
+				background: url("../img/svg/upload.svg") center center no-repeat;
+				background-size: contain;
+				@include max(sm) {
+					width: 17px;
+					height: 17px;
+					margin-right: 5px;
+				}
+			}
+		}
+
+
+		div[id^="form-item-field-video-link"]{
+			display: none;
+		}
+
+
+		label[id^=edit-field-video]{
+			display: flex;
+			justify-content: center;
+			padding: 20px 15px 15px;
+			font-size: 0;
+			color: transparent;
+			user-select: none;
+			width: 100%;
+			background: #D9D9D9;
+			cursor: pointer;
+			@include max(sm) {
+				padding: 17px 15px 10px;
+			}
+			&:hover{
+				background-color: #c7c7c7;
+			}
+			&::after{
+				content: "Выберите видео";
+				font-style: normal;
+				font-weight: 450;
+				font-size: 16px;
+				line-height: 1.24;
+				text-transform: uppercase;
+				display: block;
+				color: #404040;
+				padding-top: 2px;
+				@include max(sm) {
+					font-size: 9px;
+					line-height: 13px;
+					padding-top: 1px;
+				}
+			}
+			&::before{
+				content: "";
+				display: block;
+				width: 24px;
+				height: 24px;
+				margin-right: 8px;
+				background: url("../img/svg/upload.svg") center center no-repeat;
+				background-size: contain;
+				@include max(sm) {
+					width: 17px;
+					height: 17px;
+					margin-right: 5px;
+				}
+			}
+
+			&:nth-last-child(2){
+				display: none;
+			}
+		}
+
+		div.js-form-managed-file[id^='edit-field-video']:not(:last-child){
+			display: none;
+		}
+	}
+
+
+
 }

@@ -116,7 +116,7 @@ $(document).ready(function() {
     }
 
     /* Photo uploader */
-    if (document.querySelector('#file-loader')) {
+    /*if (document.querySelector('#file-loader')) {
         document.querySelector('#file-loader').addEventListener('change', function () {
             var splittedFakePath = this.value.split('\\');
 
@@ -124,11 +124,9 @@ $(document).ready(function() {
             elem.find('span').text(splittedFakePath[splittedFakePath.length - 1]);
             elem.appendTo('.form__files').css('display', 'flex');
         });
-    }
+    }*/
 
-    $('.form__files-item-remove').on('click', function () {
-        $(this).closest('.form__files-item').remove();
-    });
+
 
     /* Show congratulation form */
     $('.js-congrat').on('click', function (e) {

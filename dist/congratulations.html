@@ -72,21 +72,175 @@
           <input type="text" name="lastname" placeholder="Фамилия" required>
           <input type="text" name="group" placeholder="Группа  / должность  / статус" required>
           <textarea name="comment" placeholder="Текст поздравления" required></textarea>
-          <div class="form__files">
-            <div class="form__files-item"><span></span>
-              <div class="form__files-item-remove">
-                <svg>
-                  <use xlink:href="./img/sprites/sprite.svg#close"></use>
-                </svg>
+          <div class="form__fileblock">
+            <div id="edit-field-images-ajax-wrapper">
+              <details class="js-form-wrapper form-wrapper" id="edit-field-images" data-drupal-selector="edit-field-images" open="open" data-once="details">
+                <summary role="button" aria-controls="edit-field-images" aria-expanded="true" aria-pressed="true">Изображения<span class="summary"></span></summary>
+                <div class="js-form-item form-item js-form-type-managed-file form-item-field-images-0 js-form-item-field-images-0">
+                  <label id="edit-field-images-0--label" for="edit-field-images-0-upload">Добавить новый файл</label>
+                  <div class="image-widget js-form-managed-file form-managed-file clearfix">
+                    <input class="js-form-file form-file" id="edit-field-images-0-upload" accept="image/*" data-drupal-selector="edit-field-images-0-upload" multiple="multiple" type="file" name="files[field_images_0][]" size="22" data-once="fileValidate auto-file-upload">
+                    <input class="js-hide button js-form-submit form-submit" id="edit-field-images-0-upload-button" data-drupal-selector="edit-field-images-0-upload-button" formnovalidate="formnovalidate" type="submit" name="field_images_0_upload_button" value="Закачать" data-once="drupal-ajax">
+                    <input data-drupal-selector="edit-field-images-0-weight" type="hidden" name="field_images[0][_weight]" value="0">
+                    <input data-drupal-selector="edit-field-images-0-fids" type="hidden" name="field_images[0][fids]">
+                    <input data-drupal-selector="edit-field-images-0-display" type="hidden" name="field_images[0][display]" value="1">
+                  </div>
+                  <div class="description" id="edit-field-images-0--description">Это поле позволяет загрузить неограниченное количество файлов.<br>Ограничение <span>50 МБ</span>.<br>Допустимые типы: <span>png gif jpg jpeg</span>.</div>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="form__fileblock">
+            <div id="edit-field-images--h_trH13JIy8-ajax-wrapper">
+              <details class="js-form-wrapper form-wrapper" id="edit-field-images--h_trH13JIy8" data-drupal-selector="edit-field-images" open="open" data-once="details">
+                <summary role="button" aria-controls="edit-field-images--h_trH13JIy8" aria-expanded="true" aria-pressed="true">Изображения<span class="summary"></span></summary>
+                <div class="tabledrag-toggle-weight-wrapper" data-drupal-selector="tabledrag-toggle-weight-wrapper">
+                  <button class="link tabledrag-toggle-weight" type="button" data-drupal-selector="tabledrag-toggle-weight">Показать вес строк</button>
+                </div>
+                <div class="tableresponsive-toggle-columns">
+                  <button class="link tableresponsive-toggle" type="button" title="Показать ячейки таблицы, которые были скрыты, чтобы разместить всю таблицу на маленьком экране." style="display: none;">Скрыть столбцы с низким приоритетом</button>
+                </div>
+                <table class="responsive-enabled" id="edit-field-images--h_trH13JIy8-table" data-striping="1" data-once="tabledrag tableresponsive">
+                  <thead>
+                    <tr>
+                      <th>Информация о файле</th>
+                      <th class="tabledrag-hide" style="display: none;">Вес</th>
+                      <th>Operations</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="draggable">
+                      <td><a class="tabledrag-handle" href="#" title="Изменить порядок можно, перетащив пункт мышкой.">
+                          <div class="handle"></div></a>
+                        <div class="image-widget js-form-managed-file form-managed-file clearfix"><img data-drupal-selector="edit-field-images-0-preview" src="/system/files/styles/thumbnail/private/filefield_paths/f1.jpg?itok=fMd86wIY" width="100" height="71" alt="" loading="lazy" typeof="foaf:Image">
+                          <input data-drupal-selector="edit-field-images-0-fids" type="hidden" name="field_images[0][fids]" value="584"><span class="file file--mime-image-jpeg file--image" data-drupal-selector="edit-field-images-0-file-584-filename"><a class="menu-item__link" href="/system/files/filefield_paths/f1.jpg" type="image/jpeg">f1.jpg</a></span><span class="file-size">(3.84 МБ)</span>
+                          <input data-drupal-selector="edit-field-images-0-width" type="hidden" name="field_images[0][width]" value="4964">
+                          <input data-drupal-selector="edit-field-images-0-height" type="hidden" name="field_images[0][height]" value="3511">
+                          <input data-drupal-selector="edit-field-images-0-display" type="hidden" name="field_images[0][display]" value="1">
+                        </div>
+                      </td>
+                      <td class="tabledrag-hide" style="display: none;">
+                        <div class="js-form-item form-item js-form-type-select form-item-field-images-0--weight js-form-item-field-images-0--weight form-no-label">
+                          <label class="visually-hidden" for="edit-field-images-0-weight--Wg9NZehulLM">Вес нового файла</label>
+                          <select class="edit-field-images--h_trH13JIy8-weight form-select" id="edit-field-images-0-weight--Wg9NZehulLM" data-drupal-selector="edit-field-images-0-weight" name="field_images[0][_weight]">
+                            <option value="-4">-4</option>
+                            <option value="-3">-3</option>
+                            <option value="-2">-2</option>
+                            <option value="-1">-1</option>
+                            <option value="0" selected="selected">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td>
+                        <input class="button js-form-submit form-submit" id="edit-field-images-0-remove-button--d5CEa9FcdYw" data-drupal-selector="edit-field-images-0-remove-button" formnovalidate="formnovalidate" type="submit" name="field_images_0_remove_button" value="Удалить" data-once="drupal-ajax">
+                      </td>
+                    </tr>
+                    <tr class="draggable">
+                      <td><a class="tabledrag-handle" href="#" title="Изменить порядок можно, перетащив пункт мышкой.">
+                          <div class="handle"></div></a>
+                        <div class="image-widget js-form-managed-file form-managed-file clearfix"><img data-drupal-selector="edit-field-images-1-preview" src="/system/files/styles/thumbnail/private/filefield_paths/f1_0.jpg?itok=yatM80wx" width="100" height="71" alt="" loading="lazy" typeof="foaf:Image">
+                          <input data-drupal-selector="edit-field-images-1-fids" type="hidden" name="field_images[1][fids]" value="585"><span class="file file--mime-image-jpeg file--image" data-drupal-selector="edit-field-images-1-file-585-filename"><a class="menu-item__link" href="/system/files/filefield_paths/f1_0.jpg" type="image/jpeg">f1_0.jpg</a></span><span class="file-size">(3.84 МБ)</span>
+                          <input data-drupal-selector="edit-field-images-1-width" type="hidden" name="field_images[1][width]" value="4964">
+                          <input data-drupal-selector="edit-field-images-1-height" type="hidden" name="field_images[1][height]" value="3511">
+                          <input data-drupal-selector="edit-field-images-1-display" type="hidden" name="field_images[1][display]" value="1">
+                        </div>
+                      </td>
+                      <td class="tabledrag-hide" style="display: none;">
+                        <div class="js-form-item form-item js-form-type-select form-item-field-images-1--weight js-form-item-field-images-1--weight form-no-label">
+                          <label class="visually-hidden" for="edit-field-images-1-weight--IbH0h0y9fZM">Вес нового файла</label>
+                          <select class="edit-field-images--h_trH13JIy8-weight form-select" id="edit-field-images-1-weight--IbH0h0y9fZM" data-drupal-selector="edit-field-images-1-weight" name="field_images[1][_weight]">
+                            <option value="-4">-4</option>
+                            <option value="-3">-3</option>
+                            <option value="-2">-2</option>
+                            <option value="-1">-1</option>
+                            <option value="0">0</option>
+                            <option value="1" selected="selected">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td>
+                        <input class="button js-form-submit form-submit" id="edit-field-images-1-remove-button--aupaAK-9jbU" data-drupal-selector="edit-field-images-1-remove-button" formnovalidate="formnovalidate" type="submit" name="field_images_1_remove_button" value="Удалить" data-once="drupal-ajax">
+                      </td>
+                    </tr>
+                    <tr class="ajax-new-content draggable">
+                      <td><a class="tabledrag-handle" href="#" title="Изменить порядок можно, перетащив пункт мышкой.">
+                          <div class="handle"></div></a>
+                        <div class="image-widget js-form-managed-file form-managed-file clearfix"><img data-drupal-selector="edit-field-images-2-preview" src="/system/files/styles/thumbnail/private/filefield_paths/f1_1.jpg?itok=pDfP143s" width="100" height="71" alt="" loading="lazy" typeof="foaf:Image">
+                          <input data-drupal-selector="edit-field-images-2-fids" type="hidden" name="field_images[2][fids]" value="586"><span class="file file--mime-image-jpeg file--image" data-drupal-selector="edit-field-images-2-file-586-filename"><a class="menu-item__link" href="/system/files/filefield_paths/f1_1.jpg" type="image/jpeg">f1_1.jpg</a></span><span class="file-size">(3.84 МБ)</span>
+                          <input data-drupal-selector="edit-field-images-2-width" type="hidden" name="field_images[2][width]" value="4964">
+                          <input data-drupal-selector="edit-field-images-2-height" type="hidden" name="field_images[2][height]" value="3511">
+                          <input data-drupal-selector="edit-field-images-2-display" type="hidden" name="field_images[2][display]" value="1">
+                        </div>
+                      </td>
+                      <td class="tabledrag-hide" style="display: none;">
+                        <div class="js-form-item form-item js-form-type-select form-item-field-images-2--weight js-form-item-field-images-2--weight form-no-label">
+                          <label class="visually-hidden" for="edit-field-images-2-weight--7h-KUUhXaug">Вес нового файла</label>
+                          <select class="edit-field-images--h_trH13JIy8-weight form-select" id="edit-field-images-2-weight--7h-KUUhXaug" data-drupal-selector="edit-field-images-2-weight" name="field_images[2][_weight]">
+                            <option value="-4">-4</option>
+                            <option value="-3">-3</option>
+                            <option value="-2">-2</option>
+                            <option value="-1">-1</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2" selected="selected">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td>
+                        <input class="button js-form-submit form-submit" id="edit-field-images-2-remove-button--peIB1EhM7es" data-drupal-selector="edit-field-images-2-remove-button" formnovalidate="formnovalidate" type="submit" name="field_images_2_remove_button" value="Удалить" data-once="drupal-ajax">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="js-form-item form-item js-form-type-managed-file form-item-field-images-3 js-form-item-field-images-3">
+                  <label id="edit-field-images-3--jgj43oKyUz8--label" for="edit-field-images-3-upload--lBHFopLzlgo">Добавить новый файл</label>
+                  <div class="image-widget js-form-managed-file form-managed-file clearfix">
+                    <input class="js-form-file form-file" id="edit-field-images-3-upload--lBHFopLzlgo" accept="image/*" data-drupal-selector="edit-field-images-3-upload-lbhfoplzlgo" multiple="multiple" type="file" name="files[field_images_3][]" size="22" data-once="fileValidate auto-file-upload">
+                    <input class="js-hide button js-form-submit form-submit" id="edit-field-images-3-upload-button--wnw_oGn9bkw" data-drupal-selector="edit-field-images-3-upload-button" formnovalidate="formnovalidate" type="submit" name="field_images_3_upload_button" value="Закачать" data-once="drupal-ajax">
+                    <input data-drupal-selector="edit-field-images-3-weight" type="hidden" name="field_images[3][_weight]" value="3">
+                    <input data-drupal-selector="edit-field-images-3-fids" type="hidden" name="field_images[3][fids]">
+                    <input data-drupal-selector="edit-field-images-3-display" type="hidden" name="field_images[3][display]" value="1">
+                  </div>
+                  <div class="description" id="edit-field-images-3--jgj43oKyUz8--description">Это поле позволяет загрузить неограниченное количество файлов.<br>Ограничение <span>50 МБ</span>.<br>Допустимые типы: <span>png gif jpg jpeg</span>.</div>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="form__fileblock">
+            <div id="ajax-wrapper--2">
+              <div class="js-form-item form-item js-form-type-managed-file form-item-field-video-0 js-form-item-field-video-0">
+                <label id="edit-field-video-0--label" for="edit-field-video-0-upload">Видео</label>
+                <div class="js-form-managed-file form-managed-file" id="edit-field-video-0">
+                  <input class="js-form-file form-file" id="edit-field-video-0-upload" data-drupal-selector="edit-field-video-0-upload" type="file" name="files[field_video_0]" size="22" data-once="fileValidate auto-file-upload">
+                  <input class="js-hide button js-form-submit form-submit" id="edit-field-video-0-upload-button" data-drupal-selector="edit-field-video-0-upload-button" formnovalidate="formnovalidate" type="submit" name="field_video_0_upload_button" value="Закачать" data-once="drupal-ajax">
+                  <input data-drupal-selector="edit-field-video-0-fids" type="hidden" name="field_video[0][fids]">
+                  <input data-drupal-selector="edit-field-video-0-display" type="hidden" name="field_video[0][display]" value="1">
+                </div>
+                <div class="description" id="edit-field-video-0--description">Только один файл.<br>Ограничение 50 МБ.<br>Допустимые типы: mp4 mpeg4 mkw avi mov.</div>
               </div>
             </div>
           </div>
-          <label class="form__download">
-            <input id="file-loader" type="file"><span class="form__download-title">Перетащите файлы в эту область</span><span class="form__download-button">
-              <svg>
-                <use xlink:href="./img/sprites/sprite.svg#upload"></use>
-              </svg><span>Выберите файл</span></span>
-          </label>
+          <div class="form__fileblock">
+            <div id="ajax-wrapper--MxDe2VWVKb0">
+              <div class="js-form-item form-item js-form-type-managed-file form-item-field-video-0 js-form-item-field-video-0">
+                <label id="edit-field-video-0--ZSYeNgvEJL0--label" for="edit-field-video-0-upload---BpTvYGoAlM">Видео</label>
+                <div class="js-form-managed-file form-managed-file" id="edit-field-video-0--ZSYeNgvEJL0">
+                  <input data-drupal-selector="edit-field-video-0-fids" type="hidden" name="field_video[0][fids]" value="591"><span class="file file--mime-video-mp4 file--video" data-drupal-selector="edit-field-video-0-file-591-filename"><a href="/system/files/filefield_paths/video3_0.mp4" type="video/mp4">video3_0.mp4</a></span>
+                  <input data-drupal-selector="edit-field-video-0-display" type="hidden" name="field_video[0][display]" value="1">
+                  <input class="button js-form-submit form-submit" id="edit-field-video-0-remove-button--pVpHAYB1S-A" data-drupal-selector="edit-field-video-0-remove-button" formnovalidate="formnovalidate" type="submit" name="field_video_0_remove_button" value="Удалить" data-once="drupal-ajax">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <button class="form__submit" type="submit">отправить</button>
         <div class="form__success">

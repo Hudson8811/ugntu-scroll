@@ -120,20 +120,17 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   }
   /* Photo uploader */
 
+  /*if (document.querySelector('#file-loader')) {
+      document.querySelector('#file-loader').addEventListener('change', function () {
+          var splittedFakePath = this.value.split('\\');
+            var elem = $('.form__files-item').first().clone(true);
+          elem.find('span').text(splittedFakePath[splittedFakePath.length - 1]);
+          elem.appendTo('.form__files').css('display', 'flex');
+      });
+  }*/
 
-  if (document.querySelector('#file-loader')) {
-    document.querySelector('#file-loader').addEventListener('change', function () {
-      var splittedFakePath = this.value.split('\\');
-      var elem = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form__files-item').first().clone(true);
-      elem.find('span').text(splittedFakePath[splittedFakePath.length - 1]);
-      elem.appendTo('.form__files').css('display', 'flex');
-    });
-  }
-
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form__files-item-remove').on('click', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.form__files-item').remove();
-  });
   /* Show congratulation form */
+
 
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-congrat').on('click', function (e) {
     e.preventDefault();
