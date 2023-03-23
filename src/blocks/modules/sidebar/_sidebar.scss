@@ -393,6 +393,7 @@
 		overflow: auto;
 		@include max(md){
 			padding-left: 0;
+			height: 100vh;
 			padding-top: vw2(71);
 			flex-direction: column-reverse;
 		}
@@ -405,7 +406,10 @@
 			border-left: 1px solid rgba(0, 0, 0, 0.2);
 			padding-bottom: vw(195);
 			@include max(md){
-				padding-bottom: vw2(318);
+				position: absolute;
+				top: 82px;
+				width: 100vw;
+				padding-bottom: 0;
 				border-top: 1px solid rgba(0, 0, 0, 0.2);
 				border-left: 0;
 			}

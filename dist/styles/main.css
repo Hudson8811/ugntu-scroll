@@ -4407,6 +4407,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .sidebar__global {
     padding-left: 0;
+    height: 100vh;
     padding-top: 9.2447916667vw;
     flex-direction: column-reverse;
   }
@@ -4424,7 +4425,10 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .sidebar__global-items {
-    padding-bottom: 41.40625vw;
+    position: absolute;
+    top: 82px;
+    width: 100vw;
+    padding-bottom: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     border-left: 0;
   }
