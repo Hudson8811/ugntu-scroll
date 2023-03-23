@@ -123,7 +123,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   /*if (document.querySelector('#file-loader')) {
       document.querySelector('#file-loader').addEventListener('change', function () {
           var splittedFakePath = this.value.split('\\');
-            var elem = $('.form__files-item').first().clone(true);
+           var elem = $('.form__files-item').first().clone(true);
           elem.find('span').text(splittedFakePath[splittedFakePath.length - 1]);
           elem.appendTo('.form__files').css('display', 'flex');
       });
@@ -717,6 +717,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var isotope_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! isotope-layout */ "./node_modules/isotope-layout/js/isotope.js");
+/* harmony import */ var isotope_layout__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(isotope_layout__WEBPACK_IMPORTED_MODULE_1__);
+
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.sidebar__burger').on('click', function () {
@@ -747,7 +750,32 @@ function getDropdownPositon() {
     var fromTopMenu = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.sidebar__menu').offset().top;
     element.css('top', -1 * (fromTop - fromTopMenu - menuPadding - 1));
   }
-}
+} // $('.list-block__grid').isotope({
+//   // options...
+//   itemSelector: '.list-block__item',
+//   masonry: {
+//     columnWidth: 200
+//   }
+// });
+
+
+var grid = document.querySelector('.grid');
+var iso = new (isotope_layout__WEBPACK_IMPORTED_MODULE_1___default())(grid, {
+  itemSelector: '.card-person',
+  percentPosition: true,
+  masonry: {
+    columnWidth: ".card-person",
+    gutter: 20
+  }
+}); // $('.grid').isotope({
+//   // set itemSelector so .grid-sizer is not used in layout
+//   itemSelector: '.card-person',
+//   percentPosition: true,
+//   masonry: {
+//     // use element for option
+//     columnWidth: '.grid-sizer'
+//   }
+// })
 
 /***/ }),
 

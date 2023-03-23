@@ -10211,9 +10211,9 @@ summary {
 .card-person {
   display: flex;
   flex-direction: column;
-  min-height: 706px;
   background-color: #ffffff;
   position: relative;
+  margin-top: 20px;
 }
 @media only screen and (max-width: 1279px) {
   .card-person {
@@ -10240,26 +10240,15 @@ summary {
   }
 }
 .card-person__image {
-  height: 0;
-  padding-top: 61%;
+  height: auto;
   overflow: hidden;
   position: relative;
-}
-@media only screen and (max-width: 1279px) {
-  .card-person__image {
-    padding-top: 70%;
-  }
-}
-@media only screen and (max-width: 1023px) {
-  .card-person__image {
-    padding-top: 61%;
-  }
 }
 .card-person__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: absolute;
+  position: relative;
   inset: 0;
   transition: 0.3s ease;
 }
@@ -10334,9 +10323,16 @@ summary {
   background-position: 51% center;
   background-repeat: no-repeat;
   background-size: 10px auto;
+  margin-top: 84px;
+}
+@media only screen and (max-width: 1100px) {
+  .card-person__button {
+    margin-top: 42px;
+  }
 }
 @media only screen and (max-width: 699px) {
   .card-person__button {
+    margin-top: 21px;
     background-size: 6px auto;
   }
 }
@@ -10652,6 +10648,7 @@ summary {
 .list-block__sort-block {
   background: #f7f7f7;
   padding-top: 80px;
+  margin-bottom: 14px;
 }
 @media only screen and (max-width: 1279px) {
   .list-block__sort-block {
