@@ -4983,6 +4983,9 @@ summary {
 .form__fileblock .tabledrag-toggle-weight-wrapper {
   display: none;
 }
+.form__fileblock a.tabledrag-handle {
+  display: none;
+}
 .form__fileblock table thead {
   display: none;
 }
