@@ -1,0 +1,46 @@
+extends ../layouts/default
+
+block variables
+	- const title = "1970-1978"
+	- var sidebarActive = 1970
+
+block head
+	include ../../blocks/modules/overlay/overlayStyle
+block content
+	.fullPageOverlay.fullPageOverlay--white.active
+	.wrapper
+		include ../../blocks/modules/sidebar/sidebar
+		.scroll-page.y1970
+			.y4-1#year1970
+				.y4-1__text.y4-1__text--1.textBlock
+					!="Ректором института назначен доктор технических наук, профессор Загидулла Исхакович Сюняев." 
+				.y4-1__year.yearConner 1970
+				.y4-1__bg
+					.y4-1__bg--1
+						img(src="img/s1-bg.png" alt="")
+					.y4-1__man
+						picture
+							img(src="img/s1-1.png" alt="")
+					.y4-1__title.y4-1__title--1.blockTitle
+						span  Загидулла
+						span  
+							!="Исхакович <br> Сюняев"
+			.y4-2#year1971
+				.y4-2__text.y4-2__text--1.textBlock
+					!="За активное участие в студенческом строительном движении студент Х.Г. Нагуманов награжден медалью." 
+				.y4-2__year.yearConner 1971
+				.y4-2__bg
+					.y4-2__bg--1
+						img(src="img/y4-2__bg.png" alt="")
+					.y4-2__man
+						picture
+							img(src="img/s1-1.png" alt="")
+					.y4-2__title.y4-2__title--1.blockTitle
+						span  За трудовое 
+						span  
+							!="отличие"
+			
+
+
+block scripts
+

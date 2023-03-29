@@ -34,13 +34,6 @@ function getDropdownPositon(){
         element.css('top', -1 * (fromTop - fromTopMenu - menuPadding - 1))
     }
 }
-// $('.list-block__grid').isotope({
-//   // options...
-//   itemSelector: '.list-block__item',
-//   masonry: {
-//     columnWidth: 200
-//   }
-// });
 var grid = document.querySelector('.grid');
 var iso = new Isotope( grid, {
 	itemSelector: '.card-person',
@@ -50,12 +43,3 @@ var iso = new Isotope( grid, {
 		gutter: 20,
 	}
 });
-// $('.grid').isotope({
-//   // set itemSelector so .grid-sizer is not used in layout
-//   itemSelector: '.card-person',
-//   percentPosition: true,
-//   masonry: {
-//     // use element for option
-//     columnWidth: '.grid-sizer'
-//   }
-// })

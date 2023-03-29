@@ -25,6 +25,10 @@ $(window).on('load',function (){
     {
         require("./years/_y1960");
     }
+    else if ($('.y1970').length > 0)
+    {
+        require("./years/_y1970");
+    }
     else {
         $('body').addClass('active');
     }
