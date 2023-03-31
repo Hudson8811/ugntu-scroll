@@ -28,20 +28,13 @@ let yValue = urlParams.get('y');
 function initAnimation(){
 
 	scWidth =  $('.scroll-page').innerWidth();
-	b1Width =  $('.y3-4').innerWidth();
-	b2Width =  $('.y3-5').innerWidth();
-	b3Width =  $('.y3-6').innerWidth();
-	b4Width =  $('.y3-7').innerWidth();
-	b5Width =  $('.y3-8').innerWidth();
+	b1Width =  $('.y4-1').innerWidth();
+	b2Width =  $('.y4-2').innerWidth();
+
 
 	scHeight =  $('.scroll-page').innerHeight();
-	b1Height =  $('.y3-4').innerHeight();
-	b2Height =  $('.y3-5').innerHeight();
-	b3Height =  $('.y3-6').innerHeight();
-	b4Height =  $('.y3-7').innerHeight();
-	b5Height =  $('.y3-8').innerHeight();
-	b6Height =  $('.y3-2').innerHeight();
-	b7Height =  $('.y3-3').innerHeight();
+	b1Height =  $('.y4-1').innerHeight();
+	b2Height =  $('.y4-2').innerHeight();
 
 	if (window.innerWidth > 1100){
 			initScrollAnimationDesktop();
@@ -117,13 +110,91 @@ tl1.addLabel('1971');
 
 
 
-tl1.fromTo(".y4-2", {
-		y: "0",
+// tl1.fromTo(".y4-2", {
+// 		y: "0",
+// }, {
+// 		y: -1*(b2Height-scHeight),
+// 		duration: Math.abs((scHeight-b2Height)/460),
+// 		ease: "none",
+// } , ">");
+
+tl1.fromTo(".y4-2__title--1 span:nth-child(1)", {
+	x: '-90vw',
+	y: '30vh'
 }, {
-		y: -1*(b6Height-scHeight),
-		duration: Math.abs((scHeight-b6Height)/460),
+	x: '130vw',
+	duration:  1,
+	ease: "none",
+} , ">-0.3");
+tl1.fromTo(".y4-2__title--1 span:nth-child(2)", {
+	x: '100vw',
+	y: '50vh'
+}, {
+	x: '-130vw',
+	duration:  1,
+	ease: "none",
+} , ">-0.8");
+
+tl1.fromTo(".y4-2", {
+		y: "0vh",
+}, {
+		y: "-190vh",
+		duration:  1,
 		ease: "none",
 } , ">");
+tl1.fromTo(".y4-3__text--2", {
+		opacity: 1,
+}, {
+		opacity: 0.1,
+		duration:  1,
+		ease: "none",
+} , ">");
+tl1.fromTo(".y4-3__2", {
+		opacity: 0,
+}, {
+		opacity: 1,
+		duration:  1,
+		ease: "none",
+} , "<");
+tl1.fromTo(".y4-3__1", {
+		opacity: 0,
+}, {
+		opacity: 1,
+		duration:  1,
+		ease: "none",
+} , ">");
+tl1.fromTo(".y4-3__text--1", {
+		opacity: 0,
+}, {
+		opacity: 1,
+		duration:  1,
+		ease: "none",
+} , "<");
+tl1.fromTo(".y4-4", {
+	y: "0vh",
+	x: "100vw"
+}, {
+	y: "0vh",
+	x: "0vw",
+	duration:  1,
+	ease: "none",
+} , ">");
+tl1.fromTo(".y4-5", {
+	y: "0vh",
+	x: "100vw"
+}, {
+	y: "0vh",
+	x: "-104vw",
+	duration:  1,
+	ease: "none",
+} , ">");
+tl1.fromTo(".y4-5__3", {
+	x: "vw"
+}, {
+	x: "100vw",
+	duration:  2,
+	ease: "none",
+} , "<");
 
 	
 
@@ -133,7 +204,7 @@ tl1.fromTo(".y4-2", {
 			pin: true,
 			start: "top top",
 			end: () =>   "+="+addTime+"%",
-			scrub: 2.5,
+			scrub: 1,
 			animation: tl1,
 	});
 }
