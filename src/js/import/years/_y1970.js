@@ -189,12 +189,26 @@ tl1.fromTo(".y4-5", {
 	ease: "none",
 } , ">");
 tl1.fromTo(".y4-5__3", {
-	x: "vw"
+	x: "5vw"
 }, {
-	x: "100vw",
+	x: "70vw",
 	duration:  2,
 	ease: "none",
 } , "<");
+// tl1.fromTo(".y4-5__4", {
+// 	x: "70vw"
+// }, {
+// 	x: "100vw",
+// 	duration:  1,
+// 	ease: "none",
+// } , ">");
+// tl1.fromTo(".y4-5__text--1", {
+// 	x: "70vw"
+// }, {
+// 	x: "100vw",
+// 	duration:  1,
+// 	ease: "none",
+// } , "<");
 
 	
 
