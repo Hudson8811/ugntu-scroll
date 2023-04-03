@@ -8,7 +8,7 @@ gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollToPlugin);
 
 var initMode;
-let addTime = 1000;
+let addTime = 2000;
 
 
 let st1;
@@ -303,24 +303,30 @@ tl1.fromTo(".y4-9__3", {
 	duration:  0.8,
 	ease: "none",
 } , ">-=0.8");
+
+
+
+tl1.addLabel('1974');
+
+
 tl1.fromTo(".y4-10__blockOverlay", {
 	opacity: 0,
 	// x: "150vw"
 }, {
-	opacity: 0.8,
+	opacity: 0.6,
 	// x: "150vw",
-	duration:  1,
+	duration:  0.4,
 	ease: "none",
-} , ">-=0.6");
+} , ">-=0.2");
 tl1.fromTo(".y4-10", {
 	y: "0vh",
 	x: "150vw"
 }, {
 	y: "0vh",
-	x: "-54vw",
+	x: "-354vw",
 	duration:  1.2,
 	ease: "none",
-} , ">-=0.8");
+} , ">-=0.1");
 tl1.fromTo(".y4-10__1", {
 	y: "0vh",
 	x: "75vw"
@@ -335,10 +341,10 @@ tl1.fromTo(".y4-10__title--1 span:nth-child(1)", {
 	x: "0vw"
 }, {
 	y: "30vh",
-	x: "80vw",
-	duration:  1,
+	x: "120vw",
+	duration:  0.9,
 	ease: "none",
-} , "<+=0.4");
+} , "<+=0.1");
 tl1.fromTo(".y4-10__title--1 span:nth-child(2)", {
 	y: "50vh",
 	x: "75vw"
@@ -348,9 +354,167 @@ tl1.fromTo(".y4-10__title--1 span:nth-child(2)", {
 	duration:  1,
 	ease: "none",
 } , "<+=0.1");
+tl1.fromTo(".y4-12__2", {
+	// y: "50vh",
+	x: "85vw"
+}, {
+	// y: "50vh",
+	x: "70vw",
+	duration:  0.3,
+	ease: "none",
+} , ">-=0.2");
 
 
+tl1.addLabel('1975');
 
+
+tl1.fromTo(".y4-13__blockOverlay", {
+	opacity: 0,
+	// x: "150vw"
+}, {
+	opacity: 0.6,
+	// x: "150vw",
+	duration:  0.4,
+	ease: "none",
+} , ">-=0.1");
+tl1.fromTo(".y4-13", {
+	y: "0vh",
+	x: "120vw"
+}, {
+	y: "0vh",
+	x: "-174vw",
+	duration:  1.2,
+	ease: "none",
+} , ">-=0.2");
+tl1.fromTo(".y4-14__2", {
+	y: "0vh",
+	x: "100vw"
+}, {
+	y: "0vh",
+	x: "60vw",
+	duration:  0.5,
+	ease: "none",
+} , ">-=0.4");
+
+tl1.addLabel('1976');
+
+
+tl1.fromTo(".y4-15__blockOverlay", {
+	opacity: 0,
+	// x: "150vw"
+}, {
+	opacity: 0.6,
+	// x: "150vw",
+	duration:  0.4,
+	ease: "none",
+} , ">-=0.1");
+tl1.fromTo(".y4-15", {
+	y: "0vh",
+	x: "160vw"
+}, {
+	y: "0vh",
+	x: "-64vw",
+	duration:  1.2,
+	ease: "none",
+} , ">-=0.1");
+tl1.fromTo(".y4-15__1", {
+	// y: "10vh",
+	x: "0vw"
+}, {
+	// y: "0vh",
+	x: "65vw",
+	duration:  1,
+	ease: "none",
+} , "<+=0.15");
+tl1.fromTo(".y4-15__title--1 span:nth-child(1)", {
+	y: "15vh",
+	x: "-2vw"
+}, {
+	y: "15vh",
+	x: "85vw",
+	duration:  1,
+	ease: "none",
+} , "<");
+tl1.fromTo(".y4-15__title--1 span:nth-child(2)", {
+	y: "35vh",
+	x: "0vw"
+}, {
+	y: "35vh",
+	x: "65vw",
+	duration:  1,
+	ease: "none",
+} , "<");
+tl1.fromTo(".y4-15__title--1 span:nth-child(3)", {
+	y: "55vh",
+	x: "20vw"
+}, {
+	y: "55vh",
+	x: "65vw",
+	duration:  1,
+	ease: "none",
+} , "<");
+
+tl1.addLabel('1977');
+
+
+tl1.fromTo(".y4-16__blockOverlay", {
+	opacity: 0,
+	// x: "150vw"
+}, {
+	opacity: 0.6,
+	// x: "150vw",
+	duration:  0.4,
+	ease: "none",
+} , ">");
+
+tl1.fromTo(".y4-16", {
+	y: "0vh",
+	x: "200vw"
+}, {
+	y: "0vh",
+	x: "-104vw",
+	duration:  1.2,
+	ease: "none",
+} , ">-=0.1");
+tl1.fromTo(".y4-16__2", {
+	// y: "0vh",
+	x: "40vw"
+}, {
+	// y: "0vh",
+	x: "100vw",
+	duration:  1.2,
+	ease: "none",
+} , "<");
+
+tl1.addLabel('1978');
+
+tl1.fromTo(".y4-17__blockOverlay", {
+	opacity: 0,
+	// x: "150vw"
+}, {
+	opacity: 0.6,
+	// x: "150vw",
+	duration:  0.2,
+	ease: "none",
+} , ">");
+tl1.fromTo(".y4-17", {
+	y: "0vh",
+	x: "160vw"
+}, {
+	y: "0vh",
+	x: "-64vw",
+	duration:  1.2,
+	ease: "none",
+} , ">-=0.1");
+tl1.fromTo(".y4-17__bg--1", {
+	y: "0vh",
+	// x: "160vw"
+}, {
+	y: "-50vh",
+	// x: "-64vw",
+	duration:  1.2,
+	ease: "none",
+} , "<");
 
 
 

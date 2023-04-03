@@ -819,11 +819,12 @@
 	position: absolute;
 	top: 0;
 	// left: 100vw;
-	width: 150vw;
-	min-height: 100vh;
+	width: 450vw;
+	height: 100vh;
 	z-index: 110;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
+	background: #FFFFFF;
 	&__blockOverlay {
 		position: absolute;
 		top: 0;
@@ -841,9 +842,9 @@
 		top: 0;
 		left: 0vw;
 		// overflow: hidden;
-		width: 100%;
+		width: 150vw;
 		height: 100vh;
-		background: #FFFFFF;
+		// background: #FFFFFF;
 		z-index: 1;
 		&--1 {
 			position: absolute;
@@ -851,14 +852,14 @@
 			left: 0;
 			width: 100%;
 			height: 100%;		
-			background: #FFFFFF;
+			// background: #FFFFFF;
 		}
 	}
 	&__1 {
 		position: absolute;
 		left: 0;
 		width: vw(795,1920);
-		bottom: vw(155,1920);
+		top: vw(117,1920);
 		z-index: 4;
 		img {
 			position: relative;
@@ -893,5 +894,609 @@
 			max-width: vw(537,1920);
 		}
 		
+	}
+}
+.y4-11 {
+	position: absolute;
+	top: 0;
+	left: 150vw;
+	width: 150vw;
+	min-height: 100vh;
+	z-index: 110;
+	will-change: transform, opacity, top;
+	transform-style: preserve-3d;
+	&__wrap {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100vh;
+		width: 2px;
+		z-index: 5;
+		padding-top: vw(50,1920);
+		padding-bottom: vw(50,1920);
+		&--line {
+			position: relative;
+			height: 100%;
+			width: 1px;
+			background: #000;
+		}
+	}
+
+	&__bg  {
+		position: absolute;
+		top: 0;
+		left: 0vw;
+		// overflow: hidden;
+		width: 100%;
+		height: 100vh;
+		background: #FFFFFF;
+		z-index: 1;
+		&--1 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;		
+			background: #FFFFFF;
+		}
+	}
+	
+	&__1 {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding-right: vw(56,1920);
+		width: vw(1313,1920);
+		height: 100vh;
+		padding-top: vw(56,1920);
+		padding-bottom: vw(56,1920);
+		z-index: 4;
+		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center bottom;
+		}	
+	}
+	&__year {
+		color: #404040;
+		z-index: 5;	
+		position: absolute;
+		right: vw(1417,1920);	
+	}
+	&__title {
+		color: #404040;
+		&--1 {
+			span {
+				position: absolute;
+				display: block;
+			}
+		}
+
+	}
+	&__text {
+		color: #404040;
+		&--1 {
+			position: absolute;
+			left: vw(52,1920);
+			bottom: vw(52,1920);
+			z-index: 12;
+			max-width: vw(658,1920);
+		}
+		&--2 {
+			position: absolute;
+			left: vw(1087,1920);
+			bottom: vw(56,1920);
+			z-index: 12;
+			max-width: vw(249,1920);			
+			width: vw(249,1920);			
+		}
+		
+	}
+}
+.y4-12 {
+	position: absolute;
+	top: 0;
+	left: 300vw;
+	width: 150vw;
+	min-height: 100vh;
+	z-index: 110;
+	will-change: transform, opacity, top;
+	transform-style: preserve-3d;
+	background: #FFFFFF;
+	&__bg  {
+		position: absolute;
+		top: 0;
+		left: 0vw;
+		// overflow: hidden;
+		width: 150vw;
+		height: 100vh;
+		z-index: 1;
+		&--1 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;		
+		}
+	}
+	&__1 {
+		position: absolute;
+		left: 0;
+		width: vw(1555,1920);
+		height: 100vh;
+		top: 0;
+		z-index: 4;
+		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center bottom;
+		}	
+	}
+	&__2 {
+		position: absolute;
+		left: 0;
+		width: vw(416,1920);
+		top: vw(103,1920);
+		z-index: 4;
+		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center bottom;
+		}	
+	}
+	&__year {
+		color: #404040;
+		z-index: 5;	
+		position: absolute;	
+	}
+	&__text {
+		color: #404040;
+		&--1 {
+			position: absolute;
+			left: vw(1607,1920);
+			bottom: vw(52,1920);
+			z-index: 12;
+			max-width: vw(537,1920);
+		}
+		
+	}
+}
+.y4-13 {
+	position: absolute;
+	top: 0;
+	// left: 150vw;
+	width: 300vw;
+	min-height: 100vh;
+	z-index: 112;
+	will-change: transform, opacity, top;
+	transform-style: preserve-3d;
+	background: #FFFFFF;
+	&__blockOverlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		min-height: 100vh;
+		opacity: 0;
+		z-index: 112;
+		will-change: transform, opacity, top;
+		transform-style: preserve-3d;
+	}
+	&__bg  {
+		position: absolute;
+		top: 0;
+		left: 0vw;
+		// overflow: hidden;
+		width: 150vw;
+		height: 100vh;
+		z-index: 1;
+		&--1 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			img {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center bottom;
+			}	
+		}
+	}
+	&__1 {
+		position: absolute;
+		left: 0;
+		width: vw(423,1920);
+		// height: 100vh;
+		top: vw(52,1920);
+		left: vw(74,1920);
+		z-index: 4;
+		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center bottom;
+		}	
+	}
+	&__year {
+		color: #fff;
+		z-index: 5;	
+		position: absolute;	
+	}
+	&__text {
+		color: #fff;
+		&--1 {
+			position: absolute;
+			top: vw(52,1920);
+			left: vw(545,1920);
+			z-index: 12;
+			max-width: vw(512,1920);
+		}
+		
+	}
+}
+.y4-14 {
+	position: absolute;
+	top: 0;
+	left: 150vw;
+	width: 120vw;
+	min-height: 100vh;
+	z-index: 112;
+	will-change: transform, opacity, top;
+	transform-style: preserve-3d;
+	background: #FFFFFF;
+	&__1 {
+		position: absolute;
+		right: 0;
+		width: vw(710,1920);
+		height: 100vh;
+		top: 0;
+		right: 0;
+		z-index: 4;
+		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center bottom;
+		}	
+	}
+	&__2{
+		position: absolute;
+		// left: 0;
+		width: vw(755,1920);
+		// height: 100vh;
+		bottom: vw(157,1920);
+		// left: vw(74,1920);
+		z-index: 4;
+		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center bottom;
+		}	
+	}
+	&__3{
+		position: absolute;
+		left: 0;
+		width: vw(582,1920);
+		// height: 100vh;
+		top: vw(52,1920);
+		left: vw(60,1920);
+		z-index: 4;
+		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center bottom;
+		}	
+	}
+	&__year {
+		color: #404040;
+		z-index: 5;	
+		position: absolute;	
+		right: vw(751,1920);
+	}
+	&__text {
+		color: #404040;
+		&--1 {
+			position: absolute;
+			bottom: vw(52,1920);
+			left: vw(52,1920);
+			z-index: 12;
+			max-width: vw(452,1920);
+		}
+		
+	}
+}
+.y4-15 {
+	position: absolute;
+	top: 0;
+	// left: 150vw;
+	width: 160vw;
+	min-height: 100vh;
+	z-index: 115;
+	will-change: transform, opacity, top;
+	transform-style: preserve-3d;
+	&__blockOverlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		min-height: 100vh;
+		opacity: 0;
+		z-index: 115;
+		will-change: transform, opacity, top;
+		transform-style: preserve-3d;
+	}
+	&__bg  {
+		position: absolute;
+		top: 0;
+		left: 0vw;
+		// overflow: hidden;
+		width: 170vw;
+		height: 100vh;
+		z-index: 1;
+		&--1 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			img {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center bottom;
+			}	
+		}
+	}
+	&__1 {
+		position: absolute;
+		left: 0;
+		width: vw(1837,1920);
+		bottom: 0;
+		// left: vw(74,1920);
+		z-index: 7;
+		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center bottom;
+		}	
+	}
+	&__year {
+		color: #404040;
+		z-index: 5;	
+		position: absolute;	
+	}
+	&__text {
+		color: #404040;
+		&--1 {
+			position: absolute;
+			bottom: vw(52,1920);
+			left: vw(52,1920);
+			z-index: 12;
+			max-width: vw(512,1920);
+		}
+		
+	}
+	&__title {
+		position: absolute;
+		color: #404040;
+		z-index: 5;
+		&--1 {
+			span {
+				position: absolute;
+				display: block;
+			}
+		}
+
+	}
+}
+.y4-16 {
+	position: absolute;
+	top: 0;
+	// left: 150vw;
+	width: 200vw;
+	min-height: 100vh;
+	z-index: 117;
+	will-change: transform, opacity, top;
+	transform-style: preserve-3d;
+	background: #003F78;
+	&__blockOverlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		min-height: 100vh;
+		opacity: 0;
+		z-index: 117;
+		will-change: transform, opacity, top;
+		transform-style: preserve-3d;
+	}
+	&__bg  {
+		position: absolute;
+		top: 0;
+		left: 0vw;
+		// overflow: hidden;
+		width: 170vw;
+		height: 100vh;
+		z-index: 1;
+		&--1 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			img {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center bottom;
+			}	
+		}
+	}
+	&__1 {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: vw(1436,1920);
+		bottom: 0;
+		height: 100vh;
+		z-index: 7;
+		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center bottom;
+		}	
+	}
+	&__2 {
+		position: absolute;
+		top: vh(125);
+		width: vw(872,1920);
+		z-index: 7;
+		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center bottom;
+		}	
+	}
+	&__3 {
+		position: absolute;
+		bottom: vh(130);
+		width: vw(966,1920);
+		right: vw(408,1920);
+		z-index: 8;
+		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center bottom;
+		}	
+	}
+	&__year {
+		color: #fff;
+		z-index: 5;	
+		position: absolute;	
+	}
+	&__text {
+		color: #fff;
+		&--1 {
+			position: absolute;
+			bottom: vw(52,1920);
+			left: vw(1492,1920);
+			z-index: 12;
+			max-width: vw(501,1920);
+		}
+		
+	}
+	&__title {
+		position: absolute;
+		color: #404040;
+		z-index: 5;
+		&--1 {
+			span {
+				position: absolute;
+				display: block;
+			}
+		}
+
+	}
+}
+.y4-17 {
+	position: absolute;
+	top: 0;
+	// left: 150vw;
+	width: 160vw;
+	height: 100vh;
+	z-index: 117;
+	will-change: transform, opacity, top;
+	transform-style: preserve-3d;
+	&__blockOverlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		min-height: 100vh;
+		opacity: 0;
+		z-index: 117;
+		will-change: transform, opacity, top;
+		transform-style: preserve-3d;
+	}
+	&__bg  {
+		position: absolute;
+		top: 0;
+		left: 0vw;
+		// overflow: hidden;
+		width: 160vw;
+		height: 150vh;
+		z-index: 1;
+		&--1 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 150%;
+			img {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center bottom;
+			}	
+		}
+	}
+	&__year {
+		color: #fff;
+		z-index: 5;	
+		position: absolute;	
+	}
+	&__text {
+		color: #fff;
+		&--1 {
+			position: absolute;
+			top: vw(52,1920);
+			left: vw(52,1920);
+			z-index: 12;
+			max-width: vw(512,1920);
+		}
+		
+	}
+	&__title {
+		position: absolute;
+		color: #fff;
+		z-index: 5;
+		left: vw(52,1920);
+		bottom: vh(52,1920);
+		&--1 {
+			span {
+				position: absolute;
+				display: block;
+				b {
+					font-size: vw(550,1920);
+				}
+			}
+		}
+
 	}
 }
