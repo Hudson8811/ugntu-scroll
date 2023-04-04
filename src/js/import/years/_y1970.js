@@ -196,16 +196,16 @@ tl1.fromTo(".y4-5__3", {
 	ease: "none",
 } , "<");
 tl1.fromTo(".y4-5__4", {
-	x: "60vw"
+	x: "65vw"
 }, {
-	x: "145vw",
+	x: "150vw",
 	duration:  1,
 	ease: "none",
-} , "<");
+} , "<+=0.2");
 tl1.fromTo(".y4-5__text--1", {
-	x: "60vw"
+	x: "65vw"
 }, {
-	x: "145vw",
+	x: "150vw",
 	duration:  1,
 	ease: "none",
 } , "<");
@@ -499,10 +499,10 @@ tl1.fromTo(".y4-17__blockOverlay", {
 } , ">");
 tl1.fromTo(".y4-17", {
 	y: "0vh",
-	x: "160vw"
+	x: "140vw"
 }, {
 	y: "0vh",
-	x: "-64vw",
+	x: "-44vw",
 	duration:  1.2,
 	ease: "none",
 } , ">-=0.1");

@@ -132,8 +132,8 @@
 	}
 	&__2 {
 		position: absolute;
-		top: vh(150,1279);
-		left: vw(319,1920);
+		top: vh(150);
+		left: vw(228,1920);
 		width: vw(584,1920);
 		height: vw(747,1920);	
 		img {
@@ -455,7 +455,7 @@
 	}
 	&__4 {
 		position: absolute;
-		bottom: vw(452,1920);
+		bottom: vh(452);
 		// right: vw(425,1920);
 		width: 100%;
 		max-width: vw(500,1920);
@@ -489,7 +489,7 @@
 		&--1 {
 			position: absolute;
 			// right: vw(425,1920);
-			bottom: vw(87,1920);
+			bottom: vh(87);
 			z-index: 12;
 			max-width: vw(500,1920);
 		}
@@ -859,7 +859,7 @@
 		position: absolute;
 		left: 0;
 		width: vw(795,1920);
-		top: vw(117,1920);
+		top: vh(117);
 		z-index: 4;
 		img {
 			position: relative;
@@ -1427,7 +1427,7 @@
 	position: absolute;
 	top: 0;
 	// left: 150vw;
-	width: 160vw;
+	width: 140vw;
 	height: 100vh;
 	z-index: 117;
 	will-change: transform, opacity, top;
@@ -1448,21 +1448,21 @@
 		top: 0;
 		left: 0vw;
 		// overflow: hidden;
-		width: 160vw;
-		height: 150vh;
+		width: 140vw;
+		height: 130vh;
 		z-index: 1;
 		&--1 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 150%;
+			height: 120%;
 			img {
 				position: relative;
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
-				object-position: center bottom;
+				object-position: center top;
 			}	
 		}
 	}
@@ -1487,13 +1487,18 @@
 		color: #fff;
 		z-index: 5;
 		left: vw(52,1920);
-		bottom: vh(52,1920);
+		bottom: vh(80);
 		&--1 {
 			span {
 				position: absolute;
 				display: block;
-				b {
+				&:first-child {
 					font-size: vw(550,1920);
+					bottom: vh(100);
+				}
+				&:nth-child(2) {
+					left: vw(994,1920);
+					bottom: vh(-30);
 				}
 			}
 		}
