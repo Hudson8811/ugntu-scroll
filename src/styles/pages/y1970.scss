@@ -85,9 +85,9 @@
 		color: #FFFFFF;
 		&--1 {
 			position: absolute;
-			left: 5vw;
+			left: vw(52,1920);
 			z-index: 5;
-			max-width: 400px;
+			max-width:  vw(400,1920);
 		}
 		
 	}
@@ -121,6 +121,7 @@
 			top: 0;
 			left: 0;
 			width: 100vw;
+			height: 120vh;
 			img {
 				position: relative;
 				width: 100%;
@@ -200,7 +201,7 @@
 			top: 0;
 			left: 0;
 			width: 100vw;
-			
+			height: 100vh;
 			background: #FFFFFF;
 			img {
 				position: relative;
@@ -325,16 +326,18 @@
 		&--1 {
 			position: absolute;
 			left: vw(61,1920);
-			top: vw(552,1920);
+			top: vh(552);
+			padding-right: vw(15,1920);
 			z-index: 10;
 			max-width: vw(447,1920);
 		}
 		&--2 {
 			position: absolute;
 			left: vw(508,1920);
-			top: vw(552,1920);
+			top: vh(552);
 			z-index: 5;
-			max-width: vw(702,1920);
+			padding-right: vw(15,1920);
+			max-width: vw(650,1920);
 		}
 		&--3 {
 			position: absolute;

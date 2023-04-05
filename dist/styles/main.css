@@ -9426,9 +9426,9 @@ summary {
 }
 .y4-1__text--1 {
   position: absolute;
-  left: 5vw;
+  left: 2.7083333333vw;
   z-index: 5;
-  max-width: 400px;
+  max-width: 20.8333333333vw;
 }
 
 .y4-2 {
@@ -9460,6 +9460,7 @@ summary {
   top: 0;
   left: 0;
   width: 100vw;
+  height: 120vh;
 }
 .y4-2__bg--1 img {
   position: relative;
@@ -9533,6 +9534,7 @@ summary {
   top: 0;
   left: 0;
   width: 100vw;
+  height: 100vh;
   background: #FFFFFF;
 }
 .y4-3__bg--1 img {
@@ -9652,16 +9654,18 @@ summary {
 .y4-4__text--1 {
   position: absolute;
   left: 3.1770833333vw;
-  top: 28.75vw;
+  top: 51.1111111111vh;
+  padding-right: 0.78125vw;
   z-index: 10;
   max-width: 23.28125vw;
 }
 .y4-4__text--2 {
   position: absolute;
   left: 26.4583333333vw;
-  top: 28.75vw;
+  top: 51.1111111111vh;
   z-index: 5;
-  max-width: 36.5625vw;
+  padding-right: 0.78125vw;
+  max-width: 33.8541666667vw;
 }
 .y4-4__text--3 {
   position: absolute;
