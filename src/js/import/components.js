@@ -59,11 +59,6 @@ $(document).ready(function (){
                 $('.e-filter .swiper').removeClass('end');
             }
         });
-
-        $('.e-filter__item').on('click',function (){
-            $('.e-filter__item').removeClass('active');
-            $(this).addClass('active');
-        });
     }
 
 
