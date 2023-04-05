@@ -67,10 +67,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         jquery__WEBPACK_IMPORTED_MODULE_0___default()('.e-filter .swiper').removeClass('end');
       }
     });
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.e-filter__item').on('click', function () {
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.e-filter__item').removeClass('active');
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
-    });
   }
 
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.sidebar__menu-item > a').on('click', function () {
