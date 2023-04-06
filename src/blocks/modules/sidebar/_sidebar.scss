@@ -221,6 +221,28 @@
 			background: #FFFFFF;
 			border-left: 1px solid rgba(0, 0, 0, 0.2);
 			display: none;
+			&--fixed {
+				position: fixed;
+				bottom: 0;
+				top: auto;
+				left: vw(90);
+				height: 100%;
+				align-items: flex-end;
+				justify-content: flex-end;
+				background: transparent;
+				// max-height: vh(20);
+				@include max(md){
+					position: absolute;
+					background: #FFFFFF;
+					top: 100%;
+					left: vw2(-10);
+					bottom: auto;
+					align-items: flex-start;
+					flex-direction: row;
+					border-left: 0;
+					padding-top: vw2(10);
+				}
+			}
 			@include max(md){
 				top: 100%;
 				left: vw2(-10);

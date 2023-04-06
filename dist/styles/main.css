@@ -4222,6 +4222,29 @@ summary {
   border-left: 1px solid rgba(0, 0, 0, 0.2);
   display: none;
 }
+.sidebar__menu-dropdown--fixed {
+  position: fixed;
+  bottom: 0;
+  top: auto;
+  left: 4.4776119403vw;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background: transparent;
+}
+@media only screen and (max-width: 1100px) {
+  .sidebar__menu-dropdown--fixed {
+    position: absolute;
+    background: #FFFFFF;
+    top: 100%;
+    left: -1.3020833333vw;
+    bottom: auto;
+    align-items: flex-start;
+    flex-direction: row;
+    border-left: 0;
+    padding-top: 1.3020833333vw;
+  }
+}
 @media only screen and (max-width: 1100px) {
   .sidebar__menu-dropdown {
     top: 100%;
@@ -9353,6 +9376,125 @@ summary {
     padding-top: 15vw;
   }
 }
+@media only screen and (max-width: 1100px) {
+  .y1970 .yearConner {
+    font-size: 11.875vw;
+    margin-left: 5vw;
+    padding-bottom: 26.25vw;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .y1970 .textBlock {
+    font-size: 4.375vw;
+    line-height: 121%;
+    bottom: auto;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .y1970 .blockTitle--desc {
+    display: none;
+  }
+}
+.y1970 .blockTitle--mob {
+  display: none;
+}
+@media only screen and (max-width: 1100px) {
+  .y1970 .blockTitle--mob {
+    display: flex;
+  }
+}
+
+.y4-100 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
+  z-index: 200;
+  will-change: transform, opacity, top;
+  transform-style: preserve-3d;
+  display: none;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-100 {
+    display: block;
+    position: relative;
+    height: 80vh;
+    padding-bottom: 17.5vw;
+    z-index: 11;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y4-100 {
+    position: relative;
+    height: auto;
+    padding-bottom: 17.5vw;
+  }
+}
+.y4-100__numbers {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 9;
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
+  background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
+}
+@media only screen and (max-width: 1100px) {
+  .y4-100__numbers {
+    transform: none;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y4-100__numbers {
+    position: relative;
+    top: 0;
+    transform: none;
+    padding: 2.5vw 5.625vw 0;
+  }
+}
+.y4-100__numbers-number {
+  font-weight: 300;
+  font-size: 52.9353233831vw;
+  line-height: 1.71;
+  letter-spacing: -0.07em;
+  padding-right: 0.07em;
+  background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
+  color: #fff;
+}
+@media only screen and (max-width: 699px) {
+  .y4-100__numbers-number {
+    color: #fff;
+  }
+}
+.y4-100__numbers-line {
+  width: 27.5124378109vw;
+  height: 2.9850746269vw;
+  background: linear-gradient(90.77deg, #FFFFFF 3.75%, rgba(255, 255, 255, 0) 106.75%);
+  margin-left: 6.2189054726vw;
+  margin-right: 1.3930348259vw;
+  background: #fff;
+}
+@media only screen and (max-width: 699px) {
+  .y4-100__numbers-line {
+    flex-shrink: 0;
+    background: #ffffff;
+    width: 10vw;
+    height: 2.5vw;
+    margin-left: 2.5vw;
+    margin-right: 0.9375vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y4-100__numbers-line {
+    background: #fff;
+  }
+}
 
 .y4-1 {
   position: absolute;
@@ -9365,6 +9507,21 @@ summary {
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
 }
+@media only screen and (max-width: 1100px) {
+  .y4-1 {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+    height: auto;
+    background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
+  }
+}
+.y4-1 .blockTitle--mob {
+  order: 3;
+}
 .y4-1__bg {
   position: absolute;
   top: 0;
@@ -9373,6 +9530,13 @@ summary {
   width: 100vw;
   height: 140vh;
   background-color: #FFFFFF;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-1__bg {
+    position: relative;
+    height: 100vh;
+    order: 1;
+  }
 }
 .y4-1__bg img {
   position: relative;
@@ -9402,6 +9566,11 @@ summary {
   width: 100vw;
   height: 100vh;
 }
+@media only screen and (max-width: 1100px) {
+  .y4-1__man {
+    bottom: -10vh;
+  }
+}
 .y4-1__man img {
   position: relative;
   width: 100%;
@@ -9409,26 +9578,81 @@ summary {
   object-fit: contain;
   object-position: center bottom;
 }
+@media only screen and (max-width: 1100px) {
+  .y4-1__man img {
+    object-fit: cover;
+  }
+}
 .y4-1__title {
   color: #FFFFFF;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-1__title {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 5vw;
+  }
 }
 .y4-1__title--1 span {
   position: absolute;
   display: block;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-1__title--1 span {
+    position: relative;
+  }
 }
 .y4-1__year {
   color: #FFFFFF;
   z-index: 1;
   position: absolute;
 }
+@media only screen and (max-width: 1100px) {
+  .y4-1__year {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    order: 2;
+    margin-left: 5vw;
+  }
+}
 .y4-1__text {
   color: #FFFFFF;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-1__text {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    order: 4;
+  }
 }
 .y4-1__text--1 {
   position: absolute;
   left: 2.7083333333vw;
   z-index: 5;
   max-width: 20.8333333333vw;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-1__text--1 {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 70.9375vw;
+    margin-top: 3.4375vw;
+    margin-left: 5vw;
+    margin-bottom: 5vh;
+    left: 0;
+  }
 }
 
 .y4-2 {
@@ -9441,12 +9665,41 @@ summary {
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
 }
+@media only screen and (max-width: 1100px) {
+  .y4-2 {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+    height: auto;
+    background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
+    z-index: 10;
+  }
+}
+.y4-2 .blockTitle--mob {
+  order: 3;
+}
 .y4-2__bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-2__bg {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100vw;
+    height: auto;
+    order: 1;
+    background: #321A1E;
+  }
 }
 .y4-2__bg img {
   position: relative;
@@ -9462,6 +9715,11 @@ summary {
   width: 100vw;
   height: 120vh;
 }
+@media only screen and (max-width: 1100px) {
+  .y4-2__bg--1 {
+    display: none;
+  }
+}
 .y4-2__bg--1 img {
   position: relative;
   width: 100%;
@@ -9476,6 +9734,21 @@ summary {
   width: 30.4166666667vw;
   height: 38.90625vw;
 }
+@media only screen and (max-width: 1100px) {
+  .y4-2__2 {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    left: 0;
+    top: 0;
+    margin-top: 12.1875vw;
+    margin-bottom: 12.1875vw;
+  }
+}
 .y4-2__2 img {
   position: relative;
   width: 100%;
@@ -9486,17 +9759,53 @@ summary {
 .y4-2__title {
   color: #FFFFFF;
 }
+@media only screen and (max-width: 1100px) {
+  .y4-2__title {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 5vw;
+  }
+}
 .y4-2__title--1 span {
   position: absolute;
   display: block;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-2__title--1 span {
+    position: relative;
+  }
 }
 .y4-2__year {
   color: #FFFFFF;
   z-index: 5;
   position: absolute;
 }
+@media only screen and (max-width: 1100px) {
+  .y4-2__year {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    order: 2;
+    margin-left: 5vw;
+  }
+}
 .y4-2__text {
   color: #FFFFFF;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-2__text {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    order: 4;
+  }
 }
 .y4-2__text--1 {
   position: absolute;
@@ -9504,6 +9813,20 @@ summary {
   bottom: 9.4605160281vh;
   z-index: 5;
   max-width: 23.3854166667vw;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-2__text--1 {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 70.9375vw;
+    margin-top: 3.4375vw;
+    margin-left: 5vw;
+    margin-bottom: 5vh;
+    left: 0;
+  }
 }
 
 .y4-3 {
@@ -9515,6 +9838,18 @@ summary {
   z-index: 98;
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-3 {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+    height: auto;
+    background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
+  }
 }
 .y4-3__bg {
   position: absolute;
@@ -9614,6 +9949,11 @@ summary {
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
 }
+@media only screen and (max-width: 1100px) {
+  .y4-4 {
+    display: none;
+  }
+}
 .y4-4__bg {
   position: absolute;
   top: 0;
@@ -9710,6 +10050,11 @@ summary {
   z-index: 105;
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-5 {
+    display: none;
+  }
 }
 .y4-5__bg {
   position: absolute;
@@ -9832,6 +10177,11 @@ summary {
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
 }
+@media only screen and (max-width: 1100px) {
+  .y4-6 {
+    display: none;
+  }
+}
 .y4-6__bg {
   position: absolute;
   top: 0;
@@ -9902,6 +10252,11 @@ summary {
   z-index: 106;
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-7 {
+    display: none;
+  }
 }
 .y4-7__bg {
   position: absolute;
@@ -9978,6 +10333,11 @@ summary {
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
 }
+@media only screen and (max-width: 1100px) {
+  .y4-8 {
+    display: none;
+  }
+}
 .y4-8__blockOverlay {
   position: absolute;
   top: 0;
@@ -9988,6 +10348,11 @@ summary {
   z-index: 107;
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-8__blockOverlay {
+    display: none;
+  }
 }
 .y4-8__bg {
   position: absolute;
@@ -10046,6 +10411,11 @@ summary {
   z-index: 108;
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-9 {
+    display: none;
+  }
 }
 .y4-9__bg {
   position: absolute;
@@ -10137,6 +10507,11 @@ summary {
   transform-style: preserve-3d;
   background: #FFFFFF;
 }
+@media only screen and (max-width: 1100px) {
+  .y4-10 {
+    display: none;
+  }
+}
 .y4-10__blockOverlay {
   position: absolute;
   top: 0;
@@ -10148,6 +10523,11 @@ summary {
   background: #000;
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-10__blockOverlay {
+    display: none;
+  }
 }
 .y4-10__bg {
   position: absolute;
@@ -10210,6 +10590,11 @@ summary {
   z-index: 110;
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-11 {
+    display: none;
+  }
 }
 .y4-11__wrap {
   position: absolute;
@@ -10305,6 +10690,11 @@ summary {
   transform-style: preserve-3d;
   background: #FFFFFF;
 }
+@media only screen and (max-width: 1100px) {
+  .y4-12 {
+    display: none;
+  }
+}
 .y4-12__bg {
   position: absolute;
   top: 0;
@@ -10375,6 +10765,11 @@ summary {
   transform-style: preserve-3d;
   background: #FFFFFF;
 }
+@media only screen and (max-width: 1100px) {
+  .y4-13 {
+    display: none;
+  }
+}
 .y4-13__blockOverlay {
   position: absolute;
   top: 0;
@@ -10385,6 +10780,11 @@ summary {
   z-index: 112;
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-13__blockOverlay {
+    display: none;
+  }
 }
 .y4-13__bg {
   position: absolute;
@@ -10449,6 +10849,11 @@ summary {
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
   background: #FFFFFF;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-14 {
+    display: none;
+  }
 }
 .y4-14__1 {
   position: absolute;
@@ -10520,6 +10925,11 @@ summary {
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
 }
+@media only screen and (max-width: 1100px) {
+  .y4-15 {
+    display: none;
+  }
+}
 .y4-15__blockOverlay {
   position: absolute;
   top: 0;
@@ -10530,6 +10940,11 @@ summary {
   z-index: 115;
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-15__blockOverlay {
+    display: none;
+  }
 }
 .y4-15__bg {
   position: absolute;
@@ -10602,6 +11017,11 @@ summary {
   transform-style: preserve-3d;
   background: #003F78;
 }
+@media only screen and (max-width: 1100px) {
+  .y4-16 {
+    display: none;
+  }
+}
 .y4-16__blockOverlay {
   position: absolute;
   top: 0;
@@ -10612,6 +11032,11 @@ summary {
   z-index: 117;
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-16__blockOverlay {
+    display: none;
+  }
 }
 .y4-16__bg {
   position: absolute;
@@ -10712,6 +11137,11 @@ summary {
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
 }
+@media only screen and (max-width: 1100px) {
+  .y4-17 {
+    display: none;
+  }
+}
 .y4-17__blockOverlay {
   position: absolute;
   top: 0;
@@ -10722,6 +11152,11 @@ summary {
   z-index: 117;
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 1100px) {
+  .y4-17__blockOverlay {
+    display: none;
+  }
 }
 .y4-17__bg {
   position: absolute;
