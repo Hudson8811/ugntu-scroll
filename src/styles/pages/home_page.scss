@@ -1,27 +1,32 @@
-.home-page{
+.home-page {
 	width: 100%;
 	height: 100vh;
 	position: relative;
-	@include max(md){
+
+	@include max(md) {
 		padding-top: vw2(71);
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		height: auto;
 		padding-top: vw3(48);
 	}
 
 }
-.section1{
+
+.section1 {
 	position: absolute;
 	left: 0;
 	top: 0;
 	width: 100%;
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
 		height: calc(100vh - 15vw);
 		overflow: hidden;
 	}
-	&__title{
+
+	&__title {
 		width: vw(1844);
 		position: absolute;
 		left: 50%;
@@ -29,26 +34,31 @@
 		transform: translateX(-50%);
 		will-change: transform, opacity;
 		transform-style: preserve-3d;
-		@include max(md){
+
+		@include max(md) {
 			width: vw2(720);
 			top: vw2(88);
 		}
-		@include max(sm){
+
+		@include max(sm) {
 			width: vw3(282);
 			top: vw3(10);
 		}
-		img{
+
+		img {
 			width: 100%;
 		}
 	}
-	&__house{
+
+	&__house {
 		width: 100%;
 		position: absolute;
 		left: 0;
 		top: vw(178);
 		will-change: transform, top;
 		transform-style: preserve-3d;
-		@include max(md){
+
+		@include max(md) {
 			top: vw2(121);
 			translate: none;
 			rotate: none;
@@ -57,25 +67,30 @@
 			width: vw2(1080);
 			height: vw2(1236);
 		}
-		@include max(sm){
+
+		@include max(sm) {
 			transform: none;
 			width: 100%;
 			height: auto;
 			top: vw3(66);
 		}
-		img{
+
+		img {
 			width: 100%;
-			@include max(md){
+
+			@include max(md) {
 				height: 100%;
 				object-position: center top;
 				object-fit: cover;
 			}
 		}
-		img{
+
+		img {
 			width: 100%;
 		}
 	}
-	&__dates{
+
+	&__dates {
 		display: flex;
 		align-items: center;
 		font-size: vw(16);
@@ -87,31 +102,37 @@
 		transform: translateX(-60%);
 		will-change: transform, opacity;
 		transform-style: preserve-3d;
-		@include max(md){
+
+		@include max(md) {
 			font-size: vw2(33);
 			top: vw2(244);
 			transform: translateX(-50%);
 		}
-		@include max(sm){
+
+		@include max(sm) {
 			font-size: vw3(12);
 			line-height: 2.57;
 			transform: none;
 			top: vw3(72);
 			left: vw3(20);
 		}
-		&-item{
-			&:not(:first-child){
+
+		&-item {
+			&:not(:first-child) {
 				margin-left: vw(208);
-				@include max(md){
+
+				@include max(md) {
 					margin-left: vw2(22);
 				}
-				@include max(sm){
+
+				@include max(sm) {
 					margin-left: vw3(22);
 				}
 			}
 		}
 	}
-	&__circle{
+
+	&__circle {
 		width: vw(336);
 		height: vw(336);
 		position: absolute;
@@ -121,19 +142,22 @@
 		pointer-events: none;
 		will-change: transform, opacity;
 		transform-style: preserve-3d;
-		@include max(md){
+
+		@include max(md) {
 			width: vw2(183);
 			height: vw2(183);
 			left: vw2(502);
 			top: vw2(372);
 		}
-		@include max(sm){
+
+		@include max(sm) {
 			width: vw3(93);
 			height: vw3(93);
 			left: vw3(194);
 			top: vw3(53);
 		}
-		&-inner{
+
+		&-inner {
 			width: 100%;
 			height: 100%;
 			position: relative;
@@ -145,39 +169,46 @@
 			will-change: opacity;
 			transform-style: preserve-3d;
 		}
-		&-outside{
+
+		&-outside {
 			width: vw(318);
 			animation: rotateCircle 15s infinite linear;
-			@include max(md){
+
+			@include max(md) {
 				width: vw2(174);
 			}
-			@include max(sm){
+
+			@include max(sm) {
 				width: vw3(90);
 			}
 		}
-		&-inside{
+
+		&-inside {
 			position: absolute;
 			left: 50%;
 			top: 50%;
 			transform: translateX(-50%) translateY(-50%);
 			width: vw(172);
-			@include max(md){
+
+			@include max(md) {
 				width: vw2(95);
 			}
-			@include max(sm){
+
+			@include max(sm) {
 				width: vw3(47);
 			}
 		}
 	}
 
-	&__scroll{
+	&__scroll {
 		font-weight: 450;
 		font-size: 16px;
 		line-height: 1.92;
 		text-transform: uppercase;
 		color: #404040;
 		display: none;
-		span{
+
+		span {
 			display: block;
 			transform: rotate(-90deg);
 		}
@@ -186,13 +217,18 @@
 
 
 @keyframes rotateCircle {
-	0%   {transform: rotate(0)}
-	100% {transform: rotate(-360deg)}
+	0% {
+		transform: rotate(0)
+	}
+
+	100% {
+		transform: rotate(-360deg)
+	}
 }
 
 
 
-.section2{
+.section2 {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -202,11 +238,13 @@
 	background: #ACACAC;
 	will-change: transform, opacity;
 	transform-style: preserve-3d;
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
 		height: auto;
 	}
-	&::before{
+
+	&::before {
 		content: "";
 		z-index: 1;
 		position: absolute;
@@ -219,7 +257,7 @@
 		pointer-events: none;
 	}
 
-	&__numbers{
+	&__numbers {
 		display: flex;
 		align-items: center;
 		position: absolute;
@@ -229,13 +267,15 @@
 		z-index: 9;
 		will-change: transform;
 		transform-style: preserve-3d;
-		@include max(sm){
+
+		@include max(sm) {
 			position: relative;
 			top: 0;
 			transform: none;
 			padding: vw3(8) vw3(18) 0;
 		}
-		&-number{
+
+		&-number {
 			font-weight: 300;
 			font-size: vw(1064);
 			line-height: 1.71;
@@ -245,7 +285,8 @@
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			background-clip: text;
-			@include max(sm){
+
+			@include max(sm) {
 				font-size: vw3(113);
 				line-height: 1.09;
 				letter-spacing: -0.06em;
@@ -257,7 +298,8 @@
 				color: #ffffff;
 			}
 		}
-		&-line{
+
+		&-line {
 			width: vw(553);
 			height: vw(60);
 			background: linear-gradient(90.77deg, #FFFFFF 3.75%, rgba(255, 255, 255, 0) 106.75%);
@@ -265,7 +307,8 @@
 			margin-right: vw(28);
 			will-change: transform, opacity, left, top, right, bottom, background;
 			transform-style: preserve-3d;
-			@include max(sm){
+
+			@include max(sm) {
 				flex-shrink: 0;
 				background: #ffffff;
 				width: vw3(32);
@@ -276,7 +319,7 @@
 		}
 	}
 
-	&__photos{
+	&__photos {
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -285,40 +328,48 @@
 		left: 0;
 		will-change: transform, left;
 		transform-style: preserve-3d;
-		@include max(sm){
+
+		@include max(sm) {
 			display: none;
 		}
-		&-item{
+
+		&-item {
 			left: 0;
 			position: absolute;
 			will-change: transform, opacity, left, top, right, bottom, background;
 			transform-style: preserve-3d;
-			&--1{
+
+			&--1 {
 				width: vw(525);
 				bottom: vw(151);
-				@include max(md){
+
+				@include max(md) {
 					width: vw2(525);
 				}
 			}
-			&--2{
+
+			&--2 {
 				width: vw(280);
 				top: vw(78);
-				@include max(md){
+
+				@include max(md) {
 					width: vw2(280);
 					top: vw2(78);
 				}
 			}
-			&--3{
+
+			&--3 {
 				width: vw(426);
 				bottom: vw(118);
-				@include max(md){
+
+				@include max(md) {
 					width: vw2(426);
 				}
 			}
 		}
 	}
 
-	&__year{
+	&__year {
 		font-weight: 400;
 		font-size: vw(80);
 		line-height: 1.71;
@@ -331,17 +382,19 @@
 		right: vw(52);
 		will-change: opacity;
 		transform-style: preserve-3d;
-		@include max(md){
+
+		@include max(md) {
 			font-size: vw2(32);
 			right: vw2(20);
 			top: vw2(71);
 		}
-		@include max(sm){
+
+		@include max(sm) {
 			display: none;
 		}
 	}
 
-	&__text{
+	&__text {
 		font-family: $textFont;
 		font-style: normal;
 		font-weight: 400;
@@ -350,57 +403,70 @@
 		letter-spacing: -0.015em;
 		text-transform: uppercase;
 		color: #F5F5F5;
-		@include max(md){
+
+		@include max(md) {
 			font-size: vw2(40);
 		}
-		@include max(sm){
+
+		@include max(sm) {
 			font-size: vw3(27);
 			line-height: 1.03;
 		}
-		&--opacity{
+
+		&--opacity {
 			color: rgba(245, 245, 245, 0.29);
 		}
-		&--pl{}
+
+		&--pl {}
 	}
 
-	&__textblock{
+	&__textblock {
 		padding-top: vw(49);
 		padding-left: vw(56);
 		position: relative;
 		z-index: 10;
 		will-change: transform, opacity;
 		transform-style: preserve-3d;
-		@include max(md){
+
+		@include max(md) {
 			padding-top: vw2(93);
 			padding-left: vw2(22);
 		}
-		@include max(sm){
+
+		@include max(sm) {
 			padding-top: vw3(83);
 			padding-left: 0;
 		}
-		.section2__text{
+
+		.section2__text {
 			width: vw(1363);
-			@include max(md){
+
+			@include max(md) {
 				width: vw2(550);
 			}
-			@include max(sm){
+
+			@include max(sm) {
 				width: 100%;
 				padding: 0 vw3(16);
 			}
-			&--pl{
+
+			&--pl {
 				padding-left: vw(183);
 				width: vw(1606);
-				@include max(md){
+
+				@include max(md) {
 					padding-left: vw2(74);
 					width: vw2(617);
 				}
-				@include max(sm){
+
+				@include max(sm) {
 					width: 100%;
 				}
 			}
 		}
 	}
-	&__textblock2{
+
+	&__textblock2 {
 		position: absolute;
 		right: vw(57);
 		bottom: -5%;
@@ -409,20 +475,24 @@
 		opacity: 1;
 		will-change: transform, opacity, bottom;
 		transform-style: preserve-3d;
-		@include max(md){
+
+		@include max(md) {
 			width: vw2(353);
 			right: vw2(22);
 		}
-		@include max(sm){
+
+		@include max(sm) {
 			position: relative;
 			bottom: 0;
 			right: 0;
 			display: none;
 		}
-		.section2__text{
-			&--pl{
+
+		.section2__text {
+			&--pl {
 				padding-left: vw(258);
-				@include max(md){
+
+				@include max(md) {
 					padding-left: vw2(95);
 				}
 			}
@@ -430,7 +500,7 @@
 	}
 
 
-	&__letter{
+	&__letter {
 		position: absolute;
 		left: 50%;
 		top: 0;
@@ -439,10 +509,12 @@
 		z-index: 11;
 		will-change: transform, top;
 		transform-style: preserve-3d;
-		@include max(md){
+
+		@include max(md) {
 			width: vw2(336);
 		}
-		@include max(sm){
+
+		@include max(sm) {
 			position: relative;
 			left: 0;
 			top: 0;
@@ -450,39 +522,46 @@
 			margin: vw3(40) auto 0;
 			width: vw3(291);
 		}
-		img{
+
+		img {
 			width: 100%;
 		}
 	}
 
-	&__cloud{
+	&__cloud {
 		will-change: transform, opacity, left, top, right, bottom, background;
 		transform-style: preserve-3d;
-		&-1{
+
+		&-1 {
 			position: absolute;
 			width: vw(1667);
 			z-index: 9;
 			will-change: transform, left, top;
 			transform-style: preserve-3d;
-			@include max(md){
+
+			@include max(md) {
 				width: vw2(667);
 			}
-			@include max(sm){
+
+			@include max(sm) {
 				left: 0;
 				width: 100%;
 				top: vw3(371);
 			}
 		}
-		&-2{
+
+		&-2 {
 			position: absolute;
 			width: vw(1256);
 			z-index: 9;
 			will-change: transform, left, top;
 			transform-style: preserve-3d;
-			@include max(md){
+
+			@include max(md) {
 				width: vw2(502);
 			}
-			@include max(sm){
+
+			@include max(sm) {
 				left: 0;
 				width: 100%;
 				top: vw3(884);
@@ -490,7 +569,7 @@
 		}
 	}
 
-	&__house{
+	&__house {
 		position: absolute;
 		left: 0;
 		width: 100%;
@@ -498,12 +577,14 @@
 		z-index: 3;
 		will-change: transform, opacity, left, top, right, bottom, background;
 		transform-style: preserve-3d;
-		@include max(sm){
+
+		@include max(sm) {
 			position: relative;
 			top: 0;
 			margin-top: vw3(155);
 		}
-		&::before{
+
+		&::before {
 			content: "";
 			z-index: 1;
 			position: absolute;
@@ -514,14 +595,17 @@
 			display: block;
 			background: $colorCyanDark;
 			pointer-events: none;
-			@include max(md){
+
+			@include max(md) {
 				height: 200vh;
 			}
-			@include max(sm){
+
+			@include max(sm) {
 				display: none;
 			}
 		}
-		&-birds{
+
+		&-birds {
 			width: vw(708);
 			top: vw(-400);
 			left: 15%;
@@ -529,27 +613,31 @@
 			z-index: 2;
 			will-change: transform, opacity;
 			transform-style: preserve-3d;
-			@include max(sm){
+
+			@include max(sm) {
 				display: none;
 			}
 		}
-		&-image{
+
+		&-image {
 			width: 100%;
 			will-change: transform, opacity, left, top, right, bottom, background;
 			transform-style: preserve-3d;
 		}
-		&-bottom{
+
+		&-bottom {
 			width: 100%;
 			margin-top: vw(-118);
 			will-change: transform, opacity, left, top, right, bottom, background;
 			transform-style: preserve-3d;
-			@include max(sm){
+
+			@include max(sm) {
 				display: none;
 			}
 		}
 	}
 
-	&__last{
+	&__last {
 		position: absolute;
 		z-index: 2;
 		left: 0;
@@ -558,15 +646,18 @@
 		height: 100%;
 		will-change: transform, opacity, left, top, right, bottom, background;
 		transform-style: preserve-3d;
-		@include max(sm){
+
+		@include max(sm) {
 			position: relative;
 			height: auto;
 		}
-		&-img{
+
+		&-img {
 			width: 100%;
 			height: 100%;
 			overflow: hidden;
-			img{
+
+			img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
@@ -574,7 +665,8 @@
 				transform-style: preserve-3d;
 			}
 		}
-		&-label{
+
+		&-label {
 			position: absolute;
 			left: 100%;
 			bottom: vw(-35);
@@ -582,17 +674,20 @@
 			z-index: 2;
 			will-change: transform, left;
 			transform-style: preserve-3d;
-			@include max(sm){
+
+			@include max(sm) {
 				left: 50%;
 				transform: translateX(-50%);
 				bottom: vw3(8);
 				width: vw3(271);
 			}
-			img{
+
+			img {
 				width: 100%;
 			}
 		}
-		&-overlay{
+
+		&-overlay {
 			position: absolute;
 			left: 0;
 			top: 0;
@@ -601,7 +696,8 @@
 			background: #000;
 			opacity: 0;
 			z-index: 1;
-			@include max(sm){
+
+			@include max(sm) {
 				display: none;
 			}
 		}
@@ -610,7 +706,7 @@
 
 
 
-.section3{
+.section3 {
 	position: absolute;
 	top: 0;
 	left: 100%;
@@ -621,20 +717,24 @@
 	z-index: 16;
 	will-change: transform, left, top;
 	transform-style: preserve-3d;
-	@include max(md){
+
+	@include max(md) {
 		left: 0;
 		top: 100%;
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		top: 0;
 		position: relative;
 		height: auto;
 	}
-	&__flex{
+
+	&__flex {
 		height: 100%;
 		display: flex;
 		width: max-content;
-		@include max(md){
+
+		@include max(md) {
 			width: 100%;
 			height: auto;
 			min-height: 100vh;
@@ -642,22 +742,26 @@
 		}
 	}
 
-	&__image{
+	&__image {
 		height: 100%;
 		flex-shrink: 0;
-		@include max(md){
+
+		@include max(md) {
 			width: 100%;
 			height: auto;
 		}
-		img{
+
+		img {
 			height: 100%;
-			@include max(md){
+
+			@include max(md) {
 				width: 100%;
 				height: auto;
 			}
 		}
 	}
-	&__text{
+
+	&__text {
 		flex-shrink: 0;
 		font-family: $titleFont;
 		font-size: vw(42);
@@ -669,36 +773,41 @@
 		width: vw(1350);
 		padding: vw(50) 0;
 		position: relative;
-		@include max(md){
+
+		@include max(md) {
 			width: 100%;
 			padding: 0 vw2(20);
 			font-size: vw2(32);
 			line-height: 1.4;
 			display: block;
 		}
-		@include max(sm){
+
+		@include max(sm) {
 			padding: 0 vw3(16);
 			font-size: vw3(14);
 			line-height: 1.52;
 		}
-		&-inner{
+
+		&-inner {
 			padding: 0 vw(50);
-			@include max(md){
+
+			@include max(md) {
 				padding: vw2(30) 0 vw2(20);
 			}
-			@include max(sm){
+
+			@include max(sm) {
 				padding: vw3(30) 0 vw3(16);
 			}
 		}
 	}
 
-	&__label{
-		&-item{
+	&__label {
+		&-item {
 			display: block;
 		}
 	}
 
-	&__block{
+	&__block {
 		width: max-content;
 		position: absolute;
 		height: 100%;
@@ -706,7 +815,8 @@
 		left: 100%;
 		background: #F9F9F9;
 		overflow: hidden;
-		@include max(md){
+
+		@include max(md) {
 			left: 0;
 			top: 100%;
 			width: 100%;
@@ -714,122 +824,154 @@
 			min-height: 100vh;
 			background: #FFFFFF;
 		}
-		@include max(sm){
+
+		@include max(sm) {
 			position: relative;
 			top: 0;
 			min-height: 0;
 		}
-		&--1{
+
+		&--1 {
 			left: 0;
 			will-change: transform, top;
 			transform-style: preserve-3d;
-			@include max(md){
+
+			@include max(md) {
 				top: 0;
 			}
-			@include max(sm){
+
+			@include max(sm) {
 				background: #F7F7F7;
 			}
-			.section3__text-inner{
+
+			.section3__text-inner {
 				width: vw(970);
-				@include max(md){
+
+				@include max(md) {
 					width: 100%;
 				}
 			}
 		}
-		&--2{
+
+		&--2 {
 			will-change: transform, left, top;
 			transform-style: preserve-3d;
-			.section3__text--1{
-				@include max(md){
+
+			.section3__text--1 {
+				@include max(md) {
 					order: 2;
 				}
-				.section3__text-inner{
+
+				.section3__text-inner {
 					width: vw(891);
-					@include max(md){
+
+					@include max(md) {
 						width: 100%;
 					}
 				}
 			}
-			.section3__text--2{
+
+			.section3__text--2 {
 				border-left: 1px solid #484848;
-				@include max(md){
+
+				@include max(md) {
 					border: 0;
 					order: 4;
 				}
-				.section3__text-inner{
+
+				.section3__text-inner {
 					width: vw(733);
-					@include max(md){
+
+					@include max(md) {
 						width: 100%;
 					}
 				}
 			}
-			.section3__image--1{
-				@include max(md){
+
+			.section3__image--1 {
+				@include max(md) {
 					order: 1;
 				}
 			}
-			.section3__image--2{
+
+			.section3__image--2 {
 				padding: vw(50) vw(50) vw(50) 0;
-				@include max(md){
+
+				@include max(md) {
 					padding: 0;
 					order: 3;
 				}
 			}
 		}
-		&--3{
+
+		&--3 {
 			padding-left: vw(776);
 			will-change: transform, left, top;
 			transform-style: preserve-3d;
-			@include max(md){
+
+			@include max(md) {
 				padding-left: 0;
 			}
-			.section3__label{
+
+			.section3__label {
 				z-index: 3;
-				@include max(md){
+
+				@include max(md) {
 					display: none;
 				}
-				&--1{
+
+				&--1 {
 					position: absolute;
 					top: vw(50);
 					left: vw(200);
-					.section3__label-item{
+
+					.section3__label-item {
 						will-change: transform;
 						transform-style: preserve-3d;
-						&--1{
+
+						&--1 {
 							width: vw(662);
 						}
-						&--2{
+
+						&--2 {
 							width: vw(1121);
 							margin-top: vw(10);
 						}
 					}
 				}
-				&--2{
+
+				&--2 {
 					position: absolute;
 					bottom: vw(18);
 					left: vw(614);
 					display: flex;
 					align-items: flex-start;
-					@include max(md){
+
+					@include max(md) {
 						display: none;
 					}
-					.section3__label-item{
+
+					.section3__label-item {
 						flex-shrink: 0;
-						&--1{
+
+						&--1 {
 							width: vw(1101);
 						}
-						&--2{
+
+						&--2 {
 							width: vw(1051);
 							margin-left: vw(100);
 						}
 					}
 				}
 			}
-			.section3__image{
+
+			.section3__image {
 				position: relative;
 				z-index: 2;
 			}
-			.section3__star{
+
+			.section3__star {
 				position: absolute;
 				width: vw(997);
 				right: vw(529);
@@ -837,26 +979,31 @@
 				z-index: 5;
 				will-change: transform;
 				transform-style: preserve-3d;
-				@include max(md){
+
+				@include max(md) {
 					width: vw2(343);
 					right: 0;
 					bottom: auto;
 					top: vw2(313);
 				}
-				@include max(sm){
+
+				@include max(sm) {
 					width: vw3(164);
 					right: vw3(20);
 					top: vw3(156);
 				}
-				img{
+
+				img {
 					width: 100%;
 				}
 			}
-			.section3__flex{
-				@include max(md){
+
+			.section3__flex {
+				@include max(md) {
 					min-height: 0;
 				}
-				&::after{
+
+				&::after {
 					content: "";
 					width: vw(989);
 					height: 100%;
@@ -868,53 +1015,63 @@
 					flex-shrink: 0;
 					mix-blend-mode: color-burn;
 					opacity: 0.6;
-					@include max(md){
+
+					@include max(md) {
 						display: none;
 					}
 				}
 			}
 
-			.section3__mobile{
+			.section3__mobile {
 				display: none;
-				@include max(md){
+
+				@include max(md) {
 					display: block;
 					padding-left: vw2(20);
 					padding-bottom: vw2(50);
-					@include max(sm){
+
+					@include max(sm) {
 						padding-left: vw3(16);
 						padding-bottom: vw3(27);
 					}
 				}
-				&-label{
-					@include max(md){
+
+				&-label {
+					@include max(md) {
 						width: vw2(600);
 					}
-					@include max(sm){
+
+					@include max(sm) {
 						width: vw3(268);
 					}
 				}
 			}
-			.section3__year{
-				@include max(md){
+
+			.section3__year {
+				@include max(md) {
 					padding-left: vw2(20);
 				}
-				@include max(sm){
+
+				@include max(sm) {
 					padding-left: vw3(16);
 				}
 			}
-			.section3__overlay{
+
+			.section3__overlay {
 				z-index: 6;
 			}
 		}
 
-		&--4{
+		&--4 {
 			padding-left: vw(925);
 			will-change: transform, left, top;
 			transform-style: preserve-3d;
-			@include max(md){
+
+			@include max(md) {
 				padding-left: 0;
 			}
-			&::after{
+
+			&::after {
 				content: "";
 				width: 100%;
 				height: 100%;
@@ -926,11 +1083,13 @@
 				background: url(../img/p6-6.webp) right top no-repeat;
 				background-size: cover;
 				mix-blend-mode: color-burn;
-				@include max(md){
+
+				@include max(md) {
 					display: none;
 				}
 			}
-			&::before{
+
+			&::before {
 				content: "";
 				width: 100%;
 				height: 100%;
@@ -940,98 +1099,120 @@
 				z-index: 1;
 				display: block;
 				background: linear-gradient(256.45deg, #CECECE 33.71%, rgba(231, 231, 231, 0) 59.71%);
-				@include max(md){
+
+				@include max(md) {
 					display: none;
 				}
 			}
-			.section3__text{
+
+			.section3__text {
 				width: auto;
 				z-index: 3;
 				display: block;
 				position: absolute;
 				left: 0;
 				top: 0;
-				@include max(md){
+
+				@include max(md) {
 					position: static;
 				}
-				.section3__text-inner{
+
+				.section3__text-inner {
 					width: vw(516);
-					@include max(md){
+
+					@include max(md) {
 						width: auto;
-						span{
+
+						span {
 							display: none;
 						}
 					}
 				}
 			}
-			.section3__image{
+
+			.section3__image {
 				position: relative;
 				z-index: 4;
 				will-change: transform;
 				transform-style: preserve-3d;
 			}
-			.section3__label{
+
+			.section3__label {
 				z-index: 2;
 				position: absolute;
 				bottom: vw(140);
 				left: vw(70);
-				@include max(md){
+
+				@include max(md) {
 					display: none;
 				}
-				.section3__label-item{
+
+				.section3__label-item {
 					will-change: transform;
 					transform-style: preserve-3d;
-					&--1{
+
+					&--1 {
 						width: vw(786);
 						margin-left: vw(800);
 					}
-					&--2{
+
+					&--2 {
 						width: vw(1443);
 						margin-top: vw(40);
 						margin-left: vw(75);
 					}
-					&--3{
+
+					&--3 {
 						width: vw(1431);
 						margin-top: vw(-52);
 					}
 				}
 			}
-			.section3__year{
+
+			.section3__year {
 				z-index: 5;
-				@include max(md){
+
+				@include max(md) {
 					padding-left: vw2(20);
-					@include max(sm){
+
+					@include max(sm) {
 						padding-left: vw3(16);
 					}
 				}
 			}
-			.section3__mobile{
+
+			.section3__mobile {
 				display: none;
-				@include max(md){
+
+				@include max(md) {
 					display: block;
 					padding-left: vw2(20);
 					padding-bottom: vw2(50);
-					@include max(sm){
+
+					@include max(sm) {
 						padding-left: vw3(16);
 						padding-bottom: vw3(50);
 					}
 				}
-				&-label{
-					@include max(md){
+
+				&-label {
+					@include max(md) {
 						width: vw2(520);
 					}
-					@include max(sm){
+
+					@include max(sm) {
 						width: vw3(220);
 					}
 				}
 			}
-			.section3__overlay{
+
+			.section3__overlay {
 				z-index: 6;
 			}
 		}
 	}
 
-	&__year{
+	&__year {
 		font-size: vw(126);
 		line-height: 1.09;
 		letter-spacing: -0.06em;
@@ -1042,7 +1223,7 @@
 		top: vw(33);
 		font-family: $mainFont;
 
-		@include max(md){
+		@include max(md) {
 			font-size: vw2(90);
 			position: relative;
 			left: 0;
@@ -1050,14 +1231,14 @@
 			padding: vw2(10) 0 vw2(50);
 		}
 
-		@include max(sm){
+		@include max(sm) {
 			font-size: vw3(38);
 			padding: vw3(11) 0 vw3(54);
 			margin-left: vw3(-4);
 		}
 	}
 
-	&__overlay{
+	&__overlay {
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -1066,7 +1247,8 @@
 		background: #000;
 		opacity: 0;
 		z-index: 1;
-		@include max(sm){
+
+		@include max(sm) {
 			display: none;
 		}
 	}

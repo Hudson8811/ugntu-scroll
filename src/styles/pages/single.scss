@@ -1,12 +1,19 @@
+.single--page {
+	.header {
+		background: #fff;
+	}
+}
+
 .single {
 	position: relative;
 
-	@include max(md){
+	@include max(md) {
 		&:not(.no-p-top) {
 			padding-top: vw2(75);
 		}
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		&:not(.no-p-top) {
 			padding-top: vw3(50);
 		}
@@ -51,11 +58,13 @@
 			padding-bottom: 106px;
 			padding-right: 80px;
 			background: #ffffff;
+
 			@include max(lg) {
 				padding-top: 52px;
 				padding-right: 52px;
 				padding-bottom: 33px;
 			}
+
 			@include max(sm) {
 				padding-top: 12px;
 			}
@@ -65,6 +74,7 @@
 			padding-top: 124px;
 			padding-bottom: 80px;
 			padding-left: 40px;
+
 			@include max(lg) {
 				width: 100%;
 				background-color: $gray-f6;
@@ -128,17 +138,20 @@
 		}
 	}
 
-	&__shares{
+	&__shares {
 		display: flex;
 		margin-top: 100px;
+
 		@include max(sm) {
 			margin-top: 50px;
 		}
 	}
+
 	&__share {
 		display: inline-flex;
 		align-items: center;
 		position: relative;
+
 		@include hover {
 			.single__share-icon {
 				border-color: $green;
@@ -148,23 +161,26 @@
 				color: $green;
 			}
 		}
-		.yaBlock{
+
+		.yaBlock {
 			position: absolute;
 			left: 0;
 			top: 0;
 			width: 100%;
 			height: 100%;
 			z-index: 3;
+
 			.ya-share2__container,
 			.ya-share2__list,
 			.ya-share2__list,
-			.ya-share2__item_more{
+			.ya-share2__item_more {
 				width: 100%;
 				height: 100%;
 				display: block !important;
 				margin: 0 !important;
 			}
-			.ya-share2__link_more{
+
+			.ya-share2__link_more {
 				opacity: 0 !important;
 			}
 		}
@@ -179,8 +195,10 @@
 				line-height: 13px;
 			}
 		}
-		&:not(:last-child){
+
+		&:not(:last-child) {
 			margin-right: 59px;
+
 			@include max(sm) {
 				margin-right: 25px;
 			}
@@ -228,13 +246,15 @@
 			line-height: 24px;
 			margin-top: 20px;
 		}
-		&--desctop{
-			@include max(sm){
+
+		&--desctop {
+			@include max(sm) {
 				display: none;
 			}
 		}
-		&--mobile{
-			@include min(sm){
+
+		&--mobile {
+			@include min(sm) {
 				display: none;
 			}
 		}
@@ -243,8 +263,7 @@
 	&__slider {
 		position: relative;
 
-		@include max(lg) {
-		}
+		@include max(lg) {}
 
 		@include max(sm) {
 			width: calc(100% + 32px);
@@ -307,7 +326,8 @@
 				background-size: 6px auto;
 			}
 		}
-		.swiper-prev{
+
+		.swiper-prev {
 			transform: scaleX(-1);
 		}
 	}
