@@ -1,43 +1,51 @@
-.y1970{
+.y1970 {
 	width: 100%;
 	height: 100vh;
 	position: relative;
-	@include max(md){
+
+	@include max(md) {
 		padding-top: vw2(71);
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		height: auto;
 		padding-top: vw3(48);
 	}
+
 	.yearConner {
-		@include max(md){
-			font-size: vw(38,320);
-			margin-left: vw(16,320);
-			padding-bottom: vw(84,320);
+		@include max(md) {
+			font-size: vw(38, 320);
+			margin-left: vw(16, 320);
+			padding-bottom: vw(84, 320);
 		}
 	}
+
 	.textBlock {
-		@include max(md){
-			font-size: vw(14,320);
+		@include max(md) {
+			font-size: vw(14, 320);
 			line-height: 121%;
 			bottom: auto;
-		}	
+		}
 	}
+
 	.blockTitle {
 		&--desc {
-			@include max(md){
+			@include max(md) {
 				display: none;
-			}				
+			}
 		}
+
 		&--mob {
 			display: none;
-			@include max(md){
+
+			@include max(md) {
 				display: flex;
-			}				
+			}
 		}
 	}
 }
-.y4-100{
+
+.y4-100 {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -49,18 +57,21 @@
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
 	display: none;
-	@include max(md){
+
+	@include max(md) {
 		display: block;
 		position: relative;
 		height: 80vh;
 		padding-bottom: vw3(56);
 		z-index: 11;
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
 		height: auto;
 		padding-bottom: vw3(56);
 	}
+
 	// &::before{
 	// 	content: "";
 	// 	z-index: 1;
@@ -74,12 +85,13 @@
 	// 	pointer-events: none;
 	// }
 
-	&__numbers{
+	&__numbers {
 		@include years-row;
 		will-change: transform, opacity;
 		transform-style: preserve-3d;
 		background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
-		&-number{
+
+		&-number {
 			font-weight: 300;
 			font-size: vw(1064);
 			line-height: 1.71;
@@ -87,19 +99,23 @@
 			padding-right: 0.07em;
 			background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
 			color: #fff;
-			@include max(sm){
+
+			@include max(sm) {
 				color: #fff;
 			}
 		}
-		&-line{
+
+		&-line {
 			@include years-line;
 			background: #fff;
-			@include max(sm){
+
+			@include max(sm) {
 				background: #fff;
 			}
 		}
 	}
 }
+
 .y4-1 {
 	position: absolute;
 	top: 0;
@@ -111,7 +127,8 @@
 	z-index: 100;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
-	@include max(md){
+
+	@include max(md) {
 		position: relative;
 		display: flex;
 		justify-content: flex-start;
@@ -121,10 +138,12 @@
 		height: auto;
 		background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
 	}
+
 	.blockTitle--mob {
 		order: 3;
 	}
-	&__bg  {
+
+	&__bg {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -132,11 +151,13 @@
 		width: 100vw;
 		height: 140vh;
 		background-color: #FFFFFF;
-		@include max(md){
+
+		@include max(md) {
 			position: relative;
-			height: 100vh;	
+			height: 100vh;
 			order: 1;
 		}
+
 		img {
 			position: relative;
 			width: 100%;
@@ -144,79 +165,93 @@
 			object-fit: cover;
 			object-position: center bottom;
 		}
+
 		&--1 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100vw;
 			height: 280vh;
+
 			img {
 				position: relative;
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 				object-position: center bottom;
-			}			
+			}
 		}
 	}
+
 	&__man {
 		position: absolute;
 		bottom: 0vh;
 		left: 0;
 		width: 100vw;
 		height: 100vh;
-		@include max(md){
+
+		@include max(md) {
 			bottom: -10vh;
-		}		
+		}
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
 			object-position: center bottom;
-			@include max(md){
+
+			@include max(md) {
 				object-fit: cover;
 			}
-		}	
+		}
 	}
+
 	&__title {
 		color: #FFFFFF;
-		@include max(md){
+
+		@include max(md) {
 			position: relative;
 			display: flex;
 			flex-flow: column nowrap;
 			justify-content: flex-start;
 			align-items: flex-start;
-			margin-left: vw(16,320);
+			margin-left: vw(16, 320);
 		}
+
 		&--1 {
 			span {
 				position: absolute;
 				display: block;
-				@include max(md){
+
+				@include max(md) {
 					position: relative;
 				}
 			}
 		}
 
 	}
+
 	&__year {
 		color: #FFFFFF;
-		z-index: 1;	
+		z-index: 1;
 		position: absolute;
-		@include max(md){
+
+		@include max(md) {
 			position: relative;
 			display: flex;
 			flex-flow: column nowrap;
 			justify-content: flex-start;
 			align-items: flex-start;
 			order: 2;
-			margin-left: vw(16,320);
+			margin-left: vw(16, 320);
 		}
 	}
+
 	&__text {
 		color: #FFFFFF;
-		@include max(md){
+
+		@include max(md) {
 			position: relative;
 			display: flex;
 			flex-flow: column nowrap;
@@ -224,28 +259,31 @@
 			align-items: flex-start;
 			order: 4;
 		}
+
 		&--1 {
 			position: absolute;
-			left: vw(52,1920);
+			left: vw(52, 1920);
 			z-index: 5;
-			max-width:  vw(400,1920);
-			@include max(md){
+			max-width: vw(400, 1920);
+
+			@include max(md) {
 				position: relative;
 				display: flex;
 				flex-flow: column nowrap;
 				justify-content: flex-start;
 				align-items: flex-start;
-				max-width:  vw(227,320);
-				margin-top: vw(11,320);
-				margin-left: vw(16,320);
-				margin-bottom: vh(16,320);
+				max-width: vw(227, 320);
+				margin-top: vw(11, 320);
+				margin-left: vw(16, 320);
+				margin-bottom: vh(16, 320);
 				left: 0;
-				
+
 			}
 		}
-		
+
 	}
 }
+
 .y4-2 {
 	position: absolute;
 	top: 0;
@@ -256,8 +294,9 @@
 	z-index: 99;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
-	@include max(md){
-		position: relative;
+
+	@include max(md) {
+		position: absolute;
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
@@ -267,10 +306,12 @@
 		background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
 		z-index: 10;
 	}
+
 	.blockTitle--mob {
 		order: 3;
 	}
-	&__bg  {
+
+	&__bg {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -278,7 +319,7 @@
 		width: 100vw;
 		height: 100vh;
 
-		@include max(md){
+		@include max(md) {
 			position: relative;
 			display: flex;
 			flex-flow: column nowrap;
@@ -289,6 +330,7 @@
 			order: 1;
 			background: #321A1E;
 		}
+
 		img {
 			position: relative;
 			width: 100%;
@@ -296,31 +338,36 @@
 			object-fit: cover;
 			object-position: center bottom;
 		}
+
 		&--1 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100vw;
 			height: 120vh;
-			@include max(md){
+
+			@include max(md) {
 				display: none;
 			}
+
 			img {
 				position: relative;
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 				object-position: center bottom;
-			}			
+			}
 		}
 	}
+
 	&__2 {
 		position: absolute;
 		top: vh(150);
-		left: vw(228,1920);
-		width: vw(584,1920);
-		height: vw(747,1920);	
-		@include max(md){
+		left: vw(228, 1920);
+		width: vw(584, 1920);
+		height: vw(747, 1920);
+
+		@include max(md) {
 			position: relative;
 			display: flex;
 			flex-flow: column nowrap;
@@ -330,56 +377,65 @@
 			height: auto;
 			left: 0;
 			top: 0;
-			margin-top: vw(39,320);
-			margin-bottom: vw(39,320);
+			margin-top: vw(39, 320);
+			margin-bottom: vw(39, 320);
 
 		}
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__title {
 		color: #FFFFFF;
-		@include max(md){
+
+		@include max(md) {
 			position: relative;
 			display: flex;
 			flex-flow: column nowrap;
 			justify-content: flex-start;
 			align-items: flex-start;
-			margin-left: vw(16,320);
+			margin-left: vw(16, 320);
 		}
+
 		&--1 {
 			span {
 				position: absolute;
 				display: block;
-				@include max(md){
+
+				@include max(md) {
 					position: relative;
 				}
 			}
 		}
 
 	}
+
 	&__year {
 		color: #FFFFFF;
-		z-index: 5;	
+		z-index: 5;
 		position: absolute;
-		@include max(md){
+
+		@include max(md) {
 			position: relative;
 			display: flex;
 			flex-flow: column nowrap;
 			justify-content: flex-start;
 			align-items: flex-start;
 			order: 2;
-			margin-left: vw(16,320);
+			margin-left: vw(16, 320);
 		}
 	}
+
 	&__text {
 		color: #FFFFFF;
-		@include max(md){
+
+		@include max(md) {
 			position: relative;
 			display: flex;
 			flex-flow: column nowrap;
@@ -387,29 +443,32 @@
 			align-items: flex-start;
 			order: 4;
 		}
+
 		&--1 {
 			position: absolute;
-			right: vw(158,1920);
-			bottom: vh(121,1279);
+			right: vw(158, 1920);
+			bottom: vh(121, 1279);
 			z-index: 5;
-			max-width: vw(449,1920);
-			@include max(md){
+			max-width: vw(449, 1920);
+
+			@include max(md) {
 				position: relative;
 				display: flex;
 				flex-flow: column nowrap;
 				justify-content: flex-start;
 				align-items: flex-start;
-				max-width:  vw(227,320);
-				margin-top: vw(11,320);
-				margin-left: vw(16,320);
-				margin-bottom: vh(16,320);
+				max-width: vw(227, 320);
+				margin-top: vw(11, 320);
+				margin-left: vw(16, 320);
+				margin-bottom: vh(16, 320);
 				left: 0;
-				
+
 			}
 		}
-		
+
 	}
 }
+
 .y4-3 {
 	position: absolute;
 	top: 0;
@@ -420,8 +479,10 @@
 	z-index: 98;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
-	@include max(md){
-		position: relative;
+
+	@include max(md) {
+		position: absolute;
+		z-index: 100;
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
@@ -430,13 +491,19 @@
 		height: auto;
 		background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
 	}
-	&__bg  {
+
+	&__bg {
 		position: absolute;
 		top: 0;
 		left: 0;
 		// overflow: hidden;
 		width: 100vw;
+
 		// height: 140vh;
+		@include max(md) {
+			position: relative;
+		}
+
 		img {
 			position: relative;
 			width: 100%;
@@ -444,6 +511,7 @@
 			object-fit: cover;
 			object-position: center bottom;
 		}
+
 		&--1 {
 			position: absolute;
 			top: 0;
@@ -451,79 +519,183 @@
 			width: 100vw;
 			height: 100vh;
 			background: #FFFFFF;
+
+			@include max(md) {
+				background: linear-gradient(180deg, rgba(255, 255, 255, 0.23) 0%, #FFFFFF 100%);
+				opacity: 0.2;
+				z-index: 5;
+			}
+
 			img {
 				position: relative;
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 				object-position: center bottom;
-			}			
+
+				@include max(md) {
+					display: none;
+				}
+			}
 		}
 	}
+
 	&__2 {
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100vw;
-		height: 100vh;	
+		height: 100vh;
 		z-index: 8;
+
+		@include max(md) {
+			position: relative;
+			z-index: 15;
+
+		}
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__1 {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: vw(662,1920);
-		height: vw(747,1920);	
+		width: vw(662, 1920);
+		height: vw(747, 1920);
 		z-index: 8;
+
+		@include max(md) {
+			display: none;
+		}
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__title {
 		color: #FFFFFF;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			margin-left: vw(16, 320);
+		}
+
 		&--1 {
 			span {
 				position: absolute;
 				display: block;
+
+				@include max(md) {
+					position: relative;
+				}
 			}
 		}
 
 	}
+
 	&__year {
 		color: #FFFFFF;
-		z-index: 5;	
-		position: absolute;	
+		z-index: 5;
+		position: absolute;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			order: 2;
+			margin-left: vw(16, 320);
+		}
 	}
+
 	&__text {
 		color: #FFFFFF;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			order: 4;
+		}
+
 		&--1 {
 			position: absolute;
-			right: vw(172,1920);
-			bottom: vh(118,1279);
+			right: vw(172, 1920);
+			bottom: vh(118, 1279);
 			z-index: 10;
-			max-width: vw(449,1920);
+			max-width: vw(449, 1920);
+
+			@include max(md) {
+				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				max-width: vw(194, 320);
+				margin-top: vw(11, 320);
+				margin-left: vw(16, 320);
+				margin-bottom: vh(16, 320);
+				left: 0;
+
+			}
 		}
+
 		&--2 {
 			position: absolute;
-			left: vw(61,1920);
-			top: vw(52,1920);
+			left: vw(61, 1920);
+			top: vw(52, 1920);
 			z-index: 5;
-			max-width: vw(1501,1920);
+			max-width: vw(1501, 1920);
+
+			@include max(md) {
+				top: vw(48, 320);
+				width: 100vw;
+				left: vw(61, 1920);
+				opacity: 0.2;
+				max-width: 90vw;
+
+			}
+
+			@include max(sm) {
+				top: vw(48, 320);
+				width: 180vw;
+				left: -20vw;
+				opacity: 0.2;
+				max-width: 180vw;
+
+			}
 		}
-		
+
 	}
 }
+
+.block--mob {
+	display: none;
+
+	@include max(md) {
+		display: block;
+	}
+}
+
 .y4-4 {
 	position: absolute;
 	top: 0;
@@ -534,16 +706,48 @@
 	z-index: 101;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
-	@include max(md){
-		display: none;
+
+	@include max(md) {
+		position: absolute;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+		min-height: 100vh;
+		height: auto;
+		background: #fff;
 	}
-	&__bg  {
+
+	&--4 {
+		display: none;
+
+		@include max(md) {
+			position: absolute;
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-flow: column nowrap;
+			min-height: 100vh;
+			height: auto;
+			background: #fff;
+			z-index: 102;
+		}
+	}
+
+	&__bg {
 		position: absolute;
 		top: 0;
 		left: 0;
 		// overflow: hidden;
 		width: 100vw;
 		height: 100vh;
+
+		@include max(md) {
+			position: relative;
+			width: 100vw;
+			height: auto;
+		}
+
 		img {
 			position: relative;
 			width: 100%;
@@ -551,6 +755,7 @@
 			object-fit: cover;
 			object-position: center bottom;
 		}
+
 		&--1 {
 			position: absolute;
 			top: 0;
@@ -558,49 +763,139 @@
 			width: 100vw;
 			height: 100vh;
 			background: #FFFFFF;
+
+			@include max(md) {
+				position: relative;
+				width: 100vw;
+				height: auto;
+			}
+
 			img {
 				position: relative;
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 				object-position: center bottom;
-			}			
+			}
 		}
 	}
+
 	&__year {
-		color: #FFFFFF;
-		z-index: 5;	
-		position: absolute;	
+		color: #404040;
+		z-index: 5;
+		position: absolute;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			width: 100vw;
+			align-items: flex-start;
+			padding-right: vw(16, 320);
+			order: 2;
+			margin-left: vw(16, 320);
+		}
 	}
+
 	&__text {
-		color: #FFFFFF;
-		&--1 {
-			position: absolute;
-			left: vw(61,1920);
-			top: vh(552);
-			padding-right: vw(15,1920);
-			z-index: 10;
-			max-width: vw(447,1920);
-		}
-		&--2 {
-			position: absolute;
-			left: vw(508,1920);
-			top: vh(552);
-			z-index: 5;
-			padding-right: vw(15,1920);
-			max-width: vw(650,1920);
-		}
-		&--3 {
-			position: absolute;
-			right: vw(87,1920);
-			bottom: vw(52,1920);
-			z-index: 5;
-			max-width: vw(249,1920);
+		color: #404040;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			order: 4;
 		}
 
-		
+		&--1 {
+			position: absolute;
+			left: vw(61, 1920);
+			top: vh(552);
+			padding-right: vw(15, 1920);
+			z-index: 10;
+			max-width: vw(447, 1920);
+
+			@include max(md) {
+				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				max-width: vw(227, 320);
+				margin-top: vw(11, 320);
+				margin-left: vw(16, 320);
+				margin-bottom: vh(16, 320);
+				top: auto;
+				left: 0;
+
+			}
+		}
+
+		&--2 {
+			position: absolute;
+			left: vw(508, 1920);
+			top: vh(552);
+			z-index: 5;
+			padding-right: vw(15, 1920);
+			max-width: vw(650, 1920);
+
+			@include max(md) {
+				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				max-width: vw(227, 320);
+				margin-top: vw(11, 320);
+				margin-left: vw(16, 320);
+				margin-bottom: vh(16, 320);
+				left: 0;
+				top: auto;
+
+			}
+		}
+
+		&--3 {
+			position: absolute;
+			right: vw(87, 1920);
+			bottom: vw(52, 1920);
+			z-index: 5;
+			max-width: vw(249, 1920);
+
+			@include max(md) {
+				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				max-width: vw(227, 320);
+				margin-top: vw(11, 320);
+				margin-left: vw(16, 320);
+				margin-bottom: vh(16, 320);
+				left: 0;
+
+			}
+		}
+
+
 	}
 }
+
+.y4-4__blockOverlay--mob {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	min-height: 100vh;
+	opacity: 0;
+	z-index: 107;
+	will-change: transform, opacity, top;
+	transform-style: preserve-3d;
+}
+
 .textBlock--16 {
 	display: block;
 	font-weight: 450;
@@ -609,19 +904,24 @@
 	text-transform: uppercase;
 	margin-left: vw(24);
 	width: vw(204);
-	@include max(md){
-		margin-left: 0;
-		margin-top: vw2(15);
-		font-size: vw2(16);
-		width: vw2(204);
+
+	@include max(md) {
+		font-weight: 450;
+		font-size: vw(9, 320);
+		width: vw(141, 320);
+		line-height: 130%;
+		text-align: left;
+		letter-spacing: 0;
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		margin-top: vw3(10);
 		font-size: vw3(9);
 		line-height: 1.42;
 		width: vw3(204);
 	}
 }
+
 .y4-5 {
 	position: absolute;
 	top: 0;
@@ -632,10 +932,21 @@
 	z-index: 105;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
-	@include max(md){
-		display: none;
+
+	@include max(md) {
+		position: absolute;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+		min-height: 100vh;
+		height: auto;
+		background: #fff;
+		z-index: 112;
+		width: 100vw;
 	}
-	&__bg  {
+
+	&__bg {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -643,6 +954,13 @@
 		background: #CDA378;
 		width: 100%;
 		height: 100%;
+
+		@include max(md) {
+			position: relative;
+			width: 100vw;
+			height: auto;
+		}
+
 		img {
 			position: relative;
 			width: 100%;
@@ -650,84 +968,152 @@
 			object-fit: contain;
 			object-position: center bottom;
 		}
+
 		&--1 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
+
+			@include max(md) {
+				width: 100vw;
+				height: 100%;
+				z-index: 15;
+			}
+
 			img {
 				position: relative;
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 				object-position: center bottom;
-			}			
+			}
 		}
 	}
+
 	&__1 {
 		position: absolute;
 		top: 0;
-		left: vw(795,1920);
+		left: vw(795, 1920);
 		width: 100vw;
 		height: 100vh;
 		z-index: 8;
+
+		@include max(md) {
+			position: relative;
+			width: 100vw;
+			height: auto;
+			z-index: 16;
+			left: auto;
+		}
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__2 {
 		position: absolute;
 		top: 0;
-		left: vw(65,1920);
-		width: vw(662,1920);
-		height: vw(747,1920);	
+		left: vw(65, 1920);
+		width: vw(662, 1920);
+		height: vw(747, 1920);
 		z-index: 8;
+
+		@include max(md) {
+			display: none;
+		}
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__3 {
 		position: absolute;
-		bottom: vw(-120,1920);
-		left: vw(65,1920);
+		bottom: vw(-120, 1920);
+		left: vw(65, 1920);
 		width: 100%;
-		max-width: vw(1297,1920);
+		max-width: vw(1297, 1920);
 		z-index: 5;
+
+		@include max(md) {
+			display: none;
+		}
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__4 {
 		position: absolute;
 		bottom: vh(452);
 		// right: vw(425,1920);
 		width: 100%;
-		max-width: vw(500,1920);
+		max-width: vw(500, 1920);
 		padding-right: 84px;
 		z-index: 12;
+
+		@include max(md) {
+			position: relative;
+			display: none;
+			max-width: vw(284, 320);
+			height: auto;
+			margin-left: auto;
+			margin-right: auto;
+			z-index: 16;
+			left: auto;
+			bottom: auto;
+			top: auto;
+			padding-right: 0;
+			margin-bottom: vw(25, 320);
+		}
+
+		&--mob {
+			position: relative;
+			display: none;
+			max-width: vw(284, 320);
+			height: auto;
+			margin-left: auto;
+			margin-right: auto;
+			z-index: 16;
+			left: auto;
+			bottom: auto;
+			top: auto;
+			padding-right: 0;
+			margin-bottom: vw(25, 320);
+
+			@include max(md) {
+				display: block;
+			}
+		}
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__title {
 		color: #FFFFFF;
+
 		&--1 {
 			span {
 				position: absolute;
@@ -736,23 +1122,65 @@
 		}
 
 	}
+
 	&__year {
 		color: #FFFFFF;
-		z-index: 5;	
-		position: absolute;	
+		z-index: 5;
+		position: absolute;
+
+		@include max(md) {
+			color: #404040;
+			position: relative;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			width: 100vw;
+			align-items: flex-start;
+			padding-right: vw(16, 320);
+			order: 2;
+			margin-left: vw(16, 320);
+		}
 	}
+
 	&__text {
 		color: #FFFFFF;
+
+		@include max(md) {
+			color: #404040;
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			order: 4;
+		}
+
 		&--1 {
 			position: absolute;
 			// right: vw(425,1920);
 			bottom: vh(87);
 			z-index: 12;
-			max-width: vw(500,1920);
+			max-width: vw(500, 1920);
+
+			@include max(md) {
+				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				max-width: vw(227, 320);
+				margin-top: vw(11, 320);
+				margin-left: vw(16, 320);
+				margin-bottom: vh(16, 320);
+				top: auto;
+				left: 0;
+
+			}
 		}
-		
+
 	}
 }
+
 .y4-6 {
 	position: absolute;
 	top: 0;
@@ -763,10 +1191,23 @@
 	z-index: 106;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
-	@include max(md){
-		display: none;
+
+	@include max(md) {
+		position: absolute;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+		min-height: 100vh;
+		height: auto;
+		background: #CDA378;
+		z-index: 114;
+		width: 100vw;
+		left: 0;
+		padding-top: vw(27, 320);
 	}
-	&__bg  {
+
+	&__bg {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -774,61 +1215,130 @@
 		width: 100%;
 		height: 100%;
 		background: #CDA378;
+
+		@include max(md) {
+			position: relative;
+			width: 100vw;
+			height: auto;
+		}
+
 		&--1 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 100%;		
+			height: 100%;
 		}
 	}
+
 	&__1 {
 		position: absolute;
 		top: 0;
-		left: vw(549,1920);
-		width: vw(379,1920);
-		height: vw(359,1920);
+		left: vw(549, 1920);
+		width: vw(379, 1920);
+		height: vw(359, 1920);
 		z-index: 8;
+
+		@include max(md) {
+			right: vw(42, 320);
+			left: auto;
+			bottom: vw(-50, 320);
+			top: auto;
+			width: vw(111, 320);
+			height: auto;
+		}
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__2 {
 		position: absolute;
 		top: 0;
-		left: vw(783,1920);
-		width: vw(898,1920);
+		left: vw(783, 1920);
+		width: vw(898, 1920);
 		// height: vw(747,1920);	
 		z-index: 7;
+
+		@include max(md) {
+			position: relative;
+			width: vw(286, 320);
+			height: auto;
+			left: 0;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__year {
 		color: #FFFFFF;
-		z-index: 5;	
-		position: absolute;	
+		z-index: 5;
+		position: absolute;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			width: 100vw;
+			align-items: flex-start;
+			padding-right: vw(16, 320);
+			order: 2;
+			margin-left: vw(16, 320);
+		}
 	}
+
 	&__text {
 		color: #FFFFFF;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			order: 4;
+		}
+
 		&--1 {
 			position: absolute;
-			left: vw(61,1920);
-			bottom: vw(61,1920);
+			left: vw(61, 1920);
+			bottom: vw(61, 1920);
 			z-index: 12;
-			max-width: vw(500,1920);
+			max-width: vw(500, 1920);
+
+			@include max(md) {
+				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				max-width: vw(227, 320);
+				margin-top: vw(11, 320);
+				margin-left: vw(16, 320);
+				margin-bottom: vh(16, 320);
+				top: auto;
+				left: 0;
+
+			}
 		}
-		
+
 	}
 }
+
 .y4-7 {
 	position: absolute;
 	top: 0;
@@ -839,10 +1349,25 @@
 	z-index: 106;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
-	@include max(md){
-		display: none;
+
+
+	@include max(md) {
+		position: absolute;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+		min-height: 100vh;
+		height: auto;
+		background: #003F78;
+		z-index: 118;
+		width: 100vw;
+		left: 0;
+		padding-top: vw(27, 320);
+
 	}
-	&__bg  {
+
+	&__bg {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -850,50 +1375,100 @@
 		width: 100%;
 		height: 100%;
 		background: #003F78;
+
+		@include max(md) {
+			position: relative;
+			display: block;
+			width: 100vw;
+			height: auto;
+			top: auto;
+			left: auto;
+			order: 2;
+		}
+
 		&--1 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 100%;		
+			height: 100%;
 		}
 	}
+
 	&__1 {
 		position: absolute;
-		left: vw(251,1920);
-		width: vw(1416,1920);
+		left: vw(251, 1920);
+		width: vw(1416, 1920);
 		// height: vw(821,1920);
 		z-index: 4;
+
+		@include max(md) {
+			position: relative;
+			width: 100vw;
+			height: auto;
+
+		}
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__2 {
 		position: absolute;
 		bottom: 0;
-		right: vw(115,1920);
-		width: vw(739,1920);
+		right: vw(115, 1920);
+		width: vw(739, 1920);
 		// height: vw(747,1920);	
 		z-index: 7;
+
+		@include max(md) {
+			position: relative;
+			width: 100vw;
+			height: auto;
+		}
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__year {
 		color: #FFFFFF;
-		z-index: 5;	
-		position: absolute;	
+		z-index: 5;
+		position: absolute;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			width: 100vw;
+			align-items: flex-start;
+			padding-right: vw(16, 320);
+			padding-bottom: vw(30, 320) !important;
+			order: 2;
+			margin-left: vw(16, 320);
+			order: 1;
+		}
 	}
+
 	&__title {
 		color: #FFFFFF;
+
+		@include max(md) {
+			display: none;
+
+		}
+
 		&--1 {
 			span {
 				position: absolute;
@@ -903,18 +1478,45 @@
 		}
 
 	}
+
 	&__text {
 		color: #FFFFFF;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+
+		}
+
 		&--1 {
 			position: absolute;
-			right: vw(862,1920);
-			top: vw(198,1920);
+			right: vw(862, 1920);
+			top: vw(198, 1920);
 			z-index: 12;
-			max-width: vw(588,1920);
+			max-width: vw(588, 1920);
+
+			@include max(md) {
+				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				max-width: vw(237, 320);
+				margin-top: vw(52, 320);
+				margin-left: vw(16, 320);
+				margin-bottom: vh(16, 320);
+				top: auto;
+				left: 0;
+
+			}
 		}
-		
+
 	}
 }
+
 .y4-8 {
 	position: absolute;
 	top: 0;
@@ -924,9 +1526,22 @@
 	z-index: 108;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
-	@include max(md){
-		display: none;
+
+	@include max(md) {
+		position: absolute;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+		min-height: 100vh;
+		height: auto;
+		background: #FFFFFF;
+		z-index: 121;
+		width: 100vw;
+		left: 0;
+		padding-top: 0;
 	}
+
 	&__blockOverlay {
 		position: absolute;
 		top: 0;
@@ -934,14 +1549,12 @@
 		width: 100vw;
 		min-height: 100vh;
 		opacity: 0;
-		z-index: 107;
+		z-index: 120;
 		will-change: transform, opacity, top;
 		transform-style: preserve-3d;
-		@include max(md){
-			display: none;
-		}
 	}
-	&__bg  {
+
+	&__bg {
 		position: absolute;
 		top: 0;
 		left: 80vw;
@@ -950,46 +1563,105 @@
 		height: 100vh;
 		background: #FFFFFF;
 		z-index: 1;
+
+		@include max(md) {
+			position: relative;
+			width: 100vw;
+			height: auto;
+			left: 0;
+		}
+
 		&--1 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 100%;		
+			height: 100%;
 			background: #FFFFFF;
 		}
 	}
+
 	&__1 {
 		position: absolute;
 		left: 0;
 		width: 80vw;
 		height: 100vh;
 		z-index: 4;
+
+		@include max(md) {
+			position: relative;
+			width: 100vw;
+			height: auto;
+			left: 0;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__year {
 		color: #404040;
-		z-index: 5;	
-		position: absolute;	
+		z-index: 5;
+		position: absolute;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			width: 100vw;
+			align-items: flex-start;
+			padding-right: vw(16, 320);
+			order: 2;
+			margin-left: vw(16, 320);
+		}
 	}
+
 	&__text {
 		color: #404040;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			order: 4;
+		}
+
 		&--1 {
 			position: absolute;
-			left: vw(52,1920);
-			bottom: vw(52,1920);
+			left: vw(52, 1920);
+			bottom: vw(52, 1920);
 			z-index: 12;
-			max-width: vw(537,1920);
+			max-width: vw(537, 1920);
+
+			@include max(md) {
+				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				max-width: vw(227, 320);
+				margin-top: vw(11, 320);
+				margin-left: vw(16, 320);
+				margin-bottom: vh(16, 320);
+				top: auto;
+				left: 0;
+
+			}
 		}
-		
+
 	}
 }
+
 .y4-9 {
 	position: absolute;
 	top: 0;
@@ -1000,10 +1672,23 @@
 	z-index: 108;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
-	@include max(md){
-		display: none;
+
+	@include max(md) {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+		min-height: 100vh;
+		height: auto;
+		background: #FFFFFF;
+		z-index: 121;
+		width: 100vw;
+		left: 0;
+		padding-top: 0;
 	}
-	&__bg  {
+
+	&__bg {
 		position: absolute;
 		top: 0;
 		left: 80vw;
@@ -1011,82 +1696,94 @@
 		width: 70vw;
 		height: 100vh;
 		z-index: 1;
+
 		&--1 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 100%;		
+			height: 100%;
+
 			img {
 				position: relative;
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 				object-position: center bottom;
-			}	
+			}
 		}
 	}
+
 	&__1 {
 		position: absolute;
 		left: 0;
 		width: 80vw;
 		height: 100vh;
 		z-index: 4;
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__2 {
 		position: absolute;
 		left: 0;
 		bottom: 0;
-		width: vw(471,1920);
+		width: vw(471, 1920);
 		// height: 100vh;
 		z-index: 10;
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__3 {
 		position: absolute;
 		left: 0;
 		top: 50px;
-		width: vw(684,1920);
+		width: vw(684, 1920);
 		// height: 100vh;
 		z-index: 10;
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__year {
 		color: #fff;
-		z-index: 5;	
-		position: absolute;	
+		z-index: 5;
+		position: absolute;
 	}
+
 	&__text {
 		color: #ffff;
+
 		&--1 {
 			position: absolute;
-			left: vw(52,1920);
-			bottom: vw(52,1920);
+			left: vw(52, 1920);
+			bottom: vw(52, 1920);
 			z-index: 12;
-			max-width: vw(537,1920);
+			max-width: vw(537, 1920);
 		}
-		
+
 	}
 }
+
 .y4-10 {
 	position: absolute;
 	top: 0;
@@ -1097,9 +1794,11 @@
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
 	background: #FFFFFF;
-	@include max(md){
+
+	@include max(md) {
 		display: none;
 	}
+
 	&__blockOverlay {
 		position: absolute;
 		top: 0;
@@ -1111,11 +1810,13 @@
 		background: #000;
 		will-change: transform, opacity, top;
 		transform-style: preserve-3d;
-		@include max(md){
+
+		@include max(md) {
 			display: none;
 		}
 	}
-	&__bg  {
+
+	&__bg {
 		position: absolute;
 		top: 0;
 		left: 0vw;
@@ -1124,36 +1825,42 @@
 		height: 100vh;
 		// background: #FFFFFF;
 		z-index: 1;
+
 		&--1 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 100%;		
+			height: 100%;
 			// background: #FFFFFF;
 		}
 	}
+
 	&__1 {
 		position: absolute;
 		left: 0;
-		width: vw(795,1920);
+		width: vw(795, 1920);
 		top: vh(117);
 		z-index: 4;
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__year {
 		color: #404040;
-		z-index: 5;	
-		position: absolute;	
+		z-index: 5;
+		position: absolute;
 	}
+
 	&__title {
 		color: #404040;
+
 		&--1 {
 			span {
 				position: absolute;
@@ -1162,18 +1869,21 @@
 		}
 
 	}
+
 	&__text {
 		color: #404040;
+
 		&--1 {
 			position: absolute;
-			left: vw(52,1920);
-			bottom: vw(52,1920);
+			left: vw(52, 1920);
+			bottom: vw(52, 1920);
 			z-index: 12;
-			max-width: vw(537,1920);
+			max-width: vw(537, 1920);
 		}
-		
+
 	}
 }
+
 .y4-11 {
 	position: absolute;
 	top: 0;
@@ -1183,9 +1893,11 @@
 	z-index: 110;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
-	@include max(md){
+
+	@include max(md) {
 		display: none;
 	}
+
 	&__wrap {
 		position: absolute;
 		left: 0;
@@ -1193,8 +1905,9 @@
 		height: 100vh;
 		width: 2px;
 		z-index: 5;
-		padding-top: vw(50,1920);
-		padding-bottom: vw(50,1920);
+		padding-top: vw(50, 1920);
+		padding-bottom: vw(50, 1920);
+
 		&--line {
 			position: relative;
 			height: 100%;
@@ -1203,7 +1916,7 @@
 		}
 	}
 
-	&__bg  {
+	&__bg {
 		position: absolute;
 		top: 0;
 		left: 0vw;
@@ -1212,42 +1925,47 @@
 		height: 100vh;
 		background: #FFFFFF;
 		z-index: 1;
+
 		&--1 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 100%;		
+			height: 100%;
 			background: #FFFFFF;
 		}
 	}
-	
+
 	&__1 {
 		position: absolute;
 		top: 0;
 		right: 0;
-		padding-right: vw(56,1920);
-		width: vw(1313,1920);
+		padding-right: vw(56, 1920);
+		width: vw(1313, 1920);
 		height: 100vh;
-		padding-top: vw(56,1920);
-		padding-bottom: vw(56,1920);
+		padding-top: vw(56, 1920);
+		padding-bottom: vw(56, 1920);
 		z-index: 4;
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__year {
 		color: #404040;
-		z-index: 5;	
+		z-index: 5;
 		position: absolute;
-		right: vw(1417,1920);	
+		right: vw(1417, 1920);
 	}
+
 	&__title {
 		color: #404040;
+
 		&--1 {
 			span {
 				position: absolute;
@@ -1256,26 +1974,30 @@
 		}
 
 	}
+
 	&__text {
 		color: #404040;
+
 		&--1 {
 			position: absolute;
-			left: vw(52,1920);
-			bottom: vw(52,1920);
+			left: vw(52, 1920);
+			bottom: vw(52, 1920);
 			z-index: 12;
-			max-width: vw(658,1920);
+			max-width: vw(658, 1920);
 		}
+
 		&--2 {
 			position: absolute;
-			left: vw(1087,1920);
-			bottom: vw(56,1920);
+			left: vw(1087, 1920);
+			bottom: vw(56, 1920);
 			z-index: 12;
-			max-width: vw(249,1920);			
-			width: vw(249,1920);			
+			max-width: vw(249, 1920);
+			width: vw(249, 1920);
 		}
-		
+
 	}
 }
+
 .y4-12 {
 	position: absolute;
 	top: 0;
@@ -1286,10 +2008,12 @@
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
 	background: #FFFFFF;
-	@include max(md){
+
+	@include max(md) {
 		display: none;
 	}
-	&__bg  {
+
+	&__bg {
 		position: absolute;
 		top: 0;
 		left: 0vw;
@@ -1297,60 +2021,69 @@
 		width: 150vw;
 		height: 100vh;
 		z-index: 1;
+
 		&--1 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 100%;		
+			height: 100%;
 		}
 	}
+
 	&__1 {
 		position: absolute;
 		left: 0;
-		width: vw(1555,1920);
+		width: vw(1555, 1920);
 		height: 100vh;
 		top: 0;
 		z-index: 4;
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__2 {
 		position: absolute;
 		left: 0;
-		width: vw(416,1920);
-		top: vw(103,1920);
+		width: vw(416, 1920);
+		top: vw(103, 1920);
 		z-index: 4;
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__year {
 		color: #404040;
-		z-index: 5;	
-		position: absolute;	
+		z-index: 5;
+		position: absolute;
 	}
+
 	&__text {
 		color: #404040;
+
 		&--1 {
 			position: absolute;
-			left: vw(1607,1920);
-			bottom: vw(52,1920);
+			left: vw(1607, 1920);
+			bottom: vw(52, 1920);
 			z-index: 12;
-			max-width: vw(537,1920);
+			max-width: vw(537, 1920);
 		}
-		
+
 	}
 }
+
 .y4-13 {
 	position: absolute;
 	top: 0;
@@ -1361,9 +2094,11 @@
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
 	background: #FFFFFF;
-	@include max(md){
+
+	@include max(md) {
 		display: none;
 	}
+
 	&__blockOverlay {
 		position: absolute;
 		top: 0;
@@ -1374,11 +2109,13 @@
 		z-index: 112;
 		will-change: transform, opacity, top;
 		transform-style: preserve-3d;
-		@include max(md){
+
+		@include max(md) {
 			display: none;
 		}
 	}
-	&__bg  {
+
+	&__bg {
 		position: absolute;
 		top: 0;
 		left: 0vw;
@@ -1386,54 +2123,62 @@
 		width: 150vw;
 		height: 100vh;
 		z-index: 1;
+
 		&--1 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
+
 			img {
 				position: relative;
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 				object-position: center bottom;
-			}	
+			}
 		}
 	}
+
 	&__1 {
 		position: absolute;
 		left: 0;
-		width: vw(423,1920);
+		width: vw(423, 1920);
 		// height: 100vh;
-		top: vw(52,1920);
-		left: vw(74,1920);
+		top: vw(52, 1920);
+		left: vw(74, 1920);
 		z-index: 4;
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__year {
 		color: #fff;
-		z-index: 5;	
-		position: absolute;	
+		z-index: 5;
+		position: absolute;
 	}
+
 	&__text {
 		color: #fff;
+
 		&--1 {
 			position: absolute;
-			top: vw(52,1920);
-			left: vw(545,1920);
+			top: vw(52, 1920);
+			left: vw(545, 1920);
 			z-index: 12;
-			max-width: vw(512,1920);
+			max-width: vw(512, 1920);
 		}
-		
+
 	}
 }
+
 .y4-14 {
 	position: absolute;
 	top: 0;
@@ -1444,75 +2189,86 @@
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
 	background: #FFFFFF;
-	@include max(md){
+
+	@include max(md) {
 		display: none;
 	}
+
 	&__1 {
 		position: absolute;
 		right: 0;
-		width: vw(710,1920);
+		width: vw(710, 1920);
 		height: 100vh;
 		top: 0;
 		right: 0;
 		z-index: 4;
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
-		}	
+		}
 	}
-	&__2{
+
+	&__2 {
 		position: absolute;
 		// left: 0;
-		width: vw(755,1920);
+		width: vw(755, 1920);
 		// height: 100vh;
-		bottom: vw(157,1920);
+		bottom: vw(157, 1920);
 		// left: vw(74,1920);
 		z-index: 4;
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
-		}	
+		}
 	}
-	&__3{
+
+	&__3 {
 		position: absolute;
 		left: 0;
-		width: vw(582,1920);
+		width: vw(582, 1920);
 		// height: 100vh;
-		top: vw(52,1920);
-		left: vw(60,1920);
+		top: vw(52, 1920);
+		left: vw(60, 1920);
 		z-index: 4;
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__year {
 		color: #404040;
-		z-index: 5;	
-		position: absolute;	
-		right: vw(751,1920);
+		z-index: 5;
+		position: absolute;
+		right: vw(751, 1920);
 	}
+
 	&__text {
 		color: #404040;
+
 		&--1 {
 			position: absolute;
-			bottom: vw(52,1920);
-			left: vw(52,1920);
+			bottom: vw(52, 1920);
+			left: vw(52, 1920);
 			z-index: 12;
-			max-width: vw(452,1920);
+			max-width: vw(452, 1920);
 		}
-		
+
 	}
 }
+
 .y4-15 {
 	position: absolute;
 	top: 0;
@@ -1522,9 +2278,11 @@
 	z-index: 115;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
-	@include max(md){
+
+	@include max(md) {
 		display: none;
 	}
+
 	&__blockOverlay {
 		position: absolute;
 		top: 0;
@@ -1535,11 +2293,13 @@
 		z-index: 115;
 		will-change: transform, opacity, top;
 		transform-style: preserve-3d;
-		@include max(md){
+
+		@include max(md) {
 			display: none;
 		}
 	}
-	&__bg  {
+
+	&__bg {
 		position: absolute;
 		top: 0;
 		left: 0vw;
@@ -1547,56 +2307,65 @@
 		width: 170vw;
 		height: 100vh;
 		z-index: 1;
+
 		&--1 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
+
 			img {
 				position: relative;
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 				object-position: center bottom;
-			}	
+			}
 		}
 	}
+
 	&__1 {
 		position: absolute;
 		left: 0;
-		width: vw(1837,1920);
+		width: vw(1837, 1920);
 		bottom: 0;
 		// left: vw(74,1920);
 		z-index: 7;
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__year {
 		color: #404040;
-		z-index: 5;	
-		position: absolute;	
+		z-index: 5;
+		position: absolute;
 	}
+
 	&__text {
 		color: #404040;
+
 		&--1 {
 			position: absolute;
-			bottom: vw(52,1920);
-			left: vw(52,1920);
+			bottom: vw(52, 1920);
+			left: vw(52, 1920);
 			z-index: 12;
-			max-width: vw(512,1920);
+			max-width: vw(512, 1920);
 		}
-		
+
 	}
+
 	&__title {
 		position: absolute;
 		color: #404040;
 		z-index: 5;
+
 		&--1 {
 			span {
 				position: absolute;
@@ -1606,6 +2375,7 @@
 
 	}
 }
+
 .y4-16 {
 	position: absolute;
 	top: 0;
@@ -1616,9 +2386,11 @@
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
 	background: #003F78;
-	@include max(md){
+
+	@include max(md) {
 		display: none;
 	}
+
 	&__blockOverlay {
 		position: absolute;
 		top: 0;
@@ -1629,11 +2401,13 @@
 		z-index: 117;
 		will-change: transform, opacity, top;
 		transform-style: preserve-3d;
-		@include max(md){
+
+		@include max(md) {
 			display: none;
 		}
 	}
-	&__bg  {
+
+	&__bg {
 		position: absolute;
 		top: 0;
 		left: 0vw;
@@ -1641,84 +2415,97 @@
 		width: 170vw;
 		height: 100vh;
 		z-index: 1;
+
 		&--1 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
+
 			img {
 				position: relative;
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 				object-position: center bottom;
-			}	
+			}
 		}
 	}
+
 	&__1 {
 		position: absolute;
 		left: 0;
 		top: 0;
-		width: vw(1436,1920);
+		width: vw(1436, 1920);
 		bottom: 0;
 		height: 100vh;
 		z-index: 7;
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__2 {
 		position: absolute;
 		top: vh(125);
-		width: vw(872,1920);
+		width: vw(872, 1920);
 		z-index: 7;
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__3 {
 		position: absolute;
 		bottom: vh(130);
-		width: vw(966,1920);
-		right: vw(408,1920);
+		width: vw(966, 1920);
+		right: vw(408, 1920);
 		z-index: 8;
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center bottom;
-		}	
+		}
 	}
+
 	&__year {
 		color: #fff;
-		z-index: 5;	
-		position: absolute;	
+		z-index: 5;
+		position: absolute;
 	}
+
 	&__text {
 		color: #fff;
+
 		&--1 {
 			position: absolute;
-			bottom: vw(52,1920);
-			left: vw(1492,1920);
+			bottom: vw(52, 1920);
+			left: vw(1492, 1920);
 			z-index: 12;
-			max-width: vw(501,1920);
+			max-width: vw(501, 1920);
 		}
-		
+
 	}
+
 	&__title {
 		position: absolute;
 		color: #404040;
 		z-index: 5;
+
 		&--1 {
 			span {
 				position: absolute;
@@ -1728,6 +2515,7 @@
 
 	}
 }
+
 .y4-17 {
 	position: absolute;
 	top: 0;
@@ -1737,9 +2525,11 @@
 	z-index: 117;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
-	@include max(md){
+
+	@include max(md) {
 		display: none;
 	}
+
 	&__blockOverlay {
 		position: absolute;
 		top: 0;
@@ -1750,11 +2540,13 @@
 		z-index: 117;
 		will-change: transform, opacity, top;
 		transform-style: preserve-3d;
-		@include max(md){
+
+		@include max(md) {
 			display: none;
 		}
 	}
-	&__bg  {
+
+	&__bg {
 		position: absolute;
 		top: 0;
 		left: 0vw;
@@ -1762,53 +2554,62 @@
 		width: 140vw;
 		height: 130vh;
 		z-index: 1;
+
 		&--1 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 120%;
+
 			img {
 				position: relative;
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 				object-position: center top;
-			}	
+			}
 		}
 	}
+
 	&__year {
 		color: #fff;
-		z-index: 5;	
-		position: absolute;	
+		z-index: 5;
+		position: absolute;
 	}
+
 	&__text {
 		color: #fff;
+
 		&--1 {
 			position: absolute;
-			top: vw(52,1920);
-			left: vw(52,1920);
+			top: vw(52, 1920);
+			left: vw(52, 1920);
 			z-index: 12;
-			max-width: vw(512,1920);
+			max-width: vw(512, 1920);
 		}
-		
+
 	}
+
 	&__title {
 		position: absolute;
 		color: #fff;
 		z-index: 5;
-		left: vw(52,1920);
+		left: vw(52, 1920);
 		bottom: vh(80);
+
 		&--1 {
 			span {
 				position: absolute;
 				display: block;
+
 				&:first-child {
-					font-size: vw(550,1920);
+					font-size: vw(550, 1920);
 					bottom: vh(100);
 				}
+
 				&:nth-child(2) {
-					left: vw(994,1920);
+					left: vw(994, 1920);
 					bottom: vh(-30);
 				}
 			}

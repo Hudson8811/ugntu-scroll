@@ -3217,13 +3217,13 @@ function initAnimation() {
   scHeight = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.scroll-page').innerHeight();
   b1Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y4-1').innerHeight();
   b2Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y4-2').innerHeight();
-  b3Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y2-6').innerHeight();
-  b4Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y2-7').innerHeight();
-  b5Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y2-8').innerHeight();
-  b6Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y2-9').innerHeight();
-  b7Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y2-10').innerHeight();
-  b8Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y2-11').innerHeight();
-  b9Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y2-12').innerHeight();
+  b3Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y4-3').innerHeight();
+  b4Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y4-4').innerHeight();
+  b5Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y4-4--4').innerHeight();
+  b6Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y4-5').innerHeight();
+  b7Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y4-6').innerHeight();
+  b8Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y4-7').innerHeight();
+  b9Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y4-8').innerHeight();
   if (window.innerWidth > 1100) {
     initScrollAnimationDesktop();
     initMode = 'desk';
@@ -3728,32 +3728,99 @@ function initScrollAnimationTablet() {
   }, "<");
   tl1.fromTo(".y4-2", {
     y: "0",
-    top: "-250vh"
+    top: "0"
   }, {
-    top: "-350vh",
+    top: "0",
     y: -1 * (b2Height - scHeight),
     duration: Math.abs((scHeight - b2Height) / 460) + 1,
     ease: "none"
   }, ">");
-  // 	tl1.fromTo(".y4-2", {
-  // 		y: "0",
-  // 		top: "200vh"
-  // }, {
-  // 		top: "-200vh",
-  // 		y: 0,
-  // 		ease: "none",
-  // } , ">");
-
-  // 	tl1.fromTo(".y4-3", {
-  // 		y: "0",
-  // 		top: "0vh"
-  // }, {
-  // 		top: "-200vh",
-  // 		y: -1*(b1Height-scHeight),
-  // 		duration: Math.abs((scHeight-b1Height)/460)+1,
-  // 		ease: "none",
-  // } , ">");
-
+  tl1.fromTo(".y4-3", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b3Height - scHeight),
+    duration: Math.abs((scHeight - b3Height) / 460) + 1.5,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y4-4", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b4Height - scHeight),
+    duration: Math.abs((scHeight - b4Height) / 460) + 1.5,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y4-4--4", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b5Height - scHeight),
+    duration: Math.abs((scHeight - b5Height) / 460) + 1.5,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('1972', "+=0.82");
+  tl1.fromTo(".y4-4__blockOverlay--mob", {
+    opacity: 0
+    // x: "150vw"
+  }, {
+    opacity: 0.6,
+    // x: "150vw",
+    duration: 0.4,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y4-5", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b6Height - scHeight),
+    duration: Math.abs((scHeight - b6Height) / 460) + 1.5,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y4-6", {
+    // y: "0",
+    top: "100%"
+  }, {
+    top: "-4%",
+    // y: -1 * (b7Height - scHeight),
+    duration: Math.abs((scHeight - b7Height) / 460) + 1.5,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y4-7", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "-4%",
+    y: -1 * (b8Height - scHeight),
+    duration: Math.abs((scHeight - b8Height) / 460) + 1.5,
+    ease: "none"
+  }, ">");
+  console.log(b7Height);
+  console.log(-1 * (b7Height - scHeight));
+  console.log(-1 * (b7Height - scHeight));
+  tl1.addLabel('1973', "+=0.82");
+  tl1.fromTo(".y4-8__blockOverlay", {
+    opacity: 0
+    // x: "150vw"
+  }, {
+    opacity: 0.6,
+    // x: "150vw",
+    duration: 0.4,
+    ease: "none"
+  }, ">-=0.9");
+  tl1.fromTo(".y4-8", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b9Height - scHeight),
+    duration: Math.abs((scHeight - b9Height) / 460) + 1.5,
+    ease: "none"
+  }, ">");
   st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
     trigger: ".scroll-page",
     pin: true,
