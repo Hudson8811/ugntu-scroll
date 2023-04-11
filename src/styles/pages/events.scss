@@ -318,14 +318,6 @@
 			font-size: 14px;
 			line-height: 1.38;
 		}
-		span{
-			&:first-child{
-				&::after{
-					content: ", ";
-					display: inline;
-				}
-			}
-		}
 	}
 	&__right{
 		flex-grow: 1;
