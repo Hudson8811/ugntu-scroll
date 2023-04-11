@@ -3,7 +3,7 @@
     attach: function attach() {
       $('#views-count-result--target').once('views-count').each(function () {
         if ($('#views-count-result--source').length) {
-          $(this).text($('#views-count-result--source').text());
+          $(this).html($('#views-count-result--source').html());
         }
       });
 
