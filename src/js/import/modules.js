@@ -35,7 +35,7 @@ function getDropdownPositon(){
     }
 }
 
-if (typeof Drupal === undefined) {
+if (typeof Drupal === 'undefined') {
     var grid = document.querySelector('.grid');
     var iso = new Isotope( grid, {
         itemSelector: '.card-person',
