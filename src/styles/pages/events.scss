@@ -318,14 +318,6 @@
 			font-size: 14px;
 			line-height: 1.38;
 		}
-		span{
-			&:first-child{
-				&::after{
-					content: ", ";
-					display: inline;
-				}
-			}
-		}
 	}
 	&__right{
 		flex-grow: 1;
@@ -371,7 +363,7 @@
 			grid-column-gap: 37px;
 		}
 		&-item{
-			max-width: 164px;
+			max-width: 419px;
 			font-weight: 450;
 			font-size: 16px;
 			line-height: 1.24;

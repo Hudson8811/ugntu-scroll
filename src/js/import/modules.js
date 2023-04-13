@@ -34,12 +34,32 @@ function getDropdownPositon(){
         element.css('top', -1 * (fromTop - fromTopMenu - menuPadding - 1))
     }
 }
-var grid = document.querySelector('.grid');
-var iso = new Isotope( grid, {
-	itemSelector: '.card-person',
-	percentPosition: true,
-	masonry: {
-		columnWidth: ".card-person",
-		gutter: 20,
-	}
-});
+
+if (typeof Drupal === 'undefined') {
+    var grid = document.querySelector('.grid');
+    var iso = new Isotope( grid, {
+        itemSelector: '.card-person',
+        percentPosition: true,
+        masonry: {
+            columnWidth: ".card-person",
+            gutter: 20,
+        }
+    });
+}
+else {
+    (function ($, Drupal) {
+        Drupal.behaviors.tiqumModule = {
+            attach: function attach() {
+                var grid = document.querySelector('.grid');
+                var iso = new Isotope( grid, {
+                    itemSelector: '.card-person',
+                    percentPosition: true,
+                    masonry: {
+                        columnWidth: ".card-person",
+                        gutter: 20,
+                    }
+                });
+            }
+        };
+    })(jQuery, Drupal);
+}

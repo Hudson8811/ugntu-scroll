@@ -176,7 +176,21 @@ form.form(action='', method='post')
 						input#edit-field-video-0-remove-button--pVpHAYB1S-A.button.js-form-submit.form-submit(data-drupal-selector='edit-field-video-0-remove-button' formnovalidate='formnovalidate' type='submit' name='field_video_0_remove_button' value='Удалить' data-once='drupal-ajax')
 
 
+		.form__fileblock
+			.file-loader
+				.file-loader__inner
+				.file-loader__status.file-loader__status--cyan
+				.file-loader__status.file-loader__status--white
 
+			.test-file-loader
+				button.test-file-loader__btn(data-value="0") 0%
+				button.test-file-loader__btn(data-value="5") 5%
+				button.test-file-loader__btn(data-value="20") 20%
+				button.test-file-loader__btn(data-value="50") 50%
+				button.test-file-loader__btn(data-value="100") 100%
+
+				style
+					| .test-file-loader{display:flex} .test-file-loader__btn{margin: 10px; cursor:pointer;}
 
 	button.form__submit(type='submit') отправить
 

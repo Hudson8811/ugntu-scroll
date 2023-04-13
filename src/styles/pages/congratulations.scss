@@ -2,7 +2,31 @@
 
 .congratulations-page {
 	.header {
-		background: #fff;
+		background: #15a6b1;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		&__right{
+			border-left: 1px solid rgba(255, 255, 255, 0.2);
+		}
+		&__btn{
+			color: #FFFFFF;
+			&:hover{
+				color: #FFFFFF;
+			}
+			&--blue{
+				background: rgba(255, 255, 255, 0.2);
+				&:hover {
+					background: #003F78;
+					color: #ffffff !important;
+				}
+			}
+		}
+		&__menu{
+			&-item {
+				a {
+					color: #FFFFFF;
+				}
+			}
+		}
 	}
 }
 
