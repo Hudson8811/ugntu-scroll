@@ -1549,9 +1549,12 @@
 		width: 100vw;
 		min-height: 100vh;
 		opacity: 0;
-		z-index: 120;
 		will-change: transform, opacity, top;
 		transform-style: preserve-3d;
+
+		@include max(md) {
+			z-index: 120;
+		}
 	}
 
 	&__bg {
@@ -1681,11 +1684,12 @@
 		flex-flow: column nowrap;
 		min-height: 100vh;
 		height: auto;
-		background: #FFFFFF;
+		background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
 		z-index: 121;
 		width: 100vw;
 		left: 0;
 		padding-top: 0;
+		padding-bottom: vw(30, 320);
 	}
 
 	&__bg {
@@ -1697,12 +1701,27 @@
 		height: 100vh;
 		z-index: 1;
 
+		@include max(md) {
+			position: relative;
+			width: 100vw;
+			display: flex;
+			top: auto;
+			left: auto;
+			height: auto;
+			order: 3;
+			padding-left: vw(16, 320);
+		}
+
 		&--1 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
+
+			@include max(md) {
+				display: none;
+			}
 
 			img {
 				position: relative;
@@ -1721,6 +1740,16 @@
 		height: 100vh;
 		z-index: 4;
 
+		@include max(md) {
+			position: relative;
+			width: 100vw;
+			height: auto;
+			left: 0;
+			margin-left: auto;
+			margin-right: auto;
+			order: 1;
+		}
+
 		img {
 			position: relative;
 			width: 100%;
@@ -1738,11 +1767,23 @@
 		// height: 100vh;
 		z-index: 10;
 
+		@include max(md) {
+			position: absolute;
+			width: vw(112, 320);
+			display: flex;
+			top: vw(143, 320);
+			bottom: auto;
+			left: auto;
+			right: vw(20, 320);
+			margin-bottom: vw(16, 320);
+			order: 4;
+		}
+
 		img {
 			position: relative;
 			width: 100%;
 			height: 100%;
-			object-fit: cover;
+			object-fit: contain;
 			object-position: center bottom;
 		}
 	}
@@ -1754,6 +1795,16 @@
 		width: vw(684, 1920);
 		// height: 100vh;
 		z-index: 10;
+
+		@include max(md) {
+			position: relative;
+			width: vw(286, 320);
+			height: auto;
+			left: 0;
+			margin-left: auto;
+			margin-right: auto;
+			order: 5;
+		}
 
 		img {
 			position: relative;
@@ -1768,10 +1819,30 @@
 		color: #fff;
 		z-index: 5;
 		position: absolute;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			width: 100vw;
+			align-items: flex-start;
+			padding-right: vw(16, 320);
+			order: 2;
+			margin-left: vw(16, 320);
+		}
 	}
 
 	&__text {
 		color: #ffff;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
 
 		&--1 {
 			position: absolute;
@@ -1779,6 +1850,18 @@
 			bottom: vw(52, 1920);
 			z-index: 12;
 			max-width: vw(537, 1920);
+
+			@include max(md) {
+				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				max-width: vw(227, 320);
+				top: auto;
+				left: 0;
+
+			}
 		}
 
 	}
@@ -1796,7 +1879,19 @@
 	background: #FFFFFF;
 
 	@include max(md) {
-		display: none;
+		position: absolute;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+		min-height: 100vh;
+		height: auto;
+		background: #fff;
+		z-index: 133;
+		width: 100vw;
+		left: 0;
+		padding-top: 0;
+		padding-bottom: vw(30, 320);
 	}
 
 	&__blockOverlay {
@@ -1812,7 +1907,7 @@
 		transform-style: preserve-3d;
 
 		@include max(md) {
-			display: none;
+			z-index: 130;
 		}
 	}
 
@@ -1826,13 +1921,30 @@
 		// background: #FFFFFF;
 		z-index: 1;
 
+		@include max(md) {
+			position: relative;
+			width: 100vw;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			top: auto;
+			left: auto;
+			height: auto;
+		}
+
 		&--1 {
+
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
+
 			// background: #FFFFFF;
+			@include max(md) {
+				display: none;
+			}
 		}
 	}
 
@@ -1842,6 +1954,18 @@
 		width: vw(795, 1920);
 		top: vh(117);
 		z-index: 4;
+
+		@include max(md) {
+			position: relative;
+			width: 100vw;
+			height: auto;
+			left: 0;
+			top: 0;
+			padding-top: vw(20, 320);
+			margin-bottom: vw(47, 320);
+			margin-left: auto;
+			margin-right: auto;
+		}
 
 		img {
 			position: relative;
@@ -1856,10 +1980,25 @@
 		color: #404040;
 		z-index: 5;
 		position: absolute;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			width: 100vw;
+			align-items: flex-start;
+			padding-right: vw(16, 320);
+			margin-left: vw(16, 320);
+		}
 	}
 
 	&__title {
 		color: #404040;
+
+		@include max(md) {
+			display: none;
+		}
 
 		&--1 {
 			span {
@@ -1873,12 +2012,34 @@
 	&__text {
 		color: #404040;
 
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
 		&--1 {
 			position: absolute;
 			left: vw(52, 1920);
 			bottom: vw(52, 1920);
 			z-index: 12;
 			max-width: vw(537, 1920);
+
+			@include max(md) {
+				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				max-width: vw(227, 320);
+				top: auto;
+				left: 0;
+				bottom: auto;
+				padding-left: vw(16, 320);
+
+			}
 		}
 
 	}
@@ -1895,7 +2056,19 @@
 	transform-style: preserve-3d;
 
 	@include max(md) {
-		display: none;
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+		min-height: 100vh;
+		height: auto;
+		background: #fff;
+		z-index: 133;
+		width: 100vw;
+		left: 0;
+		padding-top: 0;
+		padding-bottom: vw(30, 320);
 	}
 
 	&__wrap {
@@ -1907,6 +2080,10 @@
 		z-index: 5;
 		padding-top: vw(50, 1920);
 		padding-bottom: vw(50, 1920);
+
+		@include max(md) {
+			display: none;
+		}
 
 		&--line {
 			position: relative;
@@ -1926,6 +2103,18 @@
 		background: #FFFFFF;
 		z-index: 1;
 
+		@include max(md) {
+			position: relative;
+			width: 100%d;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			top: auto;
+			left: auto;
+			height: auto;
+		}
+
 		&--1 {
 			position: absolute;
 			top: 0;
@@ -1933,6 +2122,10 @@
 			width: 100%;
 			height: 100%;
 			background: #FFFFFF;
+
+			@include max(md) {
+				display: none;
+			}
 		}
 	}
 
@@ -1946,6 +2139,20 @@
 		padding-top: vw(56, 1920);
 		padding-bottom: vw(56, 1920);
 		z-index: 4;
+
+		@include max(md) {
+			position: relative;
+			width: 100vw;
+			height: auto;
+			left: 0;
+			top: 0;
+			padding-top: vw(20, 320);
+			padding-right: vw(20, 320);
+			padding-left: vw(15, 320);
+			padding-bottom: 0;
+			margin-left: auto;
+			margin-right: auto;
+		}
 
 		img {
 			position: relative;
@@ -1961,10 +2168,25 @@
 		z-index: 5;
 		position: absolute;
 		right: vw(1417, 1920);
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			width: 100%;
+			align-items: flex-start;
+			padding-right: vw(16, 320);
+			margin-left: vw(16, 320);
+		}
 	}
 
 	&__title {
 		color: #404040;
+
+		@include max(md) {
+			display: none;
+		}
 
 		&--1 {
 			span {
@@ -1978,12 +2200,34 @@
 	&__text {
 		color: #404040;
 
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
 		&--1 {
 			position: absolute;
 			left: vw(52, 1920);
 			bottom: vw(52, 1920);
 			z-index: 12;
 			max-width: vw(658, 1920);
+
+			@include max(md) {
+				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				max-width: vw(227, 320);
+				top: auto;
+				left: 0;
+				bottom: auto;
+				padding-left: vw(16, 320);
+
+			}
 		}
 
 		&--2 {
@@ -1993,6 +2237,21 @@
 			z-index: 12;
 			max-width: vw(249, 1920);
 			width: vw(249, 1920);
+
+			@include max(md) {
+				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				margin-top: vw(11, 320);
+				margin-left: vw(16, 320);
+				margin-bottom: vh(16, 320);
+				width: 100%;
+				max-width: vw(141, 320);
+				left: 0;
+
+			}
 		}
 
 	}
@@ -2010,7 +2269,19 @@
 	background: #FFFFFF;
 
 	@include max(md) {
-		display: none;
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+		min-height: 100vh;
+		height: auto;
+		background: #fff;
+		z-index: 133;
+		width: 100vw;
+		left: 0;
+		padding-top: 0;
+		// padding-bottom: vw(30, 320);
 	}
 
 	&__bg {
@@ -2021,6 +2292,18 @@
 		width: 150vw;
 		height: 100vh;
 		z-index: 1;
+
+		@include max(md) {
+			position: relative;
+			width: 100%d;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			top: auto;
+			left: auto;
+			height: auto;
+		}
 
 		&--1 {
 			position: absolute;
@@ -2039,6 +2322,17 @@
 		top: 0;
 		z-index: 4;
 
+		@include max(md) {
+			position: relative;
+			width: 100vw;
+			height: auto;
+			left: 0;
+			top: 0;
+			padding-bottom: 0;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
 		img {
 			position: relative;
 			width: 100%;
@@ -2055,6 +2349,12 @@
 		top: vw(103, 1920);
 		z-index: 4;
 
+		@include max(md) {
+			left: auto;
+			top: vw(174, 320);
+			right: vw(45, 320);
+		}
+
 		img {
 			position: relative;
 			width: 100%;
@@ -2064,14 +2364,35 @@
 		}
 	}
 
+
+
 	&__year {
 		color: #404040;
 		z-index: 5;
 		position: absolute;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			width: 100%;
+			align-items: flex-start;
+			padding-right: vw(16, 320);
+			margin-left: vw(16, 320);
+		}
 	}
 
 	&__text {
 		color: #404040;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
 
 		&--1 {
 			position: absolute;
@@ -2079,6 +2400,20 @@
 			bottom: vw(52, 1920);
 			z-index: 12;
 			max-width: vw(537, 1920);
+
+			@include max(md) {
+				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				max-width: vw(227, 320);
+				top: auto;
+				left: 0;
+				bottom: auto;
+				padding-left: vw(16, 320);
+
+			}
 		}
 
 	}
@@ -2096,7 +2431,19 @@
 	background: #FFFFFF;
 
 	@include max(md) {
-		display: none;
+		position: absolute;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+		min-height: 100vh;
+		height: auto;
+		background: #fff;
+		z-index: 143;
+		width: 100vw;
+		left: 0;
+		padding-top: 0;
+		padding-bottom: vw(30, 320);
 	}
 
 	&__blockOverlay {
@@ -2111,7 +2458,7 @@
 		transform-style: preserve-3d;
 
 		@include max(md) {
-			display: none;
+			z-index: 140;
 		}
 	}
 
@@ -2123,6 +2470,10 @@
 		width: 150vw;
 		height: 100vh;
 		z-index: 1;
+
+		@include max(md) {
+			display: none;
+		}
 
 		&--1 {
 			position: absolute;
@@ -2150,6 +2501,51 @@
 		left: vw(74, 1920);
 		z-index: 4;
 
+		@include max(md) {
+			position: relative;
+			width: 100vw;
+			height: auto;
+			left: 0;
+			top: 0;
+			padding-top: vw(20, 320);
+			padding-right: vw(20, 320);
+			padding-left: vw(15, 320);
+			padding-bottom: 0;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center bottom;
+		}
+	}
+
+	&__3 {
+		position: absolute;
+		left: 0;
+		width: vw(1555, 1920);
+		height: 100vh;
+		top: 0;
+		z-index: 4;
+		display: none;
+
+		@include max(md) {
+			position: relative;
+			width: 100vw;
+			height: auto;
+			display: block;
+			left: 0;
+			top: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
 		img {
 			position: relative;
 			width: 100%;
@@ -2163,10 +2559,31 @@
 		color: #fff;
 		z-index: 5;
 		position: absolute;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: row nowrap;
+			color: #404040;
+			justify-content: space-between;
+			width: 100%;
+			align-items: flex-start;
+			padding-right: vw(16, 320);
+			margin-left: vw(16, 320);
+		}
 	}
 
 	&__text {
 		color: #fff;
+
+		@include max(md) {
+			position: relative;
+			color: #404040;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
 
 		&--1 {
 			position: absolute;
@@ -2174,6 +2591,20 @@
 			left: vw(545, 1920);
 			z-index: 12;
 			max-width: vw(512, 1920);
+
+			@include max(md) {
+				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				max-width: vw(227, 320);
+				top: auto;
+				left: 0;
+				bottom: auto;
+				padding-left: vw(16, 320);
+
+			}
 		}
 
 	}
@@ -2191,7 +2622,19 @@
 	background: #FFFFFF;
 
 	@include max(md) {
-		display: none;
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+		min-height: 100vh;
+		height: auto;
+		background: #fff;
+		z-index: 133;
+		width: 100vw;
+		left: 0;
+		padding-top: 0;
+		// padding-bottom: vw(30, 320);
 	}
 
 	&__1 {
@@ -2202,6 +2645,18 @@
 		top: 0;
 		right: 0;
 		z-index: 4;
+
+		@include max(md) {
+			position: relative;
+			width: 100vw;
+			height: auto;
+			left: 0;
+			top: 0;
+			padding-bottom: 0;
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: vw(14, 320);
+		}
 
 		img {
 			position: relative;
@@ -2221,6 +2676,10 @@
 		// left: vw(74,1920);
 		z-index: 4;
 
+		@include max(md) {
+			display: none;
+		}
+
 		img {
 			position: relative;
 			width: 100%;
@@ -2239,6 +2698,10 @@
 		left: vw(60, 1920);
 		z-index: 4;
 
+		@include max(md) {
+			display: none;
+		}
+
 		img {
 			position: relative;
 			width: 100%;
@@ -2253,10 +2716,29 @@
 		z-index: 5;
 		position: absolute;
 		right: vw(751, 1920);
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			width: 100%;
+			align-items: flex-start;
+			padding-right: vw(16, 320);
+			margin-left: vw(16, 320);
+		}
 	}
 
 	&__text {
 		color: #404040;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
 
 		&--1 {
 			position: absolute;
@@ -2264,6 +2746,20 @@
 			left: vw(52, 1920);
 			z-index: 12;
 			max-width: vw(452, 1920);
+
+			@include max(md) {
+				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				max-width: vw(227, 320);
+				top: auto;
+				left: 0;
+				bottom: auto;
+				padding-left: vw(16, 320);
+
+			}
 		}
 
 	}

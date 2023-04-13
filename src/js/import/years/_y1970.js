@@ -19,7 +19,7 @@ let tl = gsap.timeline({
 	}
 });
 
-let scWidth, b1Width, b2Width, b3Width, b4Width, b5Width, b6Width, b7Width, b8Width, b9Width;
+let scWidth, b1Width, b2Width, b3Width, b4Width, b5Width, b6Width, b7Width, b8Width, b9Width, b11Height, b12Height, b13Height, b14Height;
 let scHeight, b1Height, b2Height, b3Height, b4Height, b5Height, b6Height, b7Height, b8Height, b9Height;
 
 let urlParams = new URLSearchParams(window.location.search);
@@ -77,6 +77,8 @@ function initAnimation() {
 	b7Height = $('.y4-6').innerHeight();
 	b8Height = $('.y4-7').innerHeight();
 	b9Height = $('.y4-8').innerHeight();
+	b11Height = $('.y4-10').innerHeight();
+	b12Height = $('.y4-13').innerHeight();
 
 	if (window.innerWidth > 1100) {
 		initScrollAnimationDesktop();
@@ -348,8 +350,8 @@ function initScrollAnimationDesktop() {
 
 
 
-	// tl1.addLabel('1974');
 
+	tl1.addLabel('1974', "+=0.46");
 
 	tl1.fromTo(".y4-10__blockOverlay", {
 		opacity: 0,
@@ -701,10 +703,6 @@ function initScrollAnimationTablet() {
 		ease: "none",
 	}, ">");
 
-	console.log(b7Height)
-	console.log(-1 * (b7Height - scHeight))
-	console.log(-1 * (b7Height - scHeight))
-
 
 	tl1.addLabel('1973', "+=0.82");
 
@@ -727,6 +725,53 @@ function initScrollAnimationTablet() {
 		duration: Math.abs((scHeight - b9Height) / 460) + 1.5,
 		ease: "none",
 	}, ">");
+
+	tl1.fromTo(".y4-10__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.6,
+		// x: "150vw",
+		duration: 0.4,
+		ease: "none",
+	}, ">");
+
+	tl1.addLabel('1974', "+=0.82");
+	tl1.fromTo(".y4-10", {
+		y: "0",
+		top: "100%",
+	}, {
+		top: "0",
+		y: -1 * (b11Height - scHeight),
+		duration: Math.abs((scHeight - b11Height) / 460) + 1.5,
+		ease: "none",
+	}, ">-=0.3");
+
+
+
+	tl1.fromTo(".y4-13__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.6,
+		// x: "150vw",
+		duration: 0.4,
+		ease: "none",
+	}, ">");
+
+	tl1.addLabel('1975', "+=0.82");
+
+	tl1.fromTo(".y4-13", {
+		y: "0",
+		top: "100%",
+	}, {
+		top: "0",
+		y: -1 * (b12Height - scHeight),
+		duration: Math.abs((scHeight - b12Height) / 460) + 1.5,
+		ease: "none",
+	}, ">");
+
+
 
 	st1 = ScrollTrigger.create({
 		trigger: ".scroll-page",
