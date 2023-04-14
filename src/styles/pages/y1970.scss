@@ -10,6 +10,7 @@
 	@include max(sm) {
 		height: auto;
 		padding-top: vw3(48);
+		overflow: hidden;
 	}
 
 	.yearConner {
@@ -67,9 +68,12 @@
 	}
 
 	@include max(sm) {
-		position: relative;
+		position: absolute;
 		height: auto;
-		padding-bottom: vw3(56);
+		// min-height: auto;
+		padding-bottom: 0;
+		height: auto;
+		min-height: vw(610, 320);
 	}
 
 	// &::before{
@@ -138,11 +142,14 @@
 		height: auto;
 		background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
 		height: auto;
-		min-height: auto;	
+		min-height: auto;
+		margin-top: vw(255, 320);
 	}
+
 	.blockTitle--mob {
 		order: 3;
 	}
@@ -161,6 +168,7 @@
 			height: 100%;
 			order: 1;
 		}
+
 		// @include max(sm){
 		// 	position: relative;
 		// 	height: auto;	
@@ -180,10 +188,12 @@
 			left: 0;
 			width: 100vw;
 			height: 280vh;
+
 			@include max(md) {
 				position: relative;
 				height: 100%;
-			}			
+			}
+
 			img {
 				position: relative;
 				width: 100%;
@@ -205,6 +215,7 @@
 			bottom: -10vh;
 			height: auto;
 		}
+
 		@include max(sm) {
 			bottom: 0vh;
 		}
@@ -321,10 +332,13 @@
 		background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
 		z-index: 10;
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
-		height: auto;	
+		height: auto;
+		min-height: auto;
 	}
+
 	.blockTitle--mob {
 		order: 3;
 	}
@@ -362,7 +376,7 @@
 			top: 0;
 			left: 0;
 			width: 100vw;
-			height: 120vh;
+			height: 130vh;
 
 			@include max(md) {
 				display: none;
@@ -497,6 +511,7 @@
 	z-index: 98;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
+	background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
 
 	@include max(md) {
 		position: absolute;
@@ -505,16 +520,20 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
-		min-height: 100vh;
+		min-height: auto;
 		height: auto;
+		overflow: hidden;
 		background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
 		height: auto;
 		min-height: auto;
 
+
 	}
+
 	&__bg {
 		position: absolute;
 		top: 0;
@@ -547,7 +566,9 @@
 				background: linear-gradient(180deg, rgba(255, 255, 255, 0.23) 0%, #FFFFFF 100%);
 				opacity: 0.2;
 				z-index: 5;
+				height: 100%;
 			}
+
 			@include max(sm) {
 				height: 100%;
 			}
@@ -577,8 +598,11 @@
 		@include max(md) {
 			position: relative;
 			z-index: 15;
+			// min-height: auto;
+			// height: auto;
 
 		}
+
 		@include max(sm) {
 			min-height: auto;
 			height: auto;
@@ -748,10 +772,13 @@
 		height: auto;
 		background: #fff;
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
-		height: auto;	
+		height: auto;
+		min-height: auto;
 	}
+
 	&--4 {
 		display: none;
 
@@ -815,11 +842,12 @@
 	}
 
 	&__year {
-		color: #404040;
+		color: #ffff;
 		z-index: 5;
 		position: absolute;
 
 		@include max(md) {
+			color: #404040;
 			position: relative;
 			display: flex;
 			flex-flow: row nowrap;
@@ -833,10 +861,11 @@
 	}
 
 	&__text {
-		color: #404040;
+		color: #fff;
 
 		@include max(md) {
 			position: relative;
+			color: #404040;
 			display: flex;
 			flex-flow: column nowrap;
 			justify-content: flex-start;
@@ -928,7 +957,8 @@
 	z-index: 107;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
-	@include max(sm){
+
+	@include max(sm) {
 		display: none;
 	}
 }
@@ -982,10 +1012,13 @@
 		z-index: 112;
 		width: 100vw;
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
-		height: auto;	
+		height: auto;
+		min-height: auto;
 	}
+
 	&__bg {
 		position: absolute;
 		top: 0;
@@ -999,6 +1032,7 @@
 			position: relative;
 			width: 100vw;
 			height: auto;
+			order: 1;
 		}
 
 		img {
@@ -1087,7 +1121,36 @@
 		z-index: 5;
 
 		@include max(md) {
+			position: relative;
+			width: 100%;
+			height: auto;
+			z-index: 16;
+			left: auto;
+			order: 4;
+			bottom: auto;
+			max-width: vw(284, 320);
+			margin-right: vw(18, 320);
+			margin-left: vw(18, 320);
+			margin-bottom: vw(25, 320);
+		}
+
+		&--mob {
+			position: relative;
 			display: none;
+			max-width: vw(284, 320);
+			height: auto;
+			margin-left: auto;
+			margin-right: auto;
+			z-index: 16;
+			left: auto;
+			bottom: auto;
+			top: auto;
+			padding-right: 0;
+			margin-bottom: vw(25, 320);
+
+			@include max(md) {
+				display: block;
+			}
 		}
 
 		img {
@@ -1179,6 +1242,7 @@
 			padding-right: vw(16, 320);
 			order: 2;
 			margin-left: vw(16, 320);
+			order: 2;
 		}
 	}
 
@@ -1192,7 +1256,7 @@
 			flex-flow: column nowrap;
 			justify-content: flex-start;
 			align-items: flex-start;
-			order: 4;
+			order: 3;
 		}
 
 		&--1 {
@@ -1246,10 +1310,13 @@
 		left: 0;
 		padding-top: vw(27, 320);
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
-		height: auto;	
+		height: auto;
+		min-height: auto;
 	}
+
 	&__bg {
 		position: absolute;
 		top: 0;
@@ -1393,6 +1460,34 @@
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
 
+	&--swiper {
+		z-index: 15;
+
+		&-button {
+			background: rgba(255, 255, 255, 0.2);
+			width: vw(39, 320);
+			height: vw(39, 320);
+			border-radius: 50%;
+			color: #fff;
+			z-index: 20;
+
+			&::after {
+				font-size: 3vw;
+				color: #fff;
+
+			}
+		}
+
+		.swiper-slide {
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+
+			img {
+				height: vw(405, 320);
+			}
+		}
+	}
 
 	@include max(md) {
 		position: absolute;
@@ -1409,10 +1504,13 @@
 		padding-top: vw(27, 320);
 
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
-		height: auto;	
+		height: auto;
+		min-height: auto;
 	}
+
 	&__bg {
 		position: absolute;
 		top: 0;
@@ -1433,11 +1531,15 @@
 		}
 
 		&--1 {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
+			display: none;
+
+			@include max(sm) {
+				position: relative;
+				display: flex;
+				justify-content: flex-start;
+				align-items: flex-start;
+				width: 100%;
+			}
 		}
 	}
 
@@ -1452,6 +1554,11 @@
 			position: relative;
 			width: 100vw;
 			height: auto;
+
+		}
+
+		@include max(sm) {
+			display: none;
 
 		}
 
@@ -1587,10 +1694,13 @@
 		left: 0;
 		padding-top: 0;
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
-		height: auto;	
+		height: auto;
+		min-height: auto;
 	}
+
 	&__blockOverlay {
 		position: absolute;
 		top: 0;
@@ -1598,13 +1708,15 @@
 		width: 100vw;
 		min-height: 100vh;
 		opacity: 0;
+		z-index: 107;
 		will-change: transform, opacity, top;
 		transform-style: preserve-3d;
 
 		@include max(md) {
 			z-index: 120;
 		}
-		@include max(sm){
+
+		@include max(sm) {
 			display: none;
 		}
 	}
@@ -1743,10 +1855,13 @@
 		padding-top: 0;
 		padding-bottom: vw(30, 320);
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
-		height: auto;	
+		height: auto;
+		min-height: auto;
 	}
+
 	&__bg {
 		position: absolute;
 		top: 0;
@@ -1948,10 +2063,13 @@
 		padding-top: 0;
 		padding-bottom: vw(30, 320);
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
-		height: auto;	
+		height: auto;
+		min-height: auto;
 	}
+
 	&__blockOverlay {
 		position: absolute;
 		top: 0;
@@ -1967,7 +2085,8 @@
 		@include max(md) {
 			z-index: 130;
 		}
-		@include max(sm){
+
+		@include max(sm) {
 			display: none;
 		}
 	}
@@ -2131,10 +2250,13 @@
 		padding-top: 0;
 		padding-bottom: vw(30, 320);
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
-		height: auto;	
+		height: auto;
+		min-height: auto;
 	}
+
 	&__wrap {
 		position: absolute;
 		left: 0;
@@ -2347,10 +2469,13 @@
 		padding-top: 0;
 		// padding-bottom: vw(30, 320);
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
-		height: auto;	
+		height: auto;
+		min-height: auto;
 	}
+
 	&__bg {
 		position: absolute;
 		top: 0;
@@ -2512,10 +2637,13 @@
 		padding-top: 0;
 		padding-bottom: vw(30, 320);
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
-		height: auto;	
+		height: auto;
+		min-height: auto;
 	}
+
 	&__blockOverlay {
 		position: absolute;
 		top: 0;
@@ -2530,7 +2658,8 @@
 		@include max(md) {
 			z-index: 140;
 		}
-		@include max(sm){
+
+		@include max(sm) {
 			display: none;
 		}
 	}
@@ -2709,10 +2838,13 @@
 		padding-top: 0;
 		// padding-bottom: vw(30, 320);
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
-		height: auto;	
+		height: auto;
+		min-height: auto;
 	}
+
 	&__1 {
 		position: absolute;
 		right: 0;
@@ -2850,6 +2982,7 @@
 	z-index: 115;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
+
 	@include max(md) {
 		position: absolute;
 		display: flex;
@@ -2865,10 +2998,14 @@
 		padding-top: 0;
 		padding-bottom: vw(30, 320);
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
-		height: auto;	
+		height: auto;
+		min-height: auto;
+		overflow: hidden;
 	}
+
 	&__blockOverlay {
 		position: absolute;
 		top: 0;
@@ -2883,7 +3020,8 @@
 		@include max(md) {
 			z-index: 150;
 		}
-		@include max(sm){
+
+		@include max(sm) {
 			display: none;
 		}
 	}
@@ -2908,12 +3046,14 @@
 			left: auto;
 			height: auto;
 		}
+
 		&--1 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
+
 			@include max(md) {
 				position: relative;
 				width: 100vw;
@@ -2925,7 +3065,7 @@
 				// margin-right: auto;
 				// padding-top: vw(14, 320);
 			}
-	
+
 			img {
 				position: relative;
 				width: 100%;
@@ -2943,9 +3083,11 @@
 		bottom: 0;
 		// left: vw(74,1920);
 		z-index: 7;
+
 		@include max(md) {
 			display: none;
 		}
+
 		img {
 			position: relative;
 			width: 100%;
@@ -2959,6 +3101,7 @@
 		color: #404040;
 		z-index: 5;
 		position: absolute;
+
 		@include max(md) {
 			position: relative;
 			display: flex;
@@ -2973,6 +3116,7 @@
 
 	&__text {
 		color: #404040;
+
 		@include max(md) {
 			position: relative;
 			display: flex;
@@ -2987,6 +3131,7 @@
 			left: vw(52, 1920);
 			z-index: 12;
 			max-width: vw(512, 1920);
+
 			@include max(md) {
 				position: relative;
 				display: flex;
@@ -3008,9 +3153,11 @@
 		position: absolute;
 		color: #404040;
 		z-index: 5;
+
 		@include max(md) {
 			display: none;
 		}
+
 		&--1 {
 			span {
 				position: absolute;
@@ -3031,6 +3178,7 @@
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
 	background: #003F78;
+
 	@include max(md) {
 		position: absolute;
 		display: flex;
@@ -3046,10 +3194,14 @@
 		padding-top: 0;
 		padding-bottom: vw(23, 320);
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
-		height: auto;	
+		height: auto;
+		min-height: auto;
+		overflow: hidden;
 	}
+
 	&__blockOverlay {
 		position: absolute;
 		top: 0;
@@ -3060,10 +3212,12 @@
 		z-index: 117;
 		will-change: transform, opacity, top;
 		transform-style: preserve-3d;
+
 		@include max(md) {
 			z-index: 160;
 		}
-		@include max(sm){
+
+		@include max(sm) {
 			display: none;
 		}
 	}
@@ -3076,6 +3230,7 @@
 		width: 170vw;
 		height: 100vh;
 		z-index: 1;
+
 		@include max(md) {
 			position: relative;
 			width: 100%;
@@ -3087,12 +3242,14 @@
 			left: auto;
 			height: auto;
 		}
+
 		&--1 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
+
 			@include max(md) {
 				position: relative;
 				width: 100vw;
@@ -3104,6 +3261,7 @@
 				// margin-right: auto;
 				// padding-top: vw(14, 320);
 			}
+
 			img {
 				position: relative;
 				width: 100%;
@@ -3122,6 +3280,7 @@
 		bottom: 0;
 		height: 100vh;
 		z-index: 7;
+
 		@include max(md) {
 			position: relative;
 			width: 100vw;
@@ -3148,6 +3307,7 @@
 		top: vh(125);
 		width: vw(872, 1920);
 		z-index: 7;
+
 		@include max(md) {
 			position: relative;
 			width: 100vw;
@@ -3178,6 +3338,7 @@
 		width: vw(966, 1920);
 		right: vw(408, 1920);
 		z-index: 8;
+
 		@include max(md) {
 			position: relative;
 			width: 100vw;
@@ -3204,6 +3365,7 @@
 		color: #fff;
 		z-index: 5;
 		position: absolute;
+
 		@include max(md) {
 			position: relative;
 			display: flex;
@@ -3218,6 +3380,7 @@
 
 	&__text {
 		color: #fff;
+
 		@include max(md) {
 			position: relative;
 			display: flex;
@@ -3225,12 +3388,14 @@
 			justify-content: flex-start;
 			align-items: flex-start;
 		}
+
 		&--1 {
 			position: absolute;
 			bottom: vw(52, 1920);
 			left: vw(1492, 1920);
 			z-index: 12;
 			max-width: vw(501, 1920);
+
 			@include max(md) {
 				position: relative;
 				display: flex;
@@ -3272,6 +3437,7 @@
 	z-index: 117;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
+
 	@include max(md) {
 		position: absolute;
 		display: flex;
@@ -3286,11 +3452,15 @@
 		left: 0;
 		padding-top: 0;
 		padding-bottom: vw(23, 320);
+		overflow: hidden;
 	}
-	@include max(sm){
+
+	@include max(sm) {
 		position: relative;
-		height: auto;	
+		height: auto;
+		min-height: auto;
 	}
+
 	&__blockOverlay {
 		position: absolute;
 		top: 0;
@@ -3305,7 +3475,8 @@
 		@include max(md) {
 			z-index: 170;
 		}
-		@include max(sm){
+
+		@include max(sm) {
 			display: none;
 		}
 	}
@@ -3318,6 +3489,7 @@
 		width: 140vw;
 		height: 130vh;
 		z-index: 1;
+
 		@include max(md) {
 			position: relative;
 			width: 100%;
@@ -3329,12 +3501,14 @@
 			left: auto;
 			height: auto;
 		}
+
 		&--1 {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 120%;
+
 			@include max(md) {
 				position: relative;
 				width: 100vw;
@@ -3346,6 +3520,7 @@
 				// margin-right: auto;
 				// padding-top: vw(14, 320);
 			}
+
 			img {
 				position: relative;
 				width: 100%;
@@ -3360,6 +3535,7 @@
 		color: #fff;
 		z-index: 5;
 		position: absolute;
+
 		@include max(md) {
 			position: relative;
 			display: flex;
@@ -3374,6 +3550,7 @@
 
 	&__text {
 		color: #fff;
+
 		@include max(md) {
 			position: relative;
 			display: flex;
@@ -3381,12 +3558,14 @@
 			justify-content: flex-start;
 			align-items: flex-start;
 		}
+
 		&--1 {
 			position: absolute;
 			top: vw(52, 1920);
 			left: vw(52, 1920);
 			z-index: 12;
 			max-width: vw(512, 1920);
+
 			@include max(md) {
 				position: relative;
 				display: flex;
@@ -3410,9 +3589,11 @@
 		z-index: 5;
 		left: vw(52, 1920);
 		bottom: vh(80);
+
 		@include max(md) {
 			display: none;
 		}
+
 		&--1 {
 			span {
 				position: absolute;

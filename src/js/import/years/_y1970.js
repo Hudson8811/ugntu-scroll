@@ -1,5 +1,6 @@
 import $ from "jquery";
 import gsap from "gsap";
+import Swiper from 'swiper/bundle';
 import ScrollTrigger from "gsap/ScrollTrigger";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
@@ -279,7 +280,7 @@ function initScrollAnimationDesktop() {
 		y: "70vh",
 		x: "5vw"
 	}, {
-		y: "40vh",
+		y: "10vh",
 		x: "5vw",
 		duration: 0.6,
 		ease: "none",
@@ -863,21 +864,68 @@ function initScrollAnimationMobile() {
 		}
 	});
 
-	// tl1.fromTo(".y2-1__numbers", {
-	// 		x: 0,
-	// }, {
-	// 		x: '-80%',
-	// 		duration:  1,
-	// 		ease: "none",
-	// } , "0");
+	tl1.fromTo(".y4-100__numbers", {
+		x: '20%',
+	}, {
+		x: '-120%',
+		duration: 1.2,
+		ease: "none",
+	}, "0");
 
-	// tl1.fromTo(".y2-1__numbers", {
-	// 		y: 0
-	// }, {
-	// 		y: '50%',
-	// 		duration:  0.5,
-	// 		ease: "none",
-	// } , "0");	
+	tl1.fromTo(".y4-100__numbers", {
+		y: "0%",
+		opacity: 1,
+	}, {
+		y: '70%',
+		opacity: 0.3,
+		duration: 1,
+		ease: "none",
+	}, "0");
+	tl1.fromTo(".y4-100", {
+		y: "5%",
+		// opacity: 1,
+	}, {
+		y: '-75%',
+		// opacity: 0,
+		duration: 3.3,
+		ease: "none",
+	}, "<");
+
+
+	st1 = ScrollTrigger.create({
+		trigger: ".y4-100__numbers",
+		pin: false,
+		start: "-45vw top",
+		end: () => "bottom top",
+		scrub: 1.5,
+		animation: tl1,
+	});
+
+	var academicList;
+	$('.js--y4-7').each(function () {
+		var slider = $(this)
+		var academicList = new Swiper(slider[0], {
+			slidesPerView: "1",
+			spaceBetween: 16,
+			loop: false,
+			pagination: false,
+			autoHeight: true,
+			navigation: {
+				nextEl: slider.find('.swiper-button-next')[0],
+				prevEl: slider.find('.swiper-button-prev')[0]
+			},
+			// thumbs: {
+			// 		swiper: galleryThumbs
+			// },
+			pagination: {
+				el: slider.find('.swiper-pagination')[0],
+				type: 'bullets',
+				clickable: true
+			},
+
+		});
+	})
+
 }
 
 
@@ -934,3 +982,4 @@ function getParameterFromString(urlString, parameterName) {
 	var urlParams = new URLSearchParams(urlString.split('?')[1]);
 	return urlParams.get(parameterName);
 }
+
