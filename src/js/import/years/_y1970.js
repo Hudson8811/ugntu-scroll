@@ -19,7 +19,7 @@ let tl = gsap.timeline({
 	}
 });
 
-let scWidth, b1Width, b2Width, b3Width, b4Width, b5Width, b6Width, b7Width, b8Width, b9Width, b11Height, b12Height, b13Height, b14Height;
+let scWidth, b1Width, b2Width, b3Width, b4Width, b5Width, b6Width, b7Width, b8Width, b9Width, b11Height, b12Height, b13Height, b14Height, b15Height;
 let scHeight, b1Height, b2Height, b3Height, b4Height, b5Height, b6Height, b7Height, b8Height, b9Height;
 
 let urlParams = new URLSearchParams(window.location.search);
@@ -79,6 +79,9 @@ function initAnimation() {
 	b9Height = $('.y4-8').innerHeight();
 	b11Height = $('.y4-10').innerHeight();
 	b12Height = $('.y4-13').innerHeight();
+	b13Height = $('.y4-15').innerHeight();
+	b14Height = $('.y4-16').innerHeight();
+	b15Height = $('.y4-17').innerHeight();
 
 	if (window.innerWidth > 1100) {
 		initScrollAnimationDesktop();
@@ -601,7 +604,7 @@ function initScrollAnimationTablet() {
 		y: "-50%",
 		opacity: 1,
 	}, {
-		y: '-80%',
+		y: '-50%',
 		opacity: 0,
 		duration: 1,
 		ease: "none",
@@ -614,7 +617,7 @@ function initScrollAnimationTablet() {
 		// opacity: 0,
 		duration: 1,
 		ease: "none",
-	}, "<");
+	}, "<+=0.5");
 
 	tl1.fromTo(".y4-1", {
 		y: "0",
@@ -768,6 +771,72 @@ function initScrollAnimationTablet() {
 		top: "0",
 		y: -1 * (b12Height - scHeight),
 		duration: Math.abs((scHeight - b12Height) / 460) + 1.5,
+		ease: "none",
+	}, ">");
+
+	tl1.fromTo(".y4-15__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.6,
+		// x: "150vw",
+		duration: 0.4,
+		ease: "none",
+	}, ">");
+
+	tl1.addLabel('1976', "+=0.82");
+
+	tl1.fromTo(".y4-15", {
+		y: "0",
+		top: "100%",
+	}, {
+		top: "0",
+		y: -1 * (b13Height - scHeight),
+		duration: Math.abs((scHeight - b13Height) / 460) + 1.5,
+		ease: "none",
+	}, ">");
+
+
+	tl1.fromTo(".y4-16__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.6,
+		// x: "150vw",
+		duration: 0.4,
+		ease: "none",
+	}, ">");
+
+	tl1.addLabel('1977', "+=0.82");
+
+	tl1.fromTo(".y4-16", {
+		y: "0",
+		top: "100%",
+	}, {
+		top: "0",
+		y: -1 * (b14Height - scHeight),
+		duration: Math.abs((scHeight - b14Height) / 460) + 1.5,
+		ease: "none",
+	}, ">");
+	tl1.fromTo(".y4-17__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.6,
+		// x: "150vw",
+		duration: 0.4,
+		ease: "none",
+	}, ">");
+
+	tl1.addLabel('1978', "+=0.82");
+
+	tl1.fromTo(".y4-17", {
+		y: "0",
+		top: "100%",
+	}, {
+		top: "0",
+		y: -1 * (b15Height - scHeight),
+		duration: Math.abs((scHeight - b15Height) / 460) + 1.5,
 		ease: "none",
 	}, ">");
 
