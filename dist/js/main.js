@@ -3350,7 +3350,7 @@ function initScrollAnimationDesktop() {
   tl1.addLabel('1971', '-=2.1');
   tl1.fromTo(".y4-2__title--1 span:nth-child(1)", {
     x: '-90vw',
-    y: '30vh'
+    y: '20vh'
   }, {
     x: '130vw',
     duration: 1,
@@ -3358,7 +3358,7 @@ function initScrollAnimationDesktop() {
   }, ">-0.3");
   tl1.fromTo(".y4-2__title--1 span:nth-child(2)", {
     x: '100vw',
-    y: '50vh'
+    y: '40vh'
   }, {
     x: '-130vw',
     duration: 1,
