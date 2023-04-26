@@ -111,20 +111,54 @@ function initScrollAnimationDesktop() {
 		}
 	});
 
+
+	tl1.fromTo(".y4-110__numbers", {
+		x: '5vw',
+	}, {
+		x: '-100%',
+		duration: 4,
+		ease: "none",
+	}, "0");
+	tl1.fromTo(".y4-110__photos-item--1", {
+		x: '50vw',
+	}, {
+		x: '-100%',
+		duration: 1,
+		ease: "none",
+	}, "<");
+	tl1.fromTo(".y4-110__photos-item--2", {
+		x: '100vw',
+	}, {
+		x: '-100%',
+		duration: 1.5,
+		ease: "none",
+	}, ">-0.3");
+	tl1.fromTo(".y4-110__photos-item--3", {
+		x: '100vw',
+	}, {
+		x: '-100%',
+		duration: 1.5,
+		ease: "none",
+	}, ">-0.7");
+
+
+
+
+
 	tl1.fromTo(".y4-1__bg", {
 		y: '0%',
 	}, {
 		y: '-200%',
 		duration: 4,
 		ease: "none",
-	}, "0");
+	}, ">");
 	tl1.fromTo(".y4-1__bg--1", {
 		y: '0%',
 	}, {
 		y: '-200%',
 		duration: 8,
 		ease: "none",
-	}, "0");
+	}, "<");
 	tl1.fromTo(".y4-1__title--1 span:nth-child(1)", {
 		x: '-60vw',
 		y: '60vh'
@@ -132,7 +166,7 @@ function initScrollAnimationDesktop() {
 		x: '120vw',
 		duration: 1,
 		ease: "none",
-	}, "0");
+	}, "<");
 	tl1.fromTo(".y4-1__title--1 span:nth-child(2)", {
 		x: '100vw',
 		y: '80vh'
@@ -140,7 +174,7 @@ function initScrollAnimationDesktop() {
 		x: '-120vw',
 		duration: 1,
 		ease: "none",
-	}, "0");
+	}, "<");
 	tl1.fromTo(".y4-1 .y4-1__year", {
 		y: '2vh'
 	}, {
