@@ -140,6 +140,13 @@ function initScrollAnimationDesktop() {
 		duration: 1.5,
 		ease: "none",
 	}, ">-0.7");
+	tl1.fromTo(".y4-110", {
+		x: '0vw',
+	}, {
+		x: '-100%',
+		duration: 1.5,
+		ease: "none",
+	}, ">-0.5");
 
 
 
@@ -181,14 +188,14 @@ function initScrollAnimationDesktop() {
 		y: '-50vh',
 		duration: 1,
 		ease: "none",
-	}, "1");
+	}, "4");
 	tl1.fromTo(".y4-1 .y4-1__text--1", {
 		y: '5vh'
 	}, {
 		y: '-50vh',
 		duration: 1,
 		ease: "none",
-	}, "1");
+	}, "4");
 
 	tl1.addLabel('1971', '-=2.1');
 
