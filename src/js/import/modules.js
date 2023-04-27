@@ -51,14 +51,16 @@ else {
         Drupal.behaviors.tiqumModule = {
             attach: function attach() {
                 var grid = document.querySelector('.grid');
-                var iso = new Isotope( grid, {
-                    itemSelector: '.card-person',
-                    percentPosition: true,
-                    masonry: {
-                        columnWidth: ".card-person",
-                        gutter: 20,
-                    }
-                });
+                if (grid) {
+                    var iso = new Isotope( grid, {
+                        itemSelector: '.card-person',
+                        percentPosition: true,
+                        masonry: {
+                            columnWidth: ".card-person",
+                            gutter: 20,
+                        }
+                    });
+                }
             }
         };
     })(jQuery, Drupal);
