@@ -1,0 +1,54 @@
+extends ../layouts/default
+
+block variables
+	- const title = "1980-1989"
+	- var sidebarActive = 1980
+
+block head
+	include ../../blocks/modules/overlay/overlayStyle
+block content
+	.fullPageOverlay.fullPageOverlay--white.active
+	.wrapper
+		include ../../blocks/modules/sidebar/sidebar
+		.scroll-page.y1980
+			.y5-110
+				.y5-110__numbers
+					span.y5-110__numbers-number 1980
+					span.y5-110__numbers-line
+					span.y5-110__numbers-number 1989
+				.y5-110__photos
+					img.y5-110__photos-item.y5-110__photos-item--1(src="img/y4-4__bg.png" alt="")
+					img.y5-110__photos-item.y5-110__photos-item--2(src="img/y4-8__1.png" alt="")
+					img.y5-110__photos-item.y5-110__photos-item--3(src="img/y4-17__1--2.png" alt="")
+
+			.y5-1#year1980
+				.y5-1__text.y5-1__text--1.textBlock
+					!="Вхождение в координирующую структуру нефтегазовых вузов страны – содружество семи нефтяных вузов."
+				.y5-1__year.yearConner 1980
+				.y5-1__bg
+					.y5-1__bg--1
+						img(src="img/y5-1--2.png" alt="")
+					.y5-1__man
+						picture
+							img(src="img/y5-1.png" alt="")
+				.y5-1__2
+					picture
+						img(src="img/y5-1--3.png" alt="")
+				.y5-1__title.y5-1__title--1.blockTitle.blockTitle--desc
+					span  содружество
+					span  
+						!="семи"
+					span  
+						!="нефтяных"
+					span  
+						!="вузов"
+			.y5-2
+				.y5-2__bg
+					.y5-2__bg--1
+						img(src="img/y5-2.png" alt="")
+				.y5-2__title.y5-2__title--1.blockTitle
+					span  коллектив
+					span  кафедры
+					span  АТПП
+block scripts
+
