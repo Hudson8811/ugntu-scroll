@@ -3247,7 +3247,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
     if (typeof st1 !== "undefined") st1.kill();
     tl1.clear();
     tl.clear();
-    gsap__WEBPACK_IMPORTED_MODULE_2__["default"].set(".y4-1__bg,.y4-1__bg--1,.y4-1__title--1 span:nth-child(1),.y4-1__title--1 span:nth-child(2),.y4-1 .y4-1__year,.y4-1 .y4-1__text--1," + ".y4-2__title--1 span:nth-child(1),.y4-2__title--1 span:nth-child(2),.y4-2," + ".y4-3__text--2,.y4-3__2,.y4-3__1,.y4-3__text--1" + ".y4-4,.y4-5,.y4-5__3,.y4-5__4,.y4-5__text--1," + ".y4-6__1,.y4-6__2" + ".y4-7__1,.y4-7__title--1 span:nth-child(1),.y4-7__title--1 span:nth-child(2),.y4-7__2," + ".y4-8__blockOverlay,.y4-8" + ".y4-9__2,.y4-9__3" + ".y4-10__blockOverlay,.y4-10,.y4-10__1,.y4-10__title--1 span:nth-child(1),.y4-10__title--1 span:nth-child(2)" + ".y4-12__2" + ".y4-13__blockOverlay,.y4-13," + ".y4-14__2," + ".y4-15__blockOverlay,.y4-15,.y4-15__1,.y4-15__title--1 span:nth-child(1),.y4-15__title--1 span:nth-child(2),.y4-15__title--1 span:nth-child(3)," + ".y4-16__blockOverlay,.y4-16,.y4-16__2" + ".y4-17__blockOverlay,.y4-17,.y4-17__bg--1" + ".scroll-page,.sidebar__menu-dropdown, .fullPageOverlay", {
+    gsap__WEBPACK_IMPORTED_MODULE_2__["default"].set(".y4-110,.y4-1__bg--1,.y4-110__numbers,.y4-110__numbers-number,.y4-110__numbers-line,.y4-110__photos,.y4-110__photos-item" + ".y4-100,.y4-100__numbers,.y4-100__numbers-number,.y4-100__numbers-line," + ".y4-1__bg,.y4-1__bg--1,.y4-1__title--1 span:nth-child(1),.y4-1__title--1 span:nth-child(2),.y4-1 .y4-1__year,.y4-1 .y4-1__text--1," + ".y4-2__title--1 span:nth-child(1),.y4-2__title--1 span:nth-child(2),.y4-2," + ".y4-3__text--2,.y4-3__2,.y4-3__1,.y4-3__text--1" + ".y4-4,.y4-5,.y4-5__3,.y4-5__4,.y4-5__text--1," + ".y4-6__1,.y4-6__2" + ".y4-7__1,.y4-7__title--1 span:nth-child(1),.y4-7__title--1 span:nth-child(2),.y4-7__2," + ".y4-8__blockOverlay,.y4-8" + ".y4-9__2,.y4-9__3" + ".y4-10__blockOverlay,.y4-10,.y4-10__1,.y4-10__title--1 span:nth-child(1),.y4-10__title--1 span:nth-child(2)" + ".y4-12__2" + ".y4-13__blockOverlay,.y4-13," + ".y4-14__2," + ".y4-15__blockOverlay,.y4-15,.y4-15__1,.y4-15__title--1 span:nth-child(1),.y4-15__title--1 span:nth-child(2),.y4-15__title--1 span:nth-child(3)," + ".y4-16__blockOverlay,.y4-16,.y4-16__2" + ".y4-17__blockOverlay,.y4-17,.y4-17__bg--1" + ".scroll-page,.sidebar__menu-dropdown, .fullPageOverlay", {
       clearProps: "all"
     });
     window.scrollTo({
@@ -3303,6 +3303,34 @@ function initScrollAnimationDesktop() {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
     }
   });
+  tl.fromTo(".y4-110__numbers", {
+    autoAlpha: 0
+  }, {
+    autoAlpha: 1,
+    duration: 0.1,
+    ease: "none"
+  }, "0.1");
+  tl.fromTo(".y4-110__photos", {
+    autoAlpha: 0
+  }, {
+    autoAlpha: 1,
+    duration: 0.1,
+    ease: "none"
+  }, "0.1");
+  tl.fromTo(".y4-110__numbers", {
+    x: '100vw'
+  }, {
+    x: '5vw',
+    duration: 1,
+    ease: "none"
+  }, "0");
+  tl.fromTo(".y4-110__photos-item--1", {
+    x: '100vw'
+  }, {
+    x: '50vw',
+    duration: 1,
+    ease: "none"
+  }, "0");
   tl1.fromTo(".y4-110__numbers", {
     x: '5vw'
   }, {
@@ -3337,7 +3365,7 @@ function initScrollAnimationDesktop() {
     x: '-100%',
     duration: 1.5,
     ease: "none"
-  }, ">-0.5");
+  }, ">-=0.7");
   tl1.fromTo(".y4-1__bg", {
     y: '0%'
   }, {
@@ -3368,21 +3396,29 @@ function initScrollAnimationDesktop() {
     duration: 1,
     ease: "none"
   }, "<");
+  tl1.fromTo(".y4-1__title--1 span:nth-child(3)", {
+    x: '120vw',
+    y: '100vh'
+  }, {
+    x: '-140vw',
+    duration: 1,
+    ease: "none"
+  }, "<+=0.1");
   tl1.fromTo(".y4-1 .y4-1__year", {
     y: '2vh'
   }, {
     y: '-50vh',
     duration: 1,
     ease: "none"
-  }, "4");
+  }, "<+=1");
   tl1.fromTo(".y4-1 .y4-1__text--1", {
     y: '5vh'
   }, {
     y: '-50vh',
     duration: 1,
     ease: "none"
-  }, "4");
-  tl1.addLabel('1971', '-=2.1');
+  }, "<");
+  tl1.addLabel('1971', '-=6');
   tl1.fromTo(".y4-2__title--1 span:nth-child(1)", {
     x: '-90vw',
     y: '20vh'
@@ -3390,7 +3426,7 @@ function initScrollAnimationDesktop() {
     x: '130vw',
     duration: 1,
     ease: "none"
-  }, ">-0.3");
+  }, ">+0.5");
   tl1.fromTo(".y4-2__title--1 span:nth-child(2)", {
     x: '100vw',
     y: '40vh'
@@ -3443,7 +3479,7 @@ function initScrollAnimationDesktop() {
     duration: 1,
     ease: "none"
   }, ">");
-  tl1.addLabel('1972', '-=0.48');
+  tl1.addLabel('1972', '+=0.415');
   tl1.fromTo(".y4-5", {
     y: "0vh",
     x: "100vw"
@@ -3528,7 +3564,7 @@ function initScrollAnimationDesktop() {
     duration: 1,
     ease: "none"
   }, ">");
-  tl1.addLabel('1973', '+=0.8');
+  tl1.addLabel('1973', '+=0.795');
   tl1.fromTo(".y4-8__blockOverlay", {
     opacity: 0
     // x: "150vw"
@@ -3565,7 +3601,7 @@ function initScrollAnimationDesktop() {
     duration: 0.8,
     ease: "none"
   }, ">-=0.8");
-  tl1.addLabel('1974', "+=0.46");
+  tl1.addLabel('1974', "+=0.459");
   tl1.fromTo(".y4-10__blockOverlay", {
     opacity: 0
     // x: "150vw"
@@ -3629,7 +3665,7 @@ function initScrollAnimationDesktop() {
     duration: 0.4,
     ease: "none"
   }, ">-=0.1");
-  tl1.addLabel('1975', "+=0.3");
+  tl1.addLabel('1975', "+=0.29");
   tl1.fromTo(".y4-13", {
     y: "0vh",
     x: "120vw"
@@ -3740,7 +3776,7 @@ function initScrollAnimationDesktop() {
     duration: 0.2,
     ease: "none"
   }, ">");
-  tl1.addLabel('1978', "+=0.82");
+  tl1.addLabel('1978', "+=0.815");
   tl1.fromTo(".y4-17", {
     y: "0vh",
     x: "140vw"
@@ -3869,24 +3905,6 @@ function initScrollAnimationTablet() {
     duration: Math.abs((scHeight - b6Height) / 460) + 1.5,
     ease: "none"
   }, ">");
-  tl1.fromTo(".y4-6", {
-    // y: "0",
-    top: "100%"
-  }, {
-    top: "-4%",
-    // y: -1 * (b7Height - scHeight),
-    duration: Math.abs((scHeight - b7Height) / 460) + 1.5,
-    ease: "none"
-  }, ">");
-  tl1.fromTo(".y4-7", {
-    y: "0",
-    top: "100%"
-  }, {
-    top: "-4%",
-    y: -1 * (b8Height - scHeight),
-    duration: Math.abs((scHeight - b8Height) / 460) + 1.5,
-    ease: "none"
-  }, ">");
   tl1.addLabel('1973', "+=0.82");
   tl1.fromTo(".y4-8__blockOverlay", {
     opacity: 0
@@ -3896,7 +3914,7 @@ function initScrollAnimationTablet() {
     // x: "150vw",
     duration: 0.4,
     ease: "none"
-  }, ">-=0.9");
+  }, ">-=0.5");
   tl1.fromTo(".y4-8", {
     y: "0",
     top: "100%"
