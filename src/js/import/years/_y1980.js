@@ -161,7 +161,7 @@ function initScrollAnimationDesktop() {
 	tl1.fromTo(".y5-1__bg--1", {
 		y: '0%',
 	}, {
-		y: '-100%',
+		y: '-80%',
 		duration: 8,
 		ease: "none",
 	}, ">");
@@ -222,9 +222,9 @@ function initScrollAnimationDesktop() {
 		x: "100%",
 		y: '70%',
 	}, {
-		x: "-50%",
+		x: "-100%",
 		y: '70%',
-		duration: 2.5,
+		duration: 3.5,
 		ease: "none",
 	}, ">-=1.4");
 	tl1.fromTo(".y5-1", {
@@ -234,34 +234,301 @@ function initScrollAnimationDesktop() {
 		duration: 4,
 		ease: "none",
 	}, "<+=0.3");
-	// tl1.fromTo(".y5-1 .y5-1__year", {
-	// 	y: '2vh'
-	// }, {
-	// 	y: '-50vh',
-	// 	duration: 1,
-	// 	ease: "none",
-	// }, "<+=6");
 
 
 	tl1.fromTo(".y5-2__bg--1", {
 		scale: 1.5,
 	}, {
 		scale: 1,
-		duration: 1,
+		duration: 2,
 		ease: "none",
-	}, ">-=1");
+	}, ">-=0.5");
 	tl1.fromTo(".y5-2__title--1", {
-		x: "100%",
+		x: "0%",
 		y: '100%',
 	}, {
 		x: "-100%",
 		y: '100%',
-		duration: 2.5,
+		duration: 7,
+		ease: "none",
+	}, "<-=1.9");
+
+
+	tl1.fromTo(".y5-3", {
+		x: '0',
+		y: '100%'
+	}, {
+		x: '0',
+		y: '0%',
+		duration: 1,
+		ease: "none",
+	}, ">-=2");
+	tl1.fromTo(".y5-3__title--1 span:nth-child(1)", {
+		x: '-110vw',
+		y: '20vh'
+	}, {
+		x: '130vw',
+		duration: 1,
+		ease: "none",
+	}, "<+=0.2");
+	tl1.fromTo(".y5-3__title--1 span:nth-child(2)", {
+		x: '100vw',
+		y: '40vh'
+	}, {
+		x: '-130vw',
+		duration: 1,
+		ease: "none",
+	}, ">-=0.8");
+	tl1.fromTo(".y5-3__2", {
+		// x: '100vw',
+		y: '100vh'
+	}, {
+		// x: '-130vw',
+		y: '35vh',
+		duration: 1,
+		ease: "none",
+	}, ">-=1.3");
+
+	tl1.fromTo(".y5-4", {
+		y: "150vh",
+	}, {
+		y: "-50vh",
+		duration: 1,
+		ease: "none",
+	}, ">");
+
+
+	tl1.fromTo(".y5-5__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+
+	tl1.addLabel('1982', "+=0.261");
+
+	tl1.fromTo(".y5-5", {
+		y: "0vh",
+		x: "150vw"
+	}, {
+		y: "0vh",
+		x: "-354vw",
+		duration: 1.2,
+		ease: "none",
+	}, ">-=0.1");
+	tl1.fromTo(".y5-5__1", {
+		y: "0vh",
+		x: "75vw"
+	}, {
+		y: "0vh",
+		x: "65vw",
+		duration: 1,
+		ease: "none",
+	}, "<");
+	tl1.fromTo(".y5-5__title--1 span:nth-child(1)", {
+		y: "30vh",
+		x: "0vw"
+	}, {
+		y: "30vh",
+		x: "120vw",
+		duration: 0.9,
+		ease: "none",
+	}, "<+=0.1");
+	tl1.fromTo(".y5-5__title--1 span:nth-child(2)", {
+		y: "50vh",
+		x: "75vw"
+	}, {
+		y: "60vh",
+		x: "10vw",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.1");
+	tl1.fromTo(".y5-5__title--1 span:nth-child(3)", {
+		y: "70vh",
+		x: "70vw"
+	}, {
+		y: "70vh",
+		x: "140vw",
+		duration: 0.5,
+		ease: "none",
+	}, "<+=0.1");
+	tl1.fromTo(".y5-7__2", {
+		// y: "50vh",
+		x: "85vw"
+	}, {
+		// y: "50vh",
+		x: "70vw",
+		duration: 0.3,
+		ease: "none",
+	}, ">-=0.2");
+
+
+
+	tl1.fromTo(".y5-8__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+	tl1.addLabel('1983', "+=0.408");
+
+	tl1.fromTo(".y5-8", {
+		y: "0vh",
+		x: "150vw"
+	}, {
+		y: "0vh",
+		x: "-204vw",
+		duration: 1.2,
+		ease: "none",
+	}, ">-=0.1");
+	tl1.fromTo(".y5-9__2", {
+		// y: "50vh",
+		x: "95vw"
+	}, {
+		// y: "50vh",
+		x: "50vw",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.1");
+
+
+
+
+	tl1.fromTo(".y5-11__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+	tl1.addLabel('1984', "+=0.785");
+
+	tl1.fromTo(".y5-11", {
+		y: "0vh",
+		x: "150vw"
+	}, {
+		y: "0vh",
+		x: "-54vw",
+		duration: 1.2,
+		ease: "none",
+	}, ">-=0.1");
+	tl1.fromTo(".y5-11__2", {
+		// y: "50vh",
+		x: "0vw"
+	}, {
+		// y: "50vh",
+		x: "58vw",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.1");
+
+
+
+	tl1.fromTo(".y5-12__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+	tl1.addLabel('1985', "+=0.41");
+
+	tl1.fromTo(".y5-12", {
+		y: "0vh",
+		x: "150vw"
+	}, {
+		y: "0vh",
+		x: "-204vw",
+		duration: 1.2,
+		ease: "none",
+	}, ">-=0.1");
+	tl1.fromTo(".y5-14__2", {
+		// y: "50vh",
+		x: "130vw"
+	}, {
+		// y: "50vh",
+		x: "61vw",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.2");
+
+
+	
+	tl1.fromTo(".y5-15__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+	tl1.addLabel('1986', "+=0.41");
+
+
+	tl1.fromTo(".y5-15", {
+		y: "0vh",
+		x: "180vw"
+	}, {
+		y: "0vh",
+		x: "-84vw",
+		duration: 1.2,
+		ease: "none",
+	}, ">-=0.1");
+	tl1.fromTo(".y5-15__1", {
+		// y: "10vh",
+		x: "0vw"
+	}, {
+		// y: "0vh",
+		x: "65vw",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.15");
+	tl1.fromTo(".y5-15__title--1 span:nth-child(1)", {
+		y: "10vh",
+		x: "-2vw"
+	}, {
+		y: "10vh",
+		x: "55vw",
+		duration: 1,
+		ease: "none",
+	}, "<");
+	tl1.fromTo(".y5-15__title--1 span:nth-child(2)", {
+		y: "30vh",
+		x: "65vw"
+	}, {
+		y: "30vh",
+		x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, "<");
+	tl1.fromTo(".y5-15__title--1 span:nth-child(3)", {
+		y: "50vh",
+		x: "20vw"
+	}, {
+		y: "50vh",
+		x: "95vw",
+		duration: 1,
 		ease: "none",
 	}, "<");
 
 
-	tl1.addLabel('1971', '-=6');
+
+
 
 
 	st1 = ScrollTrigger.create({
