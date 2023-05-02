@@ -4729,7 +4729,7 @@ function initScrollAnimationDesktop() {
     duration: 1,
     ease: "none"
   }, ">");
-  tl1.addLabel('1986', "+=0.41");
+  tl1.addLabel('1986', "+=0.72");
   tl1.fromTo(".y5-15", {
     y: "0vh",
     x: "180vw"
@@ -4739,42 +4739,96 @@ function initScrollAnimationDesktop() {
     duration: 1.2,
     ease: "none"
   }, ">-=0.1");
-  tl1.fromTo(".y5-15__1", {
-    // y: "10vh",
-    x: "0vw"
-  }, {
-    // y: "0vh",
-    x: "65vw",
-    duration: 1,
-    ease: "none"
-  }, "<+=0.15");
   tl1.fromTo(".y5-15__title--1 span:nth-child(1)", {
     y: "10vh",
     x: "-2vw"
   }, {
     y: "10vh",
-    x: "55vw",
+    x: "50vw",
     duration: 1,
     ease: "none"
   }, "<");
   tl1.fromTo(".y5-15__title--1 span:nth-child(2)", {
     y: "30vh",
-    x: "65vw"
+    x: "130vw"
   }, {
     y: "30vh",
-    x: "150vw",
+    x: "105vw",
+    duration: 1,
+    ease: "none"
+  }, "<");
+  tl1.fromTo(".y5-15__1", {
+    x: "130vw"
+  }, {
+    x: "43vw",
     duration: 1,
     ease: "none"
   }, "<");
   tl1.fromTo(".y5-15__title--1 span:nth-child(3)", {
     y: "50vh",
-    x: "20vw"
+    x: "10vw"
   }, {
     y: "50vh",
     x: "95vw",
     duration: 1,
     ease: "none"
-  }, "<");
+  }, "<+=0.03");
+  tl1.fromTo(".y5-16__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 1,
+    ease: "none"
+  }, ">+=0.1");
+  tl1.addLabel('1987', "+=0.408");
+  tl1.fromTo(".y5-16", {
+    y: "0vh",
+    x: "150vw"
+  }, {
+    y: "0vh",
+    x: "-204vw",
+    duration: 1.2,
+    ease: "none"
+  }, ">-=0.1");
+  tl1.fromTo(".y5-17__2", {
+    // y: "50vh",
+    x: "95vw"
+  }, {
+    // y: "50vh",
+    x: "50vw",
+    duration: 1,
+    ease: "none"
+  }, "<+=0.1");
+  tl1.fromTo(".y5-19__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 1,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('1989', "+=0.41");
+  tl1.fromTo(".y5-19", {
+    y: "0vh",
+    x: "150vw"
+  }, {
+    y: "0vh",
+    x: "-204vw",
+    duration: 1.2,
+    ease: "none"
+  }, ">-=0.1");
+  tl1.fromTo(".y5-21__2", {
+    // y: "50vh",
+    x: "130vw"
+  }, {
+    // y: "50vh",
+    x: "68vw",
+    duration: 1,
+    ease: "none"
+  }, "<+=0.2");
   st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_3__["default"].create({
     trigger: ".scroll-page",
     pin: true,
