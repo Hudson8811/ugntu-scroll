@@ -57,7 +57,9 @@ function initAnimation() {
 
 	scHeight = $('.scroll-page').innerHeight();
 	b1Height = $('.y5-1').innerHeight();
-	b2Height = $('.y4-2').innerHeight();
+	b2Height = $('.y5-2').innerHeight();
+	b3Height = $('.y5-3').innerHeight();
+	b4Height = $('.y5-4').innerHeight();
 
 
 	if (window.innerWidth > 1100) {
@@ -605,6 +607,115 @@ function initScrollAnimationDesktop() {
 	});
 }
 function initScrollAnimationTablet() {
+	gsap.to(".fullPageOverlay", {
+		duration: 1,
+		autoAlpha: 0,
+		ease: "none",
+		onComplete: function () {
+				$('.fullPageOverlay').removeClass('active');
+				$('body').addClass('active');
+		}
+});
+
+tl1.fromTo(".y5-110__numbers", {
+		x: '5%',
+}, {
+		x: '-100%',
+		duration: 2,
+		ease: "none",
+}, "0");
+
+tl1.fromTo(".y5-110__numbers", {
+		y: "-50%"
+}, {
+		y: '10%',
+		duration: 2,
+		ease: "none",
+}, "0");
+
+
+tl1.fromTo(".y5-110__photos-item--1", {
+		x: '5vw',
+}, {
+		x: '-100%',
+		duration: 0.3,
+		ease: "none",
+}, "0");
+tl1.fromTo(".y5-110__photos-item--2", {
+		x: '100vw',
+}, {
+		x: '-100%',
+		duration: 0.7,
+		ease: "none",
+}, "0");
+tl1.fromTo(".y5-110__photos-item--3", {
+		x: '100vw',
+}, {
+		x: '-100%',
+		duration: 0.7,
+		ease: "none",
+}, ">-0.3");
+
+tl1.to(".y5-110", {
+	top: '-80vw',
+	duration: 2,
+	ease: "none",
+}, "0");
+
+tl1.fromTo(".y5-1", {
+	y: "0",
+	top: "100vh"
+}, {
+	top: "0vh",
+	y: -1 * (b1Height - scHeight),
+	duration: Math.abs((scHeight - b1Height) / 460) + 1,
+	ease: "none",
+}, "<");
+tl1.fromTo(".y5-2", {
+	y: "0",
+	top: "100vh"
+}, {
+	top: "0vh",
+	y: -1 * (b2Height - scHeight),
+	duration: Math.abs((scHeight - b2Height) / 460) + 1,
+	ease: "none",
+}, ">");
+tl1.fromTo(".y5-3", {
+	y: "0",
+	top: "100vh"
+}, {
+	top: "0vh",
+	y: -1 * (b3Height - scHeight),
+	duration: Math.abs((scHeight - b3Height) / 460) + 1,
+	ease: "none",
+}, ">");
+tl1.fromTo(".y5-4", {
+	y: "0",
+	top: "100vh"
+}, {
+	top: "0vh",
+	y: -1 * (b4Height - scHeight),
+	duration: Math.abs((scHeight - b4Height) / 460) + 1,
+	ease: "none",
+}, ">");
+
+
+
+
+
+
+
+tl1.addLabel('1960');
+
+st1 = ScrollTrigger.create({
+	trigger: ".scroll-page",
+	pin: true,
+	start: "top top",
+	end: () => "+=" + addTime + "%",
+	scrub: 2.5,
+	animation: tl1,
+});
+
 }
 function initScrollAnimationMobile() { }
 

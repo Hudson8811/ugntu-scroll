@@ -13281,7 +13281,7 @@ summary {
   .y4-100 {
     display: block;
     position: relative;
-    height: 80vh;
+    height: 100vh;
     padding-bottom: 17.5vw;
     z-index: 11;
   }
@@ -13373,6 +13373,7 @@ summary {
   .y5-1-80 {
     position: relative;
     display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -13416,7 +13417,8 @@ summary {
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
-    min-height: 100vh;
+    height: 100vh;
+    z-index: 120;
     height: auto;
     background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
   }
@@ -13431,8 +13433,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y5-1__bg {
-    position: relative;
-    height: 100%;
+    height: 100vh;
   }
 }
 .y5-1__bg img {
@@ -13447,12 +13448,11 @@ summary {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 300vh;
+  height: 100vh;
 }
 @media only screen and (max-width: 1100px) {
   .y5-1__bg--1 {
-    position: relative;
-    height: 100%;
+    height: auto;
   }
 }
 .y5-1__bg--1 img {
@@ -13470,6 +13470,8 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y5-1__man {
+    display: none;
+    bottom: 0;
     height: auto;
   }
 }
@@ -13498,7 +13500,11 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y5-1__2 {
-    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    order: 3;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -13545,6 +13551,7 @@ summary {
   color: #FFFFFF;
   z-index: 1;
   position: absolute;
+  display: none;
 }
 @media only screen and (max-width: 1100px) {
   .y5-1__year {
@@ -13553,7 +13560,7 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    order: 2;
+    order: 1;
     margin-left: 5vw;
   }
 }
@@ -13567,7 +13574,7 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    order: 4;
+    order: 2;
   }
 }
 .y5-1__text--1 {
@@ -13584,7 +13591,6 @@ summary {
     justify-content: flex-start;
     align-items: flex-start;
     max-width: 70.9375vw;
-    margin-top: 3.4375vw;
     margin-left: 5vw;
     margin-bottom: 5vh;
     left: 0;
@@ -13604,14 +13610,14 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-2 {
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
-    min-height: 100vh;
+    height: 100vh;
     height: auto;
     background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
-    z-index: 10;
+    z-index: 130;
   }
 }
 .y5-2__bg {
@@ -13668,6 +13674,23 @@ summary {
   position: relative;
   display: inline-block;
   margin-right: 2.7777777778vw;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-2__title--1 span {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .y5-2__title--1 {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 5vw;
+    bottom: 3.125vw;
+  }
 }
 .y5-2__year {
   color: #FFFFFF;
@@ -13733,14 +13756,14 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-3 {
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
-    background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
-    z-index: 10;
+    background: white;
+    z-index: 132;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -13759,6 +13782,19 @@ summary {
   left: 0;
   width: 100vw;
   height: 100vh;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-3__bg {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100vw;
+    height: auto;
+    order: 1;
+    background: #fff;
+  }
 }
 .y5-3__bg img {
   position: relative;
@@ -13793,6 +13829,13 @@ summary {
   height: auto;
   z-index: 5;
 }
+@media only screen and (max-width: 1100px) {
+  .y5-3__2 {
+    left: 50.3125vw;
+    width: 47.1875vw;
+    top: 80vh;
+  }
+}
 .y5-3__2 img {
   position: relative;
   width: 100%;
@@ -13807,6 +13850,20 @@ summary {
   width: 100vw;
   height: 88vh;
   z-index: 4;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-3__3 {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    padding-top: 5.3125vw;
+    left: 0;
+    background: linear-gradient(180deg, #3D0311 0%, #281313 100%);
+  }
 }
 .y5-3__3 img {
   position: relative;
@@ -13827,6 +13884,7 @@ summary {
     justify-content: flex-start;
     align-items: flex-start;
     margin-left: 5vw;
+    color: #404040;
   }
 }
 .y5-3__title--1 span {
@@ -13842,6 +13900,7 @@ summary {
   color: #FFFFFF;
   z-index: 5;
   position: absolute;
+  display: none;
 }
 @media only screen and (max-width: 1100px) {
   .y5-3__year {
@@ -13852,6 +13911,7 @@ summary {
     align-items: flex-start;
     order: 2;
     margin-left: 5vw;
+    color: #404040;
   }
 }
 .y5-3__text {
@@ -13865,6 +13925,7 @@ summary {
     justify-content: flex-start;
     align-items: flex-start;
     order: 4;
+    color: #404040;
   }
 }
 .y5-3__text--1 {
@@ -13873,6 +13934,20 @@ summary {
   bottom: 9.4605160281vh;
   z-index: 5;
   max-width: 28.8541666667vw;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-3__text--1 {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 70.9375vw;
+    margin-top: 3.4375vw;
+    margin-left: 5vw;
+    margin-bottom: 5vh;
+    left: 0;
+  }
 }
 
 .y5-4 {
@@ -13888,14 +13963,13 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-4 {
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
-    background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
-    z-index: 10;
+    z-index: 140;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -13915,6 +13989,14 @@ summary {
   width: 100vw;
   height: 150vh;
 }
+@media only screen and (max-width: 1100px) {
+  .y5-4__bg {
+    position: absolute;
+    height: auto;
+    width: 100vw;
+    order: 1;
+  }
+}
 .y5-4__bg img {
   position: relative;
   width: 100%;
@@ -13931,7 +14013,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y5-4__bg--1 {
-    display: none;
+    height: auto;
   }
 }
 .y5-4__bg--1 img {
@@ -13949,6 +14031,21 @@ summary {
   height: auto;
   z-index: 5;
 }
+@media only screen and (max-width: 1100px) {
+  .y5-4__2 {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    left: 0;
+    top: 0;
+    margin-top: 12.1875vw;
+    margin-bottom: 12.1875vw;
+  }
+}
 .y5-4__2 img {
   position: relative;
   width: 100%;
@@ -13963,6 +14060,21 @@ summary {
   width: 30.3645833333vw;
   height: auto;
   z-index: 5;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-4__3 {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    left: 0;
+    top: 0;
+    margin-top: 12.1875vw;
+    margin-bottom: 12.1875vw;
+  }
 }
 .y5-4__3 img {
   position: relative;
@@ -14029,6 +14141,20 @@ summary {
   bottom: 9.4605160281vh;
   z-index: 5;
   max-width: 30.5208333333vw;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-4__text--1 {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 70.9375vw;
+    margin-top: 3.4375vw;
+    margin-left: 5vw;
+    margin-bottom: 5vh;
+    left: 0;
+  }
 }
 
 .y5-5 {
