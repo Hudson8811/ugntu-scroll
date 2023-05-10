@@ -13102,7 +13102,7 @@ summary {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #1EA9AF;
+  background: #BFB596;
   z-index: 150;
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
@@ -13129,7 +13129,7 @@ summary {
   width: 100%;
   height: 100%;
   display: block;
-  background: #1EA9AF;
+  background: #BFB596;
   pointer-events: none;
 }
 .y5-110__numbers {
@@ -13992,7 +13992,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-4__bg {
     position: absolute;
-    height: auto;
+    min-height: 100%;
     width: 100vw;
     order: 1;
   }
@@ -14013,7 +14013,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y5-4__bg--1 {
-    height: auto;
+    min-height: 100%;
   }
 }
 .y5-4__bg--1 img {
@@ -14170,18 +14170,17 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-5 {
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #862744;
-    z-index: 133;
+    z-index: 145;
     width: 100vw;
     left: 0;
     padding-top: 0;
-    padding-bottom: 9.375vw;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -14205,8 +14204,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y5-5__blockOverlay {
-    z-index: 130;
-    display: none;
+    z-index: 144;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -14257,14 +14255,10 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-5__1 {
     position: relative;
-    width: 100vw;
+    width: 80.3125vw;
     height: auto;
     left: 0;
     top: 0;
-    padding-top: 6.25vw;
-    margin-bottom: 14.6875vw;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 .y5-5__1 img {
@@ -14333,6 +14327,7 @@ summary {
     justify-content: flex-start;
     align-items: flex-start;
     max-width: 70.9375vw;
+    margin-bottom: 7.5vw;
     top: auto;
     left: 0;
     bottom: auto;
@@ -14353,14 +14348,14 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-6 {
     position: relative;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #fff;
-    z-index: 133;
+    z-index: 147;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -14438,9 +14433,6 @@ summary {
     height: auto;
     left: 0;
     top: 0;
-    padding-top: 6.25vw;
-    padding-right: 6.25vw;
-    padding-left: 4.6875vw;
     padding-bottom: 0;
     margin-left: auto;
     margin-right: auto;
@@ -14553,7 +14545,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-7 {
     position: relative;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -14662,6 +14654,7 @@ summary {
     flex-flow: row nowrap;
     justify-content: space-between;
     width: 100%;
+    left: 0;
     align-items: flex-start;
     padding-right: 5vw;
     margin-left: 5vw;
@@ -14693,11 +14686,12 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 70.9375vw;
+    max-width: 87.8125vw;
     top: auto;
     left: 0;
     bottom: auto;
     padding-left: 5vw;
+    padding-bottom: 7.5vw;
   }
 }
 
@@ -14714,18 +14708,18 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-8 {
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #862744;
-    z-index: 133;
+    z-index: 150;
     width: 100vw;
     left: 0;
     padding-top: 0;
-    padding-bottom: 9.375vw;
+    padding-bottom: 0;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -14749,8 +14743,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y5-8__blockOverlay {
-    z-index: 130;
-    display: none;
+    z-index: 149;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -14884,6 +14877,250 @@ summary {
   }
 }
 
+.y5-90 {
+  position: absolute;
+  top: 0;
+  left: 0vw;
+  width: 150vw;
+  min-height: 100vh;
+  z-index: 110;
+  will-change: transform, opacity, top;
+  transform-style: preserve-3d;
+  display: none;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-90 {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+    height: auto;
+    background: #fff;
+    z-index: 133;
+    width: 100vw;
+    left: 0;
+    padding-top: 0;
+    padding-bottom: 9.375vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y5-90 {
+    position: relative;
+    height: auto;
+    min-height: auto;
+  }
+}
+.y5-90__wrap {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 2px;
+  z-index: 5;
+  padding-top: 2.6041666667vw;
+  padding-bottom: 2.6041666667vw;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-90__wrap {
+    display: none;
+  }
+}
+.y5-90__wrap--line {
+  position: relative;
+  height: 100%;
+  width: 1px;
+  background: #000;
+}
+.y5-90__bg {
+  position: absolute;
+  top: 0;
+  left: 0vw;
+  width: 100%;
+  height: 100vh;
+  background: #FFFFFF;
+  z-index: 1;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-90__bg {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    top: auto;
+    left: auto;
+    height: auto;
+    z-index: 2;
+  }
+}
+.y5-90__bg--1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-90__bg--1 {
+    display: none;
+  }
+}
+.y5-90__1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75.1041666667vw;
+  height: 100vh;
+  z-index: 4;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-90__1 {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    left: 0;
+    top: 0;
+    padding-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.y5-90__1 img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+.y5-90__2 {
+  position: absolute;
+  top: 2.96875vw;
+  width: 30.7291666667vw;
+  height: auto;
+  z-index: 5;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-90__2 {
+    position: absolute;
+    width: 35.3125vw;
+    height: auto;
+    right: 8.75vw;
+    top: 76.5625vw;
+    padding-top: 6.25vw;
+    padding-right: 6.25vw;
+    padding-left: 4.6875vw;
+    padding-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.y5-90__2 img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+.y5-90__year {
+  color: #404040;
+  z-index: 5;
+  position: absolute;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-90__year {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+    padding-right: 5vw;
+    margin-left: 5vw;
+  }
+}
+.y5-90__title {
+  color: #404040;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-90__title {
+    position: relative;
+    width: 100%;
+    font-size: 7.5vw;
+    padding-right: 5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 7.8125vw;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    padding-left: 5vw;
+    margin-bottom: 3.4375vw;
+  }
+}
+.y5-90__title--1 span {
+  position: relative;
+  display: block;
+}
+.y5-90__text {
+  color: #404040;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-90__text {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+.y5-90__text--1 {
+  position: absolute;
+  left: 78.5416666667vw;
+  bottom: 2.7083333333vw;
+  z-index: 12;
+  max-width: 40.9375vw;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-90__text--1 {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 69.0625vw;
+    top: auto;
+    left: 0;
+    bottom: auto;
+    padding-left: 5vw;
+  }
+}
+.y5-90__text--2 {
+  position: absolute;
+  left: 56.6145833333vw;
+  bottom: 2.9166666667vw;
+  z-index: 12;
+  max-width: 40.9375vw;
+  width: 12.96875vw;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-90__text--2 {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 3.4375vw;
+    margin-left: 5vw;
+    margin-bottom: 5vh;
+    width: 100%;
+    max-width: 44.0625vw;
+    left: 0;
+  }
+}
+
 .y5-9 {
   position: absolute;
   top: 0;
@@ -14897,7 +15134,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-9 {
     position: relative;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -14951,7 +15188,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-9__bg {
     position: relative;
-    width: 100% d;
+    width: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -14959,6 +15196,8 @@ summary {
     top: auto;
     left: auto;
     height: auto;
+    z-index: 2;
+    order: 2;
   }
 }
 .y5-9__bg--1 {
@@ -14989,12 +15228,11 @@ summary {
     height: auto;
     left: 0;
     top: 0;
-    padding-top: 6.25vw;
-    padding-right: 6.25vw;
-    padding-left: 4.6875vw;
+    display: flex;
     padding-bottom: 0;
     margin-left: auto;
     margin-right: auto;
+    order: 1;
   }
 }
 .y5-9__1 img {
@@ -15009,7 +15247,23 @@ summary {
   top: 2.96875vw;
   width: 30.7291666667vw;
   height: auto;
-  z-index: 4;
+  z-index: 3;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-9__2 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+    padding-top: 6.25vw;
+    padding-right: 6.25vw;
+    padding-left: 4.6875vw;
+    padding-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    order: 4;
+  }
 }
 .y5-9__2 img {
   position: relative;
@@ -15073,7 +15327,7 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 70.9375vw;
+    max-width: 87.8125vw;
     top: auto;
     left: 0;
     bottom: auto;
@@ -15118,7 +15372,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-10 {
     position: relative;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -15230,6 +15484,7 @@ summary {
     align-items: flex-start;
     padding-right: 5vw;
     margin-left: 5vw;
+    left: 0;
   }
 }
 .y5-10__text {
@@ -15258,11 +15513,12 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 70.9375vw;
+    max-width: 87.8125vw;
     top: auto;
     left: 0;
     bottom: auto;
     padding-left: 5vw;
+    padding-bottom: 7.5vw;
   }
 }
 
@@ -15278,16 +15534,16 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y5-11 {
-    position: relative;
-    display: none;
+    position: absolute;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
-    background: #fff;
-    z-index: 133;
+    z-index: 160;
     width: 100vw;
+    background: #5A080C;
     left: 0;
     padding-top: 0;
     padding-bottom: 9.375vw;
@@ -15314,8 +15570,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y5-11__blockOverlay {
-    z-index: 130;
-    display: none;
+    z-index: 159;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -15356,7 +15611,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-11__bg {
     position: relative;
-    width: 100% d;
+    width: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -15374,11 +15629,6 @@ summary {
   height: 100%;
   background: #5A080C;
 }
-@media only screen and (max-width: 1100px) {
-  .y5-11__bg--1 {
-    display: none;
-  }
-}
 .y5-11__1 {
   position: absolute;
   top: 0;
@@ -15394,9 +15644,6 @@ summary {
     height: auto;
     left: 0;
     top: 0;
-    padding-top: 6.25vw;
-    padding-right: 6.25vw;
-    padding-left: 4.6875vw;
     padding-bottom: 0;
     margin-left: auto;
     margin-right: auto;
@@ -15415,6 +15662,22 @@ summary {
   width: 59.8958333333vw;
   height: auto;
   z-index: 4;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-11__2 {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    left: 0;
+    top: 0;
+    display: none;
+    padding-top: 6.25vw;
+    padding-right: 6.25vw;
+    padding-left: 4.6875vw;
+    padding-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .y5-11__2 img {
   position: relative;

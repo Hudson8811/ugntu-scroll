@@ -123,7 +123,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   /*if (document.querySelector('#file-loader')) {
       document.querySelector('#file-loader').addEventListener('change', function () {
           var splittedFakePath = this.value.split('\\');
-           var elem = $('.form__files-item').first().clone(true);
+            var elem = $('.form__files-item').first().clone(true);
           elem.find('span').text(splittedFakePath[splittedFakePath.length - 1]);
           elem.appendTo('.form__files').css('display', 'flex');
       });
@@ -4300,6 +4300,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
 /* harmony import */ var gsap_MotionPathPlugin__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gsap/MotionPathPlugin */ "./node_modules/gsap/MotionPathPlugin.js");
 /* harmony import */ var gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! gsap/ScrollToPlugin */ "./node_modules/gsap/ScrollToPlugin.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -4329,7 +4331,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
     if (typeof st1 !== "undefined") st1.kill();
     tl1.clear();
     tl.clear();
-    gsap__WEBPACK_IMPORTED_MODULE_2__["default"].set(".y5-110,.y5-1__bg--1,.y5-110__numbers,.y5-110__numbers-number,.y5-110__numbers-line,.y5-110__photos,.y5-110__photos-item" + ".y5-100,.y5-100__numbers,.y5-100__numbers-number,.y5-100__numbers-line," + ".y5-1__bg,.y5-1__bg--1,.y5-1__title--1 span:nth-child(1),.y5-1__title--1 span:nth-child(2),.y5-1 .y5-1__year,.y5-1 .y5-1__text--1," + ".scroll-page,.sidebar__menu-dropdown, .fullPageOverlay", {
+    gsap__WEBPACK_IMPORTED_MODULE_2__["default"].set(".y5-110,.y5-1__bg--1,.y5-110__numbers,.y5-110__numbers-number,.y5-110__numbers-line,.y5-110__photos,.y5-110__photos-item" + ".y5-100,.y5-100__numbers,.y5-100__numbers-number,.y5-100__numbers-line," + ".y5-1__bg,.y5-1__bg--1,.y5-1__title--1 span:nth-child(1),.y5-1__title--1 span:nth-child(2),.y5-1 .y5-1__year,.y5-1 .y5-1__text--1," + ".y5-2,.y5-2__bg,.y5-2__bg--1,.y5-2__title--1" + ".y5-3,.y5-3__title--1 span:nth-child(1),.y5-3__title--1 span:nth-child(2),.y5-3__2," + ".y5-4" + ".y5-5__blockOverlay,.y5-5,.y5-5__1,.y5-5__title--1 span:nth-child(1),.y5-5__title--1 span:nth-child(2),.y5-5__title--1 span:nth-child(3)" + ".y5-6" + ".y5-7__2,.y5-7," + ".y5-8__blockOverlay,.y5-8" + ".y5-9__2,.y5-9," + ".y5-10" + ".y5-11__blockOverlay,.y5-11,.y5-11__2" + ".y5-12__blockOverlay,.y5-12," + ".y5-14__2" + ".y5-15__blockOverlay,.y5-15,.y5-15__title--1 span:nth-child(1),.y5-15__title--1 span:nth-child(2),.y5-15__1,.y5-15__title--1 span:nth-child(3)" + ".y5-16__blockOverlay,.y5-16" + ".y5-17__2" + ".y5-19__blockOverlay,.y5-19" + ".y5-21__2" + ".scroll-page,.sidebar__menu-dropdown, .fullPageOverlay", {
       clearProps: "all"
     });
     window.scrollTo({
@@ -4352,6 +4354,9 @@ function initAnimation() {
   b2Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y5-2').innerHeight();
   b3Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y5-3').innerHeight();
   b4Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y5-4').innerHeight();
+  b5Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y5-5').innerHeight();
+  b6Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y5-8').innerHeight();
+  b7Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y5-11').innerHeight();
 
   if (window.innerWidth > 1100) {
     initScrollAnimationDesktop();
@@ -4844,6 +4849,8 @@ function initScrollAnimationDesktop() {
 }
 
 function initScrollAnimationTablet() {
+  var _tl1$fromTo, _tl1$fromTo2;
+
   gsap__WEBPACK_IMPORTED_MODULE_2__["default"].to(".fullPageOverlay", {
     duration: 1,
     autoAlpha: 0,
@@ -4895,41 +4902,93 @@ function initScrollAnimationTablet() {
   }, "0");
   tl1.fromTo(".y5-1", {
     y: "0",
-    top: "100vh"
+    top: "100%"
   }, {
-    top: "0vh",
+    top: "0%",
     y: -1 * (b1Height - scHeight),
     duration: Math.abs((scHeight - b1Height) / 460) + 1,
     ease: "none"
   }, "<");
   tl1.fromTo(".y5-2", {
     y: "0",
-    top: "100vh"
+    top: "100%"
   }, {
-    top: "0vh",
+    top: "0%",
     y: -1 * (b2Height - scHeight),
     duration: Math.abs((scHeight - b2Height) / 460) + 1,
     ease: "none"
   }, ">");
   tl1.fromTo(".y5-3", {
     y: "0",
-    top: "100vh"
+    top: "100%"
   }, {
-    top: "0vh",
+    top: "0%",
     y: -1 * (b3Height - scHeight),
     duration: Math.abs((scHeight - b3Height) / 460) + 1,
     ease: "none"
   }, ">");
   tl1.fromTo(".y5-4", {
     y: "0",
-    top: "100vh"
+    top: "100%"
   }, {
-    top: "0vh",
+    top: "0%",
     y: -1 * (b4Height - scHeight),
     duration: Math.abs((scHeight - b4Height) / 460) + 1,
     ease: "none"
   }, ">");
-  tl1.addLabel('1960');
+  tl1.fromTo(".y5-5__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 1,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('1982', "+=0.8");
+  tl1.fromTo(".y5-5", {
+    y: "0",
+    top: "100%"
+  }, (_tl1$fromTo = {
+    top: "0%",
+    y: "0"
+  }, _defineProperty(_tl1$fromTo, "y", -1 * (b5Height - scHeight)), _defineProperty(_tl1$fromTo, "duration", Math.abs((scHeight - b5Height) / 460) + 1), _defineProperty(_tl1$fromTo, "ease", "none"), _tl1$fromTo), ">");
+  tl1.fromTo(".y5-8__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 1,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('1983', "+=0.8");
+  tl1.fromTo(".y5-8", {
+    y: "0",
+    top: "100%"
+  }, (_tl1$fromTo2 = {
+    top: "0%",
+    y: "0"
+  }, _defineProperty(_tl1$fromTo2, "y", -1 * (b6Height - scHeight)), _defineProperty(_tl1$fromTo2, "duration", Math.abs((scHeight - b6Height) / 460) + 1), _defineProperty(_tl1$fromTo2, "ease", "none"), _tl1$fromTo2), ">");
+  tl1.fromTo(".y5-11__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 1,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('1984', "+=0.8");
+  tl1.fromTo(".y5-11", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b7Height - scHeight),
+    duration: Math.abs((scHeight - b7Height) / 460) + 1,
+    ease: "none"
+  }, ">");
   st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_3__["default"].create({
     trigger: ".scroll-page",
     pin: true,

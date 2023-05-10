@@ -53,7 +53,7 @@
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	background: #1EA9AF;
+	background: #BFB596;
 	z-index: 150;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
@@ -79,7 +79,7 @@
 		width: 100%;
 		height: 100%;
 		display: block;
-		background: #1EA9AF;
+		background: #BFB596;
 		pointer-events: none;
 	}
 
@@ -939,7 +939,7 @@
 
 		@include max(md) {
 			position: absolute;
-			height: auto;
+			min-height: 100%;
 			width: 100vw;
 			order: 1;
 			// background: #321A1E;
@@ -961,7 +961,7 @@
 			height: 150vh;
 
 			@include max(md) {
-				height: auto;
+				min-height: 100%;
 			}
 
 			img {
@@ -1129,19 +1129,17 @@
 	@include max(md) {
 
 		position: absolute;
-		// display: flex;
-		display: none;
+		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
 		min-height: 100vh;
 		height: auto;
 		background: #862744;
-		z-index: 133;
+		z-index: 145;
 		width: 100vw;
 		left: 0;
 		padding-top: 0;
-		padding-bottom: vw(30, 320);
 	}
 
 	@include max(sm) {
@@ -1163,8 +1161,7 @@
 		transform-style: preserve-3d;
 
 		@include max(md) {
-			z-index: 130;
-			display: none;
+			z-index: 144;
 		}
 
 		@include max(sm) {
@@ -1218,14 +1215,10 @@
 
 		@include max(md) {
 			position: relative;
-			width: 100vw;
+			width: vw(257,320);
 			height: auto;
 			left: 0;
 			top: 0;
-			padding-top: vw(20, 320);
-			margin-bottom: vw(47, 320);
-			margin-left: auto;
-			margin-right: auto;
 		}
 
 		img {
@@ -1298,6 +1291,7 @@
 				justify-content: flex-start;
 				align-items: flex-start;
 				max-width: vw(227, 320);
+				margin-bottom: vw(24, 320);
 				top: auto;
 				left: 0;
 				bottom: auto;
@@ -1321,15 +1315,14 @@
 
 	@include max(md) {
 		position: relative;
-		// display: flex;
-		display: none;
+		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
 		min-height: 100vh;
 		height: auto;
 		background: #fff;
-		z-index: 133;
+		z-index: 147;
 		width: 100vw;
 		left: 0;
 		padding-top: 0;
@@ -1414,9 +1407,6 @@
 			height: auto;
 			left: 0;
 			top: 0;
-			padding-top: vw(20, 320);
-			padding-right: vw(20, 320);
-			padding-left: vw(15, 320);
 			padding-bottom: 0;
 			margin-left: auto;
 			margin-right: auto;
@@ -1536,8 +1526,7 @@
 
 	@include max(md) {
 		position: relative;
-		// display: flex;
-		display: none;
+		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
@@ -1650,6 +1639,7 @@
 			flex-flow: row nowrap;
 			justify-content: space-between;
 			width: 100%;
+			left: 0;
 			align-items: flex-start;
 			padding-right: vw(16, 320);
 			margin-left: vw(16, 320);
@@ -1680,11 +1670,12 @@
 				flex-flow: column nowrap;
 				justify-content: flex-start;
 				align-items: flex-start;
-				max-width: vw(227, 320);
+				max-width: vw(281, 320);
 				top: auto;
 				left: 0;
 				bottom: auto;
 				padding-left: vw(16, 320);
+				padding-bottom: vw(24, 320);
 
 			}
 		}
@@ -1707,19 +1698,18 @@
 
 	@include max(md) {
 		position: absolute;
-		// display: flex;
-		display: none;
+		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
 		min-height: 100vh;
 		height: auto;
 		background: #862744;
-		z-index: 133;
+		z-index: 150;
 		width: 100vw;
 		left: 0;
 		padding-top: 0;
-		padding-bottom: vw(30, 320);
+		padding-bottom: 0;
 	}
 
 	@include max(sm) {
@@ -1741,8 +1731,7 @@
 		transform-style: preserve-3d;
 
 		@include max(md) {
-			z-index: 130;
-			display: none;
+			z-index: 149;
 		}
 
 		@include max(sm) {
@@ -1887,7 +1876,7 @@
 	}
 }
 
-.y5-9 {
+.y5-90 {
 	position: absolute;
 	top: 0;
 	left: 0vw;
@@ -1896,11 +1885,10 @@
 	z-index: 110;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
-
+	display: none;
 	@include max(md) {
 		position: relative;
-		// display: flex;
-		display: none;
+		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
@@ -1954,7 +1942,7 @@
 
 		@include max(md) {
 			position: relative;
-			width: 100%d;
+			width: 100%;
 			display: flex;
 			flex-flow: column nowrap;
 			justify-content: flex-start;
@@ -1962,6 +1950,7 @@
 			top: auto;
 			left: auto;
 			height: auto;
+			z-index: 2;
 		}
 
 		&--1 {
@@ -1992,9 +1981,6 @@
 			height: auto;
 			left: 0;
 			top: 0;
-			padding-top: vw(20, 320);
-			padding-right: vw(20, 320);
-			padding-left: vw(15, 320);
 			padding-bottom: 0;
 			margin-left: auto;
 			margin-right: auto;
@@ -2013,21 +1999,275 @@
 		top: vw(57, 1920);
 		width: vw(590, 1920);
 		height: auto;
+		z-index: 5;
+
+		@include max(md) {
+			position: absolute;
+			width: vw(113, 320);
+			height: auto;
+			right: vw(28, 320);
+			top: vw(245, 320);
+			padding-top: vw(20, 320);
+			padding-right: vw(20, 320);
+			padding-left: vw(15, 320);
+			padding-bottom: 0;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center bottom;
+		}
+	}
+
+	&__year {
+		color: #404040;
+		z-index: 5;
+		position: absolute;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			width: 100%;
+			align-items: flex-start;
+			padding-right: vw(16, 320);
+			margin-left: vw(16, 320);
+		}
+	}
+
+	&__title {
+		color: #404040;
+
+		@include max(md) {
+			position: relative;
+			width: 100%;
+			font-size: vw(24, 320);
+			padding-right: vw(16, 320);
+			font-style: normal;
+			font-weight: 400;
+			line-height: vw(25, 320);
+			letter-spacing: -0.01em;
+			text-transform: uppercase;
+			padding-left: vw(16, 320);
+			margin-bottom: vw(11, 320);
+		}
+
+		&--1 {
+			span {
+				position: relative;
+				display: block;
+			}
+		}
+
+	}
+
+	&__text {
+		color: #404040;
+
+		@include max(md) {
+			position: relative;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		&--1 {
+			position: absolute;
+			left: vw(1508, 1920);
+			bottom: vw(52, 1920);
+			z-index: 12;
+			max-width: vw(786, 1920);
+
+			@include max(md) {
+				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				max-width: vw(221, 320);
+				top: auto;
+				left: 0;
+				bottom: auto;
+				padding-left: vw(16, 320);
+
+			}
+		}
+
+		&--2 {
+			position: absolute;
+			left: vw(1087, 1920);
+			bottom: vw(56, 1920);
+			z-index: 12;
+			max-width: vw(786, 1920);
+			width: vw(249, 1920);
+
+			@include max(md) {
+				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				margin-top: vw(11, 320);
+				margin-left: vw(16, 320);
+				margin-bottom: vh(16, 320);
+				width: 100%;
+				max-width: vw(141, 320);
+				left: 0;
+
+			}
+		}
+
+	}
+}
+.y5-9 {
+	position: absolute;
+	top: 0;
+	left: 0vw;
+	width: 150vw;
+	min-height: 100vh;
+	z-index: 110;
+	will-change: transform, opacity, top;
+	transform-style: preserve-3d;
+
+	@include max(md) {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column nowrap;
+		min-height: 100vh;
+		height: auto;
+		background: #fff;
+		z-index: 133;
+		width: 100vw;
+		left: 0;
+		padding-top: 0;
+		padding-bottom: vw(30, 320);
+	}
+
+	@include max(sm) {
+		position: relative;
+		height: auto;
+		min-height: auto;
+	}
+
+	&__wrap {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100vh;
+		width: 2px;
+		z-index: 5;
+		padding-top: vw(50, 1920);
+		padding-bottom: vw(50, 1920);
+
+		@include max(md) {
+			display: none;
+		}
+
+		&--line {
+			position: relative;
+			height: 100%;
+			width: 1px;
+			background: #000;
+		}
+	}
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0vw;
+		// overflow: hidden;
+		width: 100%;
+		height: 100vh;
+		background: #FFFFFF;
+		z-index: 1;
+
+		@include max(md) {
+			position: relative;
+			width: 100%;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			top: auto;
+			left: auto;
+			height: auto;
+			z-index: 2;
+			order: 2;
+		}
+
+		&--1 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #FFFFFF;
+
+			@include max(md) {
+				display: none;
+			}
+		}
+	}
+
+	&__1 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: vw(1442, 1920);
+		height: 100vh;
 		z-index: 4;
 
-		// @include max(md) {
-		// 	position: relative;
-		// 	width: 100vw;
-		// 	height: auto;
-		// 	left: 0;
-		// 	top: 0;
-		// 	padding-top: vw(20, 320);
-		// 	padding-right: vw(20, 320);
-		// 	padding-left: vw(15, 320);
-		// 	padding-bottom: 0;
-		// 	margin-left: auto;
-		// 	margin-right: auto;
-		// }
+		@include max(md) {
+			position: relative;
+			width: 100vw;
+			height: auto;
+			left: 0;
+			top: 0;
+			display: flex;
+			padding-bottom: 0;
+			margin-left: auto;
+			margin-right: auto;
+			order: 1;
+		}
+
+		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center bottom;
+		}
+	}
+	&__2 {
+		position: absolute;
+		top: vw(57, 1920);
+		width: vw(590, 1920);
+		height: auto;
+		z-index: 3;
+
+		@include max(md) {
+			position: relative;
+			width: 100%;
+			height: auto;
+			left: 0;
+			top: 0;
+			padding-top: vw(20, 320);
+			padding-right: vw(20, 320);
+			padding-left: vw(15, 320);
+			padding-bottom: 0;
+			margin-left: auto;
+			margin-right: auto;
+			order: 4;
+		}
 
 		img {
 			position: relative;
@@ -2095,7 +2335,7 @@
 				flex-flow: column nowrap;
 				justify-content: flex-start;
 				align-items: flex-start;
-				max-width: vw(227, 320);
+				max-width: vw(281, 320);
 				top: auto;
 				left: 0;
 				bottom: auto;
@@ -2143,8 +2383,7 @@
 
 	@include max(md) {
 		position: relative;
-		// display: flex;
-		display: none;
+		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
@@ -2260,6 +2499,7 @@
 			align-items: flex-start;
 			padding-right: vw(16, 320);
 			margin-left: vw(16, 320);
+			left: 0;
 		}
 	}
 
@@ -2287,11 +2527,12 @@
 				flex-flow: column nowrap;
 				justify-content: flex-start;
 				align-items: flex-start;
-				max-width: vw(227, 320);
+				max-width: vw(281, 320);
 				top: auto;
 				left: 0;
 				bottom: auto;
 				padding-left: vw(16, 320);
+				padding-bottom: vw(24, 320);
 
 			}
 		}
@@ -2311,17 +2552,16 @@
 	transform-style: preserve-3d;
 
 	@include max(md) {
-		position: relative;
-		// display: flex;
-		display: none;
+		position: absolute;
+		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
 		min-height: 100vh;
 		height: auto;
-		background: #fff;
-		z-index: 133;
+		z-index: 160;
 		width: 100vw;
+		background: #5A080C;
 		left: 0;
 		padding-top: 0;
 		padding-bottom: vw(30, 320);
@@ -2345,8 +2585,7 @@
 		transform-style: preserve-3d;
 
 		@include max(md) {
-			z-index: 130;
-			display: none;
+			z-index: 159;
 		}
 
 		@include max(sm) {
@@ -2387,7 +2626,7 @@
 
 		@include max(md) {
 			position: relative;
-			width: 100%d;
+			width: 100%;
 			display: flex;
 			flex-flow: column nowrap;
 			justify-content: flex-start;
@@ -2406,7 +2645,6 @@
 			background: #5A080C;
 
 			@include max(md) {
-				display: none;
 			}
 		}
 	}
@@ -2425,9 +2663,6 @@
 			height: auto;
 			left: 0;
 			top: 0;
-			padding-top: vw(20, 320);
-			padding-right: vw(20, 320);
-			padding-left: vw(15, 320);
 			padding-bottom: 0;
 			margin-left: auto;
 			margin-right: auto;
@@ -2448,19 +2683,20 @@
 		height: auto;
 		z-index: 4;
 
-		// @include max(md) {
-		// 	position: relative;
-		// 	width: 100vw;
-		// 	height: auto;
-		// 	left: 0;
-		// 	top: 0;
-		// 	padding-top: vw(20, 320);
-		// 	padding-right: vw(20, 320);
-		// 	padding-left: vw(15, 320);
-		// 	padding-bottom: 0;
-		// 	margin-left: auto;
-		// 	margin-right: auto;
-		// }
+		@include max(md) {
+			position: relative;
+			width: 100vw;
+			height: auto;
+			left: 0;
+			top: 0;
+			display: none;
+			padding-top: vw(20, 320);
+			padding-right: vw(20, 320);
+			padding-left: vw(15, 320);
+			padding-bottom: 0;
+			margin-left: auto;
+			margin-right: auto;
+		}
 
 		img {
 			position: relative;
