@@ -13117,7 +13117,8 @@ summary {
   .y5-110 {
     position: relative;
     height: auto;
-    padding-bottom: 17.5vw;
+    padding-bottom: 37.5vw;
+    background: #141414;
   }
 }
 .y5-110::before {
@@ -13131,6 +13132,11 @@ summary {
   display: block;
   background: #BFB596;
   pointer-events: none;
+}
+@media only screen and (max-width: 699px) {
+  .y5-110::before {
+    background: #141414;
+  }
 }
 .y5-110__numbers {
   display: flex;
@@ -13420,7 +13426,14 @@ summary {
     height: 100vh;
     z-index: 120;
     height: auto;
-    background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
+    background: #404040;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y5-1 {
+    position: relative;
+    height: auto;
+    min-height: auto;
   }
 }
 .y5-1__bg {
@@ -13428,12 +13441,12 @@ summary {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #FFFFFF;
 }
 @media only screen and (max-width: 1100px) {
   .y5-1__bg {
-    height: 100vh;
+    height: auto;
   }
 }
 .y5-1__bg img {
@@ -13448,7 +13461,7 @@ summary {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 300vh;
 }
 @media only screen and (max-width: 1100px) {
   .y5-1__bg--1 {
@@ -13460,7 +13473,7 @@ summary {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center bottom;
 }
 .y5-1__man {
   position: absolute;
@@ -13505,6 +13518,8 @@ summary {
     justify-content: center;
     align-items: flex-end;
     order: 3;
+    height: auto;
+    bottom: 0vh;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -13536,6 +13551,7 @@ summary {
     justify-content: flex-start;
     align-items: flex-start;
     margin-left: 5vw;
+    order: 2;
   }
 }
 .y5-1__title--1 span {
@@ -13593,7 +13609,21 @@ summary {
     max-width: 70.9375vw;
     margin-left: 5vw;
     margin-bottom: 5vh;
+    margin-top: 3.4375vw;
     left: 0;
+    order: 3;
+  }
+}
+.y5-1__text--2 {
+  position: absolute;
+  top: 0vw;
+  left: 2.7083333333vw;
+  z-index: 5;
+  max-width: 20.8333333333vw;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-1__text--2 {
+    display: none;
   }
 }
 
@@ -13620,12 +13650,30 @@ summary {
     z-index: 130;
   }
 }
+@media only screen and (max-width: 699px) {
+  .y5-2 {
+    position: relative;
+    height: auto;
+    min-height: auto;
+  }
+}
 .y5-2__bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+}
+@media only screen and (max-width: 699px) {
+  .y5-2__bg {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100vw;
+    height: auto;
+  }
 }
 .y5-2__bg img {
   position: relative;
@@ -13640,6 +13688,13 @@ summary {
   left: 0;
   width: 100vw;
   height: 100vh;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-2__bg--1 {
+    position: relative;
+    width: 100vw;
+    height: auto;
+  }
 }
 .y5-2__bg--1 img {
   position: relative;
@@ -13832,8 +13887,8 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-3__2 {
     left: 50.3125vw;
-    width: 47.1875vw;
-    top: 80vh;
+    width: 44.0625vw;
+    top: 62.5vw;
   }
 }
 .y5-3__2 img {
@@ -14038,12 +14093,16 @@ summary {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 89.6875vw;
     height: auto;
     left: 0;
     top: 0;
-    margin-top: 12.1875vw;
-    margin-bottom: 12.1875vw;
+    margin-top: 6.25vw;
+    padding-left: 4.6875vw;
+    padding-right: 4.6875vw;
+    margin-bottom: 0vw;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .y5-4__2 img {
@@ -14068,12 +14127,16 @@ summary {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 89.6875vw;
     height: auto;
     left: 0;
     top: 0;
-    margin-top: 12.1875vw;
-    margin-bottom: 12.1875vw;
+    margin-top: 6.25vw;
+    margin-bottom: 6.25vw;
+    padding-left: 4.6875vw;
+    padding-right: 4.6875vw;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .y5-4__3 img {
@@ -14110,6 +14173,7 @@ summary {
   color: #FFFFFF;
   z-index: 5;
   position: absolute;
+  display: none;
 }
 @media only screen and (max-width: 1100px) {
   .y5-4__year {
@@ -14149,7 +14213,7 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 70.9375vw;
+    max-width: 87.8125vw;
     margin-top: 3.4375vw;
     margin-left: 5vw;
     margin-bottom: 5vh;
@@ -14290,15 +14354,38 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y5-5__title {
-    display: none;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+    padding-left: 5vw;
   }
 }
 .y5-5__title--1 span {
   position: absolute;
   display: block;
 }
+@media only screen and (max-width: 1100px) {
+  .y5-5__title--1 span {
+    position: relative;
+    display: flex;
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 7.5vw;
+    line-height: 7.8125vw;
+    margin-bottom: 3.4375vw;
+    color: #FFFFFF;
+  }
+}
 .y5-5__title--1 span:nth-child(3) {
   opacity: 0.4;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-5__title--1 span:nth-child(3) {
+    opacity: 1;
+  }
 }
 .y5-5__text {
   color: #fff;
@@ -14326,7 +14413,7 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 70.9375vw;
+    max-width: 87.8125vw;
     margin-bottom: 7.5vw;
     top: auto;
     left: 0;
@@ -14360,6 +14447,13 @@ summary {
     left: 0;
     padding-top: 0;
     padding-bottom: 9.375vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .y5-6 {
+    position: relative;
+    height: auto;
+    min-height: auto;
   }
 }
 .y5-6__wrap {
@@ -14500,7 +14594,7 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 70.9375vw;
+    max-width: 87.8125vw;
     top: auto;
     left: 0;
     bottom: auto;
@@ -15009,11 +15103,7 @@ summary {
     width: 35.3125vw;
     height: auto;
     right: 8.75vw;
-    top: 76.5625vw;
-    padding-top: 6.25vw;
-    padding-right: 6.25vw;
-    padding-left: 4.6875vw;
-    padding-bottom: 0;
+    top: 71.25vw;
     margin-left: auto;
     margin-right: auto;
   }
@@ -15247,7 +15337,7 @@ summary {
   top: 2.96875vw;
   width: 30.7291666667vw;
   height: auto;
-  z-index: 3;
+  z-index: 4;
 }
 @media only screen and (max-width: 1100px) {
   .y5-9__2 {
@@ -15763,18 +15853,18 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-12 {
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #862744;
-    z-index: 133;
+    z-index: 165;
     width: 100vw;
     left: 0;
     padding-top: 0;
-    padding-bottom: 9.375vw;
+    padding-bottom: 0vw;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -15798,7 +15888,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y5-12__blockOverlay {
-    z-index: 130;
+    z-index: 164;
     display: none;
   }
 }
@@ -15946,7 +16036,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-13 {
     position: relative;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -16038,9 +16128,6 @@ summary {
     height: auto;
     left: 0;
     top: 0;
-    padding-top: 6.25vw;
-    padding-right: 6.25vw;
-    padding-left: 4.6875vw;
     padding-bottom: 0;
     margin-left: auto;
     margin-right: auto;
@@ -16059,6 +16146,21 @@ summary {
   width: 30.7291666667vw;
   height: auto;
   z-index: 4;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-13__2 {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    left: 0;
+    top: 0;
+    padding-top: 6.25vw;
+    padding-right: 6.25vw;
+    padding-left: 4.6875vw;
+    padding-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .y5-13__2 img {
   position: relative;
@@ -16123,7 +16225,7 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 70.9375vw;
+    max-width: 87.8125vw;
     top: auto;
     left: 0;
     bottom: auto;
@@ -16168,7 +16270,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-14 {
     position: relative;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -16233,6 +16335,7 @@ summary {
     height: auto;
     left: 0;
     top: 0;
+    padding-top: 0;
     padding-bottom: 0;
     margin-left: auto;
     margin-right: auto;
@@ -16253,9 +16356,17 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y5-14__2 {
-    left: auto;
-    top: 54.375vw;
-    right: 14.0625vw;
+    position: relative;
+    width: 100vw;
+    height: auto;
+    left: 0;
+    top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4.6875vw;
+    padding-top: 0;
   }
 }
 .y5-14__2 img {
@@ -16309,11 +16420,12 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 70.9375vw;
+    max-width: 87.8125vw;
     top: auto;
     left: 0;
     bottom: auto;
     padding-left: 5vw;
+    margin-bottom: 7.5vw;
   }
 }
 
@@ -16329,14 +16441,14 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-15 {
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #fff;
-    z-index: 153;
+    z-index: 175;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -16364,8 +16476,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y5-15__blockOverlay {
-    z-index: 150;
-    display: none;
+    z-index: 174;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -16504,11 +16615,26 @@ summary {
   flex-flow: row nowrap;
   align-items: flex-start;
 }
+@media only screen and (max-width: 1100px) {
+  .y5-15__title--1 {
+    margin-bottom: 3.4375vw;
+    flex-flow: column nowrap;
+    padding-left: 5vw;
+  }
+}
 .y5-15__title--1 span {
   position: absolute;
   display: inline-block;
   width: auto;
   max-width: 100%;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-15__title--1 span {
+    position: relative;
+    font-size: 7.5vw;
+    line-height: 7.8125vw;
+    margin-bottom: 1.5625vw;
+  }
 }
 .y5-15__title--1 span p {
   position: relative;
@@ -16585,18 +16711,18 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-16 {
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #862744;
-    z-index: 133;
+    z-index: 185;
     width: 100vw;
     left: 0;
     padding-top: 0;
-    padding-bottom: 9.375vw;
+    padding-bottom: 0vw;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -16620,8 +16746,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y5-16__blockOverlay {
-    z-index: 130;
-    display: none;
+    z-index: 184;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -16768,7 +16893,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-17 {
     position: relative;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -16860,9 +16985,6 @@ summary {
     height: auto;
     left: 0;
     top: 0;
-    padding-top: 6.25vw;
-    padding-right: 6.25vw;
-    padding-left: 4.6875vw;
     padding-bottom: 0;
     margin-left: auto;
     margin-right: auto;
@@ -16881,6 +17003,21 @@ summary {
   width: 30.7291666667vw;
   height: auto;
   z-index: 4;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-17__2 {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    left: 0;
+    top: 0;
+    padding-top: 6.25vw;
+    padding-right: 6.25vw;
+    padding-left: 4.6875vw;
+    padding-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .y5-17__2 img {
   position: relative;
@@ -16944,7 +17081,7 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 70.9375vw;
+    max-width: 87.8125vw;
     top: auto;
     left: 0;
     bottom: auto;
@@ -16989,7 +17126,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-18 {
     position: relative;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -17107,11 +17244,12 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 70.9375vw;
+    max-width: 87.8125vw;
     top: auto;
     left: 0;
     bottom: auto;
     padding-left: 5vw;
+    margin-bottom: 7.5vw;
   }
 }
 
@@ -17128,18 +17266,18 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-19 {
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #862744;
-    z-index: 133;
+    z-index: 195;
     width: 100vw;
     left: 0;
     padding-top: 0;
-    padding-bottom: 9.375vw;
+    padding-bottom: 0vw;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -17163,8 +17301,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y5-19__blockOverlay {
-    z-index: 130;
-    display: none;
+    z-index: 194;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -17311,7 +17448,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-20 {
     position: relative;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -17322,7 +17459,7 @@ summary {
     width: 100vw;
     left: 0;
     padding-top: 0;
-    padding-bottom: 9.375vw;
+    padding-bottom: 0vw;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -17382,9 +17519,6 @@ summary {
     height: auto;
     left: 0;
     top: 0;
-    padding-top: 6.25vw;
-    padding-right: 6.25vw;
-    padding-left: 4.6875vw;
     padding-bottom: 0;
     margin-left: auto;
     margin-right: auto;
@@ -17403,6 +17537,21 @@ summary {
   width: 30.7291666667vw;
   height: auto;
   z-index: 4;
+}
+@media only screen and (max-width: 1100px) {
+  .y5-20__2 {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    left: 0;
+    top: 0;
+    padding-top: 6.25vw;
+    padding-right: 6.25vw;
+    padding-left: 4.6875vw;
+    padding-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .y5-20__2 img {
   position: relative;
@@ -17473,6 +17622,7 @@ summary {
     left: 0;
     bottom: auto;
     padding-left: 5vw;
+    margin-bottom: 7.5vw;
   }
 }
 .y5-20__text--2 {
@@ -17513,7 +17663,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y5-21 {
     position: relative;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -17594,6 +17744,22 @@ summary {
   top: 16.7708333333vw;
   z-index: 4;
 }
+@media only screen and (max-width: 1100px) {
+  .y5-21__2 {
+    position: relative;
+    padding: 4.6875vw;
+    width: 100%;
+    padding-top: 0;
+    top: auto;
+  }
+}
+.y5-21__2 img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
 .y5-21__year {
   color: #404040;
   z-index: 5;
@@ -17643,6 +17809,7 @@ summary {
     left: 0;
     bottom: auto;
     padding-left: 5vw;
+    margin-bottom: 5vw;
   }
 }
 

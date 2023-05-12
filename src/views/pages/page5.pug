@@ -32,15 +32,24 @@ block content
 					.y5-1__man
 						picture
 							img(src="img/y5-1.png" alt="")
+
 				.y5-1__2
 					picture
 						img(src="img/y5-1--3.png" alt="")
+				.y5-1__text.y5-1__text--2.textBlock
+					!="На снимке ректор УНИ А.И. Спивак с коллегами готовятся к встрече почетных гостей вуза."
 				.y5-1__title.y5-1__title--1.blockTitle.blockTitle--desc
 					span  содружество
 					span  
 						!="семи"
 					span  
 						!="нефтяных"
+					span  
+						!="вузов"
+				.y5-1__title.y5-1__title--1.blockTitle.blockTitle--mob
+					span  содружество
+					span  
+						!="семи нефтяных"
 					span  
 						!="вузов"
 			.y5-2
@@ -67,6 +76,7 @@ block content
 						img(src="img/y5-3--2.png" alt="")
 				.y5-3__3
 					picture
+						//- source(media="(max-width: 699px)", srcset="img/y5-3--3--2.png")
 						img(src="img/y5-3--3.png" alt="")
 				.y5-3__2
 					picture
@@ -82,7 +92,7 @@ block content
 			.y5-4
 				.y5-4__text.y5-4__text--1.textBlock
 					!="В микрорайоне “Зеленая роща” введены первые объекты инфораструктуры строительного факультета: учебный корпус № 5, 12-ти этажное общежитие и столовая. В строительстве активно участвовали студенты факультета." 
-				//- .y5-4__year.yearConner 1980
+				.y5-4__year.yearConner 1980
 				.y5-4__bg
 					.y5-4__bg--1
 						img(src="img/y5-4--1.png" alt="")
@@ -101,9 +111,14 @@ block content
 					.y5-5__bg--1
 						.y5-5__year.yearConner.blockTitle--desc 1982
 					.y5-5__year.yearConner.blockTitle--mob 1982
+					.y5-5__title.y5-5__title--1.blockTitle.blockTitle--mob
+						span 
+							!="Диплом ВДНХ"
+						span 
+							!="СССР"
 					.y5-5__text.y5-5__text--1.textBlock
 						!="Институт удостоен Диплома первой степени выставка достижений народного хозяйства СССР." 
-					.y5-5__title.y5-5__title--1.blockTitle
+					.y5-5__title.y5-5__title--1.blockTitle.blockTitle--desc
 						span 
 							!="Диплом"
 						span 
@@ -214,22 +229,23 @@ block content
 					.y5-13__bg
 						.y5-13__year.yearConner 1985
 						.y5-13__bg--1
-						.y5-13__text--1.textBlock
+						.y5-13__text--1.textBlock.blockTitle--desc
 							!="Сдано в эксплуатацию 12-ти этажное общежитие № 7 на строительном факультете. Общежитие №6 для факультета было построено в 1980 г." 
+						.y5-13__text--1.textBlock.blockTitle--mob
+							!="Сдано в эксплуатацию второе 12-ти этажное общежитие на стройфаке." 
 				.y5-14
 					.y5-14__year.yearConner.blockTitle--desc 1985
 					.y5-14__1
 						picture
 							img(src="img/y5-14__1.png" alt="")
-					.y5-14__2
-						picture
-							img(src="img/y5-14__2.png" alt="")
 					.y5-14__year.yearConner.blockTitle--mob 1985
 					.y5-14__bg
 						.y5-14__bg--1
 						.y5-14__text--1.textBlock
 							!="Начата подготовка молодых специалистов для Республики Куба и развивающихся стран Африки."
-
+					.y5-14__2
+						picture
+							img(src="img/y5-14__2.png" alt="")
 
 			.y5-15__blockOverlay.blockOverlay
 			.y5-15#year1986
@@ -239,21 +255,28 @@ block content
 				.y5-15__bg
 					.y5-15__bg--1
 						picture
-							source(media="(max-width: 1100px)", srcset="img/y5-15__bg--1.png")
+							source(media="(max-width: 1100px)", srcset="img/y5-15__bg--1--2.png")
 							img(src="img/y5-15__bg--1.png" alt="")
 				.y5-15__year.yearConner.blockTitle--mob 1986
-				.y5-15__text.y5-15__text--1.textBlock.blockTitle--mob
-					!="Создан деканат по работе с иностранными студентами. Первый декан — доцент <br>М.К. Рогачев."
 
 				.y5-15__1
 					img(src="img/y5-15__1.png" alt="")
-				.y5-15__title.y5-15__title--1.blockTitle
+				.y5-15__title.y5-15__title--1.blockTitle.blockTitle--desc
 					span 
 						!="Первый декан"
 					span 
 						!="доцент"
 					span 
 						!=" М.К. Рогачев"
+				.y5-15__title.y5-15__title--1.blockTitle.blockTitle--mob
+					span 
+						!="Первый декан —"
+					span 
+						!="доцент"
+					span 
+						!=" М.К. Рогачев"
+				.y5-15__text.y5-15__text--1.textBlock.blockTitle--mob
+					!="Создан деканат по работе с иностранными студентами. Первый декан — доцент <br>М.К. Рогачев."
 
 			.y5-16__blockOverlay.blockOverlay
 			.y5-16#year1987
@@ -297,15 +320,14 @@ block content
 					.y5-21__1
 						picture
 							img(src="img/y5-21__1.png" alt="")
-					.y5-21__2
-						picture
-							img(src="img/y5-21__2.png" alt="")
 					.y5-21__year.yearConner.blockTitle--mob 1989
 					.y5-21__bg
 						.y5-21__bg--1
 						.y5-21__text--1.textBlock
 							!="На факультете экономики и автоматизации ПП открыта кафедра вычислительной техники и инженерной кибернетики."
-
+					.y5-21__2
+						picture
+							img(src="img/y5-21__2.png" alt="")
 						
 
 block scripts

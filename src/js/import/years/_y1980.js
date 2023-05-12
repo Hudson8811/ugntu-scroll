@@ -20,8 +20,8 @@ let tl = gsap.timeline({
 	}
 });
 
-let scWidth, b1Width, b2Width, b3Width, b4Width, b5Width, b6Width, b7Width, b8Width, b9Width, b11Height, b12Height, b13Height, b14Height, b15Height;
-let scHeight, b1Height, b2Height, b3Height, b4Height, b5Height, b6Height, b7Height, b8Height, b9Height;
+let scWidth, b1Width, b2Width, b3Width, b4Width, b5Width, b6Width, b7Width, b8Width, b9Width, b11Height;
+let scHeight, b1Height, b2Height, b3Height, b4Height, b5Height, b6Height, b7Height, b8Height, b9Height, b10Height, b12Height, b13Height, b14Height, b15Height;
 
 let urlParams = new URLSearchParams(window.location.search);
 let yValue = urlParams.get('y');
@@ -81,6 +81,10 @@ function initAnimation() {
 	b5Height = $('.y5-5').innerHeight();
 	b6Height = $('.y5-8').innerHeight();
 	b7Height = $('.y5-11').innerHeight();
+	b8Height = $('.y5-12').innerHeight();
+	b9Height = $('.y5-15').innerHeight();
+	b10Height = $('.y5-16').innerHeight();
+	b11Height = $('.y5-19').innerHeight();
 
 
 	if (window.innerWidth > 1100) {
@@ -205,6 +209,7 @@ function initScrollAnimationDesktop() {
 		ease: "none",
 	}, "<");
 
+
 	tl1.fromTo(".y5-1__title--1 span:nth-child(1)", {
 		x: '-60vw',
 		y: '100vh'
@@ -242,14 +247,21 @@ function initScrollAnimationDesktop() {
 		ease: "none",
 	}, "<+=0.1");
 	tl1.fromTo(".y5-1__2", {
-		x: "100%",
-		y: '70%',
+		x: "50%",
+		y: '110%',
 	}, {
-		x: "-100%",
+		x: "-50%",
 		y: '70%',
 		duration: 3.5,
 		ease: "none",
 	}, ">-=1.4");
+	tl1.fromTo(".y5-1 .y5-1__text--2", {
+		y: '160vh',
+	}, {
+		y: '50vh',
+		duration: 1,
+		ease: "none",
+	}, "<+=0.2");
 	tl1.fromTo(".y5-1", {
 		y: '0%',
 	}, {
@@ -685,9 +697,9 @@ tl1.to(".y5-110", {
 
 tl1.fromTo(".y5-1", {
 	y: "0",
-	top: "100%"
+	top: "70vw"
 }, {
-	top: "0%",
+	top: "0",
 	y: -1 * (b1Height - scHeight),
 	duration: Math.abs((scHeight - b1Height) / 460) + 1,
 	ease: "none",
@@ -792,6 +804,97 @@ tl1.fromTo(".y5-11", {
 }, ">");
 
 
+tl1.fromTo(".y5-12__blockOverlay", {
+	opacity: 0,
+	// x: "150vw"
+}, {
+	opacity: 0.8,
+	// x: "150vw",
+	duration: 1,
+	ease: "none",
+}, ">");
+
+tl1.addLabel('1985', "+=0.8");
+
+tl1.fromTo(".y5-12", {
+	y: "0",
+	top: "100%"
+}, {
+	top: "0",
+	y: -1 * (b8Height - scHeight),
+	duration: Math.abs((scHeight - b8Height) / 460) + 1,
+	ease: "none",
+}, ">");
+
+
+tl1.fromTo(".y5-15__blockOverlay", {
+	opacity: 0,
+	// x: "150vw"
+}, {
+	opacity: 0.8,
+	// x: "150vw",
+	duration: 1,
+	ease: "none",
+}, ">");
+
+tl1.addLabel('1986', "+=0.8");
+
+tl1.fromTo(".y5-15", {
+	y: "0",
+	top: "100%"
+}, {
+	top: "0",
+	y: -1 * (b9Height - scHeight),
+	duration: Math.abs((scHeight - b9Height) / 460) + 1,
+	ease: "none",
+}, ">");
+
+
+tl1.fromTo(".y5-16__blockOverlay", {
+	opacity: 0,
+	// x: "150vw"
+}, {
+	opacity: 0.8,
+	// x: "150vw",
+	duration: 1,
+	ease: "none",
+}, ">");
+
+tl1.addLabel('1987', "+=0.8");
+
+tl1.fromTo(".y5-16", {
+	y: "0",
+	top: "100%"
+}, {
+	top: "0",
+	y: -1 * (b10Height - scHeight),
+	duration: Math.abs((scHeight - b10Height) / 460) + 1,
+	ease: "none",
+}, ">");
+
+tl1.fromTo(".y5-19__blockOverlay", {
+	opacity: 0,
+	// x: "150vw"
+}, {
+	opacity: 0.8,
+	// x: "150vw",
+	duration: 1,
+	ease: "none",
+}, ">");
+
+tl1.addLabel('1989', "+=0.8");
+
+tl1.fromTo(".y5-19", {
+	y: "0",
+	top: "100%"
+}, {
+	top: "0",
+	y: -1 * (b11Height - scHeight),
+	duration: Math.abs((scHeight - b11Height) / 460) + 1,
+	ease: "none",
+}, ">");
+
+
 
 
 st1 = ScrollTrigger.create({
@@ -804,7 +907,45 @@ st1 = ScrollTrigger.create({
 });
 
 }
-function initScrollAnimationMobile() { }
+function initScrollAnimationMobile() {
+    gsap.to(".fullPageOverlay", {
+        duration: 1,
+        autoAlpha: 0,
+        ease: "none",
+        onComplete: function () {
+            $('.fullPageOverlay').removeClass('active');
+            $('body').addClass('active');
+        }
+    });
+
+    tl1.fromTo(".y5-110__numbers", {
+        x: 0,
+    }, {
+        x: '-110%',
+        duration: 0.6,
+        ease: "none",
+    }, "0");
+
+    tl1.fromTo(".y5-110__numbers", {
+        y: 0
+    }, {
+        y: '120%',
+        duration: 0.5,
+        ease: "none",
+    }, "0");
+
+
+
+
+    st1 = ScrollTrigger.create({
+        trigger: ".y5-110__numbers",
+        pin: false,
+        start: "-45vw top",
+        end: () => "bottom top",
+        scrub: 1,
+        animation: tl1,
+    });	
+}
 
 
 
