@@ -9,7 +9,7 @@ gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollToPlugin);
 
 var initMode;
-let addTime = 2100;
+let addTime = 3000;
 
 
 let st1;
