@@ -1,0 +1,96 @@
+extends ../layouts/default
+
+block variables
+	- const title = "1990-1999"
+	- var sidebarActive = 1990
+
+block head
+	include ../../blocks/modules/overlay/overlayStyle
+block content
+	.fullPageOverlay.fullPageOverlay--white.active
+	.wrapper
+		include ../../blocks/modules/sidebar/sidebar
+		.scroll-page.y1990
+			.y6-110
+				.y6-110__numbers
+					span.y6-110__numbers-number 1990
+					span.y6-110__numbers-line
+					span.y6-110__numbers-number 1999
+				.y6-110__photos
+					img.y6-110__photos-item.y6-110__photos-item--1(src="img/y5-2.png" alt="")
+					img.y6-110__photos-item.y6-110__photos-item--2(src="img/y5-6__1.png" alt="")
+					img.y6-110__photos-item.y6-110__photos-item--3(src="img/y5-14__1.png" alt="")
+			.y6-1-80
+				.y6-1-80__year.yearConner 1990
+			.y6-1#year1990
+				//- .y6-1__text.y6-1__text--1.textBlock
+				//- 	!="Вхождение в координирующую структуру нефтегазовых вузов страны – содружество семи нефтяных вузов."
+				.y6-1__year.yearConner 1990
+				.y6-1__bg
+					.y6-1__bg--1
+						img(src="img/y6-1--2.png" alt="")
+				.y6-1__title.y6-1__title--1.blockTitle.blockTitle--desc
+					span  первый
+					span  
+						!="выпуск"
+					span  
+						!="иностранных"
+					span  
+						!="студентов"
+				.y6-1__title.y6-1__title--1.blockTitle.blockTitle--mob
+					span  первый
+					span  
+						!="выпуск"
+					span  
+						!="иностранных"
+					span  
+						!="студентов"
+			.y6-2
+				//- .y6-3__year.yearConner 1980
+				.y6-2__text.y6-2__text--1.textBlock
+					!="На кафедре бурения внедряются в учебный процесс 10 компьютеров IBM XT." 
+				.y6-2__bg
+					.y6-2__bg--1
+						img(src="img/y6-2.png" alt="")
+				.y6-2__2
+					picture
+						img(src="img/y2-2--2.png" alt="")
+		
+			//- .y6-3
+			//- 	.y6-3__text.y6-3__text--1.textBlock
+			//- 		!="Студент технологического факультета И. Соколов стал первым Олимпийским чемпионом из Башкирии." 
+			//- 	.y6-3__year.yearConner 1980
+			//- 	.y6-3__bg
+			//- 		.y6-3__bg--1
+			//- 			img(src="img/y5-3--2.png" alt="")
+			//- 	.y6-3__3
+			//- 		picture
+			//- 			//- source(media="(max-width: 699px)", srcset="img/y5-3--3--2.png")
+			//- 			img(src="img/y5-3--3.png" alt="")
+			//- 	.y6-3__2
+			//- 		picture
+			//- 			img(src="img/y5-3--1.png" alt="")
+			//- 	.y6-3__title.y6-3__title--1.blockTitle.blockTitle--desc
+			//- 		span  олимпийский 
+			//- 		span  
+			//- 			!="чемпион"
+			//- 	.y6-3__title.y6-3__title--1.blockTitle.blockTitle--mob
+			//- 		span  олимпийский 
+			//- 		span  
+			//- 			!="чемпион"
+			//- .y6-4
+			//- 	.y6-4__text.y6-4__text--1.textBlock
+			//- 		!="В микрорайоне “Зеленая роща” введены первые объекты инфраструктуры строительного факультета: учебный корпус № 5, 12-ти этажное общежитие и столовая. В строительстве активно участвовали студенты факультета." 
+			//- 	.y6-4__year.yearConner 1980
+			//- 	.y6-4__bg
+			//- 		.y6-4__bg--1
+			//- 			img(src="img/y5-4--1.png" alt="")
+			//- 	.y6-4__2
+			//- 		picture
+			//- 			img(src="img/y5-4--2.png" alt="")
+			//- 	.y6-4__3
+			//- 		picture
+			//- 			img(src="img/y5-4--3.png" alt="")
+
+block scripts
+

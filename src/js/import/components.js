@@ -28,6 +28,9 @@ $(window).on('load', function () {
     else if ($('.y1980').length > 0) {
         require("./years/_y1980");
     }
+    else if ($('.y1990').length > 0) {
+        require("./years/_y1990");
+    }
     else {
         $('body').addClass('active');
     }
