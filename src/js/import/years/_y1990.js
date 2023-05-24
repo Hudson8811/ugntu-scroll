@@ -13,6 +13,7 @@ let addTime = 2100;
 
 let st1;
 let tl1 = gsap.timeline({});
+let tl2 = gsap.timeline({});
 let tl = gsap.timeline({
 	onComplete: function () {
 		$('body').addClass('active');
@@ -32,6 +33,7 @@ $(window).on('resize', function () {
 		if (typeof st1 !== "undefined") st1.kill();
 		tl1.clear();
 		tl.clear();
+		tl2.clear();
 		gsap.set(
 			".y6-110,.y6-1__bg--1,.y6-110__numbers,.y6-110__numbers-number,.y6-110__numbers-line,.y6-110__photos,.y6-110__photos-item" +
 			".y6-100,.y6-100__numbers,.y6-100__numbers-number,.y6-100__numbers-line," +
@@ -210,25 +212,25 @@ function initScrollAnimationDesktop() {
 		ease: "none",
 	}, "<");
 
-
 	tl1.fromTo(".y6-2__bg--1", {
 		scale: 1.5,
 	}, {
 		scale: 1,
 		duration: 2,
 		ease: "none",
+		onComplete: () => {
+			let tween = gsap.to(".y6-2__2", {
+				scale: 1,
+				rotation: 0,
+				opacity: 0.4,
+				repeat: 1,
+				yoyo: true,
+				duration: 1, 
+				ease: "bounce.out"
+			});
+		} 
 	}, "<-=0.5");
 
-
-	tl.to(".y6-2__2", {
-		scale: 0.9, 
-		opacity: 1, 
-		delay: 0.5, 
-		duration: 5,
-		stagger: 0.2,
-		ease: "elastic", 
-		force3D: true
-	}, ">+=10");
 
 
 

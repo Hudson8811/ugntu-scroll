@@ -564,7 +564,7 @@
 		top: auto;
 		height: auto;
 		z-index: 5;
-		opacity: 0;
+		opacity: 1;
 		@include max(md) {
 			left: vw(161, 320);
 			width: vw(141, 320);
