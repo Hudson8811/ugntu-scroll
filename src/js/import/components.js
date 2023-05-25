@@ -291,30 +291,5 @@ function nextPageAnimation(link, bgColor = '') {
 }
 
 
-function fileLoadStatus(target, procent = 0) {
-    let procentInt = parseInt(procent);
-    let value = procentInt + '%';
-    let procentMinus = 100 - procentInt;
-    $(target).find('.file-loader__inner').css('width', value);
-    $(target).find('.file-loader__status--cyan').text(value).css({
-        "mask-image": "linear-gradient(-90deg, black " + procentMinus + "%, transparent " + procentMinus + "% 100%)",
-        "-webkit-mask-image": "linear-gradient(-90deg, black " + procentMinus + "%, transparent " + procentMinus + "% 100%)"
-    });;
-    $(target).find('.file-loader__status--white').text(value).css({
-        "mask-image": "linear-gradient(90deg, black " + procentMinus + "%, transparent " + procentMinus + "% 100%)",
-        "-webkit-mask-image": "linear-gradient(90deg, black " + procentInt + "%, transparent " + procentInt + "% 100%)"
-    });;
-}
-
-if ($('.file-loader').length > 0) {
-    fileLoadStatus($('.file-loader'), 0);
-
-    $(document).on('click', '.test-file-loader__btn', function () {
-        event.preventDefault();
-        let value = $(this).data('value');
-        let target = $(this).closest('.form__fileblock').find('.file-loader');
-        fileLoadStatus(target, value);
-    });
-}
 
 
