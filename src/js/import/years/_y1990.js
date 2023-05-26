@@ -298,7 +298,7 @@ function initScrollAnimationDesktop() {
 		duration: 1,
 		ease: "none",
 	}, ">");	
-	tl1.addLabel('1985', "+=0.41");
+	tl1.addLabel('1991', "+=0.41");
 
 	tl1.fromTo(".y6-4", {
 		y: "0vh",
@@ -310,6 +310,125 @@ function initScrollAnimationDesktop() {
 		ease: "none",
 	}, ">-=0.1");
 
+
+	tl1.fromTo(".y6-7__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");	
+	tl1.addLabel('1993', "+=0.41");
+
+	tl1.fromTo(".y6-7", {
+		y: "0vh",
+		x: "150vw"
+	}, {
+		y: "0vh",
+		x: "-104vw",
+		duration: 1.2,
+		ease: "none",
+	}, ">-=0.1");
+	tl1.fromTo(".y6-7__1", {
+		y: "50%",
+	}, {
+		y: "-14%",
+		duration: 0.5,
+		ease: "none",
+	}, ">-=0.4");
+
+
+	tl1.fromTo(".y6-8__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+	tl1.addLabel('1986', "+=0.72");
+
+
+	tl1.fromTo(".y6-8", {
+		y: "0vh",
+		x: "180vw"
+	}, {
+		y: "0vh",
+		x: "-84vw",
+		duration: 1.4,
+		ease: "none",
+	}, ">-=0.1");
+
+	tl1.fromTo(".y6-8__title--1 span:nth-child(1)", {
+		y: "20vh",
+		x: "-10vw"
+	}, {
+		y: "20vh",
+		x: "80vw",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.4");
+	tl1.fromTo(".y6-8__title--1 span:nth-child(2)", {
+		y: "40vh",
+		x: "15vw"
+	}, {
+		y: "40vh",
+		x: "70vw",
+		duration: 1,
+		ease: "none",
+	}, "<-=0.1");
+	tl1.fromTo(".y6-8__title--1 span:nth-child(3)", {
+		y: "60vh",
+		x: "20vw"
+	}, {
+		y: "60vh",
+		x: "103vw",
+		duration: 1,
+		ease: "none",
+	}, "<-=0.03");
+	tl1.fromTo(".y6-8__1", {
+		x: "43vw"
+	}, {
+		x: "43vw",
+		duration: 1,
+		ease: "none",
+	}, "<");
+
+
+
+	tl1.fromTo(".y6-9__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+
+	tl1.fromTo(".y6-9", {
+		y: "0vh",
+		x: "150vw"
+	}, {
+		y: "0vh",
+		x: "-154vw",
+		duration: 1.2,
+		ease: "none",
+	}, ">-=0.1");
+	tl1.fromTo(".y6-10__2", {
+		// y: "50vh",
+		x: "50vw"
+	}, {
+		// y: "50vh",
+		x: "70vw",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.2");
 
 
 	// tl1.fromTo(".y6-4", {
