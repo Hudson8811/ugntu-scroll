@@ -1,6 +1,5 @@
 import $ from "jquery";
 import gsap from "gsap";
-import Swiper from 'swiper/bundle';
 import ScrollTrigger from "gsap/ScrollTrigger";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
@@ -9,7 +8,7 @@ gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollToPlugin);
 
 var initMode;
-let addTime = 2100;
+let addTime = 3600;
 
 let st1;
 let tl1 = gsap.timeline({});
@@ -53,7 +52,7 @@ $(window).on('resize', function () {
 function initAnimation() {
 
 	scWidth = $('.scroll-page').innerWidth();
-	b1Width = $('.y6-1').innerWidth();
+	b1Width = $('.y6-15').innerWidth();
 	b2Width = $('.y4-2').innerWidth();
 
 
@@ -350,7 +349,7 @@ function initScrollAnimationDesktop() {
 		ease: "none",
 	}, ">");
 	
-	tl1.addLabel('1986', "+=0.72");
+	tl1.addLabel('1994', "+=0.72");
 
 
 	tl1.fromTo(".y6-8", {
@@ -431,22 +430,129 @@ function initScrollAnimationDesktop() {
 	}, "<+=0.2");
 
 
-	// tl1.fromTo(".y6-4", {
-	// 	y: "150vh",
-	// }, {
-	// 	y: "-50vh",
-	// 	duration: 1,
-	// 	ease: "none",
-	// }, ">");
+
+	tl1.fromTo(".y6-12__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">+=0.1");
+	
+	tl1.addLabel('1996', "+=0.408");
+
+	tl1.fromTo(".y6-12", {
+		y: "0vh",
+		x: "150vw"
+	}, {
+		y: "0vh",
+		x: "-204vw",
+		duration: 1.2,
+		ease: "none",
+	}, ">-=0.1");
+	tl1.fromTo(".y6-13__2", {
+		// y: "50vh",
+		x: "95vw"
+	}, {
+		// y: "50vh",
+		x: "50vw",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.1");
+	tl1.fromTo(".y6-14__2", {
+		// y: "50vh",
+		x: "95vw"
+	}, {
+		// y: "50vh",
+		x: "57vw",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.12");
 
 
+	tl1.fromTo(".y6-15__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">+=0.1");
+	
+	tl1.addLabel('1996', "+=0.408");
+
+	tl1.fromTo(".y6-15", {
+		y: "0vh",
+		x: "380vw"
+	}, {
+		y: "0vh",
+		x: "-434vw",
+		duration: 1.2,
+		ease: "none",
+	}, ">-=0.1");
+	tl1.fromTo(".y6-15__bg", {
+		y: "0",
+	}, {
+		y: "-100%",
+		duration: 1.1,
+		ease: "none",
+	}, "<+=0.3");
+
+
+	tl1.fromTo(".y6-16__title--1 span:nth-child(1)", {
+		y: "25vh",
+		x: "-10vw"
+	}, {
+		y: "25vh",
+		x: "80vw",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.1");
+	tl1.fromTo(".y6-16__title--1 span:nth-child(2)", {
+		y: "45vh",
+		x: "10vw"
+	}, {
+		y: "45vh",
+		x: "70vw",
+		duration: 1,
+		ease: "none",
+	}, "<-=0.1");
+	tl1.fromTo(".y6-16__title--1 span:nth-child(3)", {
+		y: "65vh",
+		x: "100vw"
+	}, {
+		y: "65vh",
+		x: "20vw",
+		duration: 1,
+		ease: "none",
+	}, "<-=0.03");
+	tl1.fromTo(".y6-16__1", {
+		x: "43vw"
+	}, {
+		x: "43vw",
+		duration: 1,
+		ease: "none",
+	}, "<");
+
+	tl1.fromTo(".y6-17__1", {
+		y: "20%",
+		x: "0vw"
+	}, {
+		y: "-35%",
+		x: "0vw",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.01");
 
 	st1 = ScrollTrigger.create({
 		trigger: ".scroll-page",
 		pin: true,
 		start: "top top",
 		end: () => "+=" + addTime + "%",
-		scrub: 1,
+		scrub: 2,
 		animation: tl1,
 	});
 }

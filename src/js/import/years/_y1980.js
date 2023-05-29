@@ -9,7 +9,7 @@ gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollToPlugin);
 
 var initMode;
-let addTime = 3000;
+let addTime = 3600;
 
 
 let st1;
@@ -635,7 +635,7 @@ function initScrollAnimationDesktop() {
 		pin: true,
 		start: "top top",
 		end: () => "+=" + addTime + "%",
-		scrub: 1,
+		scrub: 2,
 		animation: tl1,
 	});
 }
