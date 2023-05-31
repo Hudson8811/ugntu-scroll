@@ -8,7 +8,8 @@ gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollToPlugin);
 
 var initMode;
-let addTime = 3600;
+// let addTime = 3600;
+let addTime = 1600;
 
 let st1;
 let tl1 = gsap.timeline({});
@@ -482,7 +483,7 @@ function initScrollAnimationDesktop() {
 		ease: "none",
 	}, ">+=0.1");
 	
-	tl1.addLabel('1996', "+=0.408");
+	tl1.addLabel('1997', "+=0.408");
 
 	tl1.fromTo(".y6-15", {
 		y: "0vh",
@@ -490,11 +491,11 @@ function initScrollAnimationDesktop() {
 	}, {
 		y: "0vh",
 		x: "-434vw",
-		duration: 1.2,
+		duration: 1.4,
 		ease: "none",
 	}, ">-=0.1");
 	tl1.fromTo(".y6-15__bg", {
-		y: "0",
+		y: "10%",
 	}, {
 		y: "-100%",
 		duration: 1.1,
@@ -543,9 +544,66 @@ function initScrollAnimationDesktop() {
 	}, {
 		y: "-35%",
 		x: "0vw",
+		duration: 0.7,
+		ease: "none",
+	}, "<+=0.45");
+
+	tl1.fromTo(".y6-18__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
 		duration: 1,
 		ease: "none",
-	}, "<+=0.01");
+	}, ">+=0.1");
+	
+	tl1.addLabel('1999', "+=0.408");
+
+	tl1.fromTo(".y6-18", {
+		y: "0vh",
+		x: "300vw"
+	}, {
+		y: "0vh",
+		x: "-334vw",
+		duration: 1.4,
+		ease: "none",
+	}, ">-=0.1");
+	tl1.fromTo(".y6-18__bg", {
+		y: "0",
+	}, {
+		y: "-100%",
+		duration: 1.1,
+		ease: "none",
+	}, "<+=0.3");
+	tl1.fromTo(".y6-19__2", {
+		// y: "50vh",
+		x: "85vw"
+	}, {
+		// y: "50vh",
+		x: "47vw",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.12");
+	tl1.fromTo(".y6-20__1", {
+		y: "0%",
+		x: "0vw"
+	}, {
+		y: "-25%",
+		x: "0vw",
+		duration: 0.6,
+		ease: "none",
+	}, "<+=0.45");
+	tl1.fromTo(".y6-20__2", {
+		// y: "50vh",
+		x: "-30%"
+	}, {
+		// y: "50vh",
+		x: "-60%",
+		duration: 0.5,
+		ease: "none",
+	}, "<+=0.05");
+
 
 	st1 = ScrollTrigger.create({
 		trigger: ".scroll-page",
@@ -557,7 +615,89 @@ function initScrollAnimationDesktop() {
 	});
 }
 function initScrollAnimationTablet() {
+	gsap.to(".fullPageOverlay", {
+		duration: 1,
+		autoAlpha: 0,
+		ease: "none",
+		onComplete: function () {
+				$('.fullPageOverlay').removeClass('active');
+				$('body').addClass('active');
+		}
+});
 
+tl1.fromTo(".y6-110__numbers", {
+		x: '5%',
+}, {
+		x: '-100%',
+		duration: 2,
+		ease: "none",
+}, "0");
+
+tl1.fromTo(".y6-110__numbers", {
+		y: "-50%"
+}, {
+		y: '10%',
+		duration: 2,
+		ease: "none",
+}, "0");
+
+
+tl1.fromTo(".y6-110__photos-item--1", {
+		x: '5vw',
+}, {
+		x: '-100%',
+		duration: 0.3,
+		ease: "none",
+}, "0");
+tl1.fromTo(".y6-110__photos-item--2", {
+		x: '100vw',
+}, {
+		x: '-100%',
+		duration: 0.7,
+		ease: "none",
+}, "0");
+tl1.fromTo(".y6-110__photos-item--3", {
+		x: '100vw',
+}, {
+		x: '-100%',
+		duration: 0.7,
+		ease: "none",
+}, ">-0.3");
+
+tl1.to(".y6-110", {
+	top: '-80vw',
+	duration: 2,
+	ease: "none",
+}, "0");
+
+tl1.fromTo(".y6-1", {
+	y: "0",
+	top: "100%"
+}, {
+	top: "0",
+	y: -1 * (b1Height - scHeight),
+	duration: Math.abs((scHeight - b1Height) / 460) + 1,
+	ease: "none",
+}, "<");
+tl1.fromTo(".y6-2", {
+	y: "0",
+	top: "100%"
+}, {
+	top: "0",
+	y: -1 * (b2Height - scHeight),
+	duration: Math.abs((scHeight - b2Height) / 460) + 1,
+	ease: "none",
+}, ">");
+
+
+st1 = ScrollTrigger.create({
+	trigger: ".scroll-page",
+	pin: true,
+	start: "top top",
+	end: () => "+=" + addTime + "%",
+	scrub: 2.5,
+	animation: tl1,
+});
 
 }
 function initScrollAnimationMobile() {
