@@ -86,7 +86,9 @@ block content
 				.y6-3__year.yearConner 1990
 				.y6-3__bg
 					.y6-3__bg--1
-						img(src="img/y6-3__bg.png" alt="")
+						picture 
+							source(media="(max-width: 1100px)", srcset="img/y6-3__bg--mob.png")
+							img(src="img/y6-3__bg.png" alt="")
 			.y6-4__blockOverlay.blockOverlay
 			.y6-4#year1991
 				.y6-5
@@ -112,10 +114,12 @@ block content
 							!="Открыта докторантура при УНИ."
 			.y6-7__blockOverlay.blockOverlay
 			.y6-7#year1993
-				.y6-7__year.yearConner 1993
+				.y6-7__year.yearConner.blockTitle--desc 1993
 				.y6-7__1
 					picture
+						source(media="(max-width: 1100px)", srcset="img/y6-7__1--mob.png")
 						img(src="img/y6-7__1.png" alt="")
+				.y6-7__year.yearConner.blockTitle--mob 1993
 				.y6-7__text--1
 					!="Приказом Госкомвуза России от 22 ноября № 364 Уфимский нефтяной институт преобразован " 
 				.y6-7__text--2
@@ -126,10 +130,13 @@ block content
 					!="Ректором университета избран доктор технических наук, профессор Айрат Мингазович Шаммазов."
 				.y6-8__year.yearConner.blockTitle--desc 1994
 				.y6-8__bg
-				.y6-8__year.yearConner.blockTitle--mob 1994
+
 
 				.y6-8__1
-					img(src="img/y6-8__bg--1.png" alt="")
+					picture
+						source(media="(max-width: 1100px)", srcset="img/y6-8__bg--1--mob.png")
+						img(src="img/y6-8__bg--1.png" alt="")
+				.y6-8__year.yearConner.blockTitle--mob 1994
 				.y6-8__title.y6-8__title--1.blockTitle.blockTitle--desc
 					span 
 						!="Айрат"
@@ -139,13 +146,11 @@ block content
 						!="Шаммазов"
 				.y6-8__title.y6-8__title--1.blockTitle.blockTitle--mob
 					span 
-						!="Айрат"
-					span 
-						!="Мингазович"
+						!="Айрат Мингазович"
 					span 
 						!="Шаммазов"
 				.y6-8__text.y6-8__text--1.textBlock.blockTitle--mob
-					!="Создан деканат по работе с иностранными студентами. Первый декан — доцент <br>М.К. Рогачев."
+					!="Ректором университета избран доктор технических наук, профессор Айрат Мингазович Шаммазов."
 			
 			.y6-9__blockOverlay.blockOverlay
 			.y6-9
@@ -195,8 +200,9 @@ block content
 					.y6-14__year.yearConner.blockTitle--desc 1996
 					.y6-14__1
 						picture
+							source(media="(max-width: 1100px)", srcset="img/y6-14__1--mob.png")
 							img(src="img/y6-14__1.png" alt="")
-					.y6-14__2
+					.y6-14__2.blockTitle--desc
 						picture
 							img(src="img/y6-14__2.png" alt="")
 
@@ -205,6 +211,9 @@ block content
 						.y6-14__bg--1
 						.y6-14__text--1.textBlock
 							!="24 преподавателя УГНТУ получили международные сертификаты, дающие право читать лекции на английском языке."
+					.y6-14__2.blockTitle--mob
+						picture
+							img(src="img/y6-14__2.png" alt="")
 			.y6-15__blockOverlay.blockOverlay
 			.y6-15#year1997
 				.y6-15__bg
@@ -218,10 +227,11 @@ block content
 					.y6-16__text.y6-16__text--1.textBlock.blockTitle--desc
 						!="Создан военный факультет УГНТУ."
 					.y6-16__year.yearConner.blockTitle--desc 1997
-					.y6-16__bg
-					.y6-16__year.yearConner.blockTitle--mob 1997
 					.y6-16__1
 						img(src="img/y6-16__1.png" alt="")
+					.y6-16__2.blockTitle--mob
+						img(src="img/y6-16__2.png" alt="")
+					.y6-16__year.yearConner.blockTitle--mob 1997
 					.y6-16__title.y6-16__title--1.blockTitle.blockTitle--desc
 						span 
 							!="Создан"
@@ -231,19 +241,18 @@ block content
 							!="факультет"
 					.y6-16__title.y6-16__title--1.blockTitle.blockTitle--mob
 						span 
-							!="Создан"
-						span 
-							!="военный"
+							!="Создан военный"
 						span 
 							!="факультет"
-					.y6-8__text.y6-8__text--1.textBlock.blockTitle--mob
+					.y6-16__text.y6-16__text--1.textBlock.blockTitle--mob
 						!="Создан военный факультет УГНТУ."
-				
+					.y6-16__3.blockTitle--mob
+						img(src="img/y6-16__3.png" alt="")
 				.y6-17
 					.y6-17__1
 						picture
 							img(src="img/y6-17__1.png" alt="")
-					.y6-17__2
+					.y6-17__2.blockTitle--desc
 						picture
 							img(src="img/y6-17__2.png" alt="")
 					.y6-17__bg
@@ -251,6 +260,9 @@ block content
 						.y6-17__bg--1
 						.y6-17__text--1.textBlock
 							!="Введен в эксплуатацию спортивный комплекс площадью 5500 м2." 
+					.y6-17__2.blockTitle--mob
+						picture
+							img(src="img/y6-17__2.png" alt="")
 			.y6-18__blockOverlay.blockOverlay
 			.y6-18#year1999
 				.y6-19

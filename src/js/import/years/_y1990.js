@@ -62,13 +62,12 @@ function initAnimation() {
 	b2Height = $('.y6-2').innerHeight();
 	b3Height = $('.y6-3').innerHeight();
 	b4Height = $('.y6-4').innerHeight();
-	b5Height = $('.y6-5').innerHeight();
+	b5Height = $('.y6-7').innerHeight();
 	b6Height = $('.y6-8').innerHeight();
-	b7Height = $('.y6-11').innerHeight();
+	b7Height = $('.y6-9').innerHeight();
 	b8Height = $('.y6-12').innerHeight();
 	b9Height = $('.y6-15').innerHeight();
-	b10Height = $('.y6-16').innerHeight();
-	b11Height = $('.y6-19').innerHeight();
+	b10Height = $('.y6-18').innerHeight();
 
 
 	if (window.innerWidth > 1100) {
@@ -686,6 +685,171 @@ tl1.fromTo(".y6-2", {
 	top: "0",
 	y: -1 * (b2Height - scHeight),
 	duration: Math.abs((scHeight - b2Height) / 460) + 1,
+	ease: "none",
+}, ">");
+tl1.fromTo(".y6-3", {
+	y: "0",
+	top: "100%"
+}, {
+	top: "0",
+	y: -1 * (b3Height - scHeight),
+	duration: Math.abs((scHeight - b3Height) / 460) + 1,
+	ease: "none",
+}, ">");
+
+tl1.fromTo(".y6-4__blockOverlay", {
+	opacity: 0,
+	// x: "150vw"
+}, {
+	opacity: 0.8,
+	// x: "150vw",
+	duration: 1,
+	ease: "none",
+}, ">");
+
+tl1.addLabel('1991', "+=0.8");
+
+tl1.fromTo(".y6-4", {
+	y: "0",
+	top: "100%"
+}, {
+	top: "0",
+	y: -1 * (b4Height - scHeight),
+	duration: Math.abs((scHeight - b4Height) / 460) + 1,
+	ease: "none",
+}, ">");
+
+
+tl1.fromTo(".y6-7__blockOverlay", {
+	opacity: 0,
+	// x: "150vw"
+}, {
+	opacity: 0.8,
+	// x: "150vw",
+	duration: 1,
+	ease: "none",
+}, ">");
+
+tl1.addLabel('1993', "+=0.8");
+
+tl1.fromTo(".y6-7", {
+	y: "0",
+	top: "100%"
+}, {
+	top: "0",
+	y: -1 * (b5Height - scHeight),
+	duration: Math.abs((scHeight - b5Height) / 460) + 1,
+	ease: "none",
+}, ">");
+
+
+tl1.fromTo(".y6-8__blockOverlay", {
+	opacity: 0,
+	// x: "150vw"
+}, {
+	opacity: 0.8,
+	// x: "150vw",
+	duration: 1,
+	ease: "none",
+}, ">");
+
+tl1.addLabel('1994', "+=0.8");
+
+tl1.fromTo(".y6-8", {
+	y: "0",
+	top: "100%"
+}, {
+	top: "0",
+	y: -1 * (b6Height - scHeight),
+	duration: Math.abs((scHeight - b6Height) / 460) + 1,
+	ease: "none",
+}, ">");
+
+
+tl1.fromTo(".y6-9__blockOverlay", {
+	opacity: 0,
+	// x: "150vw"
+}, {
+	opacity: 0.8,
+	// x: "150vw",
+	duration: 1,
+	ease: "none",
+}, ">");
+
+tl1.fromTo(".y6-9", {
+	y: "0",
+	top: "100%"
+}, {
+	top: "0",
+	y: -1 * (b7Height - scHeight),
+	duration: Math.abs((scHeight - b7Height) / 460) + 1,
+	ease: "none",
+}, ">");
+
+
+
+tl1.fromTo(".y6-12__blockOverlay", {
+	opacity: 0,
+	// x: "150vw"
+}, {
+	opacity: 0.8,
+	// x: "150vw",
+	duration: 1,
+	ease: "none",
+}, ">");
+
+tl1.addLabel('1996', "+=0.8");
+tl1.fromTo(".y6-12", {
+	y: "0",
+	top: "100%"
+}, {
+	top: "0",
+	y: -1 * (b8Height - scHeight),
+	duration: Math.abs((scHeight - b8Height) / 460) + 1,
+	ease: "none",
+}, ">");
+
+
+tl1.fromTo(".y6-15__blockOverlay", {
+	opacity: 0,
+	// x: "150vw"
+}, {
+	opacity: 0.8,
+	// x: "150vw",
+	duration: 1,
+	ease: "none",
+}, ">");
+
+tl1.addLabel('1997', "+=0.8");
+tl1.fromTo(".y6-15", {
+	y: "0",
+	top: "100%"
+}, {
+	top: "0",
+	y: -1 * (b9Height - scHeight),
+	duration: Math.abs((scHeight - b9Height) / 460) + 1,
+	ease: "none",
+}, ">");
+
+
+tl1.fromTo(".y6-18__blockOverlay", {
+	opacity: 0,
+	// x: "150vw"
+}, {
+	opacity: 0.8,
+	// x: "150vw",
+	duration: 1,
+	ease: "none",
+}, ">");
+
+tl1.addLabel('1999', "+=0.8");
+tl1.fromTo(".y6-18", {
+	y: "0",
+	top: "100%"
+}, {
+	top: "0",
+	y: -1 * (b10Height - scHeight),
+	duration: Math.abs((scHeight - b10Height) / 460) + 1,
 	ease: "none",
 }, ">");
 

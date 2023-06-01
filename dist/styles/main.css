@@ -18641,7 +18641,7 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 70.9375vw;
+    max-width: 62.5vw;
     margin-left: 5vw;
     margin-bottom: 5vh;
     margin-top: 3.4375vw;
@@ -18662,7 +18662,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y6-3 {
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -18718,10 +18718,19 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y6-3__bg--1 {
-    display: none;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    padding-top: 0;
+    left: 0;
+    opacity: 1;
   }
 }
-.y6-3__bg--1 img {
+.y6-3__bg--1 img, .y6-3__bg--1 picture {
   position: relative;
   width: 100%;
   height: 100%;
@@ -18848,7 +18857,7 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 70.9375vw;
+    max-width: 80vw;
     margin-top: 3.4375vw;
     margin-left: 5vw;
     margin-bottom: 5vh;
@@ -18869,14 +18878,14 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y6-4 {
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #862744;
-    z-index: 165;
+    z-index: 135;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -18904,8 +18913,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y6-4__blockOverlay {
-    z-index: 164;
-    display: none;
+    z-index: 134;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -19052,7 +19060,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y6-5 {
     position: relative;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -19286,7 +19294,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y6-6 {
     position: relative;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -19456,14 +19464,14 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y6-7 {
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
-    background: #EDEDED;
-    z-index: 165;
+    background: #fff;
+    z-index: 140;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -19491,8 +19499,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y6-7__blockOverlay {
-    z-index: 164;
-    display: none;
+    z-index: 140;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -19548,7 +19555,6 @@ summary {
     height: auto;
     left: 0;
     top: 0;
-    padding-top: 6.25vw;
     margin-bottom: 14.6875vw;
     margin-left: auto;
     margin-right: auto;
@@ -19573,6 +19579,7 @@ summary {
     flex-flow: row nowrap;
     justify-content: space-between;
     width: 100vw;
+    color: #404040;
     align-items: flex-start;
     padding-right: 5vw;
     margin-left: 5vw;
@@ -19627,7 +19634,7 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 70.9375vw;
+    max-width: 90vw;
     top: auto;
     left: 0;
     bottom: auto;
@@ -19657,11 +19664,13 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 70.9375vw;
+    max-width: 90vw;
     top: auto;
     left: 0;
+    opacity: 1;
     bottom: auto;
     padding-left: 5vw;
+    margin-bottom: 7.8125vw;
   }
 }
 
@@ -19679,14 +19688,14 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y6-8 {
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
-    background: #002344;
-    z-index: 175;
+    background: #fff;
+    z-index: 145;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -19714,7 +19723,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y6-8__blockOverlay {
-    z-index: 174;
+    z-index: 145;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -19776,10 +19785,16 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y6-8__1 {
-    display: none;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    height: auto;
+    left: 0;
+    top: 0;
   }
 }
-.y6-8__1 img {
+.y6-8__1 img, .y6-8__1 picture {
   position: relative;
   width: 100%;
   height: 100%;
@@ -19795,6 +19810,7 @@ summary {
   .y6-8__year {
     position: relative;
     display: flex;
+    color: #404040;
     flex-flow: row nowrap;
     justify-content: space-between;
     width: 100%;
@@ -19810,6 +19826,7 @@ summary {
   .y6-8__text {
     position: relative;
     display: flex;
+    color: #404040;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
@@ -19826,6 +19843,7 @@ summary {
   .y6-8__text--1 {
     position: relative;
     display: flex;
+    color: #404040;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
@@ -19856,6 +19874,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y6-8__title--1 {
+    color: #404040;
     margin-bottom: 3.4375vw;
     flex-flow: column nowrap;
     padding-left: 5vw;
@@ -19896,14 +19915,14 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y6-9 {
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
-    background: #862744;
-    z-index: 165;
+    background: #fff;
+    z-index: 150;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -19931,8 +19950,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y6-9__blockOverlay {
-    z-index: 164;
-    display: none;
+    z-index: 150;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -20191,17 +20209,15 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y6-10__2 {
-    position: relative;
-    width: 100vw;
+    position: absolute;
+    width: 52.1875vw;
     height: auto;
-    left: 0;
-    top: 0;
+    top: 55vw;
+    right: 0;
     padding-top: 0;
     padding-bottom: 0;
     margin-left: auto;
     margin-right: auto;
-    padding: 4.6875vw;
-    padding-top: 0;
   }
 }
 .y6-10__2 img {
@@ -20267,7 +20283,7 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 87.8125vw;
+    max-width: 93.125vw;
     top: auto;
     left: 0;
     bottom: auto;
@@ -20460,7 +20476,7 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 87.8125vw;
+    max-width: 96.875vw;
     top: auto;
     left: 0;
     bottom: auto;
@@ -20482,14 +20498,14 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y6-12 {
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #862744;
-    z-index: 185;
+    z-index: 155;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -20517,7 +20533,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y6-12__blockOverlay {
-    z-index: 184;
+    z-index: 154;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -20780,6 +20796,7 @@ summary {
     position: relative;
     width: 100vw;
     height: auto;
+    display: none;
     left: 0;
     top: 0;
     padding-top: 6.25vw;
@@ -20992,9 +21009,10 @@ summary {
     padding-bottom: 0;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 4.6875vw;
   }
 }
-.y6-14__2 img {
+.y6-14__2 img, .y6-14__2 picture {
   position: relative;
   width: 100%;
   height: 100%;
@@ -21067,14 +21085,14 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y6-15 {
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #862744;
-    z-index: 185;
+    z-index: 165;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -21102,7 +21120,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y6-15__blockOverlay {
-    z-index: 184;
+    z-index: 164;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -21121,6 +21139,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y6-15__bg {
     position: relative;
+    display: none;
     width: 100vw;
     display: flex;
     flex-flow: column nowrap;
@@ -21272,7 +21291,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y6-16 {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -21284,7 +21303,7 @@ summary {
     width: 100vw;
     left: 0;
     padding-top: 0;
-    padding-bottom: 9.375vw;
+    padding-bottom: 0vw;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -21370,7 +21389,10 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y6-16__1 {
-    display: none;
+    position: absolute;
+    top: 53.75vw;
+    max-width: 37.1875vw;
+    right: 11.25vw;
   }
 }
 .y6-16__1 img {
@@ -21378,6 +21400,53 @@ summary {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center bottom;
+}
+.y6-16__2 {
+  display: none;
+}
+@media only screen and (max-width: 1100px) {
+  .y6-16__2 {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    padding-top: 0vw;
+    left: 0;
+    opacity: 1;
+  }
+}
+.y6-16__2 img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+}
+.y6-16__3 {
+  display: none;
+}
+@media only screen and (max-width: 1100px) {
+  .y6-16__3 {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    padding: 4.6875vw;
+    opacity: 1;
+  }
+}
+.y6-16__3 img, .y6-16__3 picture {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   object-position: center bottom;
 }
 .y6-16__year {
@@ -21501,7 +21570,7 @@ summary {
     width: 100vw;
     left: 0;
     padding-top: 0;
-    padding-bottom: 9.375vw;
+    padding-bottom: 6.25vw;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -21617,7 +21686,7 @@ summary {
     margin-right: auto;
   }
 }
-.y6-17__2 img {
+.y6-17__2 img, .y6-17__2 picture {
   position: relative;
   width: 100%;
   height: 100%;
@@ -21723,6 +21792,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y6-18 {
     position: absolute;
+    display: flex;
     display: none;
     justify-content: flex-start;
     align-items: flex-start;
@@ -21730,7 +21800,7 @@ summary {
     min-height: 100vh;
     height: auto;
     background: #862744;
-    z-index: 185;
+    z-index: 175;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -21758,7 +21828,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y6-18__blockOverlay {
-    z-index: 184;
+    z-index: 174;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -22012,6 +22082,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y6-19__2 {
+    display: none;
     position: relative;
     width: 100vw;
     height: auto;
@@ -22213,6 +22284,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y6-20__2 {
+    display: none;
     position: relative;
     width: 100vw;
     height: auto;
