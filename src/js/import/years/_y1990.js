@@ -68,6 +68,7 @@ function initAnimation() {
 	b8Height = $('.y6-12').innerHeight();
 	b9Height = $('.y6-15').innerHeight();
 	b10Height = $('.y6-18').innerHeight();
+	b11Height = $('.y6-110').innerHeight();
 
 
 	if (window.innerWidth > 1100) {
@@ -671,7 +672,7 @@ tl1.to(".y6-110", {
 
 tl1.fromTo(".y6-1", {
 	y: "0",
-	top: "100%"
+	top: b11Height - 105,
 }, {
 	top: "0",
 	y: -1 * (b1Height - scHeight),
@@ -865,7 +866,43 @@ st1 = ScrollTrigger.create({
 
 }
 function initScrollAnimationMobile() {
+	gsap.to(".fullPageOverlay", {
+		duration: 1,
+		autoAlpha: 0,
+		ease: "none",
+		onComplete: function () {
+				$('.fullPageOverlay').removeClass('active');
+				$('body').addClass('active');
+		}
+	});
 
+	tl1.fromTo(".y6-110__numbers", {
+			x: 0,
+	}, {
+			x: '-110%',
+			duration: 0.6,
+			ease: "none",
+	}, "0");
+
+	tl1.fromTo(".y6-110__numbers", {
+			y: 0
+	}, {
+			y: '120%',
+			duration: 0.5,
+			ease: "none",
+	}, "0");
+
+
+
+
+	st1 = ScrollTrigger.create({
+			trigger: ".y6-110__numbers",
+			pin: false,
+			start: "-45vw top",
+			end: () => "bottom top",
+			scrub: 1,
+			animation: tl1,
+	});	
 }
 
 

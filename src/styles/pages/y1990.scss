@@ -53,7 +53,7 @@
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	background: #AAAAAA;
+	background: #003F78;
 	z-index: 150;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
@@ -68,7 +68,7 @@
 		position: relative;
 		height: auto;
 		padding-bottom: vw3(120);
-		background: #141414;
+		background: #003F78;
 	}
 
 	&::before {
@@ -80,10 +80,10 @@
 		width: 100%;
 		height: 100%;
 		display: block;
-		background: #AAAAAA;
+		background:  #AAAAAA;
 		pointer-events: none;
 		@include max(sm) {
-			background: #141414;
+			background: #003F78;
 		}
 	}
 
@@ -318,10 +318,7 @@
 	}
 
 	@include max(sm) {
-		position: relative;
-		height: auto;
-		min-height: auto;
-		// margin-top: vw(255, 320);
+		min-height: vw(587,320);
 	}
 
 	&__bg {
@@ -335,10 +332,8 @@
 		// @include max(md) {
 		// 	height: auto;
 		// }
-
-		// @include max(sm){
-		// 	position: relative;
-		// 	height: auto;	
+		// @include max(sm) {
+		// 	min-height: 587px;
 		// }
 
 		img {
@@ -356,9 +351,9 @@
 			width: 100vw;
 			height: 200vh;
 
-			// @include max(md) {
-			// 	height: auto;
-			// }
+			@include max(sm) {
+				height: vw(587,320);
+			}
 
 			img {
 				position: relative;
@@ -549,8 +544,8 @@
 
 	@include max(sm) {
 		position: relative;
-		height: auto;
 		min-height: auto;
+		height: auto;
 	}
 
 	// .blockTitle--mob {
@@ -667,16 +662,6 @@
 		height: 100vh;
 		@include max(md) {
 			height: 100%;
-		}
-		@include max(sm) {
-			position: relative;
-			display: flex;
-			flex-flow: column nowrap;
-			justify-content: flex-start;
-			align-items: flex-start;
-			width: 100vw;
-
-
 		}
 		img {
 			position: relative;
@@ -4064,7 +4049,6 @@
 	@include max(md) {
 		position: absolute;
 		display: flex;
-		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;

@@ -5228,6 +5228,7 @@ function initAnimation() {
   b8Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y6-12').innerHeight();
   b9Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y6-15').innerHeight();
   b10Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y6-18').innerHeight();
+  b11Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y6-110').innerHeight();
 
   if (window.innerWidth > 1100) {
     initScrollAnimationDesktop();
@@ -5779,7 +5780,7 @@ function initScrollAnimationTablet() {
   }, "0");
   tl1.fromTo(".y6-1", {
     y: "0",
-    top: "100%"
+    top: b11Height - 105
   }, {
     top: "0",
     y: -1 * (b1Height - scHeight),
@@ -5948,7 +5949,41 @@ function initScrollAnimationTablet() {
   });
 }
 
-function initScrollAnimationMobile() {}
+function initScrollAnimationMobile() {
+  gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(".fullPageOverlay", {
+    duration: 1,
+    autoAlpha: 0,
+    ease: "none",
+    onComplete: function onComplete() {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fullPageOverlay').removeClass('active');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
+    }
+  });
+  tl1.fromTo(".y6-110__numbers", {
+    x: 0
+  }, {
+    x: '-110%',
+    duration: 0.6,
+    ease: "none"
+  }, "0");
+  tl1.fromTo(".y6-110__numbers", {
+    y: 0
+  }, {
+    y: '120%',
+    duration: 0.5,
+    ease: "none"
+  }, "0");
+  st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
+    trigger: ".y6-110__numbers",
+    pin: false,
+    start: "-45vw top",
+    end: function end() {
+      return "bottom top";
+    },
+    scrub: 1,
+    animation: tl1
+  });
+}
 
 function checkYearValue() {
   if (yValue !== null) {

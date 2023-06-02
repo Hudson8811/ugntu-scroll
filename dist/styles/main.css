@@ -4258,6 +4258,31 @@ summary {
   }
 }
 @media only screen and (max-width: 1100px) {
+  .sidebar__menu-dropdown--right {
+    position: absolute;
+    background: #FFFFFF;
+    top: 100%;
+    right: -1.3020833333vw;
+    bottom: auto;
+    align-items: flex-start;
+    flex-direction: row;
+    border-left: 0;
+    padding-top: 1.3020833333vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .sidebar__menu-dropdown--right {
+    position: absolute;
+    left: 100%;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    top: 0 !important;
+    padding: 3.75vw 0;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 1100px) {
   .sidebar__menu-dropdown {
     top: 100%;
     left: -1.3020833333vw;
@@ -17865,7 +17890,7 @@ summary {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #AAAAAA;
+  background: #003F78;
   z-index: 150;
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
@@ -17881,7 +17906,7 @@ summary {
     position: relative;
     height: auto;
     padding-bottom: 37.5vw;
-    background: #141414;
+    background: #003F78;
   }
 }
 .y6-110::before {
@@ -17898,7 +17923,7 @@ summary {
 }
 @media only screen and (max-width: 699px) {
   .y6-110::before {
-    background: #141414;
+    background: #003F78;
   }
 }
 .y6-110__numbers {
@@ -18193,9 +18218,7 @@ summary {
 }
 @media only screen and (max-width: 699px) {
   .y6-1 {
-    position: relative;
-    height: auto;
-    min-height: auto;
+    min-height: 183.4375vw;
   }
 }
 .y6-1__bg {
@@ -18219,6 +18242,11 @@ summary {
   left: 0;
   width: 100vw;
   height: 200vh;
+}
+@media only screen and (max-width: 699px) {
+  .y6-1__bg--1 {
+    height: 183.4375vw;
+  }
 }
 .y6-1__bg--1 img {
   position: relative;
@@ -18404,8 +18432,8 @@ summary {
 @media only screen and (max-width: 699px) {
   .y6-2 {
     position: relative;
-    height: auto;
     min-height: auto;
+    height: auto;
   }
 }
 .y6-2__2 {
@@ -18514,16 +18542,6 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y6-2__bg {
     height: 100%;
-  }
-}
-@media only screen and (max-width: 699px) {
-  .y6-2__bg {
-    position: relative;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 100vw;
   }
 }
 .y6-2__bg img {
@@ -21793,7 +21811,6 @@ summary {
   .y6-18 {
     position: absolute;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
