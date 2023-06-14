@@ -177,40 +177,40 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   });
 });
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-subslider-single').length > 0 && jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-slider-single').length > 0) {
-    var subSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('.js-subslider-single', {
-      slidesPerView: 5.8,
-      spaceBetween: 18,
-      breakpoints: {
-        1024: {
-          slidesPerView: 6.4
-        },
-        1280: {
-          slidesPerView: 5.8
-        }
+  // if ($('.js-subslider-single').length > 0 && $('.js-slider-single').length > 0) {
+  //     const subSlider = new Swiper('.js-subslider-single', {
+  //         slidesPerView: 5.8,
+  //         spaceBetween: 18,
+  //         breakpoints: {
+  //             1024: {
+  //                 slidesPerView: 6.4,
+  //             },
+  //             1280: {
+  //                 slidesPerView: 5.8
+  //             }
+  //         }
+  //     });
+  // }
+  var mainSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('.js-slider-single', {
+    slidesPerView: 1.2,
+    spaceBetween: 6,
+    centeredSlides: true,
+    navigation: {
+      nextEl: '.swiper-next',
+      prevEl: '.swiper-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets'
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        centeredSlides: false
       }
-    });
-    var mainSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('.js-slider-single', {
-      slidesPerView: 1.2,
-      spaceBetween: 6,
-      centeredSlides: true,
-      navigation: {
-        nextEl: '.swiper-next',
-        prevEl: '.swiper-prev'
-      },
-      thumbs: {
-        swiper: subSlider
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 1,
-          spaceBetween: 0,
-          centeredSlides: false
-        }
-      }
-    });
-  }
-
+    }
+  });
   _fancyapps_ui_dist_fancybox_fancybox_esm_js__WEBPACK_IMPORTED_MODULE_2__.Fancybox.bind("[data-fancybox]", {});
   var jsShareElements = document.querySelectorAll('.js-share');
 

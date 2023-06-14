@@ -262,7 +262,7 @@
 
 	&__slider {
 		position: relative;
-
+		padding-bottom: vw(82,1920);
 		@include max(lg) {}
 
 		@include max(sm) {
@@ -331,7 +331,22 @@
 			transform: scaleX(-1);
 		}
 	}
-
+	&__slider-pagination {
+		bottom: 0 !important;
+		.swiper-pagination-bullet {
+			width: 20px;
+			height: 20px;
+			background: #D9D9D9;
+			opacity: 1;
+			&.swiper-pagination-bullet-active {
+				background: #15A6B1;
+			}
+		}
+		@include max(sm) {
+			display: none;
+		}
+		
+	}
 	&__subslider {
 		margin-top: 124px;
 

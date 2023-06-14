@@ -35,7 +35,7 @@
             <div class="header__menu-item"><a href="">календарь событий</a></div>
           </div>
         </div>
-        <div class="header__right"><a class="header__btn" href="">поддержать</a><a class="header__btn header__btn--blue js-congrat" href="">поздравить</a></div>
+        <div class="header__right"><a class="header__btn" href="">основной  сайт</a><a class="header__btn" href="">поддержать</a><a class="header__btn header__btn--blue js-congrat" href="">поздравить</a></div>
       </div>
       <div class="sidebar">
         <div class="sidebar__logo"><img src="img/svg/logo-side.svg" alt="logo"></div>
@@ -46,7 +46,7 @@
           <div class="sidebar__global-top">
             <div class="header">
               <div class="header__left"></div>
-              <div class="header__right"><a class="header__btn" href="">поддержать</a><a class="header__btn header__btn--blue" href="">поздравить</a></div>
+              <div class="header__right"><a class="header__btn" href="">основной  сайт</a><a class="header__btn" href="">поддержать</a><a class="header__btn header__btn--blue" href="">поздравить</a></div>
             </div>
           </div>
           <div class="sidebar__global-items">
@@ -257,9 +257,16 @@
         </div>
         <button class="form__submit" type="submit">отправить</button>
         <div class="form__success">
-          <div class="form__success-content">
-            <div class="form__success-title">Ваше поздравление направлено модератору</div>
-            <div class="form__success-text">в ближайшее время  вы сможете увидеть его на сайте</div>
+          <div class="form__success-wrap">
+            <div class="form__success-content">
+              <div class="form__success-content--col">
+                <div class="form__success-title">Ваше поздравление направлено модератору</div>
+                <div class="form__success-text">в ближайшее время  вы сможете увидеть его на сайте</div>
+              </div>
+              <div class="form__success-content--col">
+                <div class="form__success-link--text">Если у Вас возникли проблемы с добавлением поздравления, отправьте его на почтовый адрес:</div><a class="form__success-link" href="mailto:usptu75@mail.ru">usptu75@mail.ru</a>
+              </div>
+            </div>
           </div>
           <button class="form__submit js-close-modal-form" type="button">ок</button>
         </div>
@@ -315,18 +322,7 @@
                 <button class="button swiper-prev"></button>
                 <button class="button swiper-next"></button>
               </div>
-            </div>
-            <div class="single__subslider swiper js-subslider-single">
-              <div class="swiper-wrapper">
-                <div class="single__subslider-item swiper-slide"><img src="img/slider/1.jpg" srcset="img/slider/1@2x.jpg 2x" alt=""></div>
-                <div class="single__subslider-item swiper-slide"><img src="img/slider/2.jpg" srcset="img/slider/2@2x.jpg 2x" alt=""></div>
-                <div class="single__subslider-item swiper-slide"><img src="img/slider/1.jpg" srcset="img/slider/1@2x.jpg 2x" alt=""></div>
-                <div class="single__subslider-item swiper-slide"><img src="img/slider/2.jpg" srcset="img/slider/2@2x.jpg 2x" alt=""></div>
-                <div class="single__subslider-item swiper-slide"><img src="img/slider/1.jpg" srcset="img/slider/1@2x.jpg 2x" alt=""></div>
-                <div class="single__subslider-item swiper-slide"><img src="img/slider/2.jpg" srcset="img/slider/2@2x.jpg 2x" alt=""></div>
-                <div class="single__subslider-item swiper-slide"><img src="img/slider/1.jpg" srcset="img/slider/1@2x.jpg 2x" alt=""></div>
-                <div class="single__subslider-item swiper-slide"><img src="img/slider/2.jpg" srcset="img/slider/2@2x.jpg 2x" alt=""></div>
-              </div>
+              <div class="swiper-pagination single__slider-pagination"></div>
             </div>
             <div class="single__text single__text--mobile">
               1 сентября 2017 года на торжественной линейке я, как призёр олимпиады школьников, удостоилась чести получить из рук проректора УГНТУ по учебной работе символический студенческий билет.

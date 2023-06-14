@@ -195,7 +195,13 @@ form.form(action='', method='post')
 	button.form__submit(type='submit') отправить
 
 	.form__success
-		.form__success-content
-			.form__success-title Ваше поздравление направлено модератору
-			.form__success-text в ближайшее время  вы сможете увидеть его на сайте
+		.form__success-wrap
+			.form__success-content
+				.form__success-content--col
+					.form__success-title Ваше поздравление направлено модератору
+					.form__success-text в ближайшее время  вы сможете увидеть его на сайте
+				.form__success-content--col
+					.form__success-link--text Если у Вас возникли проблемы с добавлением поздравления, отправьте его на почтовый адрес:
+					a(href="mailto:usptu75@mail.ru").form__success-link usptu75@mail.ru
+
 		button.form__submit.js-close-modal-form(type='button') ок
