@@ -31,6 +31,9 @@ $(window).on('load', function () {
     else if ($('.y1990').length > 0) {
         require("./years/_y1990");
     }
+    else if ($('.y2000').length > 0) {
+        require("./years/_y2000");
+    }
     else {
         $('body').addClass('active');
     }

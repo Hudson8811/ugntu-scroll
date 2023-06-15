@@ -1,0 +1,97 @@
+extends ../layouts/default
+
+block variables
+	- const title = "2000-2010"
+	- var sidebarActive = 2000
+
+block head
+	include ../../blocks/modules/overlay/overlayStyle
+block content
+	.fullPageOverlay.fullPageOverlay--white.active
+	.wrapper
+		include ../../blocks/modules/sidebar/sidebar
+		.scroll-page.y2000
+			.y7-110
+				.y7-110__numbers
+					span.y7-110__numbers-number 2000
+					span.y7-110__numbers-line
+					span.y7-110__numbers-number 2010
+				.y7-110__photos
+					img.y7-110__photos-item.y7-110__photos-item--1(src="img/y6-110--1.png" alt="")
+					img.y7-110__photos-item.y7-110__photos-item--2(src="img/y6-110--2.png" alt="")
+					img.y7-110__photos-item.y7-110__photos-item--3(src="img/y6-110--3.png" alt="")
+			.y7-1-80
+				.y7-1-80__year.yearConner 2000
+			.y7-1#year2000
+				.y7-1__text.y7-1__text--1.textBlock
+					!='Сотрудники кафедры бурения УГНТУ и ГНПП "Азимут": М.Р. Мавлютов, Х.И. Акчурин, Л.А. Алексеев, Ф.Г. Галиакбаров, Г.Г. Ишбаев, Г.В. Конесев, Ю.Г. Матвеев, А.Н. Попов, А.И. Спивак и Б.Н. Трушкин  удостоены премии Правительства РФ в области науки и техники.'
+				.y7-1__year.yearConner 2010
+				.y7-1__bg
+					.y7-1__bg--1
+						img(src="img/y6-1--2.png" alt="")
+				.y7-1__title.y7-1__title--1.blockTitle.blockTitle--desc
+					span.picture-before Г.В. Конесев
+					span.picture-after Галиакбаров, Г.Г
+					span.picture-before Х.И. Акчурин
+					span.picture-after М.Р. Мавлютов
+					span.picture-before Галиакбаров, Г.Г
+					span.picture-after Л.А. Алексеев
+					span.picture-before Г.В. Конесев
+					span.picture-after Ишбаев, Г.В
+					span.picture-before А.И. Спивак
+					span.picture-after Б.Н. Трушкин  
+				.y7-1__title.y7-1__title--1.blockTitle.blockTitle--mob
+					span  первый
+					span  
+						!="выпуск"
+					span  
+						!="иностранных"
+					span  
+						!="студентов"
+			.y7-2
+				.y7-2__year.yearConner 1990
+				.y7-2__text.y7-2__text--1.textBlock
+					!="На кафедре бурения внедряются в учебный процесс 10 компьютеров IBM XT." 
+				.y7-2__bg
+					.y7-2__bg--1
+						img(src="img/y6-2.png" alt="")
+				.y7-2__2
+					picture
+						img(src="img/y2-2--2.png" alt="")
+				.y7-2__3.y7-2__3--1
+					picture
+						img(src="img/y6-2__3.png" alt="")
+				.y7-2__3.y7-2__3--2
+					picture
+						img(src="img/y6-2__3.png" alt="")
+				.y7-2__3.y7-2__3--3
+					picture
+						img(src="img/y6-2__3.png" alt="")
+				.y7-2__3.y7-2__3--4
+					picture
+						img(src="img/y6-2__3.png" alt="")
+				.y7-2__3.y7-2__3--5
+					picture
+						img(src="img/y6-2__3.png" alt="")
+				.y7-2__3.y7-2__3--6
+					picture
+						img(src="img/y6-2__3.png" alt="")
+				.y7-2__3.y7-2__3--6
+					picture
+						img(src="img/y6-2__3.png" alt="")
+				.y7-2__4
+					picture
+						img(src="img/y6-2__4.png" alt="")
+		
+			.y7-3
+				.y7-3__text.y7-3__text--1.textBlock
+					!="Занятия на первом тренажёре проводят профессор Л.А. Алексеев и доцент Т.О. Акбулатов." 
+				.y7-3__year.yearConner 1990
+				.y7-3__bg
+					.y7-3__bg--1
+						picture 
+							source(media="(max-width: 1100px)", srcset="img/y6-3__bg--mob.png")
+							img(src="img/y6-3__bg.png" alt="")
+
+block scripts
+
