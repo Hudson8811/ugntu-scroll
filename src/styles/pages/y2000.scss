@@ -298,7 +298,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 200vh;
+	height: vw(3634,1920);
 	overflow: hidden;
 	background: linear-gradient(180deg, #3D0311 0%, #281313 100%);
 	z-index: 100;
@@ -348,12 +348,12 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: 100vw;
-			height: 200vh;
-			display: none;
-			@include max(sm) {
-				height: vw(587,320);
-			}
+			width: vw(459,1920);
+			height: auto;
+			z-index: 100;
+			// @include max(sm) {
+			// 	height: vw(587,320);
+			// }
 
 			img {
 				position: relative;
@@ -396,8 +396,8 @@
 
 	&__2 {
 		position: absolute;
-		width: 100vw;
-		height: 100vh;
+		width: vw(459,1920);
+		height: auto;
 		z-index: 10;
 
 		@include max(md) {
@@ -405,7 +405,6 @@
 			display: flex;
 			justify-content: center;
 			align-items: flex-end;
-			order: 3;
 			height: auto;
 			bottom: 0vh;
 		}
@@ -429,9 +428,33 @@
 
 	&__title {
 		color: #FDFDFD;
-		opacity: 0.1;
+		position: absolute;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		white-space: nowrap;
 		z-index: 5;
-		
+		border-top:  1px solid rgba(255, 255, 255, 0.25);;
+		&.picture{
+			&-before{
+				&::before {
+					margin-top: vw(14, 1920);
+					position: relative;
+					display: block;
+					opacity: 1;
+					margin-right: vw(40, 1920);
+				}
+			}
+			&-after {
+				&::after {
+					position: relative;
+					display: block;
+					opacity: 1;
+					margin-top: vw(14, 1920);
+					margin-left: vw(40, 1920);
+				}
+			}
+		}
 		@include max(md) {
 			position: relative;
 			display: flex;
@@ -441,40 +464,101 @@
 			margin-left: vw(16, 320);
 			order: 2;
 		}
+		span {
+			opacity: 0.1;
+			// padding-top: vw(34, 1920);
 
+			@include max(md) {
+				position: relative;
+			}
+		}
 		&--1 {
-			span {
-				position: absolute;
-				display: flex;
-				justify-content: flex-start;
-				align-items: center;
-				white-space: nowrap;
-				border-top:  1px solid #FDFDFD;
-				// padding-top: vw(34, 1920);
-				&.picture{
-					&-before{
-						&::before {
-							margin-top: vw(14, 1920);
-							position: relative;
-							display: block;
-							content: url(../img/y7-1--1.png);
-							opacity: 1;
-							margin-right: vw(40, 1920);
-						}
-					}
-					&-after {
-						&::after {
-							position: relative;
-							display: block;
-							content: url(../img/y7-1--2.png);
-							opacity: 1;
-							margin-top: vw(14, 1920);
-							margin-left: vw(40, 1920);
-						}
+			&.picture{
+				&-after {
+					&::after {
+						content: url(../img/y7-1--1.png);
 					}
 				}
-				@include max(md) {
-					position: relative;
+			}
+		}
+		&--3 {
+			&.picture{
+				&-after {
+					&::after {
+						content: url(../img/y7-1--3.png);
+					}
+				}
+			}
+		}
+		&--5 {
+			&.picture{
+				&-after {
+					&::after {
+						content: url(../img/y7-1--5.png);
+					}
+				}
+			}
+		}
+		&--7 {
+			&.picture{
+				&-after {
+					&::after {
+						content: url(../img/y7-1--7.png);
+					}
+				}
+			}
+		}
+		&--9 {
+			&.picture{
+				&-after {
+					&::after {
+						content: url(../img/y7-1--9.png);
+					}
+				}
+			}
+		}
+		&--2 {
+			&.picture{
+				&-before{
+					&::before {
+						content: url(../img/y7-1--1.png);
+					}
+				}
+			}
+		}
+		&--4 {
+			&.picture{
+				&-before{
+					&::before {
+						content: url(../img/y7-1--1.png);
+					}
+				}
+			}
+		}
+		&--6 {
+			&.picture{
+				&-before{
+					&::before {
+						content: url(../img/y7-1--1.png);
+					}
+				}
+			}
+		}
+		&--8 {
+			&.picture{
+				&-before{
+					&::before {
+						content: url(../img/y7-1--1.png);
+					}
+				}
+			}
+		}
+		&--10 {
+			&.picture{
+				&-before{
+					&::before {
+						content: url(../img/y7-1--1.png);
+					}
 				}
 			}
 		}
@@ -512,6 +596,7 @@
 		&--1 {
 			position: absolute;
 			left: vw(52, 1920);
+			top: vw(47, 1920);
 			z-index: 5;
 			max-width: vw(717, 1920);
 
@@ -547,276 +632,6 @@
 }
 
 .y7-2 {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	min-height: 100vh;
-	// overflow: hidden;
-	z-index: 99;
-	will-change: transform, opacity, top;
-	transform-style: preserve-3d;
-
-	@include max(md) {
-		position: absolute;
-		display: flex;
-		justify-content: flex-start;
-		align-items: flex-start;
-		flex-flow: column nowrap;
-		height: auto;
-		width: 100vw;
-		// height: auto;
-		z-index: 130;
-	}
-
-	@include max(sm) {
-		position: relative;
-		min-height: auto;
-		height: auto;
-	}
-
-	// .blockTitle--mob {
-	// 	order: 3;
-	// }
-	&__2 {
-		position: absolute;
-		left: vw(196, 1920);
-		width: vw(1479, 1920);
-		bottom: vw(80, 1920);
-		top: auto;
-		height: auto;
-		z-index: 5;
-		opacity: 1;
-		@include max(md) {
-			left: vw(161, 320);
-			width: vw(141, 320);
-			top: vw(200, 320);
-			display: none;
-
-		}
-		// @include max(xxs) {
-		// 	left: vw(161, 320);
-		// 	width: vw(181, 320);
-		// 	top: vw(343, 320);
-			
-
-		// }
-
-		img {
-			position: relative;
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
-			object-position: center bottom;
-		}
-	}
-	&__3 {
-		position: absolute;
-		left: vw(569, 1920);
-		width: vw(1185, 1920);
-		top: vw(213, 1920);
-		height: auto;
-		z-index: 6;
-		opacity: 0;
-
-		&--2 {
-			left: vw(500, 1920);
-			top: vw(283, 1920);			
-		}
-		&--3 {
-			left: vw(430, 1920);
-			top: vw(353, 1920);		
-		}
-		&--4 {
-			left: vw(360, 1920);
-			top: vw(423, 1920);			
-		}
-		&--5 {
-			left: vw(290, 1920);
-			top: vw(494, 1920);			
-		}
-		&--6 {
-			left: vw(220, 1920);
-			top: vw(564, 1920);			
-		}
-		@include max(md) {
-			display: none;
-		}
-
-		img {
-			position: relative;
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
-			object-position: center bottom;
-		}
-	}
-	&__4 {
-		position: absolute;
-		left: vw(62, 1920);
-		width: vw(940, 1920);
-		bottom: vw(36, 1920);
-		height: auto;
-		z-index: 6;
-		opacity: 0;
-		@include max(md) {
-			position: relative;
-			display: flex;
-			flex-flow: column nowrap;
-			justify-content: flex-end;
-			align-items: center;
-			width: 100vw;
-			height: auto;
-			padding-top: vw(17, 320);
-			left: 0;
-			opacity: 1;
-		}
-
-		img {
-			position: relative;
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
-			object-position: center bottom;
-		}
-	}
-	&__bg {
-		position: absolute;
-		top: 0;
-		left: 0;
-		// overflow: hidden;
-		width: 100vw;
-		height: 100vh;
-		@include max(md) {
-			height: 100%;
-		}
-		img {
-			position: relative;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			object-position: center bottom;
-		}
-		&--1 {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100vw;
-			height: 100vh;
-			// background: #FFFFFF;
-
-			@include max(md) {
-				position: relative;
-				width: 100vw;
-				height: 100%;
-			}
-
-			img {
-				position: relative;
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				object-position: center top;
-			}
-		}
-	}
-
-	&__title {
-		color: #FFFFFF;
-
-		@include max(md) {
-			position: relative;
-			display: flex;
-			flex-flow: column nowrap;
-			justify-content: flex-start;
-			align-items: flex-start;
-			margin-left: vw(16, 320);
-		}
-
-		&--1 {
-			position: absolute;
-			width: auto;
-			flex-flow: row nowrap;
-			display: flex;
-			justify-content: flex-start;
-			align-items: flex-start;
-			bottom: 18vh;
-
-			span {
-				position: relative;
-				display: inline-block;
-				margin-right: vw(40,1440);
-				@include max(md) {
-					display: flex;
-					flex-flow: row nowrap;
-					justify-content: flex-start;
-					align-items: flex-start;
-				}
-
-			}
-			@include max(md) {
-				flex-flow: column nowrap;
-				justify-content: flex-start;
-				align-items: flex-start;
-				margin-right: vw(16,320);
-				bottom: vw(10,320);
-			}
-		}
-
-	}
-
-	&__year {
-		color: #FFFFFF;
-		z-index: 5;
-		position: absolute;
-		display: none;
-		@include max(md) {
-			position: relative;
-			display: flex;
-			flex-flow: column nowrap;
-			justify-content: flex-start;
-			align-items: flex-start;
-			color: #FFFFFF;
-			margin-left: vw(16, 320);
-		}
-	}
-
-	&__text {
-		color: #FFFFFF;
-
-		@include max(md) {
-			position: relative;
-			display: flex;
-			flex-flow: column nowrap;
-			justify-content: flex-start;
-			align-items: flex-start;
-		}
-
-		&--1 {
-			position: absolute;
-			top: vw(38, 1920);
-			left: vw(62, 1920);
-			z-index: 5;
-			max-width: vw(572, 1920);
-
-			@include max(md) {
-				position: relative;
-				display: flex;
-				flex-flow: column nowrap;
-				justify-content: flex-start;
-				align-items: flex-start;
-				max-width: vw(200, 320);
-				margin-left: vw(16, 320);
-				margin-bottom: vh(16, 320);
-				margin-top: vw(11, 320);;
-				left: 0;
-
-			}
-		}
-
-	}
-}
-.y7-3 {
 	position: absolute;
 	top: 0;
 	left: 0;

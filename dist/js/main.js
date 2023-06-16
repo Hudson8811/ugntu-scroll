@@ -6215,158 +6215,106 @@ function initScrollAnimationDesktop() {
     duration: 2,
     ease: "none"
   }, ">");
-  tl1.fromTo(".y7-1__title--1 span:nth-child(1)", {
-    x: '0vw',
-    y: '50vh'
-  }, {
-    x: '120vw',
-    y: '50vh',
-    duration: 1.5,
-    ease: "none"
-  }, "<+=0.1");
-  tl1.fromTo(".y7-1__title--1 span:nth-child(2)", {
-    x: '40vw',
+  tl1.fromTo(".y7-1__2", {
+    x: '45vw',
     y: '70vh'
   }, {
-    x: '-100%',
-    y: '70vh',
-    duration: 1.5,
+    x: '45vw',
+    y: '200vh',
+    duration: 10,
     ease: "none"
   }, "<");
-  tl1.fromTo(".y7-1__title--1 span:nth-child(3)", {
-    x: '0vw',
-    y: '90vh'
+  tl1.fromTo(".y7-1__title--1", {
+    x: '-45vw',
+    y: '60vh'
   }, {
     x: '120vw',
-    y: '90vh',
+    y: '60vh',
+    duration: 1.5,
+    ease: "none"
+  }, "<-=0.1");
+  tl1.fromTo(".y7-1__title--2", {
+    x: '50vw',
+    y: '85vh'
+  }, {
+    x: '-120vw',
+    y: '85vh',
     duration: 1.5,
     ease: "none"
   }, "<");
-  tl1.fromTo(".y7-1__title--1 span:nth-child(4)", {
-    x: '40vw',
+  tl1.fromTo(".y7-1__title--3", {
+    x: '-45vw',
     y: '110vh'
   }, {
-    x: '-100%',
+    x: '120vw',
     y: '110vh',
     duration: 1.5,
     ease: "none"
-  }, "<");
-  tl1.fromTo(".y7-1__title--1 span:nth-child(5)", {
-    x: '0vw',
-    y: '130vh'
+  }, "<+=0.1");
+  tl1.fromTo(".y7-1__title--4", {
+    x: '50vw',
+    y: '135vh'
+  }, {
+    x: '-120vw',
+    y: '135vh',
+    duration: 1.5,
+    ease: "none"
+  }, "<+=0.1");
+  tl1.fromTo(".y7-1__title--5", {
+    x: '-45vw',
+    y: '160vh'
   }, {
     x: '120vw',
-    y: '130vh',
+    y: '160vh',
     duration: 1.5,
     ease: "none"
-  }, "<");
-  tl1.fromTo(".y7-1__title--1 span:nth-child(6)", {
-    x: '40vw',
-    y: '150vh'
+  }, "<+=0.3");
+  tl1.fromTo(".y7-1__title--6", {
+    x: '50vw',
+    y: '185vh'
   }, {
-    x: '-100%',
-    y: '150vh',
+    x: '-120vw',
+    y: '185vh',
     duration: 1.5,
     ease: "none"
-  }, "<");
-  tl1.fromTo(".y7-1__title--1 span:nth-child(7)", {
-    x: '0vw',
-    y: '170vh'
-  }, {
-    x: '120vw',
-    y: '170vh',
-    duration: 1.5,
-    ease: "none"
-  }, "<");
-  tl1.fromTo(".y7-1__title--1 span:nth-child(8)", {
-    x: '40vw',
-    y: '190vh'
-  }, {
-    x: '-100%',
-    y: '190vh',
-    duration: 1.5,
-    ease: "none"
-  }, "<");
-  tl1.fromTo(".y7-1__title--1 span:nth-child(9)", {
-    x: '0vw',
+  }, "<+=0.1");
+  tl1.fromTo(".y7-1__title--7", {
+    x: '-45vw',
     y: '210vh'
   }, {
     x: '120vw',
     y: '210vh',
     duration: 1.5,
     ease: "none"
-  }, "<");
-  tl1.fromTo(".y7-1__title--1 span:nth-child(10)", {
-    x: '40vw',
-    y: '230vh'
+  }, "<+=0.2");
+  tl1.fromTo(".y7-1__title--8", {
+    x: '50vw',
+    y: '235vh'
   }, {
-    x: '-100%',
-    y: '230vh',
+    x: '-120vw',
+    y: '235vh',
+    duration: 1.5,
+    ease: "none"
+  }, "<+=0.2");
+  tl1.fromTo(".y7-1__title--9", {
+    x: '-45vw',
+    y: '260vh'
+  }, {
+    x: '120vw',
+    y: '260vh',
+    duration: 1.5,
+    ease: "none"
+  }, "<+=0.1");
+  tl1.fromTo(".y7-1__title--10", {
+    x: '50vw',
+    y: '285vh'
+  }, {
+    x: '-120vw',
+    y: '285vh',
     duration: 1.5,
     ease: "none"
   }, "<");
-  tl1.fromTo(".y7-2__bg--1", {
-    scale: 1.5
-  }, {
-    scale: 1,
-    duration: 2,
-    ease: "none",
-    onComplete: function onComplete() {
-      var tween = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
-      tween.to(".y7-2__2", {
-        scale: 1,
-        rotation: 0,
-        opacity: 0.4,
-        repeat: 1,
-        yoyo: true,
-        duration: 1,
-        ease: "bounce.out"
-      }, "0");
-      tween.to(".y7-2__3--1", {
-        scale: 1,
-        opacity: 1,
-        duration: 0.3,
-        ease: "power1.out"
-      }, ">");
-      tween.to(".y7-2__3--2", {
-        scale: 1,
-        opacity: 1,
-        duration: 0.5,
-        ease: "power1.out"
-      }, ">");
-      tween.to(".y7-2__3--3", {
-        scale: 1,
-        opacity: 1,
-        duration: 0.3,
-        ease: "power1.out"
-      }, ">");
-      tween.to(".y7-2__3--4", {
-        scale: 1,
-        opacity: 1,
-        duration: 0.3,
-        ease: "power1.out"
-      }, ">");
-      tween.to(".y7-2__3--5", {
-        scale: 1,
-        opacity: 1,
-        duration: 0.5,
-        ease: "power1.out"
-      }, ">");
-      tween.to(".y7-2__3--6", {
-        scale: 1,
-        opacity: 1,
-        duration: 0.3,
-        ease: "power1.out"
-      }, ">");
-      tween.to(".y7-2__4", {
-        scale: 1,
-        opacity: 1,
-        duration: 0.3,
-        ease: "power1.out"
-      }, ">");
-    }
-  }, "<-=0.5");
-  tl1.fromTo(".y7-3", {
+  tl1.fromTo(".y7-2", {
     x: '0',
     y: '100%'
   }, {
@@ -6374,7 +6322,7 @@ function initScrollAnimationDesktop() {
     y: '0%',
     duration: 1,
     ease: "none"
-  }, ">+=0.8");
+  }, "<+=0.1");
   st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
     trigger: ".scroll-page",
     pin: true,
