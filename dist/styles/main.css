@@ -7281,6 +7281,7 @@ summary {
 }
 .y2-5__text-col {
   width: 26.6169154229vw;
+  margin-left: 2.9850746269vw;
 }
 @media only screen and (max-width: 1100px) {
   .y2-5__text-col {
@@ -7288,11 +7289,8 @@ summary {
     padding-bottom: 2.6041666667vw;
   }
 }
-.y2-5__text-col:not(:last-child) {
-  margin-left: 2.9850746269vw;
-}
 @media only screen and (max-width: 1100px) {
-  .y2-5__text-col:not(:last-child) {
+  .y2-5__text-col {
     margin-left: 0;
   }
 }
@@ -19680,14 +19678,14 @@ summary {
   font-family: "Garamond Premr Pro";
   font-style: normal;
   font-weight: 400;
-  font-size: 5.8333333333vw;
-  line-height: 5.5729166667vw;
+  font-size: 4.9479166667vw;
+  line-height: 4.9479166667vw;
   letter-spacing: -0.015em;
   text-transform: uppercase;
   color: #404040;
   position: absolute;
   left: 4.2708333333vw;
-  top: 3.90625vw;
+  top: 3.3854166667vw;
   z-index: 12;
   max-width: 83.3333333333vw;
 }
@@ -19709,15 +19707,15 @@ summary {
   font-family: "Garamond Premr Pro";
   font-style: normal;
   font-weight: 400;
-  font-size: 5.8333333333vw;
-  line-height: 5.5729166667vw;
+  font-size: 4.9479166667vw;
+  line-height: 4.9479166667vw;
   letter-spacing: -0.015em;
   text-transform: uppercase;
   color: #404040;
   opacity: 0.34;
   position: absolute;
   left: 39.0625vw;
-  top: 26.0416666667vw;
+  top: 23.9583333333vw;
   z-index: 12;
   max-width: 76.9791666667vw;
 }

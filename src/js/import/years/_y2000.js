@@ -280,15 +280,15 @@ function initScrollAnimationDesktop() {
 	}, "<");
 
 
-	tl1.fromTo(".y7-2", {
-		x: '0',
-		y: '100%'
-	}, {
-		x: '0',
-		y: '0%',
-		duration: 1,
-		ease: "none",
-	}, "<+=0.1");
+	// tl1.fromTo(".y7-2", {
+	// 	x: '0',
+	// 	y: '100%'
+	// }, {
+	// 	x: '0',
+	// 	y: '0%',
+	// 	duration: 1,
+	// 	ease: "none",
+	// }, "<+=0.1");
 
 
 
