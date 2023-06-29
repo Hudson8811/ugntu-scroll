@@ -32,7 +32,6 @@
 
 .card-person {
 	$parent: &;
-
 	display: flex;
 	flex-direction: column;
 	background-color: $white;
@@ -65,7 +64,19 @@
 			}
 		}
 	}
-
+	&--foto {
+		.card-person__content {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+		.card-person__name {
+			color: #fff;
+		}
+		.card-person__position {
+			color: #fff;
+		}
+	}
 	&__image {
 		height: auto;
 		overflow: hidden;
@@ -87,6 +98,33 @@
 			inset: 0;
 			transition: 0.3s ease;
 		}
+	}
+	&__video {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+		max-width: 651px;
+		// z-index: 100;
+		cursor: pointer;
+		&::before {
+			content: "";
+			display: block;
+			width: 100%;
+			padding-top: 61.46%;
+
+		}
+		video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center center;
+		}		
 	}
 
 	&__content {
@@ -555,16 +593,36 @@
 	}
 
 	&__item {
+		&--width2 {
+			width: calc(66.66% - 20px / 2);	
+			@include max(lg) {
+				width: calc(50% - 20px / 2);
+				min-height: auto;
+			}
+			@include max(sm) {
+				width: 100%;
+			}
+	
+		}
+		&--template {
+			position: absolute;
+			top: 0;
+			left: 0;
+			pointer-events: none;
+			margin: 0 !important;
+			min-height: auto;
+		}
 		width: calc(33.3333% - 20px / 3 * 2);
 
 		@include max(lg) {
 			width: calc(50% - 20px / 2);
 		}
-
-		@include max(smd) {
+		@include max(sm) {
 			width: 100%;
 		}
+
 	}
+
 }
 
 /**

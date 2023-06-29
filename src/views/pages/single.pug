@@ -47,8 +47,11 @@ block content
 				.single__col.container
 					.single__slider.swiper.js-slider-single
 						.swiper-wrapper
-							.single__slider-item.swiper-slide(data-fancybox="gallery" data-src="img/slider/1@2x.jpg")
-								img(src='img/slider/1.jpg', srcset='img/slider/1@2x.jpg 2x', alt='')
+							.single__slider-item.swiper-slide
+								.single__slider-item--video 
+									<video class="js--card-person__video"  loop="" src="video/video--test.mov" width="auto" height="auto" alt="" muted="muted"></video>
+									.single__slider-item--video-play 
+										img(src='img/slider/video-play.svg', srcset='img/slider/video-play.svg 2x', alt='')
 							.single__slider-item.swiper-slide(data-fancybox="gallery" data-src="img/slider/2@2x.jpg")
 								img(src='img/slider/2.jpg', srcset='img/slider/2@2x.jpg 2x', alt='')
 							.single__slider-item.swiper-slide(data-fancybox="gallery" data-src="img/slider/1@2x.jpg")

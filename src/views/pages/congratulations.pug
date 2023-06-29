@@ -98,19 +98,19 @@ block content
 					//- 				.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):
 					//- 			+button('card-person__button')
 					.grid
-						.card-person.list-block__item
+						.card-person.list-block__item.list-block__item--template
+						.card-person.card-person--foto.list-block__item.list-block__item--width2
 							a.link-area(href='#', target='_blank')
 							.card-person__image
 								img(src='img/person.jpg', srcset='img/person@2x.jpg 2x', alt='')
 							.card-person__content
 								.card-person__content-group
-									.card-person__name Аделина Имамутдинова
+									.card-person__name Динислам Ибрагимов
 									.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):
-								+button('card-person__button')
-						.card-person.list-block__item
+						.card-person.list-block__item.card-person--video
 							a.link-area(href='#', target='_blank')
-							.card-person__image
-								img(src='img/person__2.png', srcset='img/person__2.png 2x', alt='')
+							.card-person__video
+								<video class="js--card-person__video"  loop="" src="video/video--test.mov" width="auto" height="auto" alt="" muted="muted"></video>
 							.card-person__content
 								.card-person__content-group
 									.card-person__name Аделина Имамутдинова

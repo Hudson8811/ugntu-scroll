@@ -27,6 +27,20 @@ if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.scroll-page').length) {
   };
 }
 
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(".card-person--video .link-area").on("mouseover", function (event) {
+  var video = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find(".js--card-person__video")[0];
+  video.play();
+}).on('mouseout', function (event) {
+  var video = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find(".js--card-person__video")[0];
+  video.pause();
+}); // $(".myvideos").on("mouseover", function(event) {
+//     console.log(this)
+//     console.log("this")
+//     this.play();
+// }).on('mouseout', function(event) {
+//     this.pause();
+// });
+
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
   setCssRootVars();
 
