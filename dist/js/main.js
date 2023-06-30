@@ -27,19 +27,17 @@ if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.scroll-page').length) {
   };
 }
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(".card-person--video .link-area").on("mouseover", function (event) {
-  var video = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find(".js--card-person__video")[0];
-  video.play();
-}).on('mouseout', function (event) {
-  var video = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find(".js--card-person__video")[0];
-  video.pause();
-}); // $(".myvideos").on("mouseover", function(event) {
-//     console.log(this)
-//     console.log("this")
-//     this.play();
-// }).on('mouseout', function(event) {
-//     this.pause();
-// });
+if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(".card-person--video .link-area").length) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".card-person--video .link-area").on("mouseover", function (event) {
+    var video = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find(".js--card-person__video")[0];
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".card-person__prewiew").addClass("card-person__prewiew--active");
+    video.play();
+  }).on('mouseout', function (event) {
+    var video = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find(".js--card-person__video")[0];
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".card-person__prewiew").removeClass("card-person__prewiew--active");
+    video.pause();
+  });
+}
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('load', function () {
   setCssRootVars();
@@ -6081,7 +6079,7 @@ gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_MotionPathPlugi
 gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_4__["default"]);
 var initMode; // let addTime = 3600;
 
-var addTime = 1600;
+var addTime = 2600;
 var st1;
 var tl1 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
 var tl2 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
@@ -6234,8 +6232,8 @@ function initScrollAnimationDesktop() {
     y: '70vh'
   }, {
     x: '45vw',
-    y: '200vh',
-    duration: 10,
+    y: '-200vh',
+    duration: 5,
     ease: "none"
   }, "<");
   tl1.fromTo(".y7-1__title--1", {
@@ -6310,33 +6308,70 @@ function initScrollAnimationDesktop() {
     duration: 1.5,
     ease: "none"
   }, "<+=0.2");
-  tl1.fromTo(".y7-1__title--9", {
-    x: '-45vw',
-    y: '260vh'
+  tl1.fromTo(".y7-2", {
+    y: "0",
+    top: "150%",
+    scale: 1.5
   }, {
-    x: '120vw',
-    y: '260vh',
-    duration: 1.5,
+    top: "0",
+    scale: 1,
+    y: -1 * (b2Height - scHeight),
+    duration: 0.8,
+    ease: "none"
+  }, ">-=1.4");
+  tl1.fromTo(".y7-3__bg--1", {
+    y: "0",
+    top: "150%",
+    scale: 1.5
+  }, {
+    top: "0",
+    scale: 1,
+    y: -1 * (b3Height - scHeight),
+    duration: 2,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y7-3__title--1", {
+    bottom: "-105%"
+  }, {
+    bottom: "3%",
+    duration: 1,
+    ease: "none"
+  }, ">-=1.1");
+  tl1.fromTo(".y7-3__title--1", {
+    x: "0%"
+  }, {
+    x: "-100%",
+    duration: 4,
+    ease: "none"
+  }, ">-=0.5");
+  tl1.fromTo(".y7-4__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 0.6,
+    ease: "none"
+  }, ">-=0.9");
+  tl1.addLabel('2001', "+=0.785");
+  tl1.fromTo(".y7-4", {
+    y: "0vh",
+    x: "150vw"
+  }, {
+    y: "0vh",
+    x: "-54vw",
+    duration: 1.2,
+    ease: "none"
+  }, ">-=0.1");
+  tl1.fromTo(".y7-4__2", {
+    // y: "50vh",
+    x: "0vw"
+  }, {
+    // y: "50vh",
+    x: "58vw",
+    duration: 1,
     ease: "none"
   }, "<+=0.1");
-  tl1.fromTo(".y7-1__title--10", {
-    x: '50vw',
-    y: '285vh'
-  }, {
-    x: '-120vw',
-    y: '285vh',
-    duration: 1.5,
-    ease: "none"
-  }, "<"); // tl1.fromTo(".y7-2", {
-  // 	x: '0',
-  // 	y: '100%'
-  // }, {
-  // 	x: '0',
-  // 	y: '0%',
-  // 	duration: 1,
-  // 	ease: "none",
-  // }, "<+=0.1");
-
   st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
     trigger: ".scroll-page",
     pin: true,

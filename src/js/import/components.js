@@ -10,26 +10,21 @@ if ($('.scroll-page').length) {
     };
 }
 
-$(".card-person--video .link-area").on("mouseover", function(event) {
-    let video = $(this).parent().find(".js--card-person__video")[0];
-    video.play()
+if($(".card-person--video .link-area").length) {
+    $(".card-person--video .link-area").on("mouseover", function(event) {
+        let video = $(this).parent().find(".js--card-person__video")[0];
+        $(".card-person__prewiew").addClass("card-person__prewiew--active")
+        video.play()
+    
+    
+    }).on('mouseout', function(event) {
+        let video = $(this).parent().find(".js--card-person__video")[0];
+        $(".card-person__prewiew").removeClass("card-person__prewiew--active")    
+        video.pause();
+    
+    });
+}
 
-
-}).on('mouseout', function(event) {
-    let video = $(this).parent().find(".js--card-person__video")[0];
-    video.pause();
-
-});
-
-// $(".myvideos").on("mouseover", function(event) {
-//     console.log(this)
-//     console.log("this")
-//     this.play();
-
-// }).on('mouseout', function(event) {
-//     this.pause();
-
-// });
 
 $(window).on('load', function () {
     setCssRootVars();
