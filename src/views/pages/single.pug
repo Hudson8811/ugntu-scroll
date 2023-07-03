@@ -49,8 +49,18 @@ block content
 						.swiper-wrapper
 							.single__slider-item.swiper-slide
 								.single__slider-item--video 
-									<video class="js--card-person__video"  loop="" src="video/video--test.mov" width="auto" height="auto" alt="" muted="muted"></video>
-									.single__slider-item--video-play 
+									<video class="js--card-person__video" controls="controls"  loop="" src="video/video--test.mov" width="auto" height="auto" alt="" muted="muted"></video>
+									.single__slider-item--prewiew
+										img(src='img/slider/prewiew.png' alt='')
+									.single__slider-item--play.js--single__slider--play
+										img(src='img/slider/video-play.svg', srcset='img/slider/video-play.svg 2x', alt='')
+							.single__slider-item.swiper-slide
+								.single__slider-item--video 
+									<iframe id="my-player" width="100%" height="100%" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="clipboard-write; autoplay" src="https://rutube.ru/play/embed/0c0c6fc1eee8c2c40019f94b492124ee?skinColor=7cb342&amp;t=300">
+									</iframe>
+									.single__slider-item--prewiew
+										img(src='img/slider/prewiew.png' alt='')
+									.single__slider-item--play.js--single__slider--play-rutub
 										img(src='img/slider/video-play.svg', srcset='img/slider/video-play.svg 2x', alt='')
 							.single__slider-item.swiper-slide(data-fancybox="gallery" data-src="img/slider/2@2x.jpg")
 								img(src='img/slider/2.jpg', srcset='img/slider/2@2x.jpg 2x', alt='')
@@ -66,9 +76,8 @@ block content
 								img(src='img/slider/1.jpg', srcset='img/slider/1@2x.jpg 2x', alt='')
 							.single__slider-item.swiper-slide(data-fancybox="gallery" data-src="img/slider/2@2x.jpg")
 								img(src='img/slider/2.jpg', srcset='img/slider/2@2x.jpg 2x', alt='')
-						.single__slider-nav
-							+button('swiper-prev')
-							+button('swiper-next')
+						+button('swiper-prev')
+						+button('swiper-next')
 						.swiper-pagination.single__slider-pagination
 					.single__text.single__text--mobile 1 сентября 2017 года на торжественной линейке я, как призёр олимпиады школьников,
 						|  удостоилась чести получить из рук проректора УГНТУ по учебной работе символический студенческий билет.

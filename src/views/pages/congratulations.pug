@@ -107,10 +107,21 @@ block content
 								.card-person__content-group
 									.card-person__name Динислам Ибрагимов
 									.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):
-						.card-person.list-block__item.card-person--video
+						.card-person.list-block__item.card-person--video.js--card-person--video-server
 							a.link-area(href='#', target='_blank')
 							.card-person__video
 								<video class="js--card-person__video"  loop="" src="video/video--test.mov" width="auto" height="auto" alt="" muted="muted"></video>
+								img.card-person__prewiew(src="img/slider/prewiew.png", alt="")
+							.card-person__content
+								.card-person__content-group
+									.card-person__name Аделина Имамутдинова
+									.card-person__position магистрант горно-нефтяного факультета УГНТУ (группа МГР13-21-01):
+								+button('card-person__button')
+						.card-person.list-block__item.js--card-person--video-ruTube
+							a.link-area(href='#', target='_blank')
+							.card-person__video
+								<iframe id="my-player" width="100%" height="100%" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="clipboard-write; autoplay" src="https://rutube.ru/play/embed/0c0c6fc1eee8c2c40019f94b492124ee?skinColor=7cb342&amp;t=300">
+								</iframe>
 								img.card-person__prewiew(src="img/slider/prewiew.png", alt="")
 							.card-person__content
 								.card-person__content-group

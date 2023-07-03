@@ -27,15 +27,68 @@ if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.scroll-page').length) {
   };
 }
 
-if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(".card-person--video .link-area").length) {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".card-person--video .link-area").on("mouseover", function (event) {
+if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js--card-person--video-server .link-area").length) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js--card-person--video-server .link-area").on("mouseover", function (event) {
     var video = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find(".js--card-person__video")[0];
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".card-person__prewiew").addClass("card-person__prewiew--active");
+    var prewiew = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find(".card-person__prewiew");
+    prewiew.addClass("card-person__prewiew--active");
     video.play();
   }).on('mouseout', function (event) {
     var video = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find(".js--card-person__video")[0];
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".card-person__prewiew").removeClass("card-person__prewiew--active");
+    var prewiew = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find(".card-person__prewiew");
+    prewiew.removeClass("card-person__prewiew--active");
     video.pause();
+  });
+}
+
+if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js--card-person--video-ruTube .link-area").length) {
+  var doCommand = function doCommand(CommandJSON) {
+    player.contentWindow.postMessage(JSON.stringify(CommandJSON), '*');
+  };
+
+  var player = document.getElementById('my-player');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js--card-person--video-ruTube .link-area").on("mouseover", function (event) {
+    doCommand({
+      type: 'player:play',
+      data: {}
+    });
+    var prewiew = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find(".card-person__prewiew");
+    prewiew.addClass("card-person__prewiew--active");
+  }).on('mouseout', function (event) {
+    doCommand({
+      type: 'player:pause',
+      data: {}
+    });
+    var prewiew = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find(".card-person__prewiew");
+    prewiew.removeClass("card-person__prewiew--active");
+  });
+}
+
+if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(".single__slider-item--video").length) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js--single__slider--play-rutub").on("click", function (event) {
+    var player = document.getElementById('my-player');
+
+    function doCommand(CommandJSON) {
+      player.contentWindow.postMessage(JSON.stringify(CommandJSON), '*');
+    }
+
+    doCommand({
+      type: 'player:play',
+      data: {}
+    });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass("single__slider-item--play--active");
+    var prewiew = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find(".single__slider-item--prewiew");
+    prewiew.addClass("single__slider-item--prewiew--active");
+  });
+}
+
+if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(".single__slider-item--video").length) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js--single__slider--play").on("click", function (event) {
+    var video = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find(".js--card-person__video")[0];
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass("single__slider-item--play--active");
+    var prewiew = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().find(".single__slider-item--prewiew");
+    prewiew.addClass("single__slider-item--prewiew--active");
+    video.play();
   });
 }
 
@@ -251,9 +304,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
     setCssRootVars();
   });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('select').on('change', function () {
-    console.log('Выбранное значение: ' + jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).val());
-  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('select').on('change', function () {});
 });
 
 function setCssRootVars() {

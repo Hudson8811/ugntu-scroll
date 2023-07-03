@@ -311,8 +311,17 @@
               <div class="swiper-wrapper">
                 <div class="single__slider-item swiper-slide">
                   <div class="single__slider-item--video">
-                     <video class="js--card-person__video"  loop="" src="video/video--test.mov" width="auto" height="auto" alt="" muted="muted"></video>
-                    <div class="single__slider-item--video-play"> <img src="img/slider/video-play.svg" srcset="img/slider/video-play.svg 2x" alt=""></div>
+                     <video class="js--card-person__video" controls="controls"  loop="" src="video/video--test.mov" width="auto" height="auto" alt="" muted="muted"></video>
+                    <div class="single__slider-item--prewiew"><img src="img/slider/prewiew.png" alt=""></div>
+                    <div class="single__slider-item--play js--single__slider--play"><img src="img/slider/video-play.svg" srcset="img/slider/video-play.svg 2x" alt=""></div>
+                  </div>
+                </div>
+                <div class="single__slider-item swiper-slide">
+                  <div class="single__slider-item--video">
+                     <iframe id="my-player" width="100%" height="100%" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="clipboard-write; autoplay" src="https://rutube.ru/play/embed/0c0c6fc1eee8c2c40019f94b492124ee?skinColor=7cb342&amp;t=300">
+</iframe>
+                    <div class="single__slider-item--prewiew"><img src="img/slider/prewiew.png" alt=""></div>
+                    <div class="single__slider-item--play js--single__slider--play-rutub"><img src="img/slider/video-play.svg" srcset="img/slider/video-play.svg 2x" alt=""></div>
                   </div>
                 </div>
                 <div class="single__slider-item swiper-slide" data-fancybox="gallery" data-src="img/slider/2@2x.jpg"><img src="img/slider/2.jpg" srcset="img/slider/2@2x.jpg 2x" alt=""></div>
@@ -323,10 +332,8 @@
                 <div class="single__slider-item swiper-slide" data-fancybox="gallery" data-src="img/slider/1@2x.jpg"><img src="img/slider/1.jpg" srcset="img/slider/1@2x.jpg 2x" alt=""></div>
                 <div class="single__slider-item swiper-slide" data-fancybox="gallery" data-src="img/slider/2@2x.jpg"><img src="img/slider/2.jpg" srcset="img/slider/2@2x.jpg 2x" alt=""></div>
               </div>
-              <div class="single__slider-nav">
-                <button class="button swiper-prev"></button>
-                <button class="button swiper-next"></button>
-              </div>
+              <button class="button swiper-prev"></button>
+              <button class="button swiper-next"></button>
               <div class="swiper-pagination single__slider-pagination"></div>
             </div>
             <div class="single__text single__text--mobile">
