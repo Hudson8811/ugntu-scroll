@@ -408,7 +408,7 @@ function initScrollAnimationDesktop() {
 	}, {
 		opacity: 0.8,
 		// x: "150vw",
-		duration: 1,
+		duration: 0.7,
 		ease: "none",
 	}, ">");
 	

@@ -8,8 +8,7 @@ gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollToPlugin);
 
 var initMode;
-// let addTime = 3600;
-let addTime = 2600;
+let addTime = 3600;
 
 let st1;
 let tl1 = gsap.timeline({});
@@ -333,6 +332,104 @@ function initScrollAnimationDesktop() {
 		ease: "none",
 	}, "<+=0.1");
 
+	tl1.fromTo(".y7-5__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+	tl1.addLabel('2002', "+=0.310");
+
+	tl1.fromTo(".y7-5", {
+		y: "0vh",
+		x: "420vw"
+	}, {
+		y: "0vh",
+		x: "-474vw",
+		duration: 3,
+		ease: "none",
+	}, ">-=1");
+
+
+	tl1.fromTo(".y7-8__title--1", {
+		y: "0vh",
+		x: "30vw"
+	}, {
+		y: "0vh",
+		x: "-70vw",
+		duration: 1.2,
+		ease: "none",
+	}, "<+=1.8");
+
+	tl1.fromTo(".y7-10__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+	tl1.addLabel('2003', "-=0.05");
+
+	tl1.fromTo(".y7-10", {
+		y: "0vh",
+		x: "410vw"
+	}, {
+		y: "0vh",
+		x: "-314vw",
+		duration: 1.4,
+		ease: "none",
+	}, ">-=0.8");
+
+	tl1.fromTo(".y7-11__title--1 span:nth-child(1)", {
+		y: "20vh",
+		x: "-10vw"
+	}, {
+		y: "20vh",
+		x: "80vw",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.4");
+	tl1.fromTo(".y7-11__title--1 span:nth-child(2)", {
+		y: "40vh",
+		x: "15vw"
+	}, {
+		y: "40vh",
+		x: "70vw",
+		duration: 1,
+		ease: "none",
+	}, "<-=0.1");
+	tl1.fromTo(".y7-11__title--1 span:nth-child(3)", {
+		y: "60vh",
+		x: "20vw"
+	}, {
+		y: "60vh",
+		x: "103vw",
+		duration: 1,
+		ease: "none",
+	}, "<-=0.03");
+	tl1.fromTo(".y7-11__title--1 span:nth-child(4)", {
+		y: "80vh",
+		x: "20vw"
+	}, {
+		y: "80vh",
+		x: "103vw",
+		duration: 1,
+		ease: "none",
+	}, "<-=0.03");
+	tl1.fromTo(".y7-11__1", {
+		x: "43vw"
+	}, {
+		x: "43vw",
+		duration: 1,
+		ease: "none",
+	}, "<");
 
 
 
