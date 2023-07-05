@@ -53,7 +53,7 @@ function initAnimation() {
 
 	scWidth = $('.scroll-page').innerWidth();
 	b1Width = $('.y7-15').innerWidth();
-	b2Width = $('.y4-2').innerWidth();
+	b2Width = $('.y7-20').innerWidth();
 
 
 	scHeight = $('.scroll-page').innerHeight();
@@ -389,40 +389,49 @@ function initScrollAnimationDesktop() {
 
 	tl1.fromTo(".y7-11__title--1 span:nth-child(1)", {
 		y: "20vh",
-		x: "-10vw"
+		x: "60vw"
 	}, {
 		y: "20vh",
-		x: "80vw",
-		duration: 1,
+		x: "10vw",
+		duration: 0.5,
 		ease: "none",
 	}, "<+=0.4");
 	tl1.fromTo(".y7-11__title--1 span:nth-child(2)", {
 		y: "40vh",
-		x: "15vw"
+		x: "-5vw"
 	}, {
 		y: "40vh",
-		x: "70vw",
+		x: "50vw",
 		duration: 1,
 		ease: "none",
 	}, "<-=0.1");
 	tl1.fromTo(".y7-11__title--1 span:nth-child(3)", {
 		y: "60vh",
-		x: "20vw"
+		x: "60vw"
 	}, {
 		y: "60vh",
-		x: "103vw",
+		x: "10vw",
 		duration: 1,
 		ease: "none",
 	}, "<-=0.03");
 	tl1.fromTo(".y7-11__title--1 span:nth-child(4)", {
 		y: "80vh",
-		x: "20vw"
+		x: "10vw"
 	}, {
 		y: "80vh",
-		x: "103vw",
+		x: "50vw",
 		duration: 1,
 		ease: "none",
 	}, "<-=0.03");
+	tl1.fromTo(".y7-11__2", {
+		x: "60vw"
+	}, {
+		x: "130vw",
+		duration: 1,
+		ease: "none",
+	}, "<-=0.03");
+
+
 	tl1.fromTo(".y7-11__1", {
 		x: "43vw"
 	}, {
@@ -430,6 +439,98 @@ function initScrollAnimationDesktop() {
 		duration: 1,
 		ease: "none",
 	}, "<");
+
+	
+	tl1.fromTo(".y7-14__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+	tl1.addLabel('2004', "-=0.05");
+
+	tl1.fromTo(".y7-14", {
+		y: "0vh",
+		x: "280vw"
+	}, {
+		y: "0vh",
+		x: "-204vw",
+		duration: 1.4,
+		ease: "none",
+	}, ">-=0.8");
+
+
+	tl1.fromTo(".y7-18__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+	tl1.addLabel('2006', "+=0.310");
+
+	tl1.fromTo(".y7-18", {
+		y: "0vh",
+		x: "150vw"
+	}, {
+		y: "0vh",
+		x: "-204vw",
+		duration: 1.4,
+		ease: "none",
+	}, ">-=0.8");
+
+
+
+	tl1.fromTo(".y7-19__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+	tl1.addLabel('2007', "+=0.310");
+
+	tl1.fromTo(".y7-19", {
+		y: "0vh",
+		x: "150vw"
+	}, {
+		y: "0vh",
+		x: "-204vw",
+		duration: 1.4,
+		ease: "none",
+	}, ">-=0.8");
+
+	tl1.fromTo(".y7-20__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+	tl1.addLabel('2008', "+=0.310");
+
+	tl1.fromTo(".y7-20", {
+		y: "0vh",
+		x: "150vw"
+	}, {
+		y: "0vh",
+		x: "-354vw",
+		duration: 1.4,
+		ease: "none",
+	}, ">-=0.8");
 
 
 
