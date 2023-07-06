@@ -178,10 +178,8 @@ function initScrollAnimationDesktop() {
 
 
 	tl1.fromTo(".y7-1__2", {
-		x: '45vw',
 		y: '70vh'
 	}, {
-		x: '45vw',
 		y: '-200vh',
 		duration: 5,
 		ease: "none",
@@ -311,7 +309,7 @@ function initScrollAnimationDesktop() {
 		ease: "none",
 	}, ">-=0.9");
 	
-	tl1.addLabel('2001', "+=0.785");
+	tl1.addLabel('2001', "+=0.48");
 
 	tl1.fromTo(".y7-4", {
 		y: "0vh",
@@ -342,7 +340,7 @@ function initScrollAnimationDesktop() {
 		ease: "none",
 	}, ">");
 	
-	tl1.addLabel('2002', "+=0.310");
+	tl1.addLabel('2002', "+=0.41");
 
 	tl1.fromTo(".y7-5", {
 		y: "0vh",
@@ -375,7 +373,7 @@ function initScrollAnimationDesktop() {
 		ease: "none",
 	}, ">");
 	
-	tl1.addLabel('2003', "-=0.05");
+	tl1.addLabel('2003', "-=0.006");
 
 	tl1.fromTo(".y7-10", {
 		y: "0vh",
@@ -451,7 +449,7 @@ function initScrollAnimationDesktop() {
 		ease: "none",
 	}, ">");
 	
-	tl1.addLabel('2004', "-=0.05");
+	tl1.addLabel('2004', "+=0.01");
 
 	tl1.fromTo(".y7-14", {
 		y: "0vh",
@@ -474,7 +472,7 @@ function initScrollAnimationDesktop() {
 		ease: "none",
 	}, ">");
 	
-	tl1.addLabel('2006', "+=0.310");
+	tl1.addLabel('2006', "+=0.389");
 
 	tl1.fromTo(".y7-18", {
 		y: "0vh",
@@ -498,7 +496,7 @@ function initScrollAnimationDesktop() {
 		ease: "none",
 	}, ">");
 	
-	tl1.addLabel('2007', "+=0.310");
+	tl1.addLabel('2007', "+=0.389");
 
 	tl1.fromTo(".y7-19", {
 		y: "0vh",
@@ -520,7 +518,7 @@ function initScrollAnimationDesktop() {
 		ease: "none",
 	}, ">");
 	
-	tl1.addLabel('2008', "+=0.310");
+	tl1.addLabel('2008', "+=0.035");
 
 	tl1.fromTo(".y7-20", {
 		y: "0vh",
@@ -531,10 +529,86 @@ function initScrollAnimationDesktop() {
 		duration: 1.4,
 		ease: "none",
 	}, ">-=0.8");
+	tl1.fromTo(".y7-21__1", {
+		y: "0vh",
+		x: "-50vw"
+	}, {
+		y: "0vh",
+		x: "0vw",
+		duration: 0.5,
+		ease: "none",
+	}, "<+=0.9");
 
+	tl1.fromTo(".y7-22__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
 
+	tl1.fromTo(".y7-22", {
+		y: "0vh",
+		x: "150vw"
+	}, {
+		y: "0vh",
+		x: "-254vw",
+		duration: 1.4,
+		ease: "none",
+	}, ">-=0.8");
+	tl1.fromTo(".y7-23__2", {
+		x: "0vw"
+	}, {
+		x: "40vw",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.1");
+	tl1.fromTo(".y7-23__text--1", {
+		x: "0vw"
+	}, {
+		x: "40vw",
+		duration: 1,
+		ease: "none",
+	}, "<");
+	tl1.fromTo(".y7-23__3", {
+		x: "60vw"
+	}, {
+		x: "125vw",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.1");
+	tl1.fromTo(".y7-24__1", {
+		x: "25vw"
+	}, {
+		x: "95vw",
+		duration: 0.8,
+		ease: "none",
+	}, "<+=0.40");
 
+	tl1.fromTo(".y7-25__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+	tl1.addLabel('2009', "+=0.389");
 
+	tl1.fromTo(".y7-25", {
+		y: "0vh",
+		x: "150vw"
+	}, {
+		y: "0vh",
+		x: "-204vw",
+		duration: 1.4,
+		ease: "none",
+	}, ">-=0.8");
 
 
 	st1 = ScrollTrigger.create({
