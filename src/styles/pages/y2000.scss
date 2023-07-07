@@ -53,7 +53,7 @@
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	background: #003F78;
+	background: #3C0512;
 	z-index: 150;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
@@ -68,7 +68,8 @@
 		position: relative;
 		height: auto;
 		padding-bottom: vw3(120);
-		background: #003F78;
+		background: #3C0512;
+
 	}
 
 	&::before {
@@ -80,10 +81,11 @@
 		width: 100%;
 		height: 100%;
 		display: block;
-		background:  #AAAAAA;
+		background: #3C0512;
 		pointer-events: none;
 		@include max(sm) {
-			background: #003F78;
+			background: #3C0512;
+
 		}
 	}
 
@@ -308,12 +310,12 @@
 
 	@include max(md) {
 		position: relative;
-		display: flex;
+		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
 		min-height: 200vh;
-		z-index: 120;
+		z-index: 100;
 		height: auto;
 		background: linear-gradient(180deg, #3D0311 0%, #281313 100%);
 	}
@@ -404,7 +406,7 @@
 
 		@include max(md) {
 			position: relative;
-			display: flex;
+			display: none;
 			justify-content: center;
 			align-items: flex-end;
 			height: auto;
@@ -636,8 +638,9 @@
 		flex-flow: column nowrap;
 		min-height: 100vh;
 		height: auto;
-		background: #ffff;
-		z-index: 132;
+		background: #3C0512;
+		z-index: 122;
+		padding-bottom: vw(24, 320);
 	}
 
 	@include max(sm) {
@@ -667,7 +670,8 @@
 			width: 100vw;
 			height: auto;
 			order: 1;
-			background: #fff;
+			background: #3C0512;
+
 		}
 
 		img {
@@ -684,7 +688,7 @@
 			left: 0;
 			width: 100vw;
 			height: 100vh;
-
+			display: none;
 			@include max(md) {
 				position: relative;
 				display: flex;
@@ -707,16 +711,19 @@
 		}
 	}
 
-	&__2 {
+	&__1 {
 		position: absolute;
 		left: vw(58, 1920);
 		width: vw(584, 1920);
 		height: auto;
 		z-index: 5;
+		display: none;
 		@include max(md) {
-			left: vw(161, 320);
-			width: vw(141, 320);
-			top: vw(200, 320);
+			display: block;
+			right: vw(40, 320);
+			width: vw(96, 320);
+			top: vw(139, 320);
+			left: auto;
 			
 
 		}
@@ -775,8 +782,10 @@
 			flex-flow: column nowrap;
 			justify-content: flex-start;
 			align-items: flex-start;
+			font-size: vw(24, 320);
+			line-height: vw(25, 320);
 			margin-left: vw(16, 320);
-			color: #404040;
+			color: #FFFFFF;
 		}
 
 		&--1 {
@@ -805,7 +814,7 @@
 			align-items: flex-start;
 			order: 2;
 			margin-left: vw(16, 320);
-			color: #404040;
+			color: #FFFFFF;
 		}
 	}
 
@@ -864,8 +873,9 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
-		height: 100vh;
 		height: auto;
+		min-height: auto;
+		background: #FFFFFF;
 		background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
 		z-index: 130;
 	}
@@ -888,7 +898,7 @@
 		width: 100vw;
 		height: 100vh;
 
-		@include max(sm) {
+		@include max(md) {
 			position: relative;
 			display: flex;
 			flex-flow: column nowrap;
@@ -896,7 +906,7 @@
 			align-items: flex-start;
 			width: 100vw;
 			height: auto;
-
+			background: #FFFFFF;
 		}
 		img {
 			position: relative;
@@ -915,16 +925,22 @@
 
 			@include max(md) {
 				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-end;
+				align-items: center;
 				width: 100vw;
 				height: auto;
+				padding-top: 0;
+				left: 0;
+				opacity: 1;
 			}
-
-			img {
+			img, picture {
 				position: relative;
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
-				object-position: center top;
+				object-position: center bottom;
 			}
 		}
 	}
@@ -939,6 +955,7 @@
 			justify-content: flex-start;
 			align-items: flex-start;
 			margin-left: vw(16, 320);
+			color: #404040;
 		}
 
 		&--1 {
@@ -949,7 +966,21 @@
 			justify-content: flex-start;
 			align-items: flex-start;
 			bottom: 18vh;
-
+			@include max(md) {
+				position: relative;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				margin-left: vw(16, 320);
+				left: auto;
+				bottom: auto;
+				left: auto;
+				font-size: vw(24, 320);
+				line-height: vw(24, 320);
+				width: vw(296, 320);
+				color: #404040;
+			}
 			span {
 				position: relative;
 				display: inline-block;
@@ -984,8 +1015,8 @@
 			flex-flow: column nowrap;
 			justify-content: flex-start;
 			align-items: flex-start;
-			order: 2;
 			margin-left: vw(16, 320);
+			color: #404040;
 		}
 	}
 
@@ -1045,7 +1076,7 @@
 		flex-flow: column nowrap;
 		min-height: 100vh;
 		height: auto;
-		z-index: 160;
+		z-index: 135;
 		width: 100vw;
 		background: #808A8E;
 		left: 0;
@@ -1071,7 +1102,7 @@
 		transform-style: preserve-3d;
 
 		@include max(md) {
-			z-index: 159;
+			z-index: 135;
 		}
 
 		@include max(sm) {
@@ -1285,7 +1316,7 @@
 		min-height: 100vh;
 		height: auto;
 		background: #862744;
-		z-index: 150;
+		z-index: 140;
 		width: 100vw;
 		left: 0;
 		padding-top: 0;
@@ -1311,7 +1342,7 @@
 		transform-style: preserve-3d;
 
 		@include max(md) {
-			z-index: 149;
+			z-index: 140;
 		}
 
 		@include max(sm) {
@@ -1721,7 +1752,7 @@
 		min-height: 100vh;
 		height: auto;
 		background: #fff;
-		z-index: 133;
+		z-index: 150;
 		width: 100vw;
 		left: 0;
 		padding-top: 0;
@@ -2140,7 +2171,7 @@
 		width: 100vw;
 		left: 0;
 		padding-top: 0;
-		// padding-bottom: vw(30, 320);
+		padding-bottom: vw(30, 320);
 	}
 
 	@include max(sm) {
@@ -2268,6 +2299,7 @@
 				align-items: flex-start;
 				margin-right: vw(16,320);
 				bottom: vw(10,320);
+				display: none;
 			}
 		}
 
@@ -2315,7 +2347,7 @@
 				flex-flow: column nowrap;
 				justify-content: flex-start;
 				align-items: flex-start;
-				max-width: vw(227, 320);
+				max-width: vw(288, 320);
 				top: auto;
 				left: 0;
 				bottom: auto;
@@ -2537,7 +2569,7 @@
 				flex-flow: column nowrap;
 				justify-content: flex-start;
 				align-items: flex-start;
-				max-width: vw(281, 320);
+				max-width: vw(288, 320);
 				top: auto;
 				left: 0;
 				bottom: auto;
@@ -2588,6 +2620,7 @@
 	@include max(md) {
 		position: absolute;
 		display: flex;
+		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
@@ -2779,6 +2812,7 @@
 	@include max(md) {
 		position: absolute;
 		display: flex;
+		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
@@ -3039,6 +3073,7 @@
 	@include max(md) {
 		position: relative;
 		display: flex;
+		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
@@ -3283,6 +3318,7 @@
 	@include max(md) {
 		position: relative;
 		display: flex;
+		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
@@ -3408,6 +3444,7 @@
 	@include max(md) {
 		position: absolute;
 		display: flex;
+		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
@@ -3597,6 +3634,7 @@
 	@include max(md) {
 		position: relative;
 		display: flex;
+		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
@@ -3767,6 +3805,7 @@
 	@include max(md) {
 		position: relative;
 		display: flex;
+		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
@@ -3945,6 +3984,7 @@
 	@include max(md) {
 		position: relative;
 		display: flex;
+		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
@@ -4142,6 +4182,7 @@
 	@include max(md) {
 		position: relative;
 		display: flex;
+		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
@@ -4338,6 +4379,7 @@
 	@include max(md) {
 		position: relative;
 		display: flex;
+		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
@@ -4533,6 +4575,7 @@
 	@include max(md) {
 		position: relative;
 		display: flex;
+		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
@@ -4730,6 +4773,7 @@
 	@include max(md) {
 		position: relative;
 		display: flex;
+		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
@@ -4926,6 +4970,7 @@
 	@include max(md) {
 		position: relative;
 		display: flex;
+		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
@@ -5151,6 +5196,7 @@
 	@include max(md) {
 		position: relative;
 		display: flex;
+		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
@@ -5347,6 +5393,7 @@
 	@include max(md) {
 		position: relative;
 		display: flex;
+		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;

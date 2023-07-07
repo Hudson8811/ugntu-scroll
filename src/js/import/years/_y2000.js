@@ -8,7 +8,8 @@ gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollToPlugin);
 
 var initMode;
-let addTime = 3600;
+// let addTime = 3600;
+let addTime = 1600;
 
 let st1;
 let tl1 = gsap.timeline({});
@@ -61,7 +62,7 @@ function initAnimation() {
 	b2Height = $('.y7-2').innerHeight();
 	b3Height = $('.y7-3').innerHeight();
 	b4Height = $('.y7-4').innerHeight();
-	b5Height = $('.y7-7').innerHeight();
+	b5Height = $('.y7-5').innerHeight();
 	b6Height = $('.y7-8').innerHeight();
 	b7Height = $('.y7-9').innerHeight();
 	b8Height = $('.y7-12').innerHeight();
@@ -620,7 +621,137 @@ function initScrollAnimationDesktop() {
 		animation: tl1,
 	});
 }
-function initScrollAnimationTablet() {}
+function initScrollAnimationTablet() {
+	gsap.to(".fullPageOverlay", {
+		duration: 1,
+		autoAlpha: 0,
+		ease: "none",
+		onComplete: function () {
+				$('.fullPageOverlay').removeClass('active');
+				$('body').addClass('active');
+		}
+	});
+	tl1.fromTo(".y7-110__numbers", {
+		x: '5%',
+	}, {
+		x: '-100%',
+		duration: 2,
+		ease: "none",
+	}, "0");
+
+	tl1.fromTo(".y7-110__numbers", {
+		y: "-50%"
+	}, {
+		y: '10%',
+		duration: 2,
+		ease: "none",
+	}, "0");
+
+
+	tl1.fromTo(".y7-110__photos-item--1", {
+		x: '5vw',
+	}, {
+		x: '-100%',
+		duration: 0.3,
+		ease: "none",
+	}, "0");
+	tl1.fromTo(".y7-110__photos-item--2", {
+		x: '100vw',
+	}, {
+		x: '-100%',
+		duration: 0.7,
+		ease: "none",
+	}, "0");
+	tl1.fromTo(".y7-110__photos-item--3", {
+		x: '100vw',
+	}, {
+		x: '-100%',
+		duration: 0.7,
+		ease: "none",
+	}, ">-0.3");
+
+	tl1.to(".y7-110", {
+	top: '-80vw',
+	duration: 2,
+	ease: "none",
+	}, "0");
+
+
+	tl1.fromTo(".y7-2", {
+		y: "0",
+		top: b11Height - 55,
+	}, {
+		top: "0",
+		y: -1 * (b2Height - scHeight),
+		duration: Math.abs((scHeight - b2Height) / 460) + 1,
+		ease: "none",
+	}, "<");
+
+	tl1.fromTo(".y7-3", {
+		y: "0",
+		top: "100%"
+	}, {
+		top: "0",
+		y: -1 * (b3Height - scHeight),
+		duration: Math.abs((scHeight - b3Height) / 460) + 1,
+		ease: "none",
+	}, ">");
+
+	tl1.fromTo(".y7-4__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+	tl1.addLabel('2001', "+=0.8");
+	
+	tl1.fromTo(".y7-4", {
+		y: "0",
+		top: "100%"
+	}, {
+		top: "0",
+		y: -1 * (b4Height - scHeight),
+		duration: Math.abs((scHeight - b4Height) / 460) + 1,
+		ease: "none",
+	}, ">");
+
+	tl1.fromTo(".y7-5__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+	tl1.addLabel('2002', "+=0.8");
+	
+	tl1.fromTo(".y7-5", {
+		y: "0",
+		top: "100%"
+	}, {
+		top: "0",
+		y: -1 * (b5Height - scHeight),
+		duration: Math.abs((scHeight - b5Height) / 460) + 1,
+		ease: "none",
+	}, ">");
+
+
+
+	st1 = ScrollTrigger.create({
+		trigger: ".scroll-page",
+		pin: true,
+		start: "top top",
+		end: () => "+=" + addTime + "%",
+		scrub: 2.5,
+		animation: tl1,
+	});
+}
 function initScrollAnimationMobile() {}
 
 

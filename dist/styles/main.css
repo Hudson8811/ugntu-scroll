@@ -22482,7 +22482,7 @@ summary {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #003F78;
+  background: #3C0512;
   z-index: 150;
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
@@ -22498,7 +22498,7 @@ summary {
     position: relative;
     height: auto;
     padding-bottom: 37.5vw;
-    background: #003F78;
+    background: #3C0512;
   }
 }
 .y7-110::before {
@@ -22510,12 +22510,12 @@ summary {
   width: 100%;
   height: 100%;
   display: block;
-  background: #AAAAAA;
+  background: #3C0512;
   pointer-events: none;
 }
 @media only screen and (max-width: 699px) {
   .y7-110::before {
-    background: #003F78;
+    background: #3C0512;
   }
 }
 .y7-110__numbers {
@@ -22800,12 +22800,12 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y7-1 {
     position: relative;
-    display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 200vh;
-    z-index: 120;
+    z-index: 100;
     height: auto;
     background: linear-gradient(180deg, #3D0311 0%, #281313 100%);
   }
@@ -22885,7 +22885,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y7-1__2 {
     position: relative;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: flex-end;
     height: auto;
@@ -23060,8 +23060,9 @@ summary {
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
-    background: white;
-    z-index: 132;
+    background: #3C0512;
+    z-index: 122;
+    padding-bottom: 7.5vw;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -23091,7 +23092,7 @@ summary {
     width: 100vw;
     height: auto;
     order: 1;
-    background: #fff;
+    background: #3C0512;
   }
 }
 .y7-2__bg img {
@@ -23107,6 +23108,7 @@ summary {
   left: 0;
   width: 100vw;
   height: 100vh;
+  display: none;
 }
 @media only screen and (max-width: 1100px) {
   .y7-2__bg--1 {
@@ -23129,21 +23131,24 @@ summary {
   object-fit: cover;
   object-position: center bottom;
 }
-.y7-2__2 {
+.y7-2__1 {
   position: absolute;
   left: 3.0208333333vw;
   width: 30.4166666667vw;
   height: auto;
   z-index: 5;
+  display: none;
 }
 @media only screen and (max-width: 1100px) {
-  .y7-2__2 {
-    left: 50.3125vw;
-    width: 44.0625vw;
-    top: 62.5vw;
+  .y7-2__1 {
+    display: block;
+    right: 12.5vw;
+    width: 30vw;
+    top: 43.4375vw;
+    left: auto;
   }
 }
-.y7-2__2 img {
+.y7-2__1 img {
   position: relative;
   width: 100%;
   height: 100%;
@@ -23190,8 +23195,10 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
+    font-size: 7.5vw;
+    line-height: 7.8125vw;
     margin-left: 5vw;
-    color: #404040;
+    color: #FFFFFF;
   }
 }
 .y7-2__title--1 span {
@@ -23218,7 +23225,7 @@ summary {
     align-items: flex-start;
     order: 2;
     margin-left: 5vw;
-    color: #404040;
+    color: #FFFFFF;
   }
 }
 .y7-2__text {
@@ -23274,8 +23281,9 @@ summary {
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
-    height: 100vh;
     height: auto;
+    min-height: auto;
+    background: #FFFFFF;
     background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
     z-index: 130;
   }
@@ -23294,7 +23302,7 @@ summary {
   width: 100vw;
   height: 100vh;
 }
-@media only screen and (max-width: 699px) {
+@media only screen and (max-width: 1100px) {
   .y7-3__bg {
     position: relative;
     display: flex;
@@ -23303,6 +23311,7 @@ summary {
     align-items: flex-start;
     width: 100vw;
     height: auto;
+    background: #FFFFFF;
   }
 }
 .y7-3__bg img {
@@ -23322,16 +23331,23 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y7-3__bg--1 {
     position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
     width: 100vw;
     height: auto;
+    padding-top: 0;
+    left: 0;
+    opacity: 1;
   }
 }
-.y7-3__bg--1 img {
+.y7-3__bg--1 img, .y7-3__bg--1 picture {
   position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center bottom;
 }
 .y7-3__title {
   color: #FFFFFF;
@@ -23344,6 +23360,7 @@ summary {
     justify-content: flex-start;
     align-items: flex-start;
     margin-left: 5vw;
+    color: #404040;
   }
 }
 .y7-3__title--1 {
@@ -23354,6 +23371,23 @@ summary {
   justify-content: flex-start;
   align-items: flex-start;
   bottom: 18vh;
+}
+@media only screen and (max-width: 1100px) {
+  .y7-3__title--1 {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 5vw;
+    left: auto;
+    bottom: auto;
+    left: auto;
+    font-size: 7.5vw;
+    line-height: 7.5vw;
+    width: 92.5vw;
+    color: #404040;
+  }
 }
 .y7-3__title--1 span {
   position: relative;
@@ -23389,8 +23423,8 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    order: 2;
     margin-left: 5vw;
+    color: #404040;
   }
 }
 .y7-3__text {
@@ -23447,7 +23481,7 @@ summary {
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
-    z-index: 160;
+    z-index: 135;
     width: 100vw;
     background: #808A8E;
     left: 0;
@@ -23476,7 +23510,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y7-4__blockOverlay {
-    z-index: 159;
+    z-index: 135;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -23676,7 +23710,7 @@ summary {
     min-height: 100vh;
     height: auto;
     background: #862744;
-    z-index: 150;
+    z-index: 140;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -23704,7 +23738,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y7-5__blockOverlay {
-    z-index: 149;
+    z-index: 140;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -24098,7 +24132,7 @@ summary {
     min-height: 100vh;
     height: auto;
     background: #fff;
-    z-index: 133;
+    z-index: 150;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -24503,6 +24537,7 @@ summary {
     width: 100vw;
     left: 0;
     padding-top: 0;
+    padding-bottom: 9.375vw;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -24631,6 +24666,7 @@ summary {
     align-items: flex-start;
     margin-right: 5vw;
     bottom: 3.125vw;
+    display: none;
   }
 }
 .y7-8__year {
@@ -24678,7 +24714,7 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 70.9375vw;
+    max-width: 90vw;
     top: auto;
     left: 0;
     bottom: auto;
@@ -24894,7 +24930,7 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 87.8125vw;
+    max-width: 90vw;
     top: auto;
     left: 0;
     bottom: auto;
@@ -24939,6 +24975,7 @@ summary {
   .y7-10 {
     position: absolute;
     display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -25122,6 +25159,7 @@ summary {
   .y7-11 {
     position: absolute;
     display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -25377,6 +25415,7 @@ summary {
   .y7-12 {
     position: relative;
     display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -25614,6 +25653,7 @@ summary {
   .y7-13 {
     position: relative;
     display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -25736,6 +25776,7 @@ summary {
   .y7-14 {
     position: absolute;
     display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -25918,6 +25959,7 @@ summary {
   .y7-16 {
     position: relative;
     display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -26083,6 +26125,7 @@ summary {
   .y7-17 {
     position: relative;
     display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -26254,6 +26297,7 @@ summary {
   .y7-18 {
     position: relative;
     display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -26447,6 +26491,7 @@ summary {
   .y7-19 {
     position: relative;
     display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -26641,6 +26686,7 @@ summary {
   .y7-20 {
     position: relative;
     display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -26834,6 +26880,7 @@ summary {
   .y7-21 {
     position: relative;
     display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -27029,6 +27076,7 @@ summary {
   .y7-22 {
     position: relative;
     display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -27222,6 +27270,7 @@ summary {
   .y7-23 {
     position: relative;
     display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -27446,6 +27495,7 @@ summary {
   .y7-24 {
     position: relative;
     display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -27641,6 +27691,7 @@ summary {
   .y7-25 {
     position: relative;
     display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
