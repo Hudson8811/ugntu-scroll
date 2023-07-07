@@ -6128,9 +6128,9 @@ __webpack_require__.r(__webpack_exports__);
 gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"]);
 gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_MotionPathPlugin__WEBPACK_IMPORTED_MODULE_3__["default"]);
 gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_4__["default"]);
-var initMode; // let addTime = 3600;
+var initMode;
+var addTime = 3600; // let addTime = 1600;
 
-var addTime = 1600;
 var st1;
 var tl1 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
 var tl2 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});

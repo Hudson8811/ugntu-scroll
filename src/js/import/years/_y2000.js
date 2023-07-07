@@ -8,8 +8,8 @@ gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollToPlugin);
 
 var initMode;
-// let addTime = 3600;
-let addTime = 1600;
+let addTime = 3600;
+// let addTime = 1600;
 
 let st1;
 let tl1 = gsap.timeline({});
