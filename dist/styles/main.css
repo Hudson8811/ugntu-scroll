@@ -24974,7 +24974,6 @@ summary {
   .y7-10 {
     position: absolute;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -25156,20 +25155,18 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y7-11 {
-    position: absolute;
+    position: relative;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
-    min-height: 100vh;
+    min-height: auto;
     height: auto;
-    background: #264177;
+    background: #fff;
     z-index: 145;
     width: 100vw;
-    left: 0;
+    left: auto;
     padding-top: 0;
-    padding-bottom: 9.375vw;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -25219,6 +25216,7 @@ summary {
     align-items: flex-start;
     top: auto;
     left: auto;
+    min-height: auto;
     height: auto;
   }
 }
@@ -25257,11 +25255,13 @@ summary {
   .y7-11__1 {
     position: relative;
     width: 100%;
+    background: #264177;
     max-width: 100%;
     display: block;
     height: auto;
     left: 0;
     top: 0;
+    padding-top: 14.0625vw;
   }
 }
 .y7-11__1 img, .y7-11__1 picture {
@@ -25287,9 +25287,42 @@ summary {
     height: auto;
     left: 0;
     top: 0;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
   }
 }
 .y7-11__2 img, .y7-11__2 picture {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+.y7-11__3 {
+  position: absolute;
+  width: 100vw;
+  bottom: 4.9479166667vw;
+  max-width: 47.1354166667vw;
+  z-index: 5;
+  display: none;
+}
+@media only screen and (max-width: 1100px) {
+  .y7-11__3 {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    height: auto;
+    left: 0;
+    top: 0;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-bottom: 5vw;
+  }
+}
+.y7-11__3 img, .y7-11__3 picture {
   position: relative;
   width: 100%;
   height: 100%;
@@ -25414,7 +25447,6 @@ summary {
   .y7-12 {
     position: relative;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -25775,14 +25807,13 @@ summary {
   .y7-14 {
     position: absolute;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #862744;
-    z-index: 150;
+    z-index: 152;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -25810,7 +25841,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y7-14__blockOverlay {
-    z-index: 149;
+    z-index: 152;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -25958,7 +25989,6 @@ summary {
   .y7-16 {
     position: relative;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -26035,7 +26065,6 @@ summary {
     padding-bottom: 0;
     margin-left: auto;
     margin-right: auto;
-    order: 1;
   }
 }
 .y7-16__1 img {
@@ -26054,6 +26083,7 @@ summary {
   .y7-16__year {
     position: relative;
     display: flex;
+    color: #404040;
     flex-flow: row nowrap;
     justify-content: space-between;
     width: 100%;
@@ -26101,8 +26131,9 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 87.8125vw;
+    max-width: 90vw;
     top: auto;
+    color: #404040;
     left: 0;
     bottom: auto;
     padding-left: 5vw;
@@ -26124,7 +26155,6 @@ summary {
   .y7-17 {
     position: relative;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -26296,17 +26326,17 @@ summary {
   .y7-18 {
     position: relative;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #fff;
-    z-index: 133;
+    z-index: 155;
     width: 100vw;
     left: 0;
     padding-top: 0;
+    padding-bottom: 9.375vw;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -26330,7 +26360,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y7-18__blockOverlay {
-    z-index: 149;
+    z-index: 155;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -26488,16 +26518,15 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y7-19 {
-    position: relative;
+    position: absolute;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
-    background: #1EA9AF;
-    z-index: 133;
+    background: white;
+    z-index: 165;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -26524,7 +26553,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y7-19__blockOverlay {
-    z-index: 149;
+    z-index: 164;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -26632,6 +26661,7 @@ summary {
     align-items: flex-start;
     padding-right: 5vw;
     margin-left: 5vw;
+    color: #404040;
   }
 }
 .y7-19__text {
@@ -26667,6 +26697,7 @@ summary {
     bottom: auto;
     padding-left: 5vw;
     margin-bottom: 7.5vw;
+    color: #404040;
   }
 }
 
@@ -26683,16 +26714,15 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y7-20 {
-    position: relative;
+    position: absolute;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #fff;
-    z-index: 133;
+    z-index: 170;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -26719,7 +26749,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y7-20__blockOverlay {
-    z-index: 149;
+    z-index: 169;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -26879,7 +26909,6 @@ summary {
   .y7-21 {
     position: relative;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -26987,17 +27016,19 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y7-21__2 {
-    position: relative;
+    position: absolute;
     width: 100vw;
     height: auto;
-    left: 0;
-    top: 0;
+    left: auto;
     padding-top: 0;
     padding-bottom: 0;
     margin-left: auto;
     margin-right: auto;
-    padding: 4.6875vw;
-    padding-top: 0;
+    padding: 0vw;
+    bottom: auto;
+    top: 55vw;
+    right: 5vw;
+    width: 36.25vw;
   }
 }
 .y7-21__2 img {
@@ -27073,16 +27104,15 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y7-22 {
-    position: relative;
+    position: absolute;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #fff;
-    z-index: 133;
+    z-index: 180;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -27109,7 +27139,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y7-22__blockOverlay {
-    z-index: 149;
+    z-index: 179;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -27269,13 +27299,12 @@ summary {
   .y7-23 {
     position: relative;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
-    background: #1A83C8;
+    background: #fff;
     z-index: 133;
     width: 100vw;
     left: 0;
@@ -27406,6 +27435,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y7-23__3 {
     position: relative;
+    display: none;
     width: 100vw;
     height: auto;
     left: 0;
@@ -27441,6 +27471,7 @@ summary {
     align-items: flex-start;
     padding-right: 5vw;
     margin-left: 5vw;
+    color: #404040;
   }
 }
 .y7-23__text {
@@ -27476,6 +27507,7 @@ summary {
     bottom: auto;
     padding-left: 5vw;
     margin-bottom: 7.5vw;
+    color: #404040;
   }
 }
 
@@ -27494,7 +27526,6 @@ summary {
   .y7-24 {
     position: relative;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -27688,16 +27719,15 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y7-25 {
-    position: relative;
+    position: absolute;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #fff;
-    z-index: 133;
+    z-index: 195;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -27724,7 +27754,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y7-25__blockOverlay {
-    z-index: 149;
+    z-index: 189;
   }
 }
 @media only screen and (max-width: 699px) {
