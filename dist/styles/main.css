@@ -5336,6 +5336,18 @@ summary {
 .form__fileblock div.js-form-managed-file[id^=edit-field-video]:not(:last-child) {
   display: none;
 }
+.form__fileblock.error::after {
+  content: "Обязательное поле";
+  color: red;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+.form__fileblock.error label[id^=edit-field-images] {
+  outline: 2px solid red;
+}
 
 .file-loader {
   height: 59px;

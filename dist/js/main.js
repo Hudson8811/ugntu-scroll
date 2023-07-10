@@ -229,8 +229,24 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       event.preventDefault();
     }
 
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form').scrollTop(0).addClass('success');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form__success').addClass('active');
+    var allowSend = true;
+
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).find('.form__fileblock').length > 0) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).find('.form__fileblock').each(function () {
+        var block = this;
+        var success = checkFileError(block);
+        if (success === false) allowSend = false;
+      });
+    }
+
+    if (allowSend !== true) {
+      //запрет отправки
+      event.preventDefault();
+    } else {
+      //отправка фомры
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form').scrollTop(0).addClass('success');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form__success').addClass('active');
+    }
   });
   /* Anchor */
 
@@ -306,6 +322,54 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('select').on('change', function () {});
 });
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.form__fileblock').on('DOMSubtreeModified', function () {
+    var block = this;
+    checkFileError(block);
+  });
+});
+
+function checkFileError(block) {
+  var dontSend = false;
+  var mode = checkFileBlock(block);
+  if (mode === 2) return false;
+
+  if (mode === 1) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(block).removeClass('error');
+    dontSend = true;
+  } else {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(block).addClass('error');
+  }
+
+  return dontSend;
+}
+
+function checkFileBlock(block) {
+  var hasFilledFileInput = 0;
+
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(block).find('input[name^="field_images"][name$="[fids]"]').length > 0) {
+    //блок изображения, модифицированный
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(block).find('input[name^="field_images"][name$="[fids]"]').each(function () {
+      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).val() !== '') {
+        hasFilledFileInput = 1;
+        return false;
+      }
+    });
+  } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(block).find('[id^="edit-field-images"]').length > 0) {
+    //блок изображения, изначальный
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(block).find('input[name^="field_images"][name$="[fids]"]').each(function () {
+      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).val() !== '') {
+        hasFilledFileInput = 1;
+        return false;
+      }
+    });
+  } else {
+    //это не блок изображений
+    hasFilledFileInput = 2;
+  }
+
+  return hasFilledFileInput;
+}
 
 function setCssRootVars() {
   var baseRatio = 2010 / 1080;

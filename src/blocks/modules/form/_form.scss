@@ -683,6 +683,22 @@
 		div.js-form-managed-file[id^='edit-field-video']:not(:last-child){
 			display: none;
 		}
+
+		&.error{
+			&::after{
+				content: "Обязательное поле";
+				color: red;
+				display: block;
+
+				width: 100%;
+				margin-top: 10px;
+				font-size: 18px;
+				line-height: 1.2;
+			}
+			label[id^=edit-field-images]{
+				outline: 2px solid red;
+			}
+		}
 	}
 }
 
