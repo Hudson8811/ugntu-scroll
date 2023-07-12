@@ -233,12 +233,27 @@ $(document).ready(function () {
     });
 
     /*отмена отправки формы и показ окна успешной отправки*/
+    
     $('.form').on('submit', function () {
         if (!$(this).hasClass('node-congratulation-form')) {
             event.preventDefault();
         }
-        $('.form').scrollTop(0).addClass('success');
-        $('.form__success').addClass('active');
+        let allowSend = true;
+        if ($(this).find('.form__fileblock').length > 0) {
+            $(this).find('.form__fileblock').each(function (){
+                let block = this;
+                let success = checkFileError(block);
+                if (success === false) allowSend = false;
+            });
+        }
+        if (allowSend !== true){
+            //запрет отправки
+            event.preventDefault();
+        } else {
+            //отправка фомры
+            $('.form').scrollTop(0).addClass('success');
+            $('.form__success').addClass('active');
+        }
     });
 
 
@@ -325,6 +340,55 @@ $(document).ready(function () {
     $('select').on('change', function () {
     })
 });
+
+
+$(document).ready(function () {
+    $('.form__fileblock').on('DOMSubtreeModified', function() {
+        let block = this;
+        checkFileError(block);
+    });
+});
+
+
+function checkFileError(block){
+    let dontSend = false;
+    let mode = checkFileBlock(block);
+    if (mode === 2) return false;
+    if (mode === 1){
+        $(block).removeClass('error');
+        dontSend = true;
+    } else {
+        $(block).addClass('error');
+    }
+    return dontSend;
+}
+
+
+function checkFileBlock(block){
+    let hasFilledFileInput = 0;
+    if ($(block).find(('input[name^="field_images"][name$="[fids]"]')).length > 0) {
+        //блок изображения, модифицированный
+        $(block).find('input[name^="field_images"][name$="[fids]"]').each(function (){
+            if ($(this).val() !== '') {
+                hasFilledFileInput = 1;
+                return false;
+            }
+        });
+    } else if ($(block).find('[id^="edit-field-images"]').length > 0) {
+        //блок изображения, изначальный
+        $(block).find('input[name^="field_images"][name$="[fids]"]').each(function (){
+            if ($(this).val() !== '') {
+                hasFilledFileInput = 1;
+                return false;
+            }
+        });
+    } else {
+        //это не блок изображений
+        hasFilledFileInput = 2;
+    }
+    return hasFilledFileInput;
+}
+
 
 
 function setCssRootVars() {
