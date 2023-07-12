@@ -1,0 +1,72 @@
+extends ../layouts/default
+
+block variables
+	- const title = "2010-2022"
+	- var sidebarActive = 2010
+
+block head
+	include ../../blocks/modules/overlay/overlayStyle
+block content
+	.fullPageOverlay.fullPageOverlay--white.active
+	.wrapper
+		include ../../blocks/modules/sidebar/sidebar
+		.scroll-page.y2010
+			.y8-110
+				.y8-110__numbers
+					span.y8-110__numbers-number 2010
+					span.y8-110__numbers-line
+					span.y8-110__numbers-number 2022
+				.y8-110__photos
+					img.y8-110__photos-item.y8-110__photos-item--1(src="img/y6-110--1.png" alt="")
+					img.y8-110__photos-item.y8-110__photos-item--2(src="img/y6-110--2.png" alt="")
+					img.y8-110__photos-item.y8-110__photos-item--3(src="img/y6-110--3.png" alt="")
+			.y8-1-80
+				.y8-1-80__year.yearConner 2000
+			.y8-1
+				.y8-1__year.yearConner 2000
+				.y8-1__bg
+					.y8-1__bg--1
+						picture 
+							source(media="(max-width: 1100px)", srcset="img/y8-1__bg.png")
+							img(src="img/y8-1__bg.png" alt="")
+				.y8-1__blockOverlay.blockOverlay
+				.y8-1__1
+					picture
+						img(src="img/y8-1--2-bg.png" alt="")
+				.y8-1__2
+					picture
+						img(src="img/y8-1__2.png" alt="")
+
+				.y8-1__title.y8-1__title--1.blockTitle.blockTitle--mob
+					!='Сотрудники кафедры бурения УГНТУ и ГНПП "Азимут": <br>М.Р. Мавлютов, <br>Х.И. Акчурин, <br>Л.А. Алексеев, <br>Ф.Г. Галиакбаров, <br>Г.Г. Ишбаев, <br>Г.В. Конесев, <br>Ю.Г. Матвеев, <br>А.Н. Попов, <br>А.И. Спивак и <br>Б.Н. Трушкин удостоены премии Правительства РФ в области науки и техники.'	
+
+				.y8-1__text--1.textBlock
+					!="Студент гр. СТ-05 Сергей Хижняк стал 75-тысячным выпускником университета." 			
+			
+			
+			.y8-2#year1980
+				.y8-2__text.y8-2__text--1.textBlock
+					!="Кафедра архитектуры завоевала первое место в международном архитектурном конкурсе Schindler Award-2010."
+				.y8-2__year.yearConner 1980
+				.y8-2__bg
+					.y8-2__bg--1
+						img(src="img/y8-2__man.png" alt="")
+				//- .y8-2__man
+				//- 	picture
+				//- 		img(src="img/y8-2__man.png" alt="")
+
+				.y8-2__2
+					picture
+						img(src="img/y8-2__2.png" alt="")
+				.y8-2__title.y8-2__title--1.blockTitle.blockTitle--desc
+					span  Schindler 
+					span  
+						!="Award-2010"
+				.y8-2__title.y8-2__title--1.blockTitle.blockTitle--mob
+					span  содружество
+					span  
+						!="семи нефтяных"
+					span  
+						!="вузов"		
+block scripts
+

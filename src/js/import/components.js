@@ -106,6 +106,9 @@ $(window).on('load', function () {
     else if ($('.y2000').length > 0) {
         require("./years/_y2000");
     }
+    else if ($('.y2010').length > 0) {
+        require("./years/_y2010");
+    }
     else {
         $('body').addClass('active');
     }

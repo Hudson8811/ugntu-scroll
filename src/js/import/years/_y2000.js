@@ -37,7 +37,23 @@ $(window).on('resize', function () {
 		gsap.set(
 			".y7-110,.y7-1__bg--1,.y7-110__numbers,.y7-110__numbers-number,.y7-110__numbers-line,.y7-110__photos,.y7-110__photos-item" +
 			".y7-100,.y7-100__numbers,.y7-100__numbers-number,.y7-100__numbers-line," +
-			".y7-1__bg,.y7-1__bg--1,.y7-1__title--1 span:nth-child(1),.y7-1__title--1 span:nth-child(2),.y7-1 .y7-1__year,.y7-1 .y7-1__text--1," +
+			".y7-1__bg, .y7-1__bg--1, .y7-1__2, .y7-1 .y7-1__year, .y7-1 .y7-1__text--1, .y7-1__title--4, .y7-1__title--5, .y7-1__title--3,  .y7-1__title--5, .y7-1__title--6, .y7-1__title--7, .y7-1__title--8" +
+			".y7-2" +
+			".y7-3__bg--1, .y7-3__title--1, " +
+			".y7-4__blockOverlay, .y7-4, .y7-4__2" +
+			".y7-5__blockOverlay, .y7-5" +
+			".y7-8__title--1" +
+			".y7-10__blockOverlay, .y7-10" +
+			".y7-11__title--1 span:nth-child(1), .y7-11__title--1 span:nth-child(2), .y7-11__title--1 span:nth-child(3), .y7-11__title--1 span:nth-child(4), .y7-11__2, .y7-11__1" +
+			".y7-14__blockOverlay, .y7-14" +
+			".y7-18__blockOverlay, .y7-18" +
+			".y7-19__blockOverlay, .y7-19" +
+			".y7-20__blockOverlay, .y7-20" +
+			".y7-21__1, " +
+			".y7-22__blockOverlay, .y7-22" +
+			".y7-23__2, .y7-23__text--1, .y7-23__3" +
+			".y7-24__1, " +
+			".y7-25__blockOverlay, .y7-25" +
 			
 			".scroll-page,.sidebar__menu-dropdown, .fullPageOverlay", { clearProps: "all" });
 		window.scrollTo({
