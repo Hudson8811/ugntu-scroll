@@ -1034,11 +1034,13 @@
 
 		&--1 {
 			position: absolute;
-			right: vw(158, 1920);
-			bottom: vh(121, 1279);
-			z-index: 5;
-			max-width: vw(449, 1920);
-
+			left: vw(52, 1920);
+			top: vw(52, 1920);
+			bottom: auto;
+			right: auto;
+			z-index: 12;
+			max-width: vw(475, 1920);
+			color: #fff;
 			@include max(md) {
 				position: relative;
 				display: flex;
@@ -1046,10 +1048,10 @@
 				justify-content: flex-start;
 				align-items: flex-start;
 				max-width: vw(227, 320);
-				margin-top: vw(11, 320);
-				margin-left: vw(16, 320);
-				margin-bottom: vh(16, 320);
+				top: auto;
 				left: 0;
+				bottom: auto;
+				padding-left: vw(16, 320);
 
 			}
 		}

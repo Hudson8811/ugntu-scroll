@@ -7194,7 +7194,6 @@ function initScrollAnimationDesktop() {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
     }
   });
-  console.log("start");
   tl.fromTo(".y8-110__numbers", {
     autoAlpha: 0
   }, {
@@ -7304,7 +7303,7 @@ function initScrollAnimationDesktop() {
   tl1.fromTo(".y8-2__bg--1", {
     y: '-50%'
   }, {
-    y: '30%',
+    y: '20%',
     duration: 2,
     ease: "none"
   }, "<");
@@ -7313,19 +7312,127 @@ function initScrollAnimationDesktop() {
     y: '100vh'
   }, {
     x: '120vw',
-    y: '-100vh',
+    y: '0vh',
     duration: 1,
     ease: "none"
   }, "<+=1.2");
   tl1.fromTo(".y8-2__title--1 span:nth-child(2)", {
     x: '100vw',
-    y: '120vh'
+    y: '115vh'
   }, {
     x: '-115vw',
-    y: '-120vh',
+    y: '0vh',
     duration: 1,
     ease: "none"
   }, "<+=0.1");
+  tl1.fromTo(".y8-3", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b3Height - scHeight),
+    duration: Math.abs((scHeight - b3Height) / 460) + 1,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y8-10__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 1,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('2011', "-=0.006");
+  tl1.fromTo(".y8-10", {
+    y: "0vh",
+    x: "360vw"
+  }, {
+    y: "0vh",
+    x: "-184vw",
+    duration: 1.4,
+    ease: "none"
+  }, ">-=0.8");
+  tl1.fromTo(".y8-11__title--1 span:nth-child(1)", {
+    y: "10vh",
+    x: "80vw"
+  }, {
+    y: "10vh",
+    x: "-100vw",
+    duration: 1,
+    ease: "none"
+  }, "<+=0.5");
+  tl1.fromTo(".y8-11__1", {
+    x: "43vw"
+  }, {
+    x: "43vw",
+    duration: 1,
+    ease: "none"
+  }, "<");
+  tl1.fromTo(".y8-13__1", {
+    scale: 1
+  }, {
+    scale: 1.5,
+    duration: 1,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y8-14__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 1,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('2012', "+=0.389");
+  tl1.fromTo(".y8-14", {
+    y: "0vh",
+    x: "150vw"
+  }, {
+    y: "0vh",
+    x: "-204vw",
+    duration: 1.4,
+    ease: "none"
+  }, ">-=0.8");
+  tl1.fromTo(".y8-15__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 1,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('2014', "+=0.389");
+  tl1.fromTo(".y8-15", {
+    y: "0vh",
+    x: "150vw"
+  }, {
+    y: "0vh",
+    x: "-204vw",
+    duration: 1.4,
+    ease: "none"
+  }, ">-=0.8");
+  tl1.fromTo(".y8-16__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 1,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('2015', "+=0.389");
+  tl1.fromTo(".y8-16", {
+    y: "0vh",
+    x: "150vw"
+  }, {
+    y: "0vh",
+    x: "-204vw",
+    duration: 1.4,
+    ease: "none"
+  }, ">-=0.8");
   st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
     trigger: ".scroll-page",
     pin: true,
