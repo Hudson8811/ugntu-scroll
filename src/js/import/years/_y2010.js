@@ -345,7 +345,8 @@ function initScrollAnimationDesktop() {
 	}, ">-=0.8");
 
 
-	tl1.fromTo(".y8-16__blockOverlay", {
+
+	tl1.fromTo(".y8-17__blockOverlay", {
 		opacity: 0,
 		// x: "150vw"
 	}, {
@@ -355,14 +356,65 @@ function initScrollAnimationDesktop() {
 		ease: "none",
 	}, ">");
 	
-	tl1.addLabel('2015', "+=0.389");
+	tl1.addLabel('2015', "-=0.09");
 
-	tl1.fromTo(".y8-16", {
+	tl1.fromTo(".y8-17", {
 		y: "0vh",
-		x: "150vw"
+		x: "360vw"
+	}, {
+		y: "0vh",
+		x: "-354vw",
+		duration: 1.4,
+		ease: "none",
+	}, ">-=0.8");
+	tl1.fromTo(".y8-20__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+	tl1.addLabel('2016', "+=0.11");
+
+	tl1.fromTo(".y8-20", {
+		y: "0vh",
+		x: "360vw"
 	}, {
 		y: "0vh",
 		x: "-204vw",
+		duration: 1.4,
+		ease: "none",
+	}, ">-=0.8");
+	tl1.fromTo(".y8-21__2", {
+		x: "85vw"
+	}, {
+		x: "35vw",
+		duration: 0.5,
+		ease: "none",
+	}, "<+=0.7");
+
+
+	tl1.fromTo(".y8-23__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+	tl1.addLabel('2017', "+=0.11");
+
+	tl1.fromTo(".y8-23", {
+		y: "0vh",
+		x: "330vw"
+	}, {
+		y: "0vh",
+		x: "-174vw",
 		duration: 1.4,
 		ease: "none",
 	}, ">-=0.8");
