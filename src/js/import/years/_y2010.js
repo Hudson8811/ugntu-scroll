@@ -420,6 +420,84 @@ function initScrollAnimationDesktop() {
 	}, ">-=0.8");
 
 
+	tl1.fromTo(".y8-26__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+	tl1.addLabel('2018', "+=0.09");
+
+	tl1.fromTo(".y8-26", {
+		y: "0vh",
+		x: "360vw"
+	}, {
+		y: "0vh",
+		x: "-484vw",
+		duration: 1.4,
+		ease: "none",
+	}, ">-=0.8");
+	tl1.fromTo(".y8-27__2", {
+		x: "-5vw"
+	}, {
+		x: "90vw",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.35");
+	tl1.fromTo(".y8-28__1", {
+		top: "0%",
+	}, {
+		top: "-100%",
+		duration: 1,
+		ease: "none",
+	}, "<+=0.35");
+	tl1.fromTo(".y8-28__2", {
+		bottom: "0"
+	}, {
+		bottom: "-100%",
+		duration: 1,
+		ease: "none",
+	}, "<");
+
+	tl1.fromTo(".y8-30__title--1 span:nth-child(1)", {
+		y: "30vh",
+		x: "-5vw",
+	}, {
+		y: "30vh",
+		x: "70vw",
+		duration: 0.5,
+		ease: "none",
+	}, "<+=0.38");
+	tl1.fromTo(".y8-30__title--1 span:nth-child(2)", {
+		y: "50vh",
+		x: "60vw",
+	}, {
+		y: "50vh",
+		x: "-10vw",
+		duration: 0.5,
+		ease: "none",
+	}, "<-=0.1");
+	tl1.fromTo(".y8-30__title--2 span:nth-child(1)", {
+		y: "70vh",
+		x: "15vw"
+	}, {
+		y: "70vh",
+		x: "90vw",
+		duration: 0.8,
+		ease: "none",
+	}, "<-=0.15");
+
+	tl1.fromTo(".y8-30__1", {
+		x: "43vw"
+	}, {
+		x: "43vw",
+		duration: 1,
+		ease: "none",
+	}, "<");
 
 
 
