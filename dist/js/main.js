@@ -7343,7 +7343,7 @@ function initScrollAnimationDesktop() {
     duration: 1,
     ease: "none"
   }, ">");
-  tl1.addLabel('2011', "-=0.006");
+  tl1.addLabel('2011', "+=0.129");
   tl1.fromTo(".y8-10", {
     y: "0vh",
     x: "360vw"
@@ -7423,14 +7423,14 @@ function initScrollAnimationDesktop() {
     duration: 1,
     ease: "none"
   }, ">");
-  tl1.addLabel('2015', "-=0.09");
+  tl1.addLabel('2015', "+=0.465");
   tl1.fromTo(".y8-17", {
     y: "0vh",
     x: "360vw"
   }, {
     y: "0vh",
     x: "-354vw",
-    duration: 1.4,
+    duration: 2.5,
     ease: "none"
   }, ">-=0.8");
   tl1.fromTo(".y8-20__blockOverlay", {
@@ -7442,7 +7442,7 @@ function initScrollAnimationDesktop() {
     duration: 1,
     ease: "none"
   }, ">");
-  tl1.addLabel('2016', "+=0.11");
+  tl1.addLabel('2016', "+=0.1");
   tl1.fromTo(".y8-20", {
     y: "0vh",
     x: "360vw"
@@ -7468,7 +7468,7 @@ function initScrollAnimationDesktop() {
     duration: 1,
     ease: "none"
   }, ">");
-  tl1.addLabel('2017', "+=0.11");
+  tl1.addLabel('2017', "+=0.12");
   tl1.fromTo(".y8-23", {
     y: "0vh",
     x: "330vw"
@@ -7487,7 +7487,7 @@ function initScrollAnimationDesktop() {
     duration: 1,
     ease: "none"
   }, ">");
-  tl1.addLabel('2018', "+=0.09");
+  tl1.addLabel('2018', "-=0.20");
   tl1.fromTo(".y8-26", {
     y: "0vh",
     x: "360vw"
@@ -7561,7 +7561,7 @@ function initScrollAnimationDesktop() {
     duration: 1,
     ease: "none"
   }, ">-=0.6");
-  tl1.addLabel('2019', "-=0.09");
+  tl1.addLabel('2019', "+=0.025");
   tl1.fromTo(".y8-31", {
     y: "0vh",
     x: "150vw"
@@ -7580,7 +7580,7 @@ function initScrollAnimationDesktop() {
     duration: 1,
     ease: "none"
   }, ">");
-  tl1.addLabel('2021', "-=0.09");
+  tl1.addLabel('2021', "+=0.15");
   tl1.fromTo(".y8-33", {
     y: "0vh",
     x: "360vw"
