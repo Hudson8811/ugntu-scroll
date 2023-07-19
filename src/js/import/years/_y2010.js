@@ -8,8 +8,8 @@ gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollToPlugin);
 
 var initMode;
-let addTime = 3600;
-// let addTime = 1600;
+// let addTime = 3600;
+let addTime = 1600;
 
 let st1;
 let tl1 = gsap.timeline({});
@@ -578,69 +578,78 @@ function initScrollAnimationDesktop() {
 	});
 }
 function initScrollAnimationTablet() {
-	// gsap.to(".fullPageOverlay", {
-	// 	duration: 1,
-	// 	autoAlpha: 0,
-	// 	ease: "none",
-	// 	onComplete: function () {
-	// 			$('.fullPageOverlay').removeClass('active');
-	// 			$('body').addClass('active');
-	// 	}
-	// });
-	// tl1.fromTo(".y8-110__numbers", {
-	// 	x: '5%',
-	// }, {
-	// 	x: '-100%',
-	// 	duration: 2,
-	// 	ease: "none",
-	// }, "0");
+	gsap.to(".fullPageOverlay", {
+		duration: 1,
+		autoAlpha: 0,
+		ease: "none",
+		onComplete: function () {
+				$('.fullPageOverlay').removeClass('active');
+				$('body').addClass('active');
+		}
+	});
+	tl1.fromTo(".y8-110__numbers", {
+		x: '5%',
+	}, {
+		x: '-100%',
+		duration: 2,
+		ease: "none",
+	}, "0");
 
-	// tl1.fromTo(".y8-110__numbers", {
-	// 	y: "-50%"
-	// }, {
-	// 	y: '10%',
-	// 	duration: 2,
-	// 	ease: "none",
-	// }, "0");
-
-
-	// tl1.fromTo(".y8-110__photos-item--1", {
-	// 	x: '5vw',
-	// }, {
-	// 	x: '-100%',
-	// 	duration: 0.3,
-	// 	ease: "none",
-	// }, "0");
-	// tl1.fromTo(".y8-110__photos-item--2", {
-	// 	x: '100vw',
-	// }, {
-	// 	x: '-100%',
-	// 	duration: 0.7,
-	// 	ease: "none",
-	// }, "0");
-	// tl1.fromTo(".y8-110__photos-item--3", {
-	// 	x: '100vw',
-	// }, {
-	// 	x: '-100%',
-	// 	duration: 0.7,
-	// 	ease: "none",
-	// }, ">-0.3");
-
-	// tl1.to(".y8-110", {
-	// top: '-80vw',
-	// duration: 2,
-	// ease: "none",
-	// }, "0");
+	tl1.fromTo(".y8-110__numbers", {
+		y: "-50%"
+	}, {
+		y: '10%',
+		duration: 2,
+		ease: "none",
+	}, "0");
 
 
-	// st1 = ScrollTrigger.create({
-	// 	trigger: ".scroll-page",
-	// 	pin: true,
-	// 	start: "top top",
-	// 	end: () => "+=" + addTime + "%",
-	// 	scrub: 2.5,
-	// 	animation: tl1,
-	// });
+	tl1.fromTo(".y8-110__photos-item--1", {
+		x: '5vw',
+	}, {
+		x: '-100%',
+		duration: 0.3,
+		ease: "none",
+	}, "0");
+	tl1.fromTo(".y8-110__photos-item--2", {
+		x: '100vw',
+	}, {
+		x: '-100%',
+		duration: 0.7,
+		ease: "none",
+	}, "0");
+	tl1.fromTo(".y8-110__photos-item--3", {
+		x: '100vw',
+	}, {
+		x: '-100%',
+		duration: 0.7,
+		ease: "none",
+	}, ">-0.3");
+
+	tl1.to(".y8-110", {
+	top: '-80vw',
+	duration: 2,
+	ease: "none",
+	}, "0");
+
+	tl1.fromTo(".y8-1", {
+		y: "0",
+		top: b11Height - 55,
+	}, {
+		top: "0",
+		y: -1 * (b1Height - scHeight),
+		duration: Math.abs((scHeight - b1Height) / 460) + 1,
+		ease: "none",
+	}, "<");
+
+	st1 = ScrollTrigger.create({
+		trigger: ".scroll-page",
+		pin: true,
+		start: "top top",
+		end: () => "+=" + addTime + "%",
+		scrub: 2.5,
+		animation: tl1,
+	});
 
 
 }
