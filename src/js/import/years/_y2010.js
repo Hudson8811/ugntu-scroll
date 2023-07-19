@@ -8,8 +8,8 @@ gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollToPlugin);
 
 var initMode;
-// let addTime = 3600;
-let addTime = 1600;
+let addTime = 3600;
+// let addTime = 1600;
 
 let st1;
 let tl1 = gsap.timeline({});
@@ -500,6 +500,72 @@ function initScrollAnimationDesktop() {
 	}, "<");
 
 
+
+	tl1.fromTo(".y8-31__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">-=0.6");
+	
+	tl1.addLabel('2019', "-=0.09");
+
+	tl1.fromTo(".y8-31", {
+		y: "0vh",
+		x: "150vw"
+	}, {
+		y: "0vh",
+		x: "-105vw",
+		duration: 1.4,
+		ease: "none",
+	}, ">-=0.8");
+
+	tl1.fromTo(".y8-33__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+	tl1.addLabel('2021', "-=0.09");
+
+	tl1.fromTo(".y8-33", {
+		y: "0vh",
+		x: "360vw"
+	}, {
+		y: "0vh",
+		x: "-779vw",
+		duration: 3,
+		ease: "none",
+	}, ">-=0.8");
+
+	tl1.fromTo(".y8-39__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	
+	tl1.addLabel('2022', "+=0.389");
+
+	tl1.fromTo(".y8-39", {
+		y: "0vh",
+		x: "150vw"
+	}, {
+		y: "0vh",
+		x: "-204vw",
+		duration: 1.4,
+		ease: "none",
+	}, ">-=0.8");
 
 
 	st1 = ScrollTrigger.create({
