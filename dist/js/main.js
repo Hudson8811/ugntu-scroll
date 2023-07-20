@@ -7161,12 +7161,14 @@ function initAnimation() {
   b5Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y8-5').innerHeight();
   b6Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y8-10').innerHeight();
   b7Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y8-14').innerHeight();
-  b8Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y8-18').innerHeight();
+  b8Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y8-17').innerHeight();
   b9Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y8-19').innerHeight();
   b10Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y8-20').innerHeight();
   b11Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y8-110').innerHeight();
-  b12Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y8-22').innerHeight();
+  b12Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y8-23').innerHeight();
   b13Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y8-25').innerHeight();
+  b14Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y8-14').innerHeight();
+  b15Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y8-26').innerHeight();
 
   if (window.innerWidth > 1100) {
     initScrollAnimationDesktop();
@@ -7680,6 +7682,157 @@ function initScrollAnimationTablet() {
     duration: Math.abs((scHeight - b1Height) / 460) + 1,
     ease: "none"
   }, "<");
+  tl1.fromTo(".y8-2", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b2Height - scHeight),
+    duration: Math.abs((scHeight - b2Height) / 460) + 1,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y8-3", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b3Height - scHeight),
+    duration: Math.abs((scHeight - b3Height) / 460) + 1,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y8-10__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 1,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('2011', "+=0.8");
+  tl1.fromTo(".y8-10", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b6Height - scHeight),
+    duration: Math.abs((scHeight - b6Height) / 460) + 1,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y8-14__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 1,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('2012', "+=0.8");
+  tl1.fromTo(".y8-14", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b7Height - scHeight),
+    duration: Math.abs((scHeight - b7Height) / 460) + 1,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y8-15__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 1,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('2014', "+=0.8");
+  tl1.fromTo(".y8-15", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b14Height - scHeight),
+    duration: Math.abs((scHeight - b14Height) / 460) + 1,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y8-17__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 1,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('2015', "+=0.8");
+  tl1.fromTo(".y8-17", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b8Height - scHeight),
+    duration: Math.abs((scHeight - b8Height) / 460) + 1,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y8-20__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 1,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('2016', "+=0.8");
+  tl1.fromTo(".y8-20", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b10Height - scHeight),
+    duration: Math.abs((scHeight - b10Height) / 460) + 1,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y8-23__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 1,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('2017', "+=0.8");
+  tl1.fromTo(".y8-23", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b12Height - scHeight),
+    duration: Math.abs((scHeight - b12Height) / 460) + 1,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y8-26__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 1,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('2018', "+=0.8");
+  tl1.fromTo(".y8-26", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b15Height - scHeight),
+    duration: Math.abs((scHeight - b15Height) / 460) + 1,
+    ease: "none"
+  }, ">");
   st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
     trigger: ".scroll-page",
     pin: true,

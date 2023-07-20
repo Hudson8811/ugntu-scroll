@@ -28512,6 +28512,7 @@ summary {
     margin-left: 5vw;
     margin-bottom: 5vh;
     left: 0;
+    order: 3;
   }
 }
 
@@ -28531,14 +28532,13 @@ summary {
   .y8-2 {
     position: relative;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
-    height: 100vh;
-    z-index: 120;
+    z-index: 125;
     height: auto;
-    background: #404040;
+    min-height: auto;
+    background: #002F5A;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -28559,6 +28559,8 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y8-2__bg {
     height: auto;
+    height: auto;
+    min-height: auto;
   }
 }
 .y8-2__bg img {
@@ -28578,6 +28580,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y8-2__bg--1 {
     height: auto;
+    width: 61.5625vw;
   }
 }
 .y8-2__bg--1 img {
@@ -28632,10 +28635,6 @@ summary {
     height: auto;
     left: 0;
     top: 0;
-    display: none;
-    padding-top: 6.25vw;
-    padding-right: 6.25vw;
-    padding-left: 4.6875vw;
     padding-bottom: 0;
     margin-left: auto;
     margin-right: auto;
@@ -28751,15 +28750,14 @@ summary {
   .y8-3 {
     position: absolute;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     height: auto;
     min-height: auto;
-    background: #FFFFFF;
-    background: linear-gradient(180deg, #251D1F 0%, #3E171D 100%);
+    background: #002F5A;
     z-index: 130;
+    padding-bottom: 5vw;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -28785,7 +28783,7 @@ summary {
     align-items: flex-start;
     width: 100vw;
     height: auto;
-    background: #FFFFFF;
+    background: #002F5A;
   }
 }
 .y8-3__bg img {
@@ -28834,7 +28832,7 @@ summary {
     justify-content: flex-start;
     align-items: flex-start;
     margin-left: 5vw;
-    color: #404040;
+    color: #FFFFFF;
   }
 }
 .y8-3__title--1 {
@@ -28898,7 +28896,7 @@ summary {
     justify-content: flex-start;
     align-items: flex-start;
     margin-left: 5vw;
-    color: #404040;
+    color: #FFFFFF;
   }
 }
 .y8-3__text {
@@ -28928,7 +28926,7 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 70.9375vw;
+    max-width: 89.6875vw;
     margin-top: 3.4375vw;
     margin-left: 5vw;
     margin-bottom: 5vh;
@@ -28950,11 +28948,10 @@ summary {
   .y8-10 {
     position: absolute;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
-    min-height: 100vh;
+    min-height: auto;
     height: auto;
     background: #862744;
     z-index: 150;
@@ -29232,7 +29229,7 @@ summary {
   .y8-11__1 {
     position: relative;
     width: 100%;
-    background: #264177;
+    background: #251A11;
     max-width: 100%;
     display: block;
     height: auto;
@@ -29294,7 +29291,7 @@ summary {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 70.9375vw;
+    max-width: 89.375vw;
     top: auto;
     left: 0;
     bottom: auto;
@@ -29369,18 +29366,17 @@ summary {
   .y8-13 {
     position: relative;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
-    min-height: 100vh;
+    min-height: auto;
     height: auto;
     background: #fff;
     z-index: 133;
     width: 100vw;
     left: 0;
     padding-top: 0;
-    padding-bottom: 9.375vw;
+    padding-bottom: 0vw;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -29471,6 +29467,10 @@ summary {
     margin-left: auto;
     margin-right: auto;
     order: 1;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    padding-right: 5vw;
+    padding-left: 5vw;
   }
 }
 .y8-13__1 img {
@@ -29496,7 +29496,6 @@ summary {
   .y8-14 {
     position: absolute;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -29692,7 +29691,6 @@ summary {
   .y8-15 {
     position: absolute;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
@@ -29887,14 +29885,13 @@ summary {
   .y8-17 {
     position: absolute;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #862744;
-    z-index: 150;
+    z-index: 200;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -29922,7 +29919,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-17__blockOverlay {
-    z-index: 149;
+    z-index: 200;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -30069,7 +30066,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-16 {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -30097,7 +30094,7 @@ summary {
   width: 100vw;
   min-height: 100vh;
   opacity: 0;
-  z-index: 150;
+  z-index: 195;
   background: #000;
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
@@ -30264,14 +30261,14 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-18 {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
-    background: #fff;
+    background: #0E0E0E;
     z-index: 195;
     width: 100vw;
     left: 0;
@@ -30421,7 +30418,7 @@ summary {
     left: 0;
     bottom: auto;
     padding-left: 5vw;
-    margin-bottom: 7.5vw;
+    margin-bottom: 0vw;
   }
 }
 .y8-18__text--2 {
@@ -30461,14 +30458,14 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-19 {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
-    background: #fff;
+    background: #0E0E0E;
     z-index: 195;
     width: 100vw;
     left: 0;
@@ -30554,6 +30551,9 @@ summary {
     padding-bottom: 0;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-bottom: 5vw;
   }
 }
 .y8-19__1 img {
@@ -30631,14 +30631,13 @@ summary {
   .y8-20 {
     position: absolute;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #1EA9AF;
-    z-index: 150;
+    z-index: 210;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -30666,7 +30665,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-20__blockOverlay {
-    z-index: 149;
+    z-index: 210;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -30814,14 +30813,14 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-21 {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
-    background: #fff;
+    background: #1EA9AF;
     z-index: 195;
     width: 100vw;
     left: 0;
@@ -31009,7 +31008,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-22 {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -31184,14 +31183,13 @@ summary {
   .y8-23 {
     position: absolute;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #1EA9AF;
-    z-index: 150;
+    z-index: 230;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -31219,7 +31217,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-23__blockOverlay {
-    z-index: 149;
+    z-index: 230;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -31367,7 +31365,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-24 {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -31583,7 +31581,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-25 {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -31758,18 +31756,17 @@ summary {
   .y8-26 {
     position: absolute;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
-    min-height: 100vh;
+    min-height: auto;
     height: auto;
-    background: #1EA9AF;
-    z-index: 150;
+    background: #fff;
+    z-index: 240;
     width: 100vw;
     left: 0;
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 5vw;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -31793,7 +31790,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-26__blockOverlay {
-    z-index: 149;
+    z-index: 240;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -31942,14 +31939,14 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-27 {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
-    background: #fff;
+    background: #002F5A;
     z-index: 195;
     width: 100vw;
     left: 0;
@@ -32051,6 +32048,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y8-27__2 {
     position: relative;
+    display: none;
     width: 100vw;
     height: auto;
     left: 0;
@@ -32137,14 +32135,14 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-28 {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
-    background: #fff;
+    background: #002F5A;
     z-index: 195;
     width: 100vw;
     left: 0;
@@ -32201,8 +32199,7 @@ summary {
     height: auto;
     left: 0;
     top: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 5vw;
     margin-left: auto;
     margin-right: auto;
   }
@@ -32226,6 +32223,7 @@ summary {
     position: relative;
     width: 100vw;
     height: auto;
+    display: none;
     left: 0;
     top: 0;
     padding-top: 0;
@@ -32310,7 +32308,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-29 {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -32467,7 +32465,7 @@ summary {
     left: 0;
     bottom: auto;
     padding-left: 5vw;
-    margin-bottom: 7.5vw;
+    margin-bottom: 0vw;
   }
 }
 .y8-29__text--2 {
