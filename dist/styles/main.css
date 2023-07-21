@@ -28237,7 +28237,7 @@ summary {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  z-index: 120;
+  z-index: 109;
   will-change: transform, opacity, top;
   transform-style: preserve-3d;
 }
@@ -28539,6 +28539,7 @@ summary {
     height: auto;
     min-height: auto;
     background: #002F5A;
+    padding-bottom: 15.625vw;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -28546,6 +28547,7 @@ summary {
     position: relative;
     height: auto;
     min-height: auto;
+    padding-bottom: 5vw;
   }
 }
 .y8-2__bg {
@@ -28580,7 +28582,7 @@ summary {
 @media only screen and (max-width: 1100px) {
   .y8-2__bg--1 {
     height: auto;
-    width: 61.5625vw;
+    display: none;
   }
 }
 .y8-2__bg--1 img {
@@ -28641,6 +28643,35 @@ summary {
   }
 }
 .y8-2__2 img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+.y8-2__3 {
+  position: absolute;
+  height: auto;
+  z-index: 4;
+  display: none;
+}
+@media only screen and (max-width: 1100px) {
+  .y8-2__3 {
+    position: absolute;
+    height: auto;
+    display: flex;
+    left: 0;
+    top: 0;
+    padding-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    top: 56.875vw;
+    left: auto;
+    width: 61.5625vw;
+  }
+}
+.y8-2__3 img, .y8-2__3 picture {
   position: relative;
   width: 100%;
   height: 100%;
@@ -32839,14 +32870,13 @@ summary {
   .y8-31 {
     position: absolute;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #862744;
-    z-index: 150;
+    z-index: 250;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -32874,7 +32904,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-31__blockOverlay {
-    z-index: 149;
+    z-index: 250;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -33021,7 +33051,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-32 {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -33198,14 +33228,13 @@ summary {
   .y8-33 {
     position: absolute;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
     background: #862744;
-    z-index: 150;
+    z-index: 280;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -33233,7 +33262,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-33__blockOverlay {
-    z-index: 149;
+    z-index: 280;
   }
 }
 @media only screen and (max-width: 699px) {
@@ -33380,7 +33409,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-34 {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -33575,7 +33604,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-35 {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -33772,7 +33801,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-36 {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -33917,14 +33946,14 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-37 {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
-    background: #fff;
+    background: #002F5A;
     z-index: 195;
     width: 100vw;
     left: 0;
@@ -34062,7 +34091,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-38 {
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -34209,14 +34238,13 @@ summary {
   .y8-39 {
     position: absolute;
     display: flex;
-    display: none;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     min-height: 100vh;
     height: auto;
-    background: #fff;
-    z-index: 195;
+    background: #1EA9AF;
+    z-index: 290;
     width: 100vw;
     left: 0;
     padding-top: 0;
@@ -34243,7 +34271,7 @@ summary {
 }
 @media only screen and (max-width: 1100px) {
   .y8-39__blockOverlay {
-    z-index: 189;
+    z-index: 290;
   }
 }
 @media only screen and (max-width: 699px) {

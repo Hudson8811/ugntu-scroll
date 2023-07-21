@@ -8,8 +8,8 @@ gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollToPlugin);
 
 var initMode;
-// let addTime = 3600;
-let addTime = 1600;
+let addTime = 3600;
+
 
 let st1;
 let tl1 = gsap.timeline({});
@@ -21,7 +21,7 @@ let tl = gsap.timeline({
 });
 
 let scWidth, b1Width, b2Width, b3Width, b4Width, b5Width, b6Width, b7Width, b8Width, b9Width, b11Height;
-let scHeight, b1Height, b2Height, b3Height, b4Height, b5Height, b6Height, b7Height, b8Height, b9Height, b10Height, b12Height, b13Height, b14Height, b15Height;
+let scHeight, b1Height, b2Height, b3Height, b4Height, b5Height, b6Height, b7Height, b8Height, b9Height, b10Height, b12Height, b13Height, b14Height, b15Height, b16Height, b17Height,b18Height;
 
 let urlParams = new URLSearchParams(window.location.search);
 let yValue = urlParams.get('y');
@@ -73,6 +73,9 @@ function initAnimation() {
 	b13Height = $('.y8-25').innerHeight();
 	b14Height = $('.y8-14').innerHeight();
 	b15Height = $('.y8-26').innerHeight();
+	b16Height = $('.y8-31').innerHeight();
+	b17Height = $('.y8-33').innerHeight();
+	b18Height = $('.y8-39').innerHeight();
 
 
 	if (window.innerWidth > 1100) {
@@ -242,7 +245,7 @@ function initScrollAnimationDesktop() {
 		ease: "none",
 	}, "<+=0.1");
 
-
+	tl1.addLabel('2011', "+=0.129");
 	tl1.fromTo(".y8-3", {
 		y: "0",
 		top: "100%"
@@ -264,7 +267,7 @@ function initScrollAnimationDesktop() {
 		ease: "none",
 	}, ">");
 	
-	tl1.addLabel('2011', "+=0.129");
+
 
 	tl1.fromTo(".y8-10", {
 		y: "0vh",
@@ -653,6 +656,8 @@ function initScrollAnimationTablet() {
 		duration: Math.abs((scHeight - b2Height) / 460) + 1,
 		ease: "none",
 	}, ">");
+
+	tl1.addLabel('2011', "+=0.8");
 	tl1.fromTo(".y8-3", {
 		y: "0",
 		top: "100%"
@@ -672,7 +677,7 @@ function initScrollAnimationTablet() {
 		duration: 1,
 		ease: "none",
 	}, ">");
-	tl1.addLabel('2011', "+=0.8");
+
 	tl1.fromTo(".y8-10", {
 		y: "0",
 		top: "100%"
@@ -808,6 +813,67 @@ function initScrollAnimationTablet() {
 	}, ">");
 
 
+	tl1.fromTo(".y8-31__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	tl1.addLabel('2019', "+=0.8");
+	tl1.fromTo(".y8-31", {
+		y: "0",
+		top: "100%"
+	}, {
+		top: "0",
+		y: -1 * (b16Height - scHeight),
+		duration: Math.abs((scHeight - b16Height) / 460) + 1,
+		ease: "none",
+	}, ">");
+
+
+	tl1.fromTo(".y8-33__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	tl1.addLabel('2021', "+=0.8");
+	tl1.fromTo(".y8-33", {
+		y: "0",
+		top: "100%"
+	}, {
+		top: "0",
+		y: -1 * (b17Height - scHeight),
+		duration: Math.abs((scHeight - b17Height) / 460) + 1,
+		ease: "none",
+	}, ">");
+	tl1.fromTo(".y8-39__blockOverlay", {
+		opacity: 0,
+		// x: "150vw"
+	}, {
+		opacity: 0.8,
+		// x: "150vw",
+		duration: 1,
+		ease: "none",
+	}, ">");
+	tl1.addLabel('2022', "+=0.8");
+	tl1.fromTo(".y8-39", {
+		y: "0",
+		top: "100%"
+	}, {
+		top: "0",
+		y: -1 * (b18Height - scHeight),
+		duration: Math.abs((scHeight - b18Height) / 460) + 1,
+		ease: "none",
+	}, ">");
+
+
 
 
 
@@ -823,41 +889,41 @@ function initScrollAnimationTablet() {
 
 }
 function initScrollAnimationMobile() {
-// 	gsap.to(".fullPageOverlay", {
-// 		duration: 1,
-// 		autoAlpha: 0,
-// 		ease: "none",
-// 		onComplete: function () {
-// 				$('.fullPageOverlay').removeClass('active');
-// 				$('body').addClass('active');
-// 		}
-// 	});
-// 	tl1.fromTo(".y8-110__numbers", {
-// 		x: 0,
-// }, {
-// 		x: '-110%',
-// 		duration: 0.6,
-// 		ease: "none",
-// }, "0");
+	gsap.to(".fullPageOverlay", {
+		duration: 1,
+		autoAlpha: 0,
+		ease: "none",
+		onComplete: function () {
+				$('.fullPageOverlay').removeClass('active');
+				$('body').addClass('active');
+		}
+	});
+	tl1.fromTo(".y8-110__numbers", {
+		x: 0,
+}, {
+		x: '-110%',
+		duration: 0.6,
+		ease: "none",
+}, "0");
 
-// tl1.fromTo(".y8-110__numbers", {
-// 		y: 0
-// }, {
-// 		y: '120%',
-// 		duration: 0.5,
-// 		ease: "none",
-// }, "0");
+tl1.fromTo(".y8-110__numbers", {
+		y: 0
+}, {
+		y: '120%',
+		duration: 0.5,
+		ease: "none",
+}, "0");
 
 
 
-// 	st1 = ScrollTrigger.create({
-// 		trigger: ".y8-110__numbers",
-// 		pin: false,
-// 		start: "-45vw top",
-// 		end: () => "bottom top",
-// 		scrub: 1,
-// 		animation: tl1,
-// });	
+	st1 = ScrollTrigger.create({
+		trigger: ".y8-110__numbers",
+		pin: false,
+		start: "-45vw top",
+		end: () => "bottom top",
+		scrub: 1,
+		animation: tl1,
+});	
 }
 
 

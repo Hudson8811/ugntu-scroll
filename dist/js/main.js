@@ -7112,9 +7112,8 @@ __webpack_require__.r(__webpack_exports__);
 gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"]);
 gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_MotionPathPlugin__WEBPACK_IMPORTED_MODULE_3__["default"]);
 gsap__WEBPACK_IMPORTED_MODULE_1__["default"].registerPlugin(gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_4__["default"]);
-var initMode; // let addTime = 3600;
-
-var addTime = 1600;
+var initMode;
+var addTime = 3600;
 var st1;
 var tl1 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
 var tl2 = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({});
@@ -7124,7 +7123,7 @@ var tl = gsap__WEBPACK_IMPORTED_MODULE_1__["default"].timeline({
   }
 });
 var scWidth, b1Width, b2Width, b3Width, b4Width, b5Width, b6Width, b7Width, b8Width, b9Width, b11Height;
-var scHeight, b1Height, b2Height, b3Height, b4Height, b5Height, b6Height, b7Height, b8Height, b9Height, b10Height, b12Height, b13Height, b14Height, b15Height;
+var scHeight, b1Height, b2Height, b3Height, b4Height, b5Height, b6Height, b7Height, b8Height, b9Height, b10Height, b12Height, b13Height, b14Height, b15Height, b16Height, b17Height, b18Height;
 var urlParams = new URLSearchParams(window.location.search);
 var yValue = urlParams.get('y');
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('resize', function () {
@@ -7169,6 +7168,9 @@ function initAnimation() {
   b13Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y8-25').innerHeight();
   b14Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y8-14').innerHeight();
   b15Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y8-26').innerHeight();
+  b16Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y8-31').innerHeight();
+  b17Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y8-33').innerHeight();
+  b18Height = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.y8-39').innerHeight();
 
   if (window.innerWidth > 1100) {
     initScrollAnimationDesktop();
@@ -7327,6 +7329,7 @@ function initScrollAnimationDesktop() {
     duration: 1,
     ease: "none"
   }, "<+=0.1");
+  tl1.addLabel('2011', "+=0.129");
   tl1.fromTo(".y8-3", {
     y: "0",
     top: "100%"
@@ -7345,7 +7348,6 @@ function initScrollAnimationDesktop() {
     duration: 1,
     ease: "none"
   }, ">");
-  tl1.addLabel('2011', "+=0.129");
   tl1.fromTo(".y8-10", {
     y: "0vh",
     x: "360vw"
@@ -7691,6 +7693,7 @@ function initScrollAnimationTablet() {
     duration: Math.abs((scHeight - b2Height) / 460) + 1,
     ease: "none"
   }, ">");
+  tl1.addLabel('2011', "+=0.8");
   tl1.fromTo(".y8-3", {
     y: "0",
     top: "100%"
@@ -7709,7 +7712,6 @@ function initScrollAnimationTablet() {
     duration: 1,
     ease: "none"
   }, ">");
-  tl1.addLabel('2011', "+=0.8");
   tl1.fromTo(".y8-10", {
     y: "0",
     top: "100%"
@@ -7833,6 +7835,63 @@ function initScrollAnimationTablet() {
     duration: Math.abs((scHeight - b15Height) / 460) + 1,
     ease: "none"
   }, ">");
+  tl1.fromTo(".y8-31__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 1,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('2019', "+=0.8");
+  tl1.fromTo(".y8-31", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b16Height - scHeight),
+    duration: Math.abs((scHeight - b16Height) / 460) + 1,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y8-33__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 1,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('2021', "+=0.8");
+  tl1.fromTo(".y8-33", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b17Height - scHeight),
+    duration: Math.abs((scHeight - b17Height) / 460) + 1,
+    ease: "none"
+  }, ">");
+  tl1.fromTo(".y8-39__blockOverlay", {
+    opacity: 0 // x: "150vw"
+
+  }, {
+    opacity: 0.8,
+    // x: "150vw",
+    duration: 1,
+    ease: "none"
+  }, ">");
+  tl1.addLabel('2022', "+=0.8");
+  tl1.fromTo(".y8-39", {
+    y: "0",
+    top: "100%"
+  }, {
+    top: "0",
+    y: -1 * (b18Height - scHeight),
+    duration: Math.abs((scHeight - b18Height) / 460) + 1,
+    ease: "none"
+  }, ">");
   st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
     trigger: ".scroll-page",
     pin: true,
@@ -7845,37 +7904,40 @@ function initScrollAnimationTablet() {
   });
 }
 
-function initScrollAnimationMobile() {// 	gsap.to(".fullPageOverlay", {
-  // 		duration: 1,
-  // 		autoAlpha: 0,
-  // 		ease: "none",
-  // 		onComplete: function () {
-  // 				$('.fullPageOverlay').removeClass('active');
-  // 				$('body').addClass('active');
-  // 		}
-  // 	});
-  // 	tl1.fromTo(".y8-110__numbers", {
-  // 		x: 0,
-  // }, {
-  // 		x: '-110%',
-  // 		duration: 0.6,
-  // 		ease: "none",
-  // }, "0");
-  // tl1.fromTo(".y8-110__numbers", {
-  // 		y: 0
-  // }, {
-  // 		y: '120%',
-  // 		duration: 0.5,
-  // 		ease: "none",
-  // }, "0");
-  // 	st1 = ScrollTrigger.create({
-  // 		trigger: ".y8-110__numbers",
-  // 		pin: false,
-  // 		start: "-45vw top",
-  // 		end: () => "bottom top",
-  // 		scrub: 1,
-  // 		animation: tl1,
-  // });	
+function initScrollAnimationMobile() {
+  gsap__WEBPACK_IMPORTED_MODULE_1__["default"].to(".fullPageOverlay", {
+    duration: 1,
+    autoAlpha: 0,
+    ease: "none",
+    onComplete: function onComplete() {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.fullPageOverlay').removeClass('active');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('active');
+    }
+  });
+  tl1.fromTo(".y8-110__numbers", {
+    x: 0
+  }, {
+    x: '-110%',
+    duration: 0.6,
+    ease: "none"
+  }, "0");
+  tl1.fromTo(".y8-110__numbers", {
+    y: 0
+  }, {
+    y: '120%',
+    duration: 0.5,
+    ease: "none"
+  }, "0");
+  st1 = gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__["default"].create({
+    trigger: ".y8-110__numbers",
+    pin: false,
+    start: "-45vw top",
+    end: function end() {
+      return "bottom top";
+    },
+    scrub: 1,
+    animation: tl1
+  });
 }
 
 function checkYearValue() {

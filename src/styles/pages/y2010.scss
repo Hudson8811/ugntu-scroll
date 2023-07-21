@@ -251,7 +251,7 @@
 	height: 100vh;
 	overflow: hidden;
 	// background: #FFFFFF;
-	z-index: 120;
+	z-index: 109;
 	will-change: transform, opacity, top;
 	transform-style: preserve-3d;
 
@@ -574,12 +574,14 @@
 		height: auto;
 		min-height: auto;
 		background: #002F5A;
+		padding-bottom: vw(50,320);
 	}
 
 	@include max(sm) {
 		position: relative;
 		height: auto;
 		min-height: auto;
+		padding-bottom: vw(16,320);
 		// margin-top: vw(255, 320);
 	}
 
@@ -618,7 +620,7 @@
 			background: transparent;
 			@include max(md) {
 				height: auto;
-				width: vw(197, 320);;
+				display: none;
 			}
 
 			img {
@@ -680,6 +682,34 @@
 		}
 
 		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center bottom;
+		}
+	}
+	&__3 {
+		position: absolute;
+		height: auto;
+		z-index: 4;
+		display: none;
+		@include max(md) {
+			position: absolute;
+			height: auto;
+			display: flex;
+			left: 0;
+			top: 0;
+			padding-bottom: 0;
+			margin-left: auto;
+			margin-right: auto;
+			right: 0;
+			top: vw(182, 320);
+			left: auto;
+			width: vw(197, 320);
+		}
+
+		img, picture {
 			position: relative;
 			width: 100%;
 			height: 100%;
@@ -4977,14 +5007,13 @@
 	@include max(md) {
 		position: absolute;
 		display: flex;
-		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
 		min-height: 100vh;
 		height: auto;
 		background: #862744;
-		z-index: 150;
+		z-index: 250;
 		width: 100vw;
 		left: 0;
 		padding-top: 0;
@@ -5010,7 +5039,7 @@
 		transform-style: preserve-3d;
 
 		@include max(md) {
-			z-index: 149;
+			z-index: 250;
 		}
 
 		@include max(sm) {
@@ -5167,7 +5196,7 @@
 	background: #010009;
 
 	@include max(md) {
-		position: absolute;
+		position: relative;
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
@@ -5351,14 +5380,13 @@
 	@include max(md) {
 		position: absolute;
 		display: flex;
-		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
 		min-height: 100vh;
 		height: auto;
 		background: #862744;
-		z-index: 150;
+		z-index: 280;
 		width: 100vw;
 		left: 0;
 		padding-top: 0;
@@ -5384,7 +5412,7 @@
 		transform-style: preserve-3d;
 
 		@include max(md) {
-			z-index: 149;
+			z-index: 280;
 		}
 
 		@include max(sm) {
@@ -5541,7 +5569,7 @@
 	background: #fff;
 
 	@include max(md) {
-		position: absolute;
+		position: relative;
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
@@ -5740,7 +5768,7 @@
 	background: #fff;
 
 	@include max(md) {
-		position: absolute;
+		position: relative;
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
@@ -5940,7 +5968,7 @@
 	background: #fff;
 
 	@include max(md) {
-		position: absolute;
+		position: relative;
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
@@ -6087,14 +6115,14 @@
 	background: #002F5A;
 
 	@include max(md) {
-		position: absolute;
+		position: relative;
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
 		min-height: 100vh;
 		height: auto;
-		background: #fff;
+		background: #002F5A;
 		z-index: 195;
 		width: 100vw;
 		left: 0;
@@ -6235,7 +6263,7 @@
 	background: #fff;
 
 	@include max(md) {
-		position: absolute;
+		position: relative;
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
@@ -6386,14 +6414,13 @@
 	@include max(md) {
 		position: absolute;
 		display: flex;
-		display: none;
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-flow: column nowrap;
 		min-height: 100vh;
 		height: auto;
-		background: #fff;
-		z-index: 195;
+		background: #1EA9AF;
+		z-index: 290;
 		width: 100vw;
 		left: 0;
 		padding-top: 0;
@@ -6418,7 +6445,7 @@
 		transform-style: preserve-3d;
 
 		@include max(md) {
-			z-index: 189;
+			z-index: 290;
 		}
 
 		@include max(sm) {
